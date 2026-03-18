@@ -1,10 +1,5 @@
 $(function () {
 
-  //헤더 - 서브메뉴
-
-
-  
-
   //헤더 - 모바일메뉴
   $('#headerWrap .mobileOpenBtn').click(function () {
     $(this).hide();

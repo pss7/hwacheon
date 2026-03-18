@@ -52,13 +52,15 @@
 
                             <ul class="linkList">
                                 <li>
-                                    <button class="hoverSlide modalBtn" data-text="의원누리집">
+                                    <button class="hoverSlide modalBtn" data-text="의원누리집" type="button"
+                                        aria-haspopup="dialog" aria-expanded="false" aria-controls="memberSiteModal">
                                         <span>의원누리집</span>
                                     </button>
 
                                     <!-- //의원누리집 모달 -->
-                                    <div class="modalBox">
-                                        <h3>
+                                    <div class="modalBox" id="memberSiteModal" role="dialog" aria-modal="true"
+                                        aria-labelledby="memberSiteModalTitle" aria-hidden="true">
+                                        <h3 id="memberSiteModalTitle">
                                             의원누리집
                                         </h3>
                                         <ul class="list">
@@ -119,7 +121,7 @@
                                                 </span>
                                             </li>
                                         </ul>
-                                        <button class="closeBtn" aria-label="의원누리집 모달 닫기">
+                                        <button class="closeBtn" type="button" aria-label="의원누리집 모달 닫기">
                                         </button>
                                     </div>
                                 </li>
@@ -139,18 +141,22 @@
 
                         <!-- 로그인 -->
                         <div class="rightBox">
-                            <div class="zoomControlBox">
-                                <button class="zoomBtn zoomOut" aria-label="화면 축소">
+                            <div class="zoomControlBox" role="group" aria-label="화면 크기 조절">
+                                <button class="zoomBtn zoomOut" type="button" aria-label="화면 축소"
+                                    aria-describedby="zoomTooltip">
                                     <img src="images/common/zoomout_icon.svg" alt="화면 축소 아이콘">
                                 </button>
-                                <button class="zoomBtn zoomIn" aria-label="화면 확대">
+                                <button class="zoomBtn zoomIn" type="button" aria-label="화면 확대"
+                                    aria-describedby="zoomTooltip">
                                     <img src="images/common/zoomin_icon.svg" alt="화면 확대 아이콘">
                                 </button>
-                                <button class="zoomBtn zoomReset" aria-label="화면 크기 초기화">
+                                <button class="zoomBtn zoomReset" type="button" aria-label="화면 크기 초기화"
+                                    aria-describedby="zoomTooltip">
                                     <img src="images/common/zoomreset_icon.svg" alt="화면 크기 초기화 아이콘">
                                 </button>
 
-                                <div class="zoomTooltip" aria-live="polite">100%</div>
+                                <div class="zoomTooltip" id="zoomTooltip" aria-live="polite" aria-atomic="true">100%
+                                </div>
                             </div>
                             <div class="authBox">
                                 <a href="#" class="authBtn hoverSlide" data-text="로그인">
@@ -175,7 +181,7 @@
 
                         <!-- 메뉴 -->
                         <div class="menuBox">
-                            <nav>
+                            <nav aria-label="주요 메뉴 왼쪽">
                                 <ul class="depth01">
                                     <li>
                                         <h2>
@@ -517,7 +523,7 @@
                             </div>
                             <!-- //logoBox -->
 
-                            <nav>
+                            <nav aria-label="주요 메뉴 오른쪽">
                                 <ul class="depth01">
                                     <li>
                                         <h2>
@@ -928,10 +934,12 @@
                             <!-- //nav -->
 
                             <div class="mobileMenuBtnBox">
-                                <button class="mobileBtn mobileOpenBtn">
+                                <button class="mobileBtn mobileOpenBtn" type="button" aria-label="모바일 메뉴 열기"
+                                    aria-controls="mobileMenuBox" aria-expanded="false">
                                     <span></span><span></span><span></span>
                                 </button>
-                                <button class="mobileBtn mobileCloseBtn">
+                                <button class="mobileBtn mobileCloseBtn" type="button" aria-label="모바일 메뉴 닫기"
+                                    aria-controls="mobileMenuBox" aria-expanded="true">
                                     <span></span><span></span>
                                 </button>
                             </div>
@@ -950,14 +958,16 @@
             <!-- //headerBottomWrap -->
 
             <!-- 모바일 메뉴 -->
-            <div id="mobileMenuBox">
+            <div id="mobileMenuBox" aria-label="모바일 전체 메뉴" aria-hidden="true">
                 <div class="mobileTopBox">
                     <div class="mobileModalBox">
-                        <button class="mobileModalBtn modalBtn">
+                        <button class="mobileModalBtn modalBtn" type="button" aria-haspopup="dialog"
+                            aria-expanded="false" aria-controls="mobileMemberSiteModal">
                             9대 의원 누리집
                         </button>
-                        <div class="modalBox">
-                            <h3>
+                        <div class="modalBox" id="mobileMemberSiteModal" role="dialog" aria-modal="true"
+                            aria-labelledby="mobileMemberSiteModalTitle" aria-hidden="true">
+                            <h3 id="mobileMemberSiteModalTitle">
                                 의원누리집
                             </h3>
                             <ul class="list">
@@ -966,7 +976,7 @@
                                         <img src="images/common/member01.png" alt="">
                                     </div>
                                     <span class="name">
-                                        조웅희
+                                        류희상
                                     </span>
                                 </li>
                                 <li>
@@ -982,7 +992,7 @@
                                         <img src="images/common/member03.png" alt="">
                                     </div>
                                     <span class="name">
-                                        조웅희
+                                        노이업
                                     </span>
                                 </li>
                                 <li>
@@ -990,7 +1000,7 @@
                                         <img src="images/common/member04.png" alt="">
                                     </div>
                                     <span class="name">
-                                        조웅희
+                                        김동완
                                     </span>
                                 </li>
                                 <li>
@@ -998,7 +1008,7 @@
                                         <img src="images/common/member05.png" alt="">
                                     </div>
                                     <span class="name">
-                                        조웅희
+                                        김명진
                                     </span>
                                 </li>
                                 <li>
@@ -1006,7 +1016,7 @@
                                         <img src="images/common/member06.png" alt="">
                                     </div>
                                     <span class="name">
-                                        조웅희
+                                        이선희
                                     </span>
                                 </li>
                                 <li>
@@ -1014,11 +1024,11 @@
                                         <img src="images/common/member07.png" alt="">
                                     </div>
                                     <span class="name">
-                                        조웅희
+                                        조재규
                                     </span>
                                 </li>
                             </ul>
-                            <button class="closeBtn" aria-label="의원누리집 모달 닫기">
+                            <button class="closeBtn" type="button" aria-label="의원누리집 모달 닫기">
                             </button>
                         </div>
                     </div>
@@ -1794,9 +1804,9 @@
                                         2026년<strong>&nbsp;&nbsp;2월&nbsp;&nbsp;1주차</strong>
                                     </span>
                                     <div class="btnArrowBox">
-                                        <button class="btn prevArrowBtn" aria-label="이전 버튼">
+                                        <button class="btn prevArrowBtn" type="button" aria-label="이전 버튼">
                                         </button>
-                                        <button class="btn nextArrowBtn" aria-label="다음 버튼">
+                                        <button class="btn nextArrowBtn" type="button" aria-label="다음 버튼">
                                         </button>
                                     </div>
                                 </div>
@@ -1922,7 +1932,7 @@
                                             의원
                                         </h3>
                                         <div class="btnBox">
-                                            <button class="btn active">
+                                            <button class="btn active" type="button">
                                                 <div class="imgBox">
                                                     <img src="images/main/img01.png" alt="류희상 의원">
                                                 </div>
@@ -2243,11 +2253,14 @@
                                         의회소식
                                     </h3>
                                     <div class="topLayoutBox">
-                                        <div class="tabbox">
-                                            <button class="tabBtn active">
+                                        <div class="tabbox" role="tablist" aria-label="의회소식 탭">
+                                            <button class="tabBtn active" type="button" role="tab" id="noticeTab01"
+                                                aria-selected="true" aria-controls="noticePanel01">
                                                 공지사항
                                             </button>
-                                            <button class="tabBtn">
+                                            </button>
+                                            <button class="tabBtn" type="button" role="tab" id="noticeTab02"
+                                                aria-selected="false" aria-controls="noticePanel02">
                                                 고시공고
                                             </button>
                                         </div>
@@ -2261,7 +2274,8 @@
                                 <div class="noticeTabContentBox">
 
                                     <!-- 공지사항 -->
-                                    <div class="noticeContentBox">
+                                    <div class="noticeContentBox" id="noticePanel01" role="tabpanel"
+                                        aria-labelledby="noticeTab01" aria-hidden="false">
                                         <div class="noticeContentTopBox">
                                             <span class="category">공지사항</span>
                                             <h4>
@@ -2305,7 +2319,8 @@
                                     <!-- //noticeContentBox -->
 
                                     <!-- 고시공고 -->
-                                    <div class="noticeContentBox">
+                                    <div class="noticeContentBox" id="noticePanel02" role="tabpanel"
+                                        aria-labelledby="noticeTab02" aria-hidden="true">
                                         <div class="noticeContentTopBox">
                                             <span class="category">고시공고</span>
                                             <h4>
@@ -2841,10 +2856,11 @@
 
                         <div class="selectBox">
                             <div class="box">
-                                <button class="selectBtn">
+                                <button class="selectBtn" type="button" aria-expanded="false"
+                                    aria-controls="footerSiteList01">
                                     화천군 관련사이트
                                 </button>
-                                <ul class="selectList">
+                                <ul class="selectList" id="footerSiteList01" aria-hidden="true">
                                     <li>
                                         <a href="https://www.ihc.go.kr/www/index.do" class="link">화천군청</a>
                                     </li>
@@ -2878,10 +2894,11 @@
                             </div>
 
                             <div class="box">
-                                <button class="selectBtn">
+                                <button class="selectBtn" type="button" aria-expanded="false"
+                                    aria-controls="footerSiteList02">
                                     강원특별자치도 시군의회
                                 </button>
-                                <ul class="selectList">
+                                <ul class="selectList" id="footerSiteList02" aria-hidden="true">
                                     <li>
                                         <a href="http://www.gncl.go.kr" class="link">강릉시의회</a>
                                     </li>
