@@ -1,0 +1,445 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Pretendard';
+  color: var(--gray-600);
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  overflow-x: hidden;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: var(--radius-xs);
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bfbfbf;
+}
+
+:root {
+  /* 참고 영역
+  --main-bg-gradient: linear-gradient(
+    90deg,
+    var(--gray-50) 0%,
+    #e1d8cd 63.5%,
+    var(--gray-100) 100%
+  );
+  --header-high: 80px;
+  --header-high-mobile: 64px;
+  --header-high-expanded: 108px;
+  --header-bg: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%),
+    rgba(255, 255, 255, 0.5);
+  --header-blur: blur(40px);
+  --input-high: 72px;
+  --form-input-high: 48px;  
+  --btn-s-high:36px;
+  --contents: 100%;
+  --drag-tooltip:72px;
+  --upload-content-high : 620px;
+  --upload-inc-high : 72px;
+  --footer-high: 64px;
+   */
+
+  /* Color */
+  --primary-color: var(--primary-500);
+  /* 주요 컬러 */
+  --secondary-color: var(--secondary-500);
+  /* 보조 컬러 */
+
+  /* primary */
+  --primary-900: #2C5231;
+  --primary-800: #3A6B40;
+  --primary-700: #4B8A52;
+  --primary-600: #60B16A;
+  --primary-500: #69C374;
+  --primary-400: #87CF90;
+  --primary-300: #9BD7A2;
+  --primary-200: #BAE3BF;
+  --primary-100: #D1ECD4;
+  --primary-50: #F0F9F1;
+
+  /* secondary */
+  --secondary-900: #725540;
+  --secondary-800: #906C52;
+  --secondary-700: #B48766;
+  --secondary-600: #D7A27A;
+  --secondary-500: #FDBE8F;
+  --secondary-400: #FDCAA3;
+  --secondary-300: #FED6B8;
+  --secondary-200: #FEE3CF;
+  --secondary-100: #FFEFE4;
+  --secondary-50: #FFF9F4;
+
+  /* Grayscale */
+  --gray-900: #1b1d1f;
+  --gray-800: #26282b;
+  --gray-700: #393F46;
+  --gray-600: #454c53;
+  --gray-500: #72787f;
+  --gray-400: #9ea4aa;
+  --gray-300: #BCC3CC;
+  --gray-200: #c9cdd2;
+  --gray-100: #e8ebed;
+  --gray-50: #f7f8f9;
+
+  /* Political Party */
+  --pp-red: #ED3451;
+  --pp-blue: #0084FF;
+
+
+  /* Neutral */
+  --black: #000000;
+  --white: #ffffff;
+
+  /* font-color */
+  --title: var(--gray-900);
+  --body: var(--gray-600);
+  --cantion: var(--gray-400);
+  --text-white-bg-dark: var(--white);
+
+  /* Statistics */
+  --stat-pp-red: var(--pp-red);
+  --stat-pp-blue: var(--pp-blue);
+  --stat-man: #50beef;
+  --stat-women: #fb8d3e;
+  --stat-elected: #1bff72;
+  --stat-elected-bg: #161d30;
+  --stat-age: #7178FF;
+  --stat-age-bg: #E4EBF4;
+  --stat-point: #7bff4b;
+  --stat-percent-bg: #091420;
+
+  /* Semantic */
+  --success: var(--success-500);
+  --success-900: #1A346A;
+  --success-800: #22448B;
+  --success-700: #2C57B4;
+  --success-600: #3870E6;
+  --success-500: #3E7BFD;
+  --success-400: #6595FD;
+  --success-300: #7EA7FE;
+  --success-200: #A6C2FE;
+  --success-100: #C3D6FE;
+  --success-50: #ECF2FF;
+
+  --warning: var(--warning-500);
+  --warning-900: #6B3818;
+  --warning-800: #8C491F;
+  --warning-700: #B55E28;
+  --warning-600: #E87934;
+  --warning-500: #FF8539;
+  --warning-400: #FF9D61;
+  --warning-300: #FFAD7A;
+  --warning-200: #FFC7A4;
+  --warning-100: #FFD9C2;
+  --warning-50: #FFF3EB;
+
+  --danger-900: #1b1d1f;
+  --danger-800: #26282b;
+  --danger-700: #393F46;
+  --danger-600: #454c53;
+  --danger-500: #72787f;
+  --danger-400: #9ea4aa;
+  --danger-300: #BCC3CC;
+  --danger-200: #c9cdd2;
+  --danger-100: #e8ebed;
+  --danger-50: #f7f8f9;
+
+  --information: var(--information-500);
+  --information-900: #13503C;
+  --information-800: #19694F;
+  --information-700: #208766;
+  --information-600: #29AD83;
+  --information-500: #2DBE90;
+  --information-400: #2DBE90;
+  --information-300: #72D3B5;
+  --information-200: #9EE1CC;
+  --information-100: #BEEBDD;
+  --information-50: #EAF9F4;
+
+  /* sns */
+  --naver_color: #00c300;
+  --youtube_color: #ed2123;
+  --instargram_color: #5b43e1;
+  --kakao_color: #fae100;
+
+  /* Text size (1rem ê¸°ì¤€) */
+  --H1: 48px;
+  /* 6rem */
+  --H2: 40px;
+  /* 4rem */
+  --H3: 36px;
+  /* 3rem */
+  --H4: 32px;
+  /* 2rem */
+  --H5: 24px;
+  /* 1.5rem */
+  --H6: 20px;
+  /* 1.25rem */
+  --Subtitle-1: 18px;
+  /* 1.125rem */
+  --Subtitle-2: 16px;
+  /* 1rem */
+  --body-1: 16px;
+  /* 1rem */
+  --body-2: 14px;
+  /* .875rem */
+  --Caption: 12px;
+  /* .75rem */
+  --Button-l: 20px;
+  /* 1rem */
+  --Button-m: 16px;
+  /* 1rem */
+  --Button-s: 14px;
+  /* 1rem */
+
+  --font-size-xxxl: 24px;
+  /* 1.5rem */
+  --font-size-xxl: 22px;
+  /* 1.375rem */
+  --font-size-xl: 20px;
+  /* 1.25rem */
+  --font-size-l: 18px;
+  /* 1.125rem */
+  --font-size-m: 16px;
+  /* 1rem */
+  --font-size-s: 14px;
+  /* .875rem */
+  --font-size-xs: 12px;
+  /* .75rem */
+  --font-size-xxs: 11px;
+  /* .6875rem */
+  --font-size-xxxs: 10px;
+  /* .625rem */
+
+  /* Text weight */
+  --T-black: 900;
+  --bold: 700;
+  --semi-bold: 600;
+  --medium: 500;
+  --regular: 400;
+  --light: 300;
+
+  /* Font families */
+  --font-primary: 'Pretendard';
+  --font-secondary: 'Ria sans';
+
+  /* Line Heights */
+  --line-height-tight: 120%;
+  /* H1~H6, subtitle, button */
+  --line-height-relaxed: 140%;
+  /* 기본 문장 */
+  --line-height-loose: 160%;
+  /* 3줄 이상 문단 */
+
+  /* Radius */
+  --radius-xl: 64px;
+  --radius-l: 40px;
+  --radius-m: 20px;
+  --radius-s: 16px;
+  --radius-xs: 8px;
+  --radius-2xs: 4px;
+
+  /* Spacing */
+  --spacing-6xl: 160px;
+  --spacing-5xl: 120px;
+  --spacing-4xl: 96px;
+  --spacing-3xl: 80px;
+  --spacing-2xl: 64px;
+  --spacing-xl: 56px;
+  --spacing-l: 48px;
+  --spacing-lm: 40px;
+  --spacing-ml: 32px;
+  --spacing-m: 24px;
+  --spacing-ms: 20px;
+  --spacing-s: 16px;
+  --spacing-xs: 8px;
+  --spacing-2xs: 4px;
+  --spacing-3xs: 2px;
+
+  /* lnb gap */
+  --lnb-gap: var(--spacing-ms);
+
+  --basic-transition: 0.3s ease-out;
+  --spring-transition: 0.5s cubic-bezier(0.25, 0.99, 0.24, 1);
+  --spring-transition-soft: 0.2s cubic-bezier(0.74, 0.01, 0.26, 0.99);
+  --ease1: cubic-bezier(0.25, 0.99, 0.24, 1);
+  --box-shadow-100: inset 0 0 0 1px var(--white);
+  --basic-pattern: repeating-linear-gradient(to right,
+      rgba(244, 242, 240, 0.1) 0px,
+      rgba(244, 242, 240, 0.1) 1px,
+      transparent 1px,
+      transparent 8px);
+}
+
+@media (max-width:1200px) {
+  :root {
+    --header-high: var(64px);
+  }
+}
+
+/* button */
+.btn-box {
+  display: flex;
+  gap: var(--radius-xs);
+  justify-content: center;
+}
+
+.btn-box .btn {
+  padding: 0 var(--spacing-s);
+  border-radius: var(--radius-xs);
+  background-color: var(--gray-600);
+  overflow: hidden;
+  transition: var(--spring-transition);
+  min-width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.btn-box .btn-name {
+  font-size: var(--font-size-s);
+  font-weight: var(--bold);
+  color: var(--white);
+  position: relative;
+  transition: var(--spring-transition);
+  transform-origin: 100% 0%;
+  display: flex;
+  height: var(--btn-s-high);
+  align-items: center;
+}
+
+.btn-box .btn-name:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  height: var(--btn-s-high);
+  align-items: center;
+}
+
+.btn-box .btn:hover {
+  background: var(--gray-400);
+}
+
+.btn-box .btn:hover span {
+  transform: translateY(-100%);
+}
+
+.btn-box .btn:active {
+  background: var(--gray-400);
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+.btn-box .btn:active span {
+  transform: translateY(-100%);
+}
+
+
+.btn-box .btn.btn-success {}
+
+.btn-box .btn.btn-success:hover {
+  background: var(--success);
+}
+
+.btn-box .btn.btn-default {
+  background: var(--gray-400);
+}
+
+.btn-box .btn.btn-default:hover {
+  background: var(--gray-600);
+}
+
+.btn-box .btn.btn-danger {
+  background: var(--gray-400);
+}
+
+.btn-box .btn.btn-danger:hover {
+  background: var(--danger);
+}
+
+.btn-box .btn.btn-warning {
+  background: var(--gray-400);
+}
+
+.btn-box .btn.btn-warning:hover {
+  background: var(--warning);
+}
+
+.btn-box.btn-right {}
+
+.btn-box.btn-size-l {}
+
+.btn-box.btn-size-l .btn {
+  padding: 0 var(--spacing-s);
+  border-radius: var(--radius-s);
+  min-width: 96px;
+}
+
+.btn-box.btn-size-l .btn-name {
+  height: var(--btn-l-high);
+  font-size: var(--font-size-m);
+}
+
+.btn-box.btn-size-l .btn-name:before {
+  height: var(--btn-l-high);
+}
