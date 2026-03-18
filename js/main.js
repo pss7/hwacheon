@@ -1,11 +1,11 @@
-
 $(function () {
 
   //메인 슬라이드 영역
-  $('#visualWrap .slickBox .slick').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+  $('#visualWrap .slickBox .slick').on('beforeChange', function () {
     $('#visualWrap .visualBox').removeClass('active');
   });
-  $('#visualWrap .slickBox .slick').on('init afterChange', function (event, slick, currentSlide, nextSlide) {
+
+  $('#visualWrap .slickBox .slick').on('init afterChange', function () {
     $('#visualWrap .visualBox').addClass('active');
   });
 
@@ -56,9 +56,7 @@ $(function () {
     });
   }
 
-  $(window).on('load scroll resize', function () {
-    scrollActive();
-  });
+  $(window).on('load scroll resize', scrollActive);
 
   //화천군의회 소개 영역 - 슬라이드
   $('#introduceWrap .slider-for').slick({
@@ -83,8 +81,6 @@ $(function () {
   $('#introduceWrap .btnBox .btn').on('click', function () {
     const idx = $(this).index();
     $('#introduceWrap .slider-for').slick('slickGoTo', idx);
-    $('#introduceWrap .btnBox .btn').removeClass('active');
-    $(this).addClass('active');
   });
 
   $('#introduceWrap .slider-for').on('afterChange', function (event, slick, currentSlide) {
@@ -92,20 +88,31 @@ $(function () {
     $('#introduceWrap .btnBox .btn').eq(currentSlide).addClass('active');
   });
 
+  $('#introduceWrap .btnBox .btn').first().addClass('active');
+
   //화천군의회 소개 영역 - 탭
-  $('#introduceWrap .noticeContentBox').hide();
-  $('#introduceWrap .noticeContentBox').first().show();
+  $('#introduceWrap .noticeContentBox').hide().attr('aria-hidden', 'true');
+  $('#introduceWrap .noticeContentBox').first().show().attr('aria-hidden', 'false');
 
   $('#introduceWrap .tabBtn').click(function () {
-
-    $('#introduceWrap .tabBtn').removeClass('active');
-    $(this).addClass('active');
-
     let idx = $(this).index();
 
-    $('#introduceWrap .noticeContentBox').hide();
-    $('#introduceWrap .noticeContentBox').eq(idx).fadeIn(600);
+    $('#introduceWrap .tabBtn')
+      .removeClass('active')
+      .attr('aria-selected', 'false');
 
+    $(this)
+      .addClass('active')
+      .attr('aria-selected', 'true');
+
+    $('#introduceWrap .noticeContentBox')
+      .hide()
+      .attr('aria-hidden', 'true');
+
+    $('#introduceWrap .noticeContentBox')
+      .eq(idx)
+      .fadeIn(600)
+      .attr('aria-hidden', 'false');
   });
 
 });
