@@ -243,7 +243,7 @@
 #introduceWrap .introduceLeftBox .introduceLayoutBox{display: flex;}
 #introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn.active .name{color: var(--primary-700); font-weight: var(--bold);}
 #introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn.active .imgBox{background-color: var(--primary-50); border: 2px solid var(--primary-500);}
-#introduceWrap .introduceLeftBox .introduceSlideBox{position: relative; padding: var(--spacing-m); width: 348px; height: 577px; border-radius: var(--radius-m); background: url(../images/main/bg02.png)no-repeat center / cover; }
+#introduceWrap .introduceLeftBox .introduceSlideBox{position: relative; padding: var(--spacing-m); width: 348px; height: 577px; border-radius: var(--radius-m); background: url(../images/main/bg.jpg)no-repeat center / cover; }
 #introduceWrap .introduceLeftBox .box{display: block; width: 284px; margin: 0 auto var(--spacing-s); border-radius: var(--radius-l); background-color: var(--white);}
 #introduceWrap .introduceLeftBox .textBox{padding: var(--spacing-ms);}
 #introduceWrap .introduceLeftBox .textBox .nameBox{margin-bottom: var(--spacing-ms); display: flex; align-items: center; gap: 0 var(--spacing-2xs);}
