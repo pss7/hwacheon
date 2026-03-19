@@ -289,7 +289,7 @@
   #introduceWrap .introduceSlideBox .imgBox{height: 320px;}
   #introduceWrap .introduceBox{overflow: hidden;}
 
-  #introduceWrap .noticeContentBox{width: 100%;}
+  #introduceWrap .noticeTabContentBox{width: 100%;}
   #introduceWrap .noticeContentBox .noticeContentTopBox{margin-bottom: var(--spacing-lm);}
   #introduceWrap .noticeContentBox .noticeContentListBox{gap: 0 var(--spacing-s);}
   #introduceWrap .noticeContentBox .noticeContentListBox .box h4{margin-bottom: var(--spacing-ms);}
