@@ -59,7 +59,7 @@
 #mobileMenuBox{display: none;}
 
 /* 헤더 영역 - 상단 안내  */
-#krds-masthead{background-color: #EEF2F7; font-size: #1E2124; font-size: 15px;}
+#krds-masthead{position: relative; background-color: #EEF2F7; color: #1E2124; font-size: 15px; z-index: 99999999;}
 #krds-masthead .inner{max-width: 1480px; margin: 0 auto; padding: 0 20px;}
 #krds-masthead .nuri-txt{display: flex; align-items: center; gap: 0 8px; padding: 5px 0; font-size: 15px;}
 #krds-masthead .nuri-txt::before{content: ''; width: 24px; height: 16px; background: url(../images/common/taegeukgi.jpg)no-repeat center;}
@@ -173,7 +173,7 @@
     height: 2px; background: var(--gray-600);}
   .mobileMenuBtnBox .mobileCloseBtn span:nth-child(1){transform: translate(-50%, -50%) rotate(45deg);}
   .mobileMenuBtnBox .mobileCloseBtn span:nth-child(2){transform: translate(-50%, -50%) rotate(-45deg);}
-  #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:80px; right:0; max-width: 500px; width: 100%; height: calc(100vh - 80px); background: var(--white); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0); transition: clip-path 1.3s ease-out, opacity 0.7s ease-out;}
+  #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:113px; right:0; max-width: 500px; width: 100%; height: calc(100vh - 113px); background: var(--white); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0); transition: clip-path 1.3s ease-out, opacity 0.7s ease-out;}
   #mobileMenuBox.active{opacity: 1; clip-path: circle(180% at 100% 0);}
 
   /* 헤더 영역 - 모바일메뉴(상단) */
@@ -228,7 +228,7 @@
   #headerWrap .headerBottomBox .logoBox h1 a img.m{width: 121px;}
   #headerWrap .mobileMenuBox{width: 40px; height: 40px;}
   
-  #mobileMenuBox{top: 64px; height: calc(100vh - 64px);}
+  #mobileMenuBox{top: 97px; height: calc(100vh - 97px);}
 
 }
 
@@ -242,7 +242,7 @@
   #mobileMenuBox .mobileDepth01 li h2 a.active{border-radius: var(--radius-xs);}
   #mobileMenuBox .mobileModalBox{max-width: none;}
   #mobileMenuBox .mobileTopBox .mobileModalBtn{max-width: 243px; margin: 0 auto;}
-  #mobileMenuBox{border-radius: 0;}
+  #mobileMenuBox{top: 94px; height: calc(100vh - 94px); border-radius: 0;}
 
 }
 
