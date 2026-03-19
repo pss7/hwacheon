@@ -77,6 +77,6 @@
     font-style: normal;
     font-weight: 400;
     src: url(fonts/RiaSans-Regular.woff2) format('font-woff2'),
-        url(fonts/RiaSans-BolRegulard.woff) format('woff'),
+        url(fonts/RiaSans-Regular.woff) format('woff'),
         url(fonts/RiaSans-Regular.otf) format('opentype');
 }

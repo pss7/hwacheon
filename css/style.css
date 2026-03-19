@@ -58,6 +58,19 @@
 /* 헤더 영역 */
 #mobileMenuBox{display: none;}
 
+/* 헤더 영역 - 상단 안내  */
+#krds-masthead{background-color: #EEF2F7; font-size: #1E2124; font-size: 15px;}
+#krds-masthead .inner{max-width: 1480px; margin: 0 auto; padding: 0 20px;}
+#krds-masthead .nuri-txt{display: flex; align-items: center; gap: 0 8px; padding: 5px 0; font-size: 15px;}
+#krds-masthead .nuri-txt::before{content: ''; width: 24px; height: 16px; background: url(../images/common/taegeukgi.jpg)no-repeat center;}
+
+@media (max-width: 480px){
+
+  #krds-masthead .nuri-txt{font-size: 12px;}
+
+}
+
+
 /* 헤더 영역 - sns  */
 #headerWrap .headerCenterWrap{position: relative; z-index: 9999999;}
 #headerWrap .headerCenterBox{display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-m); padding: var(--spacing-xs) 0;}
@@ -105,7 +118,6 @@
 
 
 #headerWrap .subMenuBox{ 
-  display: none!important;
   position: absolute;
   top: 47px;
   left: 0;
@@ -116,12 +128,13 @@
   padding-bottom: var(--spacing-lm);
   overflow: hidden;
 
-  /* 제거 */
-  /* border: 1px solid var(--gray-600); */
-  /* border-radius: var(--radius-l); */
-  /* box-shadow: 0 8px 40px rgba(30, 43, 55, 0.1); */
-  /* background-color: var(--gray-50); */
-border-radius: var(--radius-l);
+
+  border: 1px solid var(--gray-600); 
+  border-radius: var(--radius-l); 
+  box-shadow: 0 8px 40px rgba(30, 43, 55, 0.1); 
+  background-color: var(--gray-50); 
+  border-radius: var(--radius-l);
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -140,9 +153,6 @@ border-radius: var(--radius-l);
   opacity: 0;
   overflow: hidden;
 
-
-  /* 
-  box-shadow: 0 8px 40px rgba(30, 43, 55, 0.1); */
   border-radius: var(--radius-l);
   background-color: var(--gray-50);
 
