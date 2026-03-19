@@ -70,7 +70,6 @@
 
 }
 
-
 /* 헤더 영역 - sns  */
 #headerWrap .headerCenterWrap{position: relative; z-index: 9999999;}
 #headerWrap .headerCenterBox{display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-m); padding: var(--spacing-xs) 0;}
@@ -96,7 +95,7 @@
 #headerWrap .headerBottomBox .menuBox{display: flex; justify-content: space-between;}
 #headerWrap .headerBottomBox nav{flex: 1;}
 #headerWrap .headerBottomBox nav .depth01{display: flex; box-shadow: 0 8px 40px rgba(30, 43, 55, 0.1); border-radius: var(--radius-l);}
-#headerWrap .headerBottomBox nav .depth01 > li{flex: 1;}
+#headerWrap .headerBottomBox nav .depth01 > li{ flex: 1;}
 #headerWrap .headerBottomBox nav .depth01 li h2 a{display: flex; align-items: center; justify-content: center; height: 48px; color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-l); transition: color .3s; background-color: var(--white);} 
 #headerWrap .headerBottomBox nav .depth01 li:first-child h2 a{border-radius: var(--radius-l);} 
 #headerWrap .headerBottomBox nav .depth01 li:last-child h2 a{border-radius: var(--radius-l);}
@@ -111,67 +110,9 @@
 /* 헤더 영역 - 서브메뉴 */
 #headerWrap .headerBottomBox nav:nth-of-type(1) .depth01 li:first-child .subMenuBox{border-radius: 0 var(--radius-l) var(--radius-l) var(--radius-l);}
 #headerWrap .headerBottomBox nav:nth-of-type(2) .depth01 li:last-child .subMenuBox{border-radius: var(--radius-l) 0 var(--radius-l) var(--radius-l);}
-
-
-
-
-
-
-#headerWrap .subMenuBox{ 
-  position: absolute;
-  top: 47px;
-  left: 0;
-  right: 0;
-  z-index: 10;
-
-  display: flex;
-  padding-bottom: var(--spacing-lm);
-  overflow: hidden;
-
-
-  border: 1px solid var(--gray-600); 
-  border-radius: var(--radius-l); 
-  box-shadow: 0 8px 40px rgba(30, 43, 55, 0.1); 
-  background-color: var(--gray-50); 
-  border-radius: var(--radius-l);
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(6px);
-  transition: opacity .25s ease, transform .3s ease;
-} 
-
-#headerWrap .subMenuMotionBg {
-  position: absolute;
-  top: 47px;
-  left: 0;
-  right: 0;
-  z-index: 5;
-
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-
-  border-radius: var(--radius-l);
-  background-color: var(--gray-50);
-
-  transition: height .3s ease, opacity .25s ease;
-}
-
-#headerWrap .subMenuBox.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-
-
-
-
-
-
+#headerWrap .subMenuBox{display: none; position: absolute; top: 47px; left: 0; right: 0;
+  z-index: 10;padding-bottom: var(--spacing-lm); overflow: hidden; border: 1px solid var(--gray-600); border-radius: var(--radius-l); box-shadow: 0 8px 40px rgba(30, 43, 55, 0.1); background-color: var(--gray-50);}
+#headerWrap .subMenuBox.active {display: flex;}
 #headerWrap .subMenuBox .leftBox{display: flex; flex-direction: column; padding: var(--spacing-ms); flex-shrink: 0; width: 200px; border-right: 2px solid var(--gray-100); background-color: var(--white); }
 #headerWrap .subMenuBox .leftBox .titlBox h2{margin-bottom: var(--spacing-xs); color: var(--primary-900); font-size: var(--font-size-xxxl); font-family: 'RiaSans';}
 #headerWrap .subMenuBox .leftBox .titlBox p{color: var(--gray-400); font-size: var(--font-size-s);}
