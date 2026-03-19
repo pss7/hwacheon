@@ -242,7 +242,7 @@
   #mobileMenuBox .mobileDepth01 li h2 a.active{border-radius: var(--radius-xs);}
   #mobileMenuBox .mobileModalBox{max-width: none;}
   #mobileMenuBox .mobileTopBox .mobileModalBtn{max-width: 243px; margin: 0 auto;}
-  #mobileMenuBox{top: 94px; height: calc(100vh - 94px); border-radius: 0;}
+  #mobileMenuBox{top: 93px; height: calc(100vh - 93px); border-radius: 0;}
 
 }
 
