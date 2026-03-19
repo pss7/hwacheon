@@ -254,7 +254,7 @@
 }
 
 /* 푸터 영역 */
-#footerWrap{padding: var(--spacing-2xl) 0; border: 2px solid #DFDACF; border-radius: 80px 80px 0 0; border-width: 1px 0 0 0;}
+#footerWrap{padding: var(--spacing-2xl) 0; border: 2px solid #DFDACF; border-radius: 80px 80px 0 0; border-width: 2px 0 0 0; background-color: var(--gray-50);}
 .footerBox{display: flex; justify-content: space-between; gap:0;}
 .footerBox .footerLeftBox{display: flex;}
 
@@ -267,7 +267,7 @@
 #footerWrap .footerInfoBox .phoneBox dl{display: flex; align-items: flex-start; gap: 0 var(--spacing-xs);}
 #footerWrap .footerInfoBox .phoneBox dl dt{font-weight: 800; font-family: 'RiaSans'; color: var(--gray-900); font-size: var(--font-size-s);}
 #footerWrap .footerInfoBox .phoneBox dl dd{font-weight: var(--medium); color: var(--gray-600);}
-#footerWrap .footerInfoBox .timeBox{margin-bottom: var(--spacing-lm); width: 175px; padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-xs); background-color:  var(--gray-100);}
+#footerWrap .footerInfoBox .timeBox{margin-bottom: var(--spacing-lm); width: 175px; padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-xs); background-color:  var(--gray-100); background-color: var(--white);}
 #footerWrap .footerInfoBox .timeBox dl{display: flex; align-items: center; gap: 0 var(--spacing-xs)}
 #footerWrap .footerInfoBox .timeBox dl dt{width: 56px; flex-shrink: 0; color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
 #footerWrap .footerInfoBox .timeBox dl dd{color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
