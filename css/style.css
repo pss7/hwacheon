@@ -173,7 +173,7 @@
     height: 2px; background: var(--gray-600);}
   .mobileMenuBtnBox .mobileCloseBtn span:nth-child(1){transform: translate(-50%, -50%) rotate(45deg);}
   .mobileMenuBtnBox .mobileCloseBtn span:nth-child(2){transform: translate(-50%, -50%) rotate(-45deg);}
-  #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:113px; right:0; max-width: 500px; width: 100%; min-height: calc(100vh - 113px); background: var(--white); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0); transition: clip-path 1.3s ease-out, opacity 0.7s ease-out;}
+  #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:113px; right:0; max-width: 500px; width: 100%; height: calc(100vh - 113px); background: var(--white); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0); transition: clip-path 1.3s ease-out, opacity 0.7s ease-out; overflow-y: auto;}
   #mobileMenuBox.active{opacity: 1; clip-path: circle(180% at 100% 0);}
 
   /* 헤더 영역 - 모바일메뉴(상단) */
@@ -228,7 +228,7 @@
   #headerWrap .headerBottomBox .logoBox h1 a img.m{width: 121px;}
   #headerWrap .mobileMenuBox{width: 40px; height: 40px;}
   
-  #mobileMenuBox{top: 97px; min-height: calc(100vh - 97px);}
+  #mobileMenuBox{top: 97px; height: calc(100vh - 97px);}
 
 }
 
@@ -242,7 +242,7 @@
   #mobileMenuBox .mobileDepth01 li h2 a.active{border-radius: var(--radius-xs);}
   #mobileMenuBox .mobileModalBox{max-width: none;}
   #mobileMenuBox .mobileTopBox .mobileModalBtn{max-width: 243px; margin: 0 auto;}
-  #mobileMenuBox{top: 93px; min-height: calc(100vh - 93px); border-radius: 0;}
+  #mobileMenuBox{top: 93px; height: calc(100vh - 93px); border-radius: 0;}
 
 }
 
