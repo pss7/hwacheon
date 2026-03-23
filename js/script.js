@@ -54,8 +54,6 @@ $(function () {
     }, 10);
   });
 
-
-  //헤더 - 모바일메뉴
   //헤더 - 모바일메뉴
   $('#headerWrap .mobileCloseBtn').hide();
 
