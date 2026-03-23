@@ -1,1 +1,30 @@
 @charset "UTF-8";
+
+/* 공통 */
+html, 
+body{height: 100%;}
+#wrap{height: 100%; display: flex; flex-direction: column;}
+main{flex: 1;}
+
+/* 서브 상단 비주얼 영역 */
+#subVisualWrap{display: flex; align-items: center; justify-content: center; position: relative; height: 356px;}
+#subVisualWrap .visualBox{ position: absolute; inset: 0 20px; border-radius: var(--radius-l); overflow: hidden;}
+#subVisualWrap .visualBox img{height: 100%; object-fit: cover; transform: scale(1.3);}
+#subVisualWrap.active .visualBox img{transform: scale(1); transition: all 7s;}
+#subVisualWrap .titleBox{position: relative; padding: 0 var(--spacing-ms);}
+#subVisualWrap .titleBox h3 span{display: block; font-weight: var(--semi-bold); font-size: var(--font-size-xxxl); color: var(--white); letter-spacing: 3px; text-align: center;}
+
+/* 브레드크럼 */
+#subVisualWrap .breadcrumbBox{background-color: var(--white); position: absolute; left:20px; bottom: 0; border-radius: 0 var(--radius-l) 0 0;}
+#subVisualWrap .breadcrumbBox .breadcrumbList{padding: 0 var(--spacing-lm) 0 var(--spacing-ms); height: 64px; display: flex; align-items: center; gap: 0 0;}
+#subVisualWrap .breadcrumbBox .breadcrumbList li{display: flex; align-items: center; font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-400);} 
+#subVisualWrap .breadcrumbBox .breadcrumbList li::after{content: ''; margin: 0 var(--spacing-xs); width: 5px; height: 2px; background-color: var(--gray-400);}
+#subVisualWrap .breadcrumbBox .breadcrumbList li:last-child:after{display: none;}
+#subVisualWrap .breadcrumbBox .breadcrumbList li:last-child{color: var(--gray-900);}
+#subVisualWrap .breadcrumbBox .breadcrumbList li .home{display: block;}
+#subVisualWrap .breadcrumbBox .breadcrumbList li .home img{width: 24px;}
+
+#contentWrap .utilBox{display: flex; align-items: center;}
+#contentWrap .utilBox button{width: 40px; height: 40px;}
+#contentWrap .utilBox .shareBtn{background: url(../images/sub/share_icon.svg)no-repeat center;}
+#contentWrap .utilBox .printBtn{background: url(../images/sub/print_icon.svg)no-repeat center;} 

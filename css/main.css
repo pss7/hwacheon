@@ -259,7 +259,9 @@
 #introduceWrap .introduceSlideBox .imgBox img{height: 100%; object-fit: cover;}
 
 /* 화천군의회소개영역 - 의회소식 */
-#introduceWrap .layoutBox{display: flex; justify-content: space-between; gap: 0 117px;}
+#introduceWrap .layoutBox{position: relative; display: flex; justify-content: space-between; gap: 0 117px;}
+#introduceWrap .layoutBox::before {content: ''; position: absolute; left: 50%; bottom: 0; width: 100%; height: 284px;
+  transform: translateX(-50%); border-radius: 50%; background: var(--secondary-100); opacity: .7; filter: blur(80px);  z-index: -1;}
 #introduceWrap .noticeBox .category{display: inline-block; margin-bottom: var(--radius-xs); padding: var(--radius-2xs) var(--radius-xs); border: 1px solid var(--primary-200); border-radius: 0 0 0 var(--radius-xs); background-color: var(--primary-50); color: var(--primary-700); font-weight: var(--semi-bold); font-size: var(--font-size-xs);}
 #introduceWrap .noticeBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-3xl);}
 #introduceWrap .noticeBox .noticeTitleBox{width: 135px; flex-shrink: 0;}
@@ -284,11 +286,10 @@
 
   #introduceWrap .introduceLeftBox .introduceListBox .btnBox{display: none;}
   #introduceWrap .layoutBox{flex-direction: column; gap: var(--spacing-2xl) 0;}
-  #introduceWrap .introduceLeftBox .introduceSlideBox{padding: var(--spacing-m) 0 var(--spacing-m) var(--spacing-m); width: 100%; height: auto;}
+  #introduceWrap .introduceLeftBox .introduceSlideBox{padding: var(--spacing-m) 0 var(--spacing-m) var(--spacing-m); width: calc(100% - 222px); height: auto;}
   #introduceWrap .introduceLeftBox .slide{ margin-right: var(--spacing-s);}
   #introduceWrap .introduceLeftBox .box{width: 240px;}
   #introduceWrap .introduceSlideBox .imgBox{height: 320px;}
-  #introduceWrap .introduceBox{overflow: hidden;}
 
   #introduceWrap .noticeTabContentBox{width: 100%;}
   #introduceWrap .noticeContentBox .noticeContentTopBox{margin-bottom: var(--spacing-lm);}
@@ -306,6 +307,7 @@
   #introduceWrap .introduceLeftBox .tit{margin: 0;}
   #introduceWrap .introduceLeftBox .tit br{display: none;}
   #introduceWrap .introduceLeftBox .textBox .nameBox .name{font-size: var(--H6);}
+  #introduceWrap .introduceLeftBox .introduceSlideBox{width: 100%;}
   
   #introduceWrap .noticeBox{gap: 0 var(--spacing-2xl);}
   #introduceWrap .noticeBox .noticeTitleBox .tit{margin-bottom: var(--spacing-s);}
@@ -333,6 +335,11 @@
   #introduceWrap .noticeBox .noticeTitleBox .tabbox .tabBtn{margin: 0;}
   #introduceWrap .noticeBox .noticeTitleBox .tabbox{display: flex; gap: 0 var(--spacing-xs);}
 
+  #introduceWrap .noticeBox{position: relative;}
+  #introduceWrap .noticeBox::before{content: ''; position: absolute; left: 50%; top: 100px; width: 100%; height: 200px;
+  transform: translateX(-50%); border-radius: 50%; background: var(--secondary-100); opacity: .7; filter: blur(80px);  z-index: -1;}
+  #introduceWrap .layoutBox::before{display: none;}
+  
 }
 
 @media (max-width: 576px){

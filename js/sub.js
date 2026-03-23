@@ -3,8 +3,7 @@ $(function () {
 
   //상단
   $(window).load(function () {
-    $('.subVisualBox .visualBox').addClass('active');
-    // $('.visionBox .topImgBox').addClass('active');
+    $('.subVisualWrap').addClass('active');
   });
 
   //로그인 탭
