@@ -1666,10 +1666,12 @@
 
                 <div class="titleBox">
                     <h3>
-                        <span>군민과 함께하는 의정</span>
-                        <!-- <span>행복한 군민</span>
-                        <span>공정과 상식으로 만들어가는</span>
-                        <span>새로운 화천군의회</span> -->
+                        <div class="rollingText">
+                            <span>군민과 함께하는 의정</span>
+                            <span>행복한 군민</span>
+                            <span>공정과 상식으로 만들어가는</span>
+                            <span>새로운 화천군의회</span>
+                        </div>
                     </h3>
                 </div>
                 <!-- //titleBox -->
@@ -1683,13 +1685,13 @@
                             </a>
                         </li>
                         <li>
-                            의회안내
+                            <span>의회안내</span>
+                        </li>
+                        <li><span>
+                                의장실</span>
                         </li>
                         <li>
-                            의장실
-                        </li>
-                        <li>
-                            의장 인사말
+                            <span>의장 인사말</span>
                         </li>
                     </ul>
                     <!-- //breadcrumbList -->
@@ -1702,43 +1704,190 @@
 
 
             <div id="contentWrap">
+
+                <!-- 왼쪽 메뉴 영역 -->
                 <aside>
                     <ul class="depth01">
                         <li>
                             <h2>
-                                <a href="#"></a>
+                                <a href="#" class="active">의장실</a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                <a href="#">의회연혁</a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                <a href="#">의회구성</a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                <a href="#">청사안내</a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                <a href="#">의회기능</a>
                             </h2>
                         </li>
                     </ul>
+                    <!-- //depth01 -->
+
                 </aside>
+                <!-- aside -->
 
-                <div class="contentBox">
+                <!-- 오른쪽 콘텐츠 영역 -->
+                <div class="contentRightBox">
 
-                    <div class="titleBox">
-                        <h3>
-                            의장인사말
-                        </h3>
+                    <!-- 콘텐츠 상단 영역 -->
+                    <div class="contentTopBox">
+                        <div class="container">
+                            <div class="layoutBox">
+
+                                <!-- 상단 제목, 서브메뉴 영역-->
+                                <div class="titleBox">
+                                    <h3>
+                                        의장인사말
+                                    </h3>
+                                    <div class="subMenuBox">
+                                        <button class="subMenuBtn" aria-label="서브메뉴 열기"></button>
+                                        <ul class="subMenuList">
+                                            <li>
+                                                <h4>
+                                                    <a href="#" class="active">서브메뉴서브메뉴서브메뉴</a>
+                                                </h4>
+                                            </li>
+                                            <li>
+                                                <h4>
+                                                    <a href="#">서브메뉴</a>
+                                                </h4>
+                                            </li>
+                                            <li>
+                                                <h4>
+                                                    <a href="#">서브메뉴</a>
+                                                </h4>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- //titleBox -->
+
+                                <!-- 공유, 인쇄 영역 -->
+                                <div class="utilBox">
+                                    <button type="button" class="shareBtn" aria-label="공유하기">
+                                    </button>
+                                    <button type="button" class="printBtn" aria-label="인쇄하기">
+                                    </button>
+                                </div>
+                                <!-- //utilBox -->
+
+                            </div>
+                            <!-- //layoutBox -->
+
+                        </div>
+                        <!-- //container -->
+
                     </div>
-                    <!-- //titleBox -->
+                    <!-- //contentTopBox -->
 
-                    <div class="utilBox">
-                        <button type="button" class="shareBtn" aria-label="공유하기">
-                        </button>
-                        <button type="button" class="printBtn" aria-label="인쇄하기">
-                        </button>
+                    <!-- 콘텐츠 영역 -->
+                    <div class="contentBox">
+
+                        <!-- 인사말 콘텐츠 -->
+                        <div class="greetingBox">
+                            <div class="container">
+
+                                <p class="greetingTopText">
+                                    화천군의회 홈페이지를 방문해 주신 <br>
+                                    군민 여러분 진심으로 환영합니다.
+                                </p>
+                                <!-- //topText -->
+
+                                <div class="greetingImgBox">
+                                    <div class="imgBox">
+                                        <img src="../images/sub/greeting/chairman_img.png" alt="제9대 화천군의회 의장 류희상">
+                                    </div>
+                                    <div class="chairmanInfoBox">
+                                        <div class="layoutBox">
+                                            <img src="../images/sub/greeting/badge_icon.svg" alt="의회">
+                                            <span>
+                                                제9대<br>
+                                                화천군의회
+                                            </span>
+                                        </div>
+                                        <p>
+                                            의장 <br>
+                                            류희상입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- //imgBox -->
+
+                                <div class="greetingInfoBox">
+                                    <div class="leftBox">
+                                        <span>since 1991</span>
+                                        <p>
+                                            우리 의회는 1991년 4월15일 초대의회를 개원한 이후 <br>
+                                            지역발전과 군민의 삶의 질 향상을 위해 의정활동을 펼쳐왔습니다.
+                                        </p>
+                                    </div>
+                                    <!-- //leftBox -->
+
+                                    <div class="rightBox">
+
+                                        <strong>
+                                            제9대 후반기 <br>
+                                            화천군의회에서는 <br>
+                                        </strong>
+
+                                        <div class="strongBox">
+                                            <span>
+                                                군민과 함꼐하는 의정
+                                            </span>
+                                            <span>
+                                                행복한 군민
+                                            </span>
+                                            <span>
+                                                공정과 상식
+                                            </span>
+                                        </div>
+
+                                        <p>
+                                            <em>
+                                                3가지 목표로 새로운 화천군의회를 만들기 위해 <br>
+                                                모든 군민들께 더욱 다가가고, 소통하는 의정활동을 펼쳐 나가겠습니다.
+                                            </em>
+                                            <em>
+                                                앞으로도 화천군의회에 지속적인 관심과 격려를 부탁드리며, <br>
+                                                여러분의 앞날에 희망과 행복이 가득하시기를 기원합니다.
+                                            </em>
+                                            <span>
+                                                감사합니다.
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <!-- //rightBox -->
+
+                                </div>
+                                <!-- //greetingInfoBox -->
+
+                            </div>
+                            <!-- //container -->
+
+                        </div>
+                        <!-- //greetingBox -->
+
                     </div>
-                    <!-- //utilBox -->
+                    <!-- //contentBox -->
 
                 </div>
                 <!-- //contentBox -->
 
             </div>
             <!-- //contentWrap -->
-
-
-
-
-
 
         </main>
         <!-- //main -->
