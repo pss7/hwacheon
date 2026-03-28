@@ -1,4 +1,3 @@
-
 $(function () {
 
   //상단 비주얼
@@ -26,12 +25,16 @@ $(function () {
     e.preventDefault();
     e.stopPropagation();
 
-    let $box = $(this).closest('#contentWrap .contentTopBox .subMenuBox');
-    $('#contentWrap .contentTopBox .subMenuBox').not($box).removeClass('active');
-    $box.toggleClass('active');
+    if ($(this).parents('.subMenuBox').hasClass('active')) {
+      $(this).attr('aria-expanded', 'false');
+      $(this).parents('.subMenuBox').removeClass('active');
+    } else {
+      $(this).attr('aria-expanded', 'true');
+      $(this).parents('.subMenuBox').addClass('active');
+    }
   });
 
-  //링크 복사 및 프린트
+  //링크 복사 
   $('#contentWrap .utilBox .shareBtn').click(function (e) {
     e.preventDefault();
 
@@ -46,11 +49,10 @@ $(function () {
       });
   });
 
+  //프린트
   $('#contentWrap .utilBox .printerBtn').click(function (e) {
     e.preventDefault();
     window.print();
   });
-
-
 
 });

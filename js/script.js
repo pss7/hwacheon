@@ -56,7 +56,7 @@ $(function () {
   $('#headerWrap .mobileOpenBtn').click(function () {
     $(this).hide().attr('aria-expanded', 'true');
     $('#headerWrap .mobileCloseBtn').fadeIn();
-    $('#mobileMenuBox').prop('hidden', false).addClass('active');
+    $('#mobileMenuBox').addClass('active');
     $('.mobilebg').addClass('active');
     $('body').addClass('mobileNonScroll');
   });
@@ -64,7 +64,7 @@ $(function () {
   $('#headerWrap .mobileCloseBtn').click(function () {
     $(this).hide();
     $('#headerWrap .mobileOpenBtn').fadeIn().attr('aria-expanded', 'false').focus();
-    $('#mobileMenuBox').prop('hidden', true).removeClass('active');
+    $('#mobileMenuBox').removeClass('active');
     $('.mobilebg').removeClass('active');
     $('body').removeClass('mobileNonScroll');
   });
@@ -84,17 +84,17 @@ $(function () {
   });
 
   $('#mobileMenuBox .mobileDepth02 li h3 a').click(function () {
-    if (!$(this).closest('li').children('.mobileDepth03').length) return true;
+    if (!$(this).parents('li').children('.mobileDepth03').length) return true;
 
-    if ($(this).closest('li').children('h3').hasClass('active')) {
-      $(this).closest('li').children('.mobileDepth03').slideUp();
-      $(this).closest('li').children('h3').removeClass('active');
+    if ($(this).parents('li').children('h3').hasClass('active')) {
+      $(this).parents('li').children('.mobileDepth03').slideUp();
+      $(this).parents('li').children('h3').removeClass('active');
     } else {
       $('#mobileMenuBox .mobileDepth02 li').children('.mobileDepth03').slideUp();
       $('#mobileMenuBox .mobileDepth02 li h3').removeClass('active');
 
-      $(this).closest('li').children('.mobileDepth03').slideDown();
-      $(this).closest('li').children('h3').addClass('active');
+      $(this).parents('li').children('.mobileDepth03').slideDown();
+      $(this).parents('li').children('h3').addClass('active');
     }
 
     return false;
@@ -102,16 +102,13 @@ $(function () {
 
   /* 헤더 - 모달 */
   $('#headerWrap .modalBtn').click(function () {
-    $('#' + $(this).attr('aria-controls')).prop('hidden', false);
     $(this).addClass('active');
+    $(this).next('.modalBox').addClass('active');
   });
 
   $('#headerWrap .closeBtn').click(function () {
-    $(this).closest('.modalBox').prop('hidden', true);
-
-    $('#headerWrap .modalBtn[aria-controls="' + $(this).closest('.modalBox').attr('id') + '"]')
-      .removeClass('active')
-      .focus();
+    $(this).parents('.modalBox').removeClass('active');
+    $(this).parents('.modalBox').prev('.modalBtn').focus();
   });
 
   /* 헤더 - 화면 축소, 확대, 초기화 */
@@ -120,8 +117,8 @@ $(function () {
       scale = Math.min(scale + step, maxScale);
 
       $('#wrap.main').css({
-        'transform': 'scale(' + scale + ')',
-        'transform-origin': 'top center'
+        transform: 'scale(' + scale + ')',
+        transformOrigin: 'top center'
       });
 
       $('.zoomTooltip').text(Math.round(scale * 100) + '%');
@@ -133,8 +130,8 @@ $(function () {
       scale = Math.max(scale - step, minScale);
 
       $('#wrap.main').css({
-        'transform': 'scale(' + scale + ')',
-        'transform-origin': 'top center'
+        transform: 'scale(' + scale + ')',
+        transformOrigin: 'top center'
       });
 
       $('.zoomTooltip').text(Math.round(scale * 100) + '%');
@@ -145,8 +142,8 @@ $(function () {
     scale = 1;
 
     $('#wrap.main').css({
-      'transform': 'scale(' + scale + ')',
-      'transform-origin': 'top center'
+      transform: 'scale(' + scale + ')',
+      transformOrigin: 'top center'
     });
 
     $('.zoomTooltip').text(Math.round(scale * 100) + '%');
@@ -161,28 +158,23 @@ $(function () {
   });
 
   $('#wrap.main').css({
-    'transform': 'scale(' + scale + ')',
-    'transform-origin': 'top center'
+    transform: 'scale(' + scale + ')',
+    transformOrigin: 'top center'
   });
 
   $('.zoomTooltip').text(Math.round(scale * 100) + '%');
 
   /* 푸터 */
   $('#footerWrap .selectBtn').click(function () {
-    let isActive = $(this).hasClass('active');
+    if ($(this).parents('.box').hasClass('active')) {
+      $(this).removeClass('active').attr('aria-expanded', 'false');
+      $(this).parents('.box').removeClass('active');
+    } else {
+      $('#footerWrap .selectBtn').removeClass('active').attr('aria-expanded', 'false');
+      $('#footerWrap .selectBox .box').removeClass('active');
 
-    $('#footerWrap .selectBtn')
-      .removeClass('active')
-      .attr('aria-expanded', 'false');
-
-    $('#footerWrap .selectList').prop('hidden', true);
-
-    if (!isActive) {
-      $(this)
-        .addClass('active')
-        .attr('aria-expanded', 'true');
-
-      $('#' + $(this).attr('aria-controls')).prop('hidden', false);
+      $(this).addClass('active').attr('aria-expanded', 'true');
+      $(this).parents('.box').addClass('active');
     }
   });
 
