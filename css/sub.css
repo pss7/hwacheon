@@ -372,19 +372,16 @@ main{flex: 1;}
 .orgchartBox .orgchartTopBox{margin-bottom: var(--spacing-3xl); padding: var(--spacing-3xl) var(--spacing-ms); background-color: var(--gray-50); border-radius: var(--radius-l);}
 .orgchartBox .orgChartList01{max-width: 965px; margin: 0 auto;}
 .orgchartBox .orgChartList01 > li{position: relative;}
-.orgchartBox .orgChartList01 li span{margin: 0 auto; display: flex; align-items: center;justify-content: center; width: 100%; max-width: 240px; min-height: 80px; padding: 12px 16px; border-radius: var(--radius-m); font-weight: var(--bold); font-size: var(--font-size-xl); color: var(--white); text-align: center; word-break: keep-all;}
+.orgchartBox .orgChartList01 li span{margin: 0 auto; display: flex; align-items: center;justify-content: center; width: 100%; max-width: 240px; min-height: 80px; border-radius: var(--radius-m); font-weight: var(--bold); font-size: var(--font-size-xl); color: var(--white); text-align: center; word-break: keep-all;}
 .orgchartBox .orgChartList01 li span br{display: none;}
 .orgchartBox .orgChartList01 li .chairman{ position: relative; margin-bottom: 125px; background-color: var(--primary-900); letter-spacing: 5px;}
 .orgchartBox .orgChartList01 li .chairman::after{ content: ''; position: absolute; left: 50%; bottom: -56px; width: 1px; height: 56px; margin-left: -0.5px; background-color: var(--gray-600);}
 .orgchartBox .orgChartGroup{ position: relative; display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-m);}
-.orgchartBox .orgChartList01 > li::after{content: ''; position: absolute; left: 50%; top: 135px; transform: translateX(-49%);
-    width: 49.3%; height: 1px; background-color: var(--gray-600);}
 .orgchartBox .orgChartList02 > li{position: relative; margin-bottom: 28px;}
 .orgchartBox .orgChartList02 > li:last-child{margin-bottom: 0;}
 .orgchartBox .orgChartList02 > li::before{content: ''; position: absolute;left: 50%;top: -69px; width: 1px; height: 69px;
     background-color: var(--gray-600);}
 .orgchartBox .orgChartList02 > li::after{content: ''; position: absolute; left: 50%; top: 80px; width: 1px; height: 28px; margin-left: 0.5px; background-color: var(--gray-600);}
-.orgchartBox .orgChartList02.type01{width: 100%; max-width: 498px;}
 .orgchartBox .orgChartList02.type01 li span{background-color: var(--primary-500);}
 .orgchartBox .orgChartList02 li .manager{ margin-bottom: 28px;}
 .orgchartBox .orgChartList02.type02{ margin-top: -109px; width: 100%; max-width: 240px;}
@@ -395,9 +392,19 @@ main{flex: 1;}
 .orgchartBox .orgChartList02.type02 > li:nth-child(2)::after{height: 56px;}
 .orgchartBox .orgChartList02.type02 > li:last-child::after{display: none;}
 .orgchartBox .orgChartList03{ position: relative; padding-top: 28px; display: flex; gap: 0 var(--spacing-ms);}
-.orgchartBox .orgChartList03::after{content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 52.2%; height: 1px;  background-color: var(--gray-600);}
-.orgchartBox .orgChartList03 li{position: relative; width: 100%; max-width: 240px;}
+.orgchartBox .orgChartList03::after{content: ''; position: absolute;
+  top: 0; left: calc((100% - var(--spacing-ms)) / 4); width: calc(((100% - var(--spacing-ms)) / 2) + var(--spacing-ms)); height: 1px; background-color: var(--gray-600);}
+.orgchartBox .orgChartList03 li{position: relative; flex: 1 1 0; max-width: 240px;}
 .orgchartBox .orgChartList03 li::after{content: ''; position: absolute; top: -28px; left: 50%; width: 1px; height: 28px; margin-left: -0.5px; background-color: var(--gray-600);}
+.orgchartBox .orgChartGroup{position: relative; display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 0 var(--spacing-m);}
+.orgchartBox .orgChartList01 > li::after{content: ''; position: absolute;
+  top: 135px; left: min(249px, calc((100% - 240px - var(--spacing-m)) / 2));
+  right: 240px; height: 1px; background-color: var(--gray-600);}
+.orgchartBox .orgChartList02.type01{flex: 1 1 auto; min-width: 0;
+  max-width: 498px; width: 100%;}
+.orgchartBox .orgChartList02.type02{flex: 0 0 240px; width: 240px; max-width: 240px;
+  margin-top: -109px;}
 .orgchartBox .staffBox h4::before{content: ''; margin-top: -2px; width: 24px; height: 24px; background: url(../images/sub/staff/badge.svg)no-repeat center;}
 .orgchartBox .staffBox h4{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-m); font-size: var(--font-size-xxxl); font-weight: var(--bold);}
 .orgchartBox .staffBox .staffTable .colPosition{width: 200px;}
@@ -424,19 +431,21 @@ main{flex: 1;}
 
 }
 
-
 @media (max-width: 1024px){
 
   .orgchartBox .orgChartList01 li .chairman{margin-bottom: 125px; max-width: none;}
   .orgchartBox .orgChartList01 li .chairman::after{height: 62px; bottom: -62px;}
 
   .orgchartBox .orgChartList01 li span{min-height: 72px;}
-  .orgchartBox .orgChartList01 > li::after{width: 48.2%; top: 133px;}
+  .orgchartBox .orgChartList01 > li::after{top: 133px;}
   .orgchartBox .orgChartList02 > li::after{top: 72px;}
   .orgchartBox .orgChartList02 > li::before{top: -63px; height: 63px;}
   .orgchartBox .orgChartList02.type02{margin-top: -100px;}
-  
   .orgchartBox .orgChartList03{gap: 0 var(--spacing-xs);}
+  .orgchartBox .orgChartList03::after{
+    left: calc((100% - var(--spacing-xs)) / 4);
+    width: calc(((100% - var(--spacing-xs)) / 2) + var(--spacing-xs));
+  }
   
 }
 
@@ -450,15 +459,14 @@ main{flex: 1;}
   .orgchartBox .orgChartList02.type02 > li:nth-child(2){margin-bottom: var(--spacing-ml);}
   .orgchartBox .orgChartList02 li .manager{margin-bottom: var(--spacing-s);}
   .orgchartBox .orgChartList03{padding-top: var(--spacing-s);}
-  .orgchartBox .orgChartList03::after{width: 52.4%;}
   .orgchartBox .orgChartList02 > li::after{height: 16px;}
   .orgchartBox .orgChartList03 li::after{top: -16px; height: 16px;}
-
   .orgchartBox .orgChartGroup{gap: 0 var(--spacing-lm);}
   .orgchartBox .orgChartList01 li span{max-width: none;}
   .orgchartBox .orgChartList02.type01,
-  .orgchartBox .orgChartList02.type02{max-width: none; width: 50%;}
-  
+  .orgchartBox .orgChartList02.type02{flex: none; max-width: none; width: calc((100% - 40px) / 2);}
+  .orgchartBox .orgChartList01 > li::after{content: ''; position: absolute; top: 134px;
+    left: calc((100% - var(--spacing-lm)) / 4); width: calc(((100% - var(--spacing-lm)) / 4) + var(--spacing-lm)); height: 1px; background-color: var(--gray-600); }
 }
 
 @media (max-width: 576px){
@@ -478,6 +486,10 @@ main{flex: 1;}
   .orgchartBox .staffBox .staffTable tbody th,
   .orgchartBox .staffBox .staffTable tbody td{display: block;}
   .orgchartBox .staffBox .staffTable tbody td{padding: var(--spacing-s) 0 var(--spacing-m);}
-
+  .orgchartBox .orgChartList02.type01,
+  .orgchartBox .orgChartList02.type02{flex: none; max-width: none;
+    width: calc((100% - var(--spacing-ms)) / 2);}
+  .orgchartBox .orgChartList01 > li::after{left: calc((100% - var(--spacing-ms)) / 4);
+    width: calc(((100% - var(--spacing-ms)) / 4) + var(--spacing-ms));}
 
 }
