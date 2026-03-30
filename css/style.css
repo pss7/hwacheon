@@ -305,7 +305,7 @@
 
 @media (max-width: 1024px){
 
-  #footerWrap{border-radius: var(--radius-xl);}
+  #footerWrap{border-radius: var(--radius-xl) var(--radius-xl) 0 0;}
   #footerWrap .footerLogoBox{margin-right: var(--spacing-m);}
   #footerWrap .footerLogoBox h1 img{width: 72px;}
   #footerWrap .footerLinkBox{width: 250px;}

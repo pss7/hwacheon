@@ -5,6 +5,7 @@ html,
 body{height: 100%;}
 #wrap{height: 100%; display: flex; flex-direction: column;}
 main{flex: 1;}
+.blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
 /* 서브 상단 비주얼 영역 */
 #subVisualWrap{display: flex; align-items: center; justify-content: center; position: relative; height: 356px;}
@@ -277,5 +278,206 @@ main{flex: 1;}
 @media (max-width: 360px){
 
     #contentWrap .profileBox .profileImgBox::after{height: 15vh;}
+
+}
+
+/* 연혁 */
+#contentWrap .historyBox .historyLayoutBox{display: flex; gap: 0 var(--spacing-6xl);}
+#contentWrap .historyBox .historyClockBox{position: sticky; top: 30px; width: 254px;
+    height: 241px; background: url(../images/sub/history/clock01.svg) no-repeat center / contain;}
+#contentWrap .historyBox .historyClockBox::after{ content: ''; width: 20px; height: 19px;
+    position: absolute; top: 56%; left: 50%; transform: translate(-50%, -50%); background: url(../images/sub/history/clock04.svg) no-repeat center / contain; z-index: 3;}
+#contentWrap .historyBox .historyClockBox .clockHand{position: absolute; top: 56%; left: 50%;
+    transform: translate(-50%, -50%); z-index: 2;}
+#contentWrap .historyBox .historyClockBox .clockHand.hour{width: 52px; height: 10px;
+   }
+#contentWrap .historyBox .historyClockBox .clockHand.hour .clockIcon01{position: absolute;
+    top: 50%; left: -32px; transform: translateY(-50%); display: block; width: 52px; height: 10px;
+    background: url(../images/sub/history/clock02.svg) no-repeat center / contain;}
+#contentWrap .historyBox .historyClockBox .clockHand.minute{width: 10px; height: 69px;
+   }
+#contentWrap .historyBox .historyClockBox .clockHand.minute .clockIcon02{ position: absolute;
+    top: -38px; left: 50%; transform: translateX(-50%); display: block; width: 10px;
+    height: 69px; background: url(../images/sub/history/clock03.svg) no-repeat center / contain;}
+
+@keyframes hourRotate{
+    from{transform: translate(-50%, -50%) rotate(0deg);}
+    to{transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+@keyframes minuteRotate{
+    from{transform: translate(-50%, -50%) rotate(0deg);}
+    to{transform: translate(-50%, -50%) rotate(360deg);}
+}
+#contentWrap .historyBox .historyClockBox.sticky .clockHand.hour{animation: hourRotate 15s linear infinite;}
+#contentWrap .historyBox .historyClockBox.sticky .clockHand.minute{animation: minuteRotate 3s linear infinite;}
+#contentWrap .historyBox .historyList > li{margin-bottom: var(--spacing-5xl); display: flex; gap: 0 var(--spacing-3xl);}
+#contentWrap .historyBox .historyList > li:last-child{margin-bottom: 0;}
+#contentWrap .historyBox .historyList li h4{margin-bottom: var(--spacing-lm); font-size: var(--H4); color: var(--gray-900);}
+#contentWrap .historyBox .historyList li:nth-child(odd) .historyPeriodBox{background: linear-gradient(to bottom, #F0F9F1, #F7F8F9);}
+#contentWrap .historyBox .historyList li:nth-child(even) .historyPeriodBox{background: linear-gradient(to bottom, #FFF9F4, #F7F8F9);}
+#contentWrap .historyBox .historyList li .historyPeriodBox{padding-top: var(--spacing-ms); width: 72px; flex-shrink: 0; text-align: center; border-radius: var(--radius-xs);}
+#contentWrap .historyBox .historyList li .historyPeriodBox span{color: var(--gray-400); writing-mode: vertical-rl; font-family: 'RiaSans'; font-size: var(--font-size-l);}
+#contentWrap .historyBox .listBox > li{margin-bottom: var(--spacing-lm); display: flex; align-items: flex-start; gap: 0 var(--spacing-ms); border-left: 2px solid var(--gray-200);}
+#contentWrap .historyBox .listBox li:last-child{margin-bottom: 0;}
+#contentWrap .historyBox .listBox li .date{padding-left: var(--spacing-s); display: flex; flex-direction: column; justify-content: center; width: 72px; flex-shrink: 0; line-height: 1.5;}
+#contentWrap .historyBox .listBox li span{display: block; color: var(--gray-900); font-size: var(--font-size-s); font-weight: var(--bold);}
+#contentWrap .historyBox .listBox li .list li,
+#contentWrap .historyBox .listBox li p{color: var(--gray-600); font-size: var(--font-size-xl); word-break: keep-all;}
+#contentWrap .historyBox .listBox li .list li{margin-bottom: var(--spacing-s); }
+#contentWrap .historyBox .listBox li .list li:last-child{margin-bottom: 0;}
+
+@media (max-width: 1280px){
+
+  #contentWrap .historyBox .historyClockBox{width: 186px; height: 176px;}
+  #contentWrap .historyBox .historyClockBox .clockHand.hour .clockIcon01{left: -11px; width: 38px; height: 7px;}
+  #contentWrap .historyBox .historyClockBox::after{width: 15px; height: 14px;}
+  #contentWrap .historyBox .historyClockBox .clockHand.minute .clockIcon02{top:-13px; height: 50px; width: 7px;}
+  #contentWrap .historyBox .historyLayoutBox{gap: 0 var(--spacing-3xl);}
+  #contentWrap .historyBox .historyList > li{gap: 0 var(--spacing-2xl);}
+
+}
+
+@media (max-width: 1024px){
+
+  #contentWrap .historyBox .historyClockBox{position: relative; top:0;}
+  #contentWrap .historyBox .historyLayoutBox{flex-direction: column; align-items: center; gap: var(--spacing-3xl) 0;}
+  #contentWrap .historyBox .historyList{width: 100%;}
+  #contentWrap .historyBox .historyList li .historyPeriodBox span{font-size: var(--font-size-l);}
+  #contentWrap .historyBox .historyList li h4{font-size: var(--font-size-xxxl);}
+  #contentWrap .historyBox .historyClockBox .clockHand.hour,
+  #contentWrap .historyBox .historyClockBox .clockHand.minute{animation: none;}
+
+}
+
+@media (max-width: 768px){
+
+  #contentWrap .historyBox .historyList > li{gap: 0 var(--spacing-lm);}
+  #contentWrap .historyBox .listBox li .list li,
+  #contentWrap .historyBox .listBox li p{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 576px){
+
+  #contentWrap .historyBox .historyList > li{flex-direction: column; gap: var(--spacing-lm) 0;}
+  #contentWrap .historyBox .historyList li h4{margin-bottom: var(--spacing-m);}
+  #contentWrap .historyBox .historyList li .historyPeriodBox{display: flex; align-items: center; justify-content: center; height: 66px; padding-top: 0; width: 100%;}
+  #contentWrap .historyBox .historyList li .historyPeriodBox span{writing-mode:initial}
+  #contentWrap .historyBox .historyClockBox{width: 164px; height: 156px;}
+
+}
+
+/* 조직 및 직원현황 */
+.orgchartBox .orgchartTopBox{margin-bottom: var(--spacing-3xl); padding: var(--spacing-3xl) var(--spacing-ms); background-color: var(--gray-50); border-radius: var(--radius-l);}
+.orgchartBox .orgChartList01{max-width: 965px; margin: 0 auto;}
+.orgchartBox .orgChartList01 > li{position: relative;}
+.orgchartBox .orgChartList01 li span{margin: 0 auto; display: flex; align-items: center;justify-content: center; width: 100%; max-width: 240px; min-height: 80px; padding: 12px 16px; border-radius: var(--radius-m); font-weight: var(--bold); font-size: var(--font-size-xl); color: var(--white); text-align: center; word-break: keep-all;}
+.orgchartBox .orgChartList01 li span br{display: none;}
+.orgchartBox .orgChartList01 li .chairman{ position: relative; margin-bottom: 125px; background-color: var(--primary-900); letter-spacing: 5px;}
+.orgchartBox .orgChartList01 li .chairman::after{ content: ''; position: absolute; left: 50%; bottom: -56px; width: 1px; height: 56px; margin-left: -0.5px; background-color: var(--gray-600);}
+.orgchartBox .orgChartGroup{ position: relative; display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-m);}
+.orgchartBox .orgChartList01 > li::after{content: ''; position: absolute; left: 50%; top: 135px; transform: translateX(-49%);
+    width: 49.3%; height: 1px; background-color: var(--gray-600);}
+.orgchartBox .orgChartList02 > li{position: relative; margin-bottom: 28px;}
+.orgchartBox .orgChartList02 > li:last-child{margin-bottom: 0;}
+.orgchartBox .orgChartList02 > li::before{content: ''; position: absolute;left: 50%;top: -69px; width: 1px; height: 69px;
+    background-color: var(--gray-600);}
+.orgchartBox .orgChartList02 > li::after{content: ''; position: absolute; left: 50%; top: 80px; width: 1px; height: 28px; margin-left: 0.5px; background-color: var(--gray-600);}
+.orgchartBox .orgChartList02.type01{width: 100%; max-width: 498px;}
+.orgchartBox .orgChartList02.type01 li span{background-color: var(--primary-500);}
+.orgchartBox .orgChartList02 li .manager{ margin-bottom: 28px;}
+.orgchartBox .orgChartList02.type02{ margin-top: -109px; width: 100%; max-width: 240px;}
+.orgchartBox .orgChartList02.type02 li .committee{background-color: var(--primary-700);}
+.orgchartBox .orgChartList02.type02 li span{background-color: var(--secondary-800);}
+.orgchartBox .orgChartList02.type02 > li::before{display: none;}
+.orgchartBox .orgChartList02.type02 > li:nth-child(2){margin-bottom: var(--spacing-xl);}
+.orgchartBox .orgChartList02.type02 > li:nth-child(2)::after{height: 56px;}
+.orgchartBox .orgChartList02.type02 > li:last-child::after{display: none;}
+.orgchartBox .orgChartList03{ position: relative; padding-top: 28px; display: flex; gap: 0 var(--spacing-ms);}
+.orgchartBox .orgChartList03::after{content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 52.2%; height: 1px;  background-color: var(--gray-600);}
+.orgchartBox .orgChartList03 li{position: relative; width: 100%; max-width: 240px;}
+.orgchartBox .orgChartList03 li::after{content: ''; position: absolute; top: -28px; left: 50%; width: 1px; height: 28px; margin-left: -0.5px; background-color: var(--gray-600);}
+.orgchartBox .staffBox h4::before{content: ''; margin-top: -2px; width: 24px; height: 24px; background: url(../images/sub/staff/badge.svg)no-repeat center;}
+.orgchartBox .staffBox h4{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-m); font-size: var(--font-size-xxxl); font-weight: var(--bold);}
+.orgchartBox .staffBox .staffTable .colPosition{width: 200px;}
+.orgchartBox .staffBox .staffTable{width: 100%; padding: var(--spacing-m); border: 1px solid var(--gray-600); border-radius: var(--radius-m);}
+.orgchartBox .staffBox .staffTable thead th{color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--bold); text-align: left;}
+.orgchartBox .staffBox .staffTable tbody th{color: var(--gray-900); font-weight: var(--bold);}
+.orgchartBox .staffBox .staffTable thead th{padding-bottom: var(--spacing-xs);}
+.orgchartBox .staffBox .staffTable tbody th{padding: var(--spacing-m) 0; border-bottom: 1px solid var(--gray-100); vertical-align: top; text-align: left;}
+.orgchartBox .staffBox .staffTable tbody th h5{font-size: var(--font-size-m);}
+.orgchartBox .staffBox .staffTable tbody td{padding: var(--spacing-m) 0; border-bottom: 1px solid var(--gray-100);}
+.orgchartBox .staffBox .staffTable tbody th .phone::before{content: ''; width: 16px; height: 16px; background: url(../images/sub/staff/phone.svg)no-repeat center / contain;}
+.orgchartBox .staffBox .staffTable tbody th .phone{min-width: 121px; margin-top: var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs);  display: inline-flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s ); background-color: var(--gray-100); border-radius: var(--radius-xs);}
+.orgchartBox .staffBox .staffTable tbody td .workList li{position: relative; padding-left: var(--spacing-ms); margin-bottom: var(--spacing-xs); color: var(--gray-600);}
+.orgchartBox .staffBox .staffTable tbody td .workList li::before{content: ''; position: absolute; top:10px; left:10px; width: 3px; height: 3px; background-color: var(--gray-600); border-radius: var(--radius-s);}
+.orgchartBox .staffBox .staffTable tbody td .workList li:last-child{margin-bottom: 0;}
+.orgchartBox .staffBox .staffTable tbody tr:last-child th,
+.orgchartBox .staffBox .staffTable tbody tr:last-child td{border-bottom: 0;}
+.orgchartBox .staffLayoutBox{display: flex; justify-content: space-between; gap: 0 var(--spacing-3xl)}
+.orgchartBox .staffBox{flex: 1;}
+
+@media (max-width: 1280px){
+
+  .orgchartBox .staffLayoutBox{flex-direction: column; gap: var(--spacing-3xl ) 0;}
+
+}
+
+
+@media (max-width: 1024px){
+
+  .orgchartBox .orgChartList01 li .chairman{margin-bottom: 125px; max-width: none;}
+  .orgchartBox .orgChartList01 li .chairman::after{height: 62px; bottom: -62px;}
+
+  .orgchartBox .orgChartList01 li span{min-height: 72px;}
+  .orgchartBox .orgChartList01 > li::after{width: 48.2%; top: 133px;}
+  .orgchartBox .orgChartList02 > li::after{top: 72px;}
+  .orgchartBox .orgChartList02 > li::before{top: -63px; height: 63px;}
+  .orgchartBox .orgChartList02.type02{margin-top: -100px;}
+  
+  .orgchartBox .orgChartList03{gap: 0 var(--spacing-xs);}
+  
+}
+
+@media (max-width: 768px){
+
+  .orgchartBox .orgchartTopBox{margin-bottom: var(--spacing-2xl); padding: var(--spacing-lm) var(--spacing-ms);}
+  .orgchartBox .orgChartList01 li .chairman{margin-bottom: 113px;}
+  .orgchartBox .orgChartList02.type02{margin-top: -88px;}
+  .orgchartBox .orgChartList02 > li::before{height: 50px; top: -50px;}
+  .orgchartBox .orgChartList02 > li{margin-bottom: var(--spacing-s);}
+  .orgchartBox .orgChartList02.type02 > li:nth-child(2){margin-bottom: var(--spacing-ml);}
+  .orgchartBox .orgChartList02 li .manager{margin-bottom: var(--spacing-s);}
+  .orgchartBox .orgChartList03{padding-top: var(--spacing-s);}
+  .orgchartBox .orgChartList03::after{width: 52.4%;}
+  .orgchartBox .orgChartList02 > li::after{height: 16px;}
+  .orgchartBox .orgChartList03 li::after{top: -16px; height: 16px;}
+
+  .orgchartBox .orgChartGroup{gap: 0 var(--spacing-lm);}
+  .orgchartBox .orgChartList01 li span{max-width: none;}
+  .orgchartBox .orgChartList02.type01,
+  .orgchartBox .orgChartList02.type02{max-width: none; width: 50%;}
+  
+}
+
+@media (max-width: 576px){
+
+  .orgchartBox .orgChartList01 li span{font-size: var(--font-size-m);}
+  .orgchartBox .orgChartList01 li .chairman{font-size: var(--font-size-xl);}
+  .orgchartBox .staffBox .staffTable thead th{display: none;}
+  .orgchartBox .staffBox .staffTable .colPosition{width: 164px;}
+
+}
+
+@media (max-width: 480px){
+
+  .orgchartBox .orgChartGroup{gap: 0 var(--spacing-ms);}
+  .orgchartBox .staffBox .staffTable{padding: var(--spacing-s);}
+  .orgchartBox .staffBox .staffTable tbody th{padding: var(--spacing-m) 0 0; border-bottom: 0;}
+  .orgchartBox .staffBox .staffTable tbody th,
+  .orgchartBox .staffBox .staffTable tbody td{display: block;}
+  .orgchartBox .staffBox .staffTable tbody td{padding: var(--spacing-s) 0 var(--spacing-m);}
+
 
 }
