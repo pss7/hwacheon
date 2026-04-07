@@ -57,7 +57,8 @@ $(function () {
 
   //연혁
   $(window).scroll(function () {
-    if ($('#contentWrap .historyBox .historyClockBox')[0].getBoundingClientRect().top <= 30) {
+    if ($('#contentWrap .historyBox .historyClockBox').length > 0 &&
+      $('#contentWrap .historyBox .historyClockBox')[0].getBoundingClientRect().top <= 30) {
       $('#contentWrap .historyBox .historyClockBox').addClass('sticky');
     } else {
       $('#contentWrap .historyBox .historyClockBox').removeClass('sticky');

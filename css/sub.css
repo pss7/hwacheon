@@ -550,7 +550,7 @@ main{flex: 1;}
 .locationBox .mapInfoBox .naverViewLink{padding-left: var(--spacing-xs); display: flex; align-items: center; gap: 0 0; width: 153px; height: 40px; font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: 50px; background-color: var(--naver_color);}
 .locationBox .locationInfoBox span{position: relative; display: inline-block; margin-bottom: var(--spacing-m); padding: var(--spacing-2xs) var(--spacing-s); border-radius: var(--radius-s); background-color: var(--primary-900); color: var(--stat-point);}
 .locationBox .locationInfoBox span::after{content: ''; width: 26px; height: 14px; position: absolute; left: 50%; transform: translateX(-50%); bottom: -14px; background: url(../images/sub/location/arrow_icon.svg)no-repeat center;}
-.locationBox .locationInfoBox strong{display: block; margin-bottom: var(--spacing-m); font-size: var(--H4); font-weight: var(--bold); color: var(--gray-600);}
+.locationBox .locationInfoBox strong, .locationBox .locationInfoBox .phone{display: block; margin-bottom: var(--spacing-m); font-size: var(--H4); font-weight: var(--bold); color: var(--gray-600);}
 .locationBox .locationInfoBox dl{margin-bottom: var(--spacing-xs); position: relative; padding-left:var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-3xs )}
 .locationBox .locationInfoBox dl::before{content: '';position: absolute; top:10px; left:0; width: var(--spacing-3xs); height: var(--spacing-3xs); background-color: var(--gray-600);;}
 .locationBox .locationInfoBox dl dt{font-weight: var(--bold); color: var(--gray-600);}
@@ -613,7 +613,7 @@ main{flex: 1;}
 
   .locationBox .mapInfoBox dl{flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
   .locationBox .mapInfoBox dl dt{width: auto; font-size: var(--Subtitle-1);}
-  .locationBox .locationInfoBox strong{margin-bottom: var(--spacing-s); font-size: var(--H5);}
+  .locationBox .locationInfoBox strong, .locationBox .locationInfoBox .phone{margin-bottom: var(--spacing-s); font-size: var(--H5);}
   .locationBox .locationGuideWrap .locationGuideBox{padding: 185px var(--spacing-m) var(--spacing-m);}
   .locationBox .locationGuideWrap .locationGuideBox::before{width: 117px; height: 142px; top: var(--spacing-m);}
 
@@ -622,7 +622,7 @@ main{flex: 1;}
 @media (max-width: 480px){
 
   .locationBox .locationInfoWrap{flex-direction: column; gap: var(--spacing-lm) 0;}
-  .locationBox .locationInfoBox strong{font-size: var(--H6);}
+  .locationBox .locationInfoBox strong, .locationBox .locationInfoBox .phone{font-size: var(--H6);}
   .locationBox .locationGuideBox .locationGuideList .box{padding: var(--spacing-s);}
   .locationBox .locationGuideBox .locationGuideList .box p{margin-bottom: var(--spacing-s);}
   .locationBox .locationGuideWrap .locationGuideBox{padding: 177px var(--spacing-s) var(--spacing-s);}
@@ -965,12 +965,12 @@ main{flex: 1;}
 .convocationBox .sessionBox01 .meetingInfoBox02 .meeting02 strong{display: block;}
 .convocationBox .sessionBox01 .sessionPeriodBox{max-width: 664px; margin: 0 auto var(--spacing-2xl); padding-bottom: var(--spacing-lm); border-bottom: 1px solid var(--gray-100);}
 .convocationBox .sessionBox01 .sessionPeriodBox h4{font-size: var(--H4); color: var(--gray-900); text-align: center;}
-.convocationBox .sessionBox01 .sessionPeriodBox p{text-align: center; color: var(--gray-600); font-size: var(--font-size-xxxl); font-weight: var(--semi-bold);}
+.convocationBox .sessionBox01 .sessionPeriodBox p{text-align: center; color: var(--gray-600); font-size: var(--font-size-xxxl); font-weight: var(--semi-bold); line-height: 1.6;}
 .convocationBox .sessionBox01 .sessionPeriodBox p span{display: block; margin-top: var(--spacing-s); font-size: var(--body-1); font-weight: var(--regular);}
-.convocationBox .sessionBox01 .sessionPeriodBox img{display: block; max-width: 100%; margin: var(--spacing-m) auto var(--spacing-lm);}
-
-
-
+.convocationBox .sessionBox01 .sessionPeriodBox img{ max-width: 100%; margin: var(--spacing-m) auto var(--spacing-lm);}
+.convocationBox .sessionBox01 .sessionPeriodBox img.pc{display: block;}
+.convocationBox .sessionBox01 .sessionPeriodBox img.tablet{display: none;}
+.convocationBox .sessionBox01 .sessionPeriodBox img.mobile{display: none;}
 
 
 
@@ -1002,17 +1002,34 @@ main{flex: 1;}
   .convocationBox .assemblyBox .text01{font-size: var(--font-size-xl);}
   .convocationBox .assemblyBox::after{right: auto; top: auto; bottom: 0; left: 50%; transform: translateX(-50%);}
 
+  .convocationBox .sessionBox01 .sessionPeriodBox{margin: 0 auto var(--spacing-lm);}
   .convocationBox .sessionBox01 .sessionPeriodBox img{margin: var(--spacing-m) auto;}
+  .convocationBox .sessionBox01 .sessionPeriodBox img.pc{display: none;}
+  .convocationBox .sessionBox01 .sessionPeriodBox img.tablet{display: block;}
+
   .convocationBox .sessionBox01 .sessionPeriodBox h4{font-size: var(--H5);}
   .convocationBox .sessionBox01 .sessionPeriodBox p{font-size: var(--font-size-xl);}
   .convocationBox .sessionBox01 .meetingInfoBox01 strong{font-size: var(--font-size-xxxl);}
-  .convocationBox .sessionBox01 .meetingInfoBox02{flex-direction: column; gap: var(--spacing-xs) 0;}
+  .convocationBox .sessionBox01 .meetingInfoBox02{flex-direction: column; gap: var(--spacing-xs ) 0;}
+  .convocationBox .sessionBox01 .meetingInfoBox02 .meeting01{max-width: none;}
   
+}
+
+@media (max-width: 576px){
+
+  .convocationBox .sessionBox01 .meetingInfoBox01{flex-direction: column; gap: var(--spacing-s) 0; align-items: center;}
+  .convocationBox .sessionBox01 .meetingInfoBox01{margin-bottom: var(--spacing-xs);}
 
 }
 
 @media (max-width: 480px){
 
   .convocationBox .assemblyBox .text01{font-size: var(--font-size-l);}
+
+  .convocationBox .sessionBox01{padding: var(--spacing-m) var(--spacing-ms);}
+  .convocationBox .sessionBox01 .sessionPeriodBox p{font-size: var(--font-size-l);}
+  .convocationBox .sessionBox01 .sessionPeriodBox img.tablet{display: none;}
+  .convocationBox .sessionBox01 .sessionPeriodBox img.mobile{display: block;}
+  .convocationBox .sessionBox01 .meetingInfoBox01 p{font-size: var(--font-size-s);}
 
 }
