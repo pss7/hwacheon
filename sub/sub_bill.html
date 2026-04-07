@@ -8,7 +8,7 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>조직 및 직원현황 </title>
+    <title>의안처리</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -1033,7 +1033,7 @@
                 <!-- //titleBox -->
 
                 <!-- 브레드크럼 영역-->
-                <nav class="breadcrumbBox" aria-label="브레드크럼">
+                <div class="breadcrumbBox">
                     <ul class="breadcrumbList">
                         <li>
                             <a href="/" class="home" aria-label="홈으로 이동">
@@ -1043,15 +1043,16 @@
                         <li>
                             <span>의회안내</span>
                         </li>
-                        <li>
-                            <span>의회구성</span>
+                        <li><span>
+                                의회기능</span>
                         </li>
                         <li>
-                            <span>조직 및 직원현황</span>
+                            <span>의안처리</span>
                         </li>
                     </ul>
                     <!-- //breadcrumbList -->
-                </nav>
+
+                </div>
                 <!-- //breadcrumbBox -->
 
             </div>
@@ -1075,7 +1076,7 @@
                         </li>
                         <li>
                             <h2>
-                                <a href="#" class="active">의회구성</a>
+                                <a href="#">의회구성</a>
                             </h2>
                         </li>
                         <li>
@@ -1085,7 +1086,7 @@
                         </li>
                         <li>
                             <h2>
-                                <a href="#">의회기능</a>
+                                <a href="#" class="active">의회기능</a>
                             </h2>
                         </li>
                     </ul>
@@ -1105,8 +1106,29 @@
                                 <!-- 상단 제목, 서브메뉴 영역-->
                                 <div class="titleBox">
                                     <h3>
-                                        조직 및 직원현황
+                                        의안처리
                                     </h3>
+                                    <div class="subMenuBox">
+                                        <button class="subMenuBtn" type="button" aria-label="서브메뉴"
+                                            aria-controls="subMenuList" aria-expanded="false"></button>
+                                        <ul class="subMenuList" id="subMenuList">
+                                            <li>
+                                                <h4>
+                                                    <a href="#" class="active">서브메뉴서브메뉴서브메뉴</a>
+                                                </h4>
+                                            </li>
+                                            <li>
+                                                <h4>
+                                                    <a href="#">서브메뉴</a>
+                                                </h4>
+                                            </li>
+                                            <li>
+                                                <h4>
+                                                    <a href="#">서브메뉴</a>
+                                                </h4>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <!-- //titleBox -->
 
@@ -1131,479 +1153,254 @@
                     <!-- 콘텐츠 영역 -->
                     <div class="contentBox">
 
-                        <!-- 조직 및 직원현황 콘텐츠 -->
-                        <div class="orgchartBox">
+                        <!-- 의안처리 콘텐츠 -->
+                        <div class="billBox">
                             <div class="container">
-                                <div class="orgchartTopBox">
-                                    <ul class="orgChartList01">
-                                        <li>
-                                            <span class="chairman">의장</span>
 
-                                            <div class="orgChartGroup">
-                                                <ul class="orgChartList02 type01">
+                                <div class="billTopBox">
+                                    <h4 class="tit">
+                                        처리절차
+                                    </h4>
+                                    <ul class="processList">
+                                        <li>
+                                            <span class="step step01">
+                                                Step.1
+                                            </span>
+                                            <div class="processContentBox">
+                                                <h4>
+                                                    의안의 제출 또는 제안, 발의
+                                                </h4>
+                                                <ul class="bulletIcon">
+                                                    <li>지방자치단체장(군수)제출</li>
+                                                    <li>재적의원 1/5이상 연서로 발의</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="step step02">
+                                                Step.2
+                                            </span>
+                                            <div class="processContentBox">
+                                                <h4>
+                                                    접수
+                                                </h4>
+                                                <ul class="bulletIcon">
                                                     <li>
-                                                        <span class="manager">사무과장</span>
-                                                        <ul class="orgChartList03">
+                                                        요건확인
+                                                        <ul class="bulletBar">
                                                             <li>
-                                                                <span>의정 <br> 담당</span>
+                                                                의안의 형식요건
                                                             </li>
                                                             <li>
-                                                                <span>의사 <br> 담당</span>
+                                                                찬성자의 서명부 등
                                                             </li>
                                                         </ul>
                                                     </li>
                                                 </ul>
-
-                                                <ul class="orgChartList02 type02">
-                                                    <li>
-                                                        <span class="committee">특별위원회</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>수석전문위원</span>
-                                                    </li>
-                                                    <li>
-                                                        <span>전문위원</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="step step03">
+                                                Step.3
+                                            </span>
+                                            <div class="processContentBox">
+                                                <h4>
+                                                    의안 번호 부여
+                                                </h4>
+                                                <ul class="bulletIcon">
+                                                    <li>의안 종류에 관계없이 연번 부여</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="step step04">
+                                                Step.4
+                                            </span>
+                                            <div class="processContentBox">
+                                                <h4>
+                                                    의장에게 보고
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="step step05">
+                                                Step.5
+                                            </span>
+                                            <div class="processContentBox">
+                                                <h4>
+                                                    의안 배부 및 본회의 보고
+                                                </h4>
+                                                <ul class="bulletIcon">
+                                                    <li>제출된 의안은 모든 의원에게 1부씩 배부</li>
+                                                    <li>본회의 개의중에는 지체없이 보고하고 휴폐회중인 경우에는 <br> 먼저 의원에게 배부하고 본회의가 개의되는 첫날에
+                                                        보고
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <!-- //orgChartGroup -->
+                                        </li>
+                                        <li>
+                                            <span class="step step06">
+                                                Step.6
+                                            </span>
+                                            <div class="processContentBox">
+                                                <h4>
+                                                    본회의 상정, 심의, 의결
+                                                </h4>
+                                                <ul class="bulletIcon">
+                                                    <li>의사일정 상정</li>
+                                                    <li>전문위원 검토보고</li>
+                                                    <li>질의</li>
+                                                    <li>토론</li>
+                                                    <li>의결(표결)</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="step step07">
+                                                Step.7
+                                            </span>
+                                            <div class="processContentBox">
+                                                <h4>
+                                                    군수에게 이송
+                                                </h4>
+                                                <ul class="bulletIcon">
+                                                    <li>예산안 : 3일 이내</li>
+                                                    <li>조례안 : 5일 이내</li>
+                                                    <li>기타 의안은 가급적 빠른 시일 내에 이송</li>
+                                                </ul>
+                                            </div>
                                         </li>
                                     </ul>
-                                    <!-- //orgChartList01 -->
+                                    <!-- //processList -->
 
                                 </div>
-                                <!-- //orgchartTopBox -->
+                                <!-- //billTopBox -->
 
-                                <div class="staffStatusBox">
-
-                                    <div class="staffLayoutBox">
-                                        <div class="staffBox">
-                                            <h4>
-                                                의회사무과
-                                            </h4>
-
-                                            <table class="staffTable">
-                                                <caption class="blind">
-                                                    직원현황
-                                                </caption>
-                                                <colgroup>
-                                                    <col class="colPosition">
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>직위</th>
-                                                        <th>업무</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                사무과장
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2720
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    의회사무과 업무 총괄 및 소속직원 지휘감독
-                                                                </li>
-                                                                <li>
-                                                                    화천군의회 회의운영 총괄
-                                                                </li>
-                                                                <li>
-                                                                    의회 청탁방지담당관
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                의정담당
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2721
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    의정업무 총괄
-                                                                </li>
-                                                                <li>
-                                                                    의회운영 기본계획 수립 및 종합조정
-                                                                </li>
-                                                                <li>
-                                                                    의회소관 예산지출
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                의사담당
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2741
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    의사업무 총괄
-                                                                </li>
-                                                                <li>
-                                                                    본회의 회의진행 보좌
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2722
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    인사, 교육, 복무, 징계 관련 업무
-                                                                </li>
-                                                                <li>
-                                                                    감사 관련 업무
-                                                                </li>
-                                                                <li>
-                                                                    의회 주요행사의 기획 및 운영
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2723
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    각종 행사관리 및 동향파악 관리
-                                                                </li>
-                                                                <li>
-                                                                    시군의회 의장협의회 관련 업무
-                                                                </li>
-                                                                <li>
-                                                                    각종 행사 의전 수행
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2734
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    일반서무 및 문서ㆍ 보안관리
-                                                                </li>
-                                                                <li>
-                                                                    의원 개인정보관리
-                                                                </li>
-                                                                <li>
-                                                                    재물조사 및 의회 물품관리
-                                                                </li>
-                                                                <li>
-                                                                    회계(의회예산 편성 및 집행)
-                                                                </li>
-                                                                <li>
-                                                                    의원 수당관리 및 공무직 급여관리
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2736
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    기계실 공조실 관리
-                                                                </li>
-                                                                <li>
-                                                                    청사시설물 관리 및 장비관리
-                                                                </li>
-                                                                <li>
-                                                                    회의영상물 장비 및 방송, 음향기기 유지관리
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2739
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    업무용차량 운행 및 관리
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2739
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    의장용차량 운행 및 관리
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2735
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    의회 회의 및 각종 행사 사진촬영 및 기록관리
-                                                                </li>
-                                                                <li>
-                                                                    보도자료 스크랩 관리
-                                                                </li>
-                                                                <li>
-                                                                    의회홍보 광고자료(언론사)
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                주무관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2742
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    정례회 및 임시회 운영
-                                                                </li>
-                                                                <li>
-                                                                    의회홍보 및 보도자료 작성 및 제공
-                                                                </li>
-                                                                <li>
-                                                                    본회의 시나리오작성 및 운영보좌
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                공무직
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2712
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    의장실 및 부속실 운영관리, 특별위원회실 관리
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                <div class="caseLayoutBox">
+                                    <div class="caseBox caseBoxType01">
+                                        <div class="caseTitleBox">
+                                            <span class="case">
+                                                Case.1
+                                            </span>
+                                            <h5>
+                                                조례 공포 절차
+                                            </h5>
                                         </div>
-
-                                        <div class="staffBox">
-                                            <h4>
-                                                전문위원실
-                                            </h4>
-
-                                            <table class="staffTable">
-                                                <caption class="blind">
-                                                    직원현황
-                                                </caption>
-                                                <colgroup>
-                                                    <col class="colPosition">
-                                                    <col>
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>직위</th>
-                                                        <th>업무</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                수석전문위원
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2716
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    전문위원실 업무총괄
-                                                                </li>
-                                                                <li>
-                                                                    위원회 의사진행 보좌
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                전문위원
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2717
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    조례안, 예산안, 청원, 자치법규 등 안건에 대한 검토 보고
-                                                                </li>
-                                                                <li>
-                                                                    위원회 의사진행 보좌
-                                                                </li>
-                                                                <li>
-                                                                    정책지원관 업무 총괄
-                                                                </li>
-                                                                <li>
-                                                                    의회 입법 법률 고문관리
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                정책지원관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2718
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    위원회 의사진행 보좌
-                                                                </li>
-                                                                <li>
-                                                                    조례 ․ 예산 심의 등 의결 관련 자료 수집 조사 분석
-                                                                </li>
-                                                                <li>
-                                                                    군정 질의 작성 및 의원 정책개발사업 지원
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                정책지원관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2711
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    조례 ․ 예산 심의 등 의결 관련 자료 수집 조사 분석
-                                                                </li>
-                                                                <li>
-                                                                    군정 질의 작성 및 의원 정책개발사업 지원
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <h5>
-                                                                정책지원관
-                                                            </h5>
-                                                            <span class="phone">
-                                                                033.440.2715
-                                                            </span>
-                                                        </th>
-                                                        <td>
-                                                            <ul class="workList">
-                                                                <li>
-                                                                    조례 ․ 예산 심의 등 의결 관련 자료 수집 조사 분석
-                                                                </li>
-                                                                <li>
-                                                                    군정 질의 작성 및 의원 정책개발사업 지원
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        <ul class="caseList">
+                                            <li>
+                                                <div class="stepBox">
+                                                    <span class="step">Step.1</span>
+                                                    <h6>지방자치단체장(군수)공포</h6>
+                                                </div>
+                                                <ul class="bulletIcon">
+                                                    <li>
+                                                        이송된 후 20일 이내에 지방자치단체장(군수)공포
+                                                    </li>
+                                                    <li>
+                                                        <strong>20일 이내</strong>에 공포치 않을 경우 의장이 공표
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    
+                                    <!-- //caseBox -->
+
+                                    <div class="caseBox caseBoxType02">
+                                        <div class="caseTitleBox">
+                                            <span class="case">
+                                                Case.2
+                                            </span>
+                                            <h5>
+                                                재의 요구 절차
+                                            </h5>
+                                        </div>
+                                        <ul class="caseList">
+                                            <li>
+                                                <div class="stepBox">
+                                                    <span class="step">Step.1</span>
+                                                    <h6>재의 요구</h6>
+                                                </div>
+                                                <ul class="bulletIcon">
+                                                    <li>
+                                                        지방자치단체장(군수)는 조례안에 대하여 이의가 있을때에는 이송받은 후 <strong>20일 이내</strong>에
+                                                        이유를
+                                                        붙여 재의 요구
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="stepBox">
+                                                    <span class="step">Step.2</span>
+                                                    <h6>접수</h6>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="stepBox">
+                                                    <span class="step">Step.3</span>
+                                                    <h6>본의회 처리</h6>
+                                                </div>
+                                                <ul class="bulletIcon">
+                                                    <li>
+                                                        <strong>의사일정 상정</strong>(부득이한 사유가 없는 한 휴회 · 폐회 기간을 제외하고 10일 이내)
+                                                    </li>
+                                                    <li>
+                                                        지방자치단체측 거부 이유 청취
+                                                    </li>
+                                                    <li>
+                                                        질의 · 토론
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="stepBox">
+                                                    <span class="step">Step.4</span>
+                                                    <h6>지방자치단체장(군수)에게 이송</h6>
+                                                </div>
+                                            </li>
+                                            <li class="stepList05">
+
+                                                <div class="box">
+                                                    <div class="stepBox">
+                                                        <span class="step">Step.5-1</span>
+                                                        <h6>지방자치단체장(군수)공포</h6>
+                                                    </div>
+                                                    <ul class="bulletIcon">
+                                                        <li>
+                                                            이송된 후 <strong>5일 이내</strong>에 단체장 공포
+                                                        </li>
+                                                        <li>
+                                                            <strong>5일 이내</strong>에 공포치 않을 경우 의장이 공포
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="box">
+                                                    <div class="stepBox">
+                                                        <span class="step">Step.5-2</span>
+                                                        <h6>대법원에 제소</h6>
+                                                    </div>
+                                                    <ul class="bulletIcon">
+                                                        <li>
+                                                            지방자치단체장(군수)는 재 의결된 사항이 법령에 위배된다고 판단되는 때는 재 의결된 날부터 20일 이내에
+                                                            대법원에
+                                                            제소
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //caseBox -->
+
                                 </div>
-                                <!-- //staffStatusBox -->
+                                <!-- //caseLayoutBox -->
 
                             </div>
                             <!-- //container -->
 
                         </div>
-                        <!-- //orgchartBox -->
+                        <!-- //billBox -->
 
                     </div>
                     <!-- //contentBox -->

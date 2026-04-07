@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 가운데영역 */
-.container{max-width: 1480px; margin: 0 auto; padding: 0 20px;}
+.container{max-width: 1480px; margin: 0 auto; padding: 0 var(--spacing-ms);}
 
 /* 공통 */
 .mobileNonScroll{overflow: hidden;}
@@ -40,15 +40,6 @@
 .viewLink::after{content: ''; margin-top: 1px; width: 24px; height: 24px; background: url(../images/main/plus_icon.svg)no-repeat center; transition: all .3s;}
 .viewLink:hover{font-weight: var(--bold);}
 .viewLink:hover::after{transform: rotate(-90deg); background: url(../images/main/plus_icon02.svg)no-repeat center;}
-
-/* 공통 - 제목 */
-.tit{font-size: var(--H4); color: var(--gray-900); font-family: 'RiaSans';}
-
-@media (max-width: 1280px){
-
-  .tit{font-size: var(--H5);}
-
-}
 
 /* 공통 - dots */
 .slick-dots{min-width: 56px; padding: var(--radius-xs); display: flex; gap: 0 var(--spacing-2xs); align-items: center; background: rgba(255,255,255,0.25); border-radius: var(--radius-s); box-shadow: inset 0 0 8px rgba(255,255,255,.5); backdrop-filter: blur(8px); }

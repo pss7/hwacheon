@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+/* 공통 - 제목 */
+.tit{font-size: var(--H4); color: var(--gray-900); font-family: 'RiaSans';}
+
+@media (max-width: 1280px){
+
+  .tit{font-size: var(--H5);}
+
+}
+
 /* 메인슬라이드 영역 - 메인슬라이드 */
 #visualWrap{padding: var(--spacing-lm) 0 0; background: url(../images/main/bg.png)no-repeat center top; background-size: 100% 548px;}
 #visualWrap .slick-slider{height: 430px;}
