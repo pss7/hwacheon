@@ -192,7 +192,7 @@ main{flex: 1;}
 #contentWrap .greetingBox .greetingInfoBox .rightBox p span{display: block; color: var(--gray-900); font-weight: var(--bold); font-size: var(--font-size-xl);}
 #contentWrap .greetingBox .greetingInfoBox .rightBox strong{display: block; margin-bottom: var(--spacing-m); color: var(--gray-900); font-size: var(--H4); line-height: 1.6; word-break: keep-all;}
 #contentWrap .greetingBox .greetingInfoBox .rightBox .strongBox span{padding: var(--spacing-xs) var(--spacing-s); background-color: var(--primary-500); border-radius: var(--radius-s); color: var(--white); font-weight: var(--medium); font-family: 'RiaSans';}
-#contentWrap .greetingBox .greetingInfoBox .rightBox .strongBox{margin-bottom: var(--spacing-ml); display: flex; flex-wrap: wrap; justify-content: center;  gap: var(--spacing-xs);}
+#contentWrap .greetingBox .greetingInfoBox .rightBox .strongBox{margin-bottom: var(--spacing-ml); display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
 
 @media (max-width: 1280px){
 
@@ -222,6 +222,7 @@ main{flex: 1;}
   #contentWrap .greetingBox .greetingTopText{margin-bottom: var(--spacing-m); font-size: var(--Subtitle-2);}
   #contentWrap .greetingBox .chairmanInfoBox{left: var(--spacing-m); right:var(--spacing-m); bottom: var(--spacing-ml);}
   #contentWrap .greetingBox .greetingImgBox .imgBox img{width: calc(100% + 80px); transform: translateX(-80px);}
+  #contentWrap .greetingBox .greetingInfoBox .rightBox .strongBox{justify-content: center;}
 
 }
 
@@ -327,21 +328,21 @@ main{flex: 1;}
 /* 연혁 */
 #contentWrap .historyBox .historyLayoutBox{display: flex; gap: 0 var(--spacing-6xl);}
 #contentWrap .historyBox .historyClockBox{position: sticky; top: 30px; width: 254px;
-    height: 241px; background: url(../images/sub/history/clock01.svg) no-repeat center / contain;}
+    height: 241px; background: url(../images/sub/clock01.svg) no-repeat center / contain;}
 #contentWrap .historyBox .historyClockBox::after{ content: ''; width: 20px; height: 19px;
-    position: absolute; top: 56%; left: 50%; transform: translate(-50%, -50%); background: url(../images/sub/history/clock04.svg) no-repeat center / contain; z-index: 3;}
+    position: absolute; top: 56%; left: 50%; transform: translate(-50%, -50%); background: url(../images/sub/clock04.svg) no-repeat center / contain; z-index: 3;}
 #contentWrap .historyBox .historyClockBox .clockHand{position: absolute; top: 56%; left: 50%;
     transform: translate(-50%, -50%); z-index: 2;}
 #contentWrap .historyBox .historyClockBox .clockHand.hour{width: 52px; height: 10px;
    }
 #contentWrap .historyBox .historyClockBox .clockHand.hour .clockIcon01{position: absolute;
     top: 50%; left: -32px; transform: translateY(-50%); display: block; width: 52px; height: 10px;
-    background: url(../images/sub/history/clock02.svg) no-repeat center / contain;}
+    background: url(../images/sub/clock02.svg) no-repeat center / contain;}
 #contentWrap .historyBox .historyClockBox .clockHand.minute{width: 10px; height: 69px;
    }
 #contentWrap .historyBox .historyClockBox .clockHand.minute .clockIcon02{ position: absolute;
     top: -38px; left: 50%; transform: translateX(-50%); display: block; width: 10px;
-    height: 69px; background: url(../images/sub/history/clock03.svg) no-repeat center / contain;}
+    height: 69px; background: url(../images/sub/clock03.svg) no-repeat center / contain;}
 
 @keyframes hourRotate{
     from{transform: translate(-50%, -50%) rotate(0deg);}
@@ -448,7 +449,7 @@ main{flex: 1;}
   max-width: 498px; width: 100%;}
 .orgchartBox .orgChartList02.type02{flex: 0 0 240px; width: 240px; max-width: 240px;
   margin-top: -109px;}
-.orgchartBox .staffBox h4::before{content: ''; margin-top: -2px; width: 24px; height: 24px; background: url(../images/sub/staff/badge.svg)no-repeat center;}
+.orgchartBox .staffBox h4::before{content: ''; margin-top: -2px; width: 24px; height: 24px; background: url(../images/sub/badge.svg)no-repeat center;}
 .orgchartBox .staffBox h4{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-m); font-size: var(--font-size-xxxl); font-weight: var(--bold);}
 .orgchartBox .staffBox .staffTable .colPosition{width: 200px;}
 .orgchartBox .staffBox .staffTable{width: 100%; padding: var(--spacing-m); border: 1px solid var(--gray-600); border-radius: var(--radius-m);}
@@ -458,7 +459,7 @@ main{flex: 1;}
 .orgchartBox .staffBox .staffTable tbody th{padding: var(--spacing-m) 0; border-bottom: 1px solid var(--gray-100); vertical-align: top; text-align: left;}
 .orgchartBox .staffBox .staffTable tbody th h5{font-size: var(--font-size-m);}
 .orgchartBox .staffBox .staffTable tbody td{padding: var(--spacing-m) 0; border-bottom: 1px solid var(--gray-100);}
-.orgchartBox .staffBox .staffTable tbody th .phone::before{content: ''; width: 16px; height: 16px; background: url(../images/sub/staff/phone.svg)no-repeat center / contain;}
+.orgchartBox .staffBox .staffTable tbody th .phone::before{content: ''; width: 16px; height: 16px; background: url(../images/sub/phone.svg)no-repeat center / contain;}
 .orgchartBox .staffBox .staffTable tbody th .phone{min-width: 121px; margin-top: var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs);  display: inline-flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s ); background-color: var(--gray-100); border-radius: var(--radius-xs);}
 .orgchartBox .staffBox .staffTable tbody td .workList li{position: relative; padding-left: var(--spacing-ms); margin-bottom: var(--spacing-xs); color: var(--gray-600);}
 .orgchartBox .staffBox .staffTable tbody td .workList li::before{content: ''; position: absolute; top:10px; left:10px; width: 3px; height: 3px; background-color: var(--gray-600); border-radius: var(--radius-s);}
@@ -543,13 +544,13 @@ main{flex: 1;}
 .locationBox .positionImg{position: absolute; top:0; left:0; width: auto;}
 .locationBox .mapInfoBox{padding: var(--spacing-m); display: flex; align-items: center; justify-content: space-between; position: absolute; bottom: 32px; left:32px; right:32px; border-radius: var(--radius-l); z-index: 999; background: rgba(30, 43, 55, 0.75); } 
 .locationBox .mapInfoBox dl{display: flex;}
-.locationBox .mapInfoBox dl dt::before{content:''; margin-right: var(--spacing-3xs); width: 28px; height: 25px; background: url(../images/sub/location/map_icon.svg)no-repeat center;}
+.locationBox .mapInfoBox dl dt::before{content:''; margin-right: var(--spacing-3xs); width: 28px; height: 25px; background: url(../images/sub/map_icon.svg)no-repeat center;}
 .locationBox .mapInfoBox dl dt{width: 95px; display: flex; align-items: center; gap: 0 var(--spacing-xs); flex-shrink: 0; color: var(--white); font-size: var(--H6); font-weight: var(--bold);}
 .locationBox .mapInfoBox dl dd{color: var(--white);}
-.locationBox .mapInfoBox .naverViewLink::before{content: ''; width: 32px; height: 32px; background: url(../images/sub/location/naver_icon.svg)no-repeat center;}
-.locationBox .mapInfoBox .naverViewLink{padding-left: var(--spacing-xs); display: flex; align-items: center; gap: 0 0; width: 153px; height: 40px; font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: 50px; background-color: var(--naver_color);}
+.locationBox .mapInfoBox .naverViewLink::before{content: ''; width: 32px; height: 32px; background: url(../images/sub/naver_icon.svg)no-repeat center;}
+.locationBox .mapInfoBox .naverViewLink{padding:0 var(--spacing-s) 0 var(--spacing-xs); display: flex; align-items: center; gap: 0 0; height: 40px; font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: 50px; background-color: var(--naver_color);}
 .locationBox .locationInfoBox span{position: relative; display: inline-block; margin-bottom: var(--spacing-m); padding: var(--spacing-2xs) var(--spacing-s); border-radius: var(--radius-s); background-color: var(--primary-900); color: var(--stat-point);}
-.locationBox .locationInfoBox span::after{content: ''; width: 26px; height: 14px; position: absolute; left: 50%; transform: translateX(-50%); bottom: -14px; background: url(../images/sub/location/arrow_icon.svg)no-repeat center;}
+.locationBox .locationInfoBox span::after{content: ''; width: 26px; height: 14px; position: absolute; left: 50%; transform: translateX(-50%); bottom: -14px; background: url(../images/sub/arrow_icon04.svg)no-repeat center;}
 .locationBox .locationInfoBox strong, .locationBox .locationInfoBox .phone{display: block; margin-bottom: var(--spacing-m); font-size: var(--H4); font-weight: var(--bold); color: var(--gray-600);}
 .locationBox .locationInfoBox dl{margin-bottom: var(--spacing-xs); position: relative; padding-left:var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-3xs )}
 .locationBox .locationInfoBox dl::before{content: '';position: absolute; top:10px; left:0; width: var(--spacing-3xs); height: var(--spacing-3xs); background-color: var(--gray-600);;}
@@ -559,10 +560,10 @@ main{flex: 1;}
 .locationBox .locationInfoWrap{display: flex; margin-bottom: var(--spacing-3xl);}
 .locationBox .locationInfoBox{flex: 1;}
 .locationBox .locationGuideWrap{margin-bottom: var(--spacing-3xl);}
-.locationBox h4::before{content: ''; width: 12px; height: 17px; background: url(../images/sub/location/icon.svg)no-repeat center;}
+.locationBox h4::before{content: ''; width: 12px; height: 17px; background: url(../images/sub/bullet_icon01.svg)no-repeat center;}
 .locationBox h4{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-s); font-size: var(--H5); color: var(--gray-900);}
 .locationBox .locationGuideWrap .locationGuideBox{ position: relative; padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-2xl) 300px; border-radius: var(--radius-xl); background-color: var(--gray-100);}
-.locationBox .locationGuideWrap .locationGuideBox::before{content: ''; position: absolute; top:64px; left:64px; width: 157px; height: 182px; background: url(../images/sub/location/bus.svg)no-repeat center / contain;}
+.locationBox .locationGuideWrap .locationGuideBox::before{content: ''; position: absolute; top:64px; left:64px; width: 157px; height: 182px; background: url(../images/sub/bus.svg)no-repeat center / contain;}
 .locationBox .locationGuideBox h5{margin-bottom: var(--spacing-s); color: var(--gray-600); font-size:var(--H5);}
 .locationBox .locationGuideBox .locationGuideList{ display: flex; gap: 0 var(--spacing-s);}
 .locationBox .locationGuideBox .locationGuideList .box{flex: 1; padding: var(--spacing-m); background-color: var(--white); border-radius: var(--radius-m);}
@@ -573,7 +574,7 @@ main{flex: 1;}
 .locationBox .parkingWrap .parkingBox{padding-top: var(--spacing-s); border-top: 2px solid var(--gray-600);}
 .locationBox .parkingWrap dl{margin-bottom: var(--spacing-m); padding: var(--spacing-s) 0; display: flex; gap: 0 var(--spacing-ms);}
 .locationBox .parkingWrap dl dt{flex-shrink: 0; width: 148px; color: var(--gray-600); font-size: var(--H6); font-weight: var(--bold);}
-.locationBox .parkingWrap dl dd::before{content: '';position: absolute; top:0; left:0;  width: 12px; height: 24px; background: url(../images/sub/location/icon02.svg)no-repeat center;}
+.locationBox .parkingWrap dl dd::before{content: '';position: absolute; top:0; left:0;  width: 12px; height: 24px; background: url(../images/sub/bullet_icon02.svg)no-repeat center;}
 .locationBox .parkingWrap dl dd{padding-left: var(--spacing-s); position: relative; gap: 0 var(--spacing-2xs); color: var(--gray-600);}
 .locationBox .parkingWrap dl dd span{ display: inline-block; margin-top: var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--gray-100); font-weight: var(--semi-bold); font-size: var(--font-size-s); color: var(--gray-600); border-radius: var(--radius-xs); line-height: 1.5;}
 
@@ -641,8 +642,8 @@ main{flex: 1;}
 .accessBox .operationBox dl dt{flex-shrink: 0;}
 .accessBox .operationBox dl dt h5{display: flex; align-items: center; gap: 0 var(--spacing-s); font-family: 'RiaSans'; font-size: var(--H5); color: var(--gray-900); font-weight: var(--regular);}
 .accessBox .operationBox dl dt h5::before{content: ''; width: 48px; height: 48px;}
-.accessBox .operationBox dl dt h5.meetingIcon01::before{background: url(../images/sub/access/meeting_icon01.svg)no-repeat center / contain;}
-.accessBox .operationBox dl dt h5.meetingIcon02::before{background: url(../images/sub/access/meeting_icon02.svg)no-repeat center / contain;}
+.accessBox .operationBox dl dt h5.meetingIcon01::before{background: url(../images/sub/meeting_icon01.svg)no-repeat center / contain;}
+.accessBox .operationBox dl dt h5.meetingIcon02::before{background: url(../images/sub/meeting_icon02.svg)no-repeat center / contain;}
 .accessBox .operationBox dl dd{width: 100%;}
 .accessBox .operationBox dl dd p{margin-bottom: var(--spacing-s); color: var(--gray-600);}
 .accessBox .operationBox dl dd .list01{padding: var(--spacing-s); border-radius: var(--radius-xs); background-color: var(--gray-50);}
@@ -661,7 +662,7 @@ main{flex: 1;}
 .accessBox .councilAuthorityWrap{margin-bottom: var(--spacing-5xl);}
 .accessBox .councilAuthorityBox{padding: var(--spacing-2xl) var(--spacing-lm); display: flex; gap: 0 var(--spacing-5xl); border-radius: var(--radius-l); background-color: var(--gray-50);} 
 .accessBox .councilAuthorityBox .title{display: flex; flex-direction: column; flex-shrink: 0; font-size: var(--H4); color: var(--gray-900); font-family: 'RiaSans';}
-.accessBox .councilAuthorityBox .title::after{content: '';margin: 0 auto; width: 265px; height: 223px; margin-top: auto; background: url(../images/sub/access/building_img.png)no-repeat center / contain;}
+.accessBox .councilAuthorityBox .title::after{content: '';margin: 0 auto; width: 265px; height: 223px; margin-top: auto; background: url(../images/sub/building_img.png)no-repeat center / contain;}
 .accessBox .councilAuthorityBox .bulletTitle{margin-bottom: var(--spacing-s);}
 .accessBox .councilAuthorityBox .authorityList li{margin-bottom: var(--spacing-lm);}
 .accessBox .councilAuthorityBox .authorityList li:last-child{margin-bottom: 0;}
@@ -673,7 +674,7 @@ main{flex: 1;}
 .accessBox .localAuthorityBox .localAuthorityList > li{margin-bottom: var(--spacing-ml);}
 .accessBox .localAuthorityBox .localAuthorityList li:last-child{margin-bottom: 0;}
 .accessBox .localAuthorityBox .localAuthorityList li h5{padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs) var(--spacing-xs); display: inline-flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-s); color: var(--gray-900); font-weight: var(--semi-bold); font-size: var(--font-size-l); border: 1px solid var(--gray-600); border-radius: var(--radius-xs);}
-.accessBox .localAuthorityBox .localAuthorityList li h5::before{content: ''; width: 32px; height: 32px; background: url(../images/sub/access/icon.svg)no-repeat center / contain; }
+.accessBox .localAuthorityBox .localAuthorityList li h5::before{content: ''; width: 32px; height: 32px; background: url(../images/sub/icon.svg)no-repeat center / contain; }
 
 @media (max-width: 1280px){
 
