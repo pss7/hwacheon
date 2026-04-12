@@ -65,6 +65,49 @@ $(function () {
     }
   });
 
+  //만화로 보는 화천 군의회
+  $('.comicsBox .comicsContentBox .comicsList').scroll(function () {
+    $(this).parents('.comicsContentBox').toggleClass(
+      'isEnd',
+      this.scrollTop + this.clientHeight >= this.scrollHeight - 1
+    );
+  }).trigger('scroll');
+
+
+
+
+  //현역의원
+  //현역의원
+  $('.currentMemberBox .tabContentBox').hide();
+  $('.currentMemberBox .tabContentBox').first().show();
+
+  $('.currentMemberBox .currentMemberTabContent').hide();
+  $('.currentMemberBox .tabContentBox').eq(1).find('.currentMemberTabContent').first().show();
+  $('.currentMemberBox .tabContentBox').eq(2).find('.currentMemberTabContent').first().show();
+
+  $('.currentMemberBox .tabList li').click(function () {
+
+    $('.currentMemberBox .tabList li').children().removeClass('active');
+    $(this).children().addClass('active');
+
+    let idx = $(this).index();
+
+    $('.currentMemberBox .tabContentBox').hide();
+    $('.currentMemberBox .tabContentBox').eq(idx).show();
+
+  });
+
+  $('.currentMemberBox .currentMemberTab li').click(function () {
+
+    $(this).parent().children().children().removeClass('active');
+    $(this).children().addClass('active');
+
+    let idx = $(this).index();
+
+    $(this).parent().next().children('.currentMemberTabContent').hide();
+    $(this).parent().next().children('.currentMemberTabContent').eq(idx).show();
+
+  });
 
 
 });

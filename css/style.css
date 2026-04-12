@@ -7,7 +7,16 @@
 .mobileNonScroll{overflow: hidden;}
 
 /* 공통 - 호버 시 텍스트 슬라이드 */
-.hoverSlide:not(.active){padding: var(--spacing-xs); position: relative; line-height: 1.2; font-size: var(--font-size-s); color: var(--gray-600); font-weight: var(--medium); border-radius: var(--radius-xs); transition: background-color .3s; overflow: hidden;}
+.hoverSlide:not(.active){position: relative; display: inline-grid; overflow: hidden;
+  vertical-align: middle;}
+.hoverSlide:not(.active) .hoverSlideText{ grid-area: 1 / 1; display: block;
+  transition: transform .45s cubic-bezier(.22, 1, .36, 1); transition: all .3s;}
+.hoverSlide:not(.active) .hoverSlideText:first-child{transform: translateY(0);}
+.hoverSlide:not(.active) .hoverSlideClone{transform: translateY(-100%);}
+.hoverSlide:not(.active):hover .hoverSlideText:first-child{ transform: translateY(100%);  background: 0;}
+.hoverSlide:not(.active):hover .hoverSlideClone{transform: translateY(0);}
+
+/* .hoverSlide:not(.active){padding: var(--spacing-xs); position: relative; line-height: 1.2; font-size: var(--font-size-s); color: var(--gray-600); font-weight: var(--medium); border-radius: var(--radius-xs); transition: background-color .3s; overflow: hidden;}
 .hoverSlide:not(.active) span{display: block;}
 .hoverSlide:not(.active)::before{content: attr(data-text); position: absolute; inset: 8px; transform: translateY(-150%); color: var(--gray-600); line-height: 1.2;}
 .hoverSlide:not(.active):hover{background-color: var(--gray-100);}
@@ -24,7 +33,7 @@
   0%   { transform: translateY(-150%); }
   70%  { transform: translateY(12%); }  
   100% { transform: translateY(0); }
-}
+} */
 
 /* 공통 - 버튼 */
 .btnArrowBox{display: flex; gap: 0 var(--spacing-xs);}
@@ -67,8 +76,13 @@
 #headerWrap .headerCenterBox .leftBox .snsBox{display: flex; align-items: center; gap: 0 var(--spacing-2xs);}
 #headerWrap .headerCenterBox .leftBox .linkList{display: flex;}
 #headerWrap .headerCenterBox .leftBox .linkList > li{position: relative;}
-#headerWrap .headerCenterBox .leftBox .linkList li a{display: block;}
-#headerWrap .modalBtn.active{padding: var(--spacing-xs);color: var(--gray-600); font-weight: var(--medium); border-radius: var(--radius-xs); background-color: var(--gray-100); font-size: var(--font-size-s); line-height: 1.2;}
+#headerWrap .headerCenterBox .leftBox .linkList li a span,
+#headerWrap .headerCenterBox .leftBox .linkList li button span{display: block; padding: var(--spacing-xs); position: relative; line-height: 1.2; font-size: var(--font-size-s); color: var(--gray-600); font-weight: var(--medium); border-radius: var(--radius-xs);}
+#headerWrap .headerCenterBox .leftBox .linkList li a,
+#headerWrap .headerCenterBox .leftBox .linkList li button{border-radius: var(--radius-xs);}
+#headerWrap .headerCenterBox .leftBox .linkList li a:hover,
+#headerWrap .headerCenterBox .leftBox .linkList li button:hover{background-color: var(--gray-100);}
+#headerWrap .modalBtn.active{padding: var(--spacing-xs);color: var(--gray-600); font-weight: var(--medium); background-color: var(--gray-100); font-size: var(--font-size-s); line-height: 1.2;}
 #headerWrap .headerCenterBox .leftBox.authBox a{display: block; color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
 #headerWrap .headerCenterBox .rightBox,
 #headerWrap .headerCenterBox .leftBox{display: flex; align-items: center; }
@@ -77,7 +91,9 @@
 #headerWrap .rightBox .zoomControlBox{position: relative; display: flex; align-items: center;}
 #headerWrap .rightBox .zoomControlBox .zoomTooltip {opacity: 0; visibility: hidden; position: absolute; top: 40px; left: 50%; transform: translateX(-50%); padding: var(--spacing-s) var(--spacing-s); background-color: var(--white); color: var(--gray-600); font-size: var(--font-size-m); line-height: 1; border-radius: var(--radius-s); border: 1px solid var(--gray-300); z-index: 10; transition: all .3s; box-shadow: 5px 5px 10px rgba(0,0,0,.1); font-weight: var(--bold);}
 #headerWrap .headerCenterBox .rightBox .zoomControlBox .zoomTooltip.show{opacity: 1; visibility: visible;}
-#headerWrap .headerCenterBox .rightBox .authBtn{display: block; padding: var(--spacing-xs); font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-600);}
+#headerWrap .headerCenterBox .rightBox .authBtn span{padding: var(--spacing-xs); font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-600);}
+#headerWrap .headerCenterBox .rightBox .authBtn{border-radius: var(--radius-xs);}
+#headerWrap .headerCenterBox .rightBox .authBtn:hover{background-color: var(--gray-100);}
 
 /* 헤더 영역 - 메뉴 */
 #headerWrap .headerBottomWrap{position: relative; margin-top: var(--spacing-2xs);  z-index: 999999; background-color: var(--white);}

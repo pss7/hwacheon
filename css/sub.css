@@ -7,13 +7,21 @@ body{height: 100%;}
 main{flex: 1;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
+/* 공통 - 탭 */
+.tabList{margin: var(--spacing-xs) 0; display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
+.tabList li .tabBtn{padding: var(--spacing-xs) var(--spacing-s); background-color: var(--gray-100); border-radius: var(--radius-s); font-size: var(--Subtitle-2); background-color: var(--gray-100); font-weight: var(--bold); transition: all .3s;}
+.tabList li .tabBtn:hover{background-color: var(--gray-400); color: var(--white);}
+.tabList li .tabBtn.active{background-color: var(--primary-500); color: var(--white);}
+
 /* 공통 - 제목 */
 .tit{font-size: var(--H4); font-weight: var(--bold); color: var(--gray-900);}
-.text{font-size: var(--gray-600); color: var(--font-size-xl);}
+.text{font-size: var(--font-size-xl); color: var(--gray-600);}
 
 @media (max-width: 768px){
 
   .tit{font-size: var(--H5);}
+  .text{font-size: var(--font-size-m);}
+  .text br{display: none;}
 
 }
 
@@ -642,8 +650,8 @@ main{flex: 1;}
 .accessBox .operationBox dl dt{flex-shrink: 0;}
 .accessBox .operationBox dl dt h5{display: flex; align-items: center; gap: 0 var(--spacing-s); font-family: 'RiaSans'; font-size: var(--H5); color: var(--gray-900); font-weight: var(--regular);}
 .accessBox .operationBox dl dt h5::before{content: ''; width: 48px; height: 48px;}
-.accessBox .operationBox dl dt h5.meetingIcon01::before{background: url(../images/sub/meeting_icon01.svg)no-repeat center / contain;}
-.accessBox .operationBox dl dt h5.meetingIcon02::before{background: url(../images/sub/meeting_icon02.svg)no-repeat center / contain;}
+.accessBox .operationBox dl dt h5.meetingIcon01::before{background: url(../images/sub/icon01.svg)no-repeat center / contain;}
+.accessBox .operationBox dl dt h5.meetingIcon02::before{background: url(../images/sub/icon02.svg)no-repeat center / contain;}
 .accessBox .operationBox dl dd{width: 100%;}
 .accessBox .operationBox dl dd p{margin-bottom: var(--spacing-s); color: var(--gray-600);}
 .accessBox .operationBox dl dd .list01{padding: var(--spacing-s); border-radius: var(--radius-xs); background-color: var(--gray-50);}
@@ -982,6 +990,45 @@ main{flex: 1;}
 
 
 
+.convocationBox .sessionBox02{margin-bottom: var(--spacing-3xl);}
+.convocationBox .sessionBox02 h4{margin-bottom: var(--spacing-m); font-size: var(--font-size-xxxl); font-weight: var(--semi-bold); text-align: center;}
+.convocationBox .sessionBox02 .sessionCompare {display: grid; grid-template-columns: 132px 1fr 132px; align-items: stretch; max-width: 1200px; margin: 0 auto;}
+.convocationBox .sessionBox02 .sideLabel{ display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-s) 0; font-family: 'RiaSans';
+  font-size: var(--H4); color: var(--gray-900);}
+.convocationBox .sessionBox02 .sideLabel::before{content: ''; width:48px; height: 48px;}
+.convocationBox .sessionBox02 .sideLabel.leftLabel::before{background: url(../images/sub/icon02.svg)no-repeat center / contain;}
+.convocationBox .sessionBox02 .sideLabel.rightLabel::before{background: url(../images/sub/icon03.svg)no-repeat center / contain;}
+.convocationBox .sessionBox02 .centerTable{max-width: 814px; margin: 0 auto; display: grid; grid-template-rows: repeat(2, auto); background: var(--white);}
+.convocationBox .sessionBox02 .tableRow{margin-bottom: -1px; display: grid; grid-template-columns: 1fr 66px 1fr; align-items: center; border: 1px dashed var(--gray-200); border-width: 1px 0;}
+.convocationBox .sessionBox02 .leftValue,
+.convocationBox .sessionBox02 .middleLabel,
+.convocationBox .sessionBox02 .rightValue {display: flex; align-items: center}
+.convocationBox .sessionBox02 .middleLabel{padding: var(--spacing-2xs) var(--spacing-xs); background: var(--gray-100); border-radius: var(--radius-xs); font-weight: var(--semi-bold); color: var(--gray-600); font-size: var(--font-size-s);}
+.convocationBox .sessionBox02 .leftValue{display: flex; gap: 0 var(--spacing-xs); justify-content: flex-end; padding: var(--spacing-ms) var(--spacing-lm);}
+.convocationBox .sessionBox02 .rightValue{display: flex; gap: 0 var(--spacing-xs); justify-content: flex-start; padding: var(--spacing-ms) var(--spacing-lm);}
+.convocationBox .sessionBox02 .leftValue,
+.convocationBox .sessionBox02 .rightValue{font-size: var(--Subtitle-1);}
+.convocationBox .sessionBox02 .middleLabel{min-height: 32px; justify-content: center; line-height: 1.4;}
+.convocationBox .sessionBox02 .middleLabel br{display: none;}
+.convocationBox .sessionBox02 .leftValue::after{content: ''; margin-top: 1px; width: 8px; height: 8px;  border-radius: var(--radius-s); background-color: var(--primary-500);}
+.convocationBox .sessionBox02 .rightValue::before{content: ''; margin-top: 1px; width: 8px; height: 8px;  border-radius: var(--radius-s); background-color: var(--secondary-500);}
+.convocationBox .convocationMeetingBox{margin-bottom: var(--spacing-3xl);}
+.convocationBox .convocationMeetingBox .meetingLayoutBox{margin-bottom: var(--spacing-m); padding: var(--spacing-2xl) var(--spacing-m); display: flex; justify-content: center; gap: 0 var(--spacing-3xl); background: linear-gradient(90deg, #FEFEFE 0%, #FAFAFA 50%, #FEFEFE 100%);}
+.convocationBox .convocationMeetingBox .arrow{width: 28px; height: 28px; background: url(../images/sub/arrow_icon.svg) no-repeat center / contain; transform: rotate(-90deg);}
+.convocationBox .convocationMeetingBox h5{margin-bottom: var(--spacing-m); font-size: var(--H4); color: var(--gray-900); text-align: center;}
+.convocationBox .convocationMeetingBox .meetingContentList{display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-2xs);}
+.convocationBox .convocationMeetingBox .meetingContentList li{display: flex; align-items: center; justify-content: center; min-height: 48px; padding: var(--spacing-xs); border-radius: var(--spacing-xs); font-weight: var(--semi-bold); color: var(--white); background-color: var(--primary-500);}
+.convocationBox .convocationMeetingBox p{text-align: center; font-size: var(--font-size-xl); color: var(--gray-600);}
+.convocationBox .flowSection{margin-bottom: var(--spacing-3xl);}
+.convocationBox .flowSection:nth-last-of-type(2){margin-bottom: var(--spacing-lm);}
+.convocationBox .flowSection .bulletTitle{margin-bottom: var(--spacing-m);}
+.convocationBox .flowSection .flowList{display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-s);}
+.convocationBox .flowSection .flowList > li{padding: var(--spacing-m); border: 1px solid var(--gray-600); border-radius: var(--radius-m); box-shadow: 10px 10px 40px rgba(0,0,0,.1);}
+.convocationBox .flowSection .flowList li h5{margin-bottom: var(--spacing-s); font-size: var(--Subtitle-1); color: var(--gray-900);}
+.convocationBox .supplementBox .bulletIcon li{margin: 0; padding: var(--spacing-ms) var(--spacing-ms) var(--spacing-ms) var(--spacing-s); border-bottom: 1px dashed var(--gray-200);}
+.convocationBox .supplementBox .bulletIcon li:last-child{border-bottom: 0;}
+.convocationBox .supplementBox .bulletIcon > li::before{top: 19px;}
 
 @media (max-width: 1280px){
 
@@ -993,6 +1040,20 @@ main{flex: 1;}
 
   .convocationBox .assemblyBox::after{width: 112px; height: 126px;}
   .convocationBox .sessionBox01{padding: var(--spacing-lm) var(--spacing-ms);}
+  .convocationBox .sessionBox02 .sessionCompare { grid-template-columns: 1fr 1fr;
+    grid-template-areas: "leftLabel rightLabel"  "centerTable centerTable";
+   gap: var(--spacing-lm) 0;}
+  .convocationBox .sessionBox02 .leftLabel{grid-area: leftLabel;}
+  .convocationBox .sessionBox02 .rightLabel{grid-area: rightLabel;}
+  .convocationBox .sessionBox02 .centerTable {grid-area: centerTable; max-width: 100%;}
+  .convocationBox .sessionBox02 .sideLabel{ justify-content: center;}
+  .convocationBox .sessionBox02 .leftValue::after,
+  .convocationBox .sessionBox02 .rightValue::before{display: none;}
+  .convocationBox .sessionBox02 .leftValue,
+  .convocationBox .sessionBox02 .rightValue{display: block; padding: var(--spacing-ms); text-align: center;}
+  .convocationBox .sessionBox02 .centerTable{width: 100%;}
+
+  .convocationBox .convocationMeetingBox .meetingContentList li{min-height: 34px;}
 
 }
 
@@ -1013,6 +1074,18 @@ main{flex: 1;}
   .convocationBox .sessionBox01 .meetingInfoBox01 strong{font-size: var(--font-size-xxxl);}
   .convocationBox .sessionBox01 .meetingInfoBox02{flex-direction: column; gap: var(--spacing-xs ) 0;}
   .convocationBox .sessionBox01 .meetingInfoBox02 .meeting01{max-width: none;}
+
+  .convocationBox .sessionBox02 h4{font-size: var(--font-size-xl);}
+  .convocationBox .sessionBox02 .sideLabel{font-size: var(--H5);}
+
+  .convocationBox .convocationMeetingBox .meetingLayoutBox{flex-direction: column; align-items: center; gap: var(--spacing-m) 0;}
+  .convocationBox .convocationMeetingBox .arrow{transform: none;}
+  .convocationBox .convocationMeetingBox h5{font-size: var(--H5);}
+  .convocationBox .convocationMeetingBox p{font-size: var(--font-size-m);}
+  .convocationBox .convocationMeetingBox p br{display: none;}
+
+  .convocationBox .flowSection .flowList{grid-template-columns: repeat(2, 1fr)}
+  .convocationBox .flowSection .flowList > li{padding: var(--spacing-s);}
   
 }
 
@@ -1026,11 +1099,376 @@ main{flex: 1;}
 @media (max-width: 480px){
 
   .convocationBox .assemblyBox .text01{font-size: var(--font-size-l);}
-
   .convocationBox .sessionBox01{padding: var(--spacing-m) var(--spacing-ms);}
   .convocationBox .sessionBox01 .sessionPeriodBox p{font-size: var(--font-size-l);}
   .convocationBox .sessionBox01 .sessionPeriodBox img.tablet{display: none;}
   .convocationBox .sessionBox01 .sessionPeriodBox img.mobile{display: block;}
   .convocationBox .sessionBox01 .meetingInfoBox01 p{font-size: var(--font-size-s);}
+  .convocationBox .sessionBox02 .leftValue,
+  .convocationBox .sessionBox02 .rightValue{font-size: var(--body-2);}
+  .convocationBox .sessionBox02 .tableRow{grid-template-columns: 1fr 40px 1fr;}
+  .convocationBox .sessionBox02 .middleLabel br{display: block;}
+
+  .convocationBox .convocationMeetingBox .meetingLayoutBox{padding: var(--spacing-m);}
+
+  .convocationBox .flowSection .flowList{grid-template-columns: 1fr; gap: var(--spacing-xs);}
+  .convocationBox .flowSection .flowList > li{padding: var(--spacing-s);}
+  .convocationBox .flowSection .flowList li h5{font-size: var(--Subtitle-2);}
+  .convocationBox .supplementBox .bulletIcon > li::before{top: 17px;}
+
+}
+
+/* 만화로 보는 화천군의회 */
+.comicsBox .comicsContentBox{position: relative; flex-shrink: 1; max-width: 774px; width: 100%; background-color: var(--gray-50); }
+.comicsBox .comicsContentBox::before,
+.comicsBox .comicsContentBox::after {content: ''; position: absolute; left: 0;
+  right: 0; bottom: 0;}
+.comicsBox .comicsContentBox::before {left: 0; right: 0; bottom: 0; height: 132px;
+  z-index: 9; background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(255, 255, 255, 0.08) 42%,
+    rgba(255, 255, 255, 0.18) 68%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  box-shadow:
+    inset 0 -34px 48px rgba(255, 255, 255, 0.24),
+    inset 0 -14px 24px rgba(255, 255, 255, 0.18);}
+.comicsBox .comicsContentBox::after {left: 0; right: 0; bottom: 0; height: 110px;
+  z-index: 3; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.12) 22%,
+    rgba(0, 0, 0, 0.34) 55%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.12) 22%,
+    rgba(0, 0, 0, 0.34) 55%,
+    rgba(0, 0, 0, 0.75) 100%
+  );}
+.comicsBox .comicsContentBox.isEnd::before,
+.comicsBox .comicsContentBox.isEnd::after {display: none;}
+.comicsBox .comicsContentBox .comicsList{padding: var(--spacing-2xl); height: 1076px; overflow-y:auto;}
+.comicsBox .comicsContentBox .comicsList li{position: relative; box-shadow: 10px 10px 40px rgba(0,0,0,.1);}
+.comicsBox .comicsContentBox .comicsList li .number{min-width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; position: absolute; top:0; right:0; border-radius: var(--radius-2xs); border: 1px solid var(--gray-600); font-size: var(--Caption); background-color: var(--white); font-weight: var(--semi-bold);}
+.comicsBox .comicsLayoutBox{display: flex; gap: 0 var(--spacing-3xl)}
+.comicsBox .comicsTextBox{flex: 1;}
+.comicsBox .comicsTextBox h3{padding: var(--spacing-2xs) var(--spacing-xs); display: inline-block; margin-bottom: var(--spacing-xs); font-weight: var(--semi-bold); font-size: var(--font-size-xs); color: var(--primary-700); border: 1px solid var(--primary-200); border-radius: 0 0 0 var(--radius-xs); background-color: var(--primary-50);}
+.comicsBox .comicsTextBox .text01{margin-bottom: var(--spacing-m); font-weight: var(--bold); font-size: var(--font-size-xxxl); color: var(--gray-900); line-height: 1.5;}
+.comicsBox .comicsTextBox .text02{padding: var(--spacing-s); margin-bottom: var(--spacing-2xl); border: 1px solid var(--gray-600); box-shadow: 10px 10px 40px rgba(0,0,0,.1); border-radius: var(--radius-m); font-size: var(--body-2); color: var(--gray-600);}
+.comicsBox .comicsTextBox .charactersList{  display: grid;
+  grid-template-columns: repeat(3, 1fr); gap: var(--spacing-s) var(--spacing-m);}
+.comicsBox .comicsTextBox h4{margin-bottom: var(--spacing-m); font-size: var(--Subtitle-1); font-weight: var(--semi-bold); color: var(--gray-900);}
+.comicsBox .comicsTextBox .charactersList li{text-align: center;}
+.comicsBox .comicsTextBox .charactersList li .imgBox{height: 208px; margin-bottom: var(--spacing-xs);}
+.comicsBox .comicsTextBox .charactersList li .imgBox img{width: auto; margin: 0 auto;}
+.comicsBox .comicsTextBox .charactersList li em{display: inline-flex; padding: var(--spacing-2xs) var(--spacing-xs); font-style: normal; border-radius: var(--radius-xs); background-color: var(--gray-100); color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--semi-bold); word-break: keep-all; line-height: 1.5;}  
+
+@media (max-width: 1280px){
+
+  .comicsBox .comicsContentBox .comicsList{padding: var(--spacing-2xl) var(--spacing-ms);}
+
+}
+
+@media (max-width: 1024px){
+
+  .comicsBox .comicsTextBox{margin-bottom: var(--spacing-3xl);}
+  .comicsBox .comicsLayoutBox{flex-direction: column-reverse;}
+  .comicsBox .comicsContentBox{max-width: none; background: 0;}
+  .comicsBox .comicsContentBox .comicsList{padding: 0;}
+
+}
+
+@media (max-width: 480px){
+
+  .comicsBox .comicsTextBox .charactersList li .imgBox{height: 156px;}
+  .comicsBox .comicsTextBox .charactersList li .imgBox img{max-width: 100%; height: 100%; object-fit: contain;}
+
+}
+
+/* 의원윤리강령 */
+.ethicsCodeBox .text{margin-bottom: var(--spacing-3xl);}
+.ethicsCodeBox .ethicsCodeLayoutBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-5xl);}
+.ethicsCodeBox .ethicsCodeTitBox{position: sticky; top:30px;}
+.ethicsCodeBox .ethicsCodeTitBox h4{margin-bottom: var(--spacing-lm); color: var(--gray-900); font-size: var(--H1); font-weight: var(--bold);}
+.ethicsCodeBox .ethicsCodeList{margin-top: 156px; flex: 1;}
+.ethicsCodeBox .ethicsCodeList li dl{margin-bottom: -1px; display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-m) var(--spacing-s); border: 1px solid var(--gray-200); border-width: 1px 0;}
+.ethicsCodeBox .ethicsCodeList li dl dt{width: 160px; flex-shrink: 0;}
+.ethicsCodeBox .ethicsCodeList li dl dt span{display: block; margin-bottom: var(--spacing-s); color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s);}
+.ethicsCodeBox .ethicsCodeList li dl dt p{line-height: 1.6; font-size: var(--font-size-xl); color: var(--gray-900);}
+.ethicsCodeBox .ethicsCodeList li dl:last-child{border-bottom: 0;}
+.ethicsCodeBox .ethicsCodeList li dl dd{color: var(--gray-600);}
+
+@media (max-width: 1024px){
+
+  .ethicsCodeBox .ethicsCodeLayoutBox{gap: 0 var(--spacing-3xl);}
+  .ethicsCodeBox .ethicsCodeTitBox h4{font-size: var(--H4);}
+  .ethicsCodeBox .ethicsCodeTitBox .ethicsCodeImgBox{width: 240px;}
+  .ethicsCodeBox .ethicsCodeList{margin-top: 116px;}
+
+}
+
+@media (max-width: 768px){
+
+  .ethicsCodeBox .ethicsCodeLayoutBox{gap: 0 var(--spacing-lm);}
+  .ethicsCodeBox .ethicsCodeTitBox .ethicsCodeImgBox{width: 160px;}
+
+}
+
+@media (max-width: 576px){
+
+  .ethicsCodeBox .ethicsCodeList li dl{flex-direction: column; align-items: flex-start;}
+  .ethicsCodeBox .ethicsCodeList li dl dt p{margin-bottom: var(--spacing-xs); font-size: var(--font-size-l);}
+  .ethicsCodeBox .ethicsCodeTitBox .ethicsCodeImgBox{width: 120px;}
+
+}
+
+@media (max-width: 480px){
+
+  .ethicsCodeBox .ethicsCodeTitBox{width: 100%; position: static;}
+  .ethicsCodeBox .ethicsCodeLayoutBox{flex-direction: column; gap: var(--spacing-lm) 0;}
+  .ethicsCodeBox .ethicsCodeList li dl{padding: var(--spacing-m) var(--spacing-s) var(--spacing-m) 0;}
+  .ethicsCodeBox .ethicsCodeList{margin-top: 0;}
+  .ethicsCodeBox .ethicsCodeList li dl dt{width: 100%;}
+
+}
+
+/* 현역의원 */
+.currentMemberBox .currentMemberTopTit{margin-bottom: var(--spacing-lm); display: flex; align-items: flex-end; gap: 0 var(--spacing-s);}
+.currentMemberBox .currentMemberTopTit h4{flex-shrink: 0; color: var(--gray-900); font-size: var(--H1);}
+.currentMemberBox .currentMemberTopTit .termBox{justify-content: center; display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--success-50); border-radius: 0 0 0 var(--radius-xs);}
+.currentMemberBox .currentMemberTopTit .termBox .term{flex-shrink: 0; font-weight: var(--semi-bold); font-size: var(--font-size-s); color: var(--success-500); font-style: normal;}
+.currentMemberBox .currentMemberTopTit .termBox .date{color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium); text-align: center;}
+.currentMemberBox .currentMemberTab{padding: var(--spacing-xs) var(--spacing-s); display: inline-flex; gap: 0 var(--spacing-m); border: 1px solid var(--gray-100); border-radius: var(--spacing-s)}
+.currentMemberBox .currentMemberTab li .tabBtn{font-weight: var(--bold); color: var(--gray-400); font-size: var(--Subtitle-2); transition: all .3s;}
+.currentMemberBox .currentMemberTab li .tabBtn:hover{color: var(--primary-500);}
+.currentMemberBox .currentMemberTab li .tabBtn.active{color: var(--gray-900);}
+.currentMemberBox .currentMemberList{margin-top: var(--spacing-m); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-m);}
+.currentMemberBox .currentMemberList li{flex-wrap: wrap; display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-lm); min-height: 488px; padding: var(--spacing-m); border-radius: var(--radius-m); border: 1px solid var(--gray-100);}
+.currentMemberBox .currentMemberList li .currentMemberImgBox{position: relative; width: 269px; height: 360px; border-radius:var(--radius-m) var(--radius-m) var(--radius-l) var(--radius-m); background-color: var(--gray-100); overflow: hidden;}
+.currentMemberBox .currentMemberList li .currentMemberImgBox img.person{height: 100%; object-fit: cover;}
+.currentMemberBox .currentMemberList li .currentMemberImgBox .politicalParty{position: absolute; bottom: 20px; right:20px;}
+.currentMemberBox .currentMemberTextBox{width: calc(100% - 331px); height: 360px; display: flex; flex-direction: column;}
+.currentMemberBox .currentMemberTextBox .currentMemberNameBox{margin-bottom: var(--spacing-lm);}
+.currentMemberBox .currentMemberTextBox .currentMemberNameBox .name01{display: block; margin-bottom: var(--spacing-xs); color: var(--gray-900); font-size: var(--H4); font-weight: var(--bold); font-family: 'RiaSans';} 
+.currentMemberBox .currentMemberTextBox .currentMemberNameBox .name02{color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--bold); font-style: normal;}
+.currentMemberBox .currentMemberTextBox .currentMemberInfoBox span{display: block; margin-bottom: var(--spacing-xs); font-size: var(--H6); font-weight: var(--bold); color: var(--gray-600);}
+.currentMemberBox .currentMemberTextBox .currentMemberInfoBox em{padding: var(--spacing-2xs) var(--spacing-xs); font-style: normal; background-color: var(--gray-100); border-radius: var(--radius-xs); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+.currentMemberBox .currentMemberTextBox .currentMemberAttendanceBox{margin-top: auto;}
+.currentMemberBox .currentMemberTextBox .currentMemberAttendanceBox .layoutBox{display: flex;  align-items: center; justify-content: space-between;}
+.currentMemberBox .currentMemberTextBox .currentMemberAttendanceBox .attendanceRateTitle{display: block; font-weight: var(--bold); color: var(--gray-900);}
+.currentMemberBox .currentMemberTextBox .attendanceRateBox{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.currentMemberBox .currentMemberTextBox .attendanceRateBox .box{color: var(--gray-400); font-weight: var(--bold);}
+.currentMemberBox .currentMemberTextBox .attendanceRateBox .box strong{color: var(--gray-900);}
+.currentMemberBox .currentMemberTextBox .attendanceRateBox .percent{padding: var(--spacing-2xs) var(--spacing-xs); font-style: normal; background-color: var(--stat-percent-bg); color: var(--white); border-radius: var(--radius-xs); font-size: var(--font-size-s);}
+.currentMemberBox .currentMemberTextBox .percentBox{margin-top: var(--spacing-xs); position: relative; height: 6px; border-radius: var(--radius-s); background-color: var(--gray-50); overflow: hidden;}
+.currentMemberBox .currentMemberTextBox .percentBox span{position: absolute; top:0; left:0; right:0; bottom: 0; border-radius: var(--radius-s); background-color: var(--primary-500); box-shadow: 8px 0 20px #FFBB3D;}
+.currentMemberBox .currentMemberList li .memberInfoModalBox{margin-top: var(--spacing-m); width: 100%; padding: var(--spacing-xs); display: flex; gap: 0 0; border: 1px solid var(--gray-200); border-radius: var(--radius-s);}
+.currentMemberBox .currentMemberList li .memberInfoModalBox .memberBtn{height: 40px; flex: 1; color: var(--gray-600); font-weight: var(--bold); text-align: center; border-radius: var(--spacing-xs);}
+
+
+.currentMemberTabContent{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1280px){
+
+  .currentMemberBox .currentMemberTextBox{width: calc(100% - 220px); height: 240px;}
+  .currentMemberBox .currentMemberList li{min-height: auto;}
+  .currentMemberBox .currentMemberList li .currentMemberImgBox{width: 180px; height: 240px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .currentMemberBox .currentMemberList{grid-template-columns: 1fr;}
+  .currentMemberBox .currentMemberTextBox .currentMemberNameBox .name01{font-size: var(--H5);}
+
+}
+
+@media (max-width: 768px){
+
+  .currentMemberBox .currentMemberTextBox .currentMemberInfoBox span{font-size: var(--font-size-l);}
+  .currentMemberBox .currentMemberTopTit h4{font-size: var(--H4);}
+
+}
+
+@media (max-width: 480px){
+
+  .currentMemberBox .currentMemberTextBox{margin-bottom: var(--spacing-m); display: flex; flex-wrap: wrap; width: 100%; height: auto; flex-direction: row; gap: var(--spacing-lm) 0;}
+  .currentMemberBox .currentMemberTextBox .currentMemberAttendanceBox{width: 100%;}
+  .currentMemberBox .currentMemberList li{padding: var(--spacing-m) var(--spacing-s) var(--spacing-s); flex-direction: column;}
+  .currentMemberBox .currentMemberTextBox .currentMemberNameBox{margin: 0;}
+  .currentMemberBox .currentMemberTextBox .currentMemberNameBox,
+  .currentMemberBox .currentMemberTextBox .currentMemberInfoBox{width: 50%;}
+  .currentMemberBox .currentMemberList li .currentMemberImgBox{width: 100%; height: auto;}
+  .currentMemberBox .currentMemberList li .memberInfoModalBox{margin-top: var(--spacing-s);}
+  .currentMemberBox .currentMemberList{gap: var(--spacing-lm);}
+  
+  .currentMemberBox .currentMemberTab li .tabBtn{font-size: var(--body-2);}
+
+}
+
+/* 역대의원 */
+.formerMemberBox .formerMemberLayoutBox{margin: var(--spacing-lm) 0 var(--spacing-3xl); display: flex; align-items: flex-start; gap: 0 var(--spacing-m);}
+.formerMemberBox .formerMemberInfoBox{position: sticky; top: 30px; width: 220px; flex-shrink: 0;} 
+.formerMemberBox .formerMemberInfoBox h4{margin-bottom: var(--spacing-s); color: var(--gray-900); font-size: var(--H1);}
+.formerMemberBox .formerMemberInfoBox .personnel{display: block; margin-bottom: var(--spacing-xs); color: var(--gray-900); font-weight: var(--bold);}
+.formerMemberBox .formerMemberInfoBox .termBox{justify-self: flex-start; padding: var(--spacing-2xs) var(--spacing-xs); display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; background-color: var(--success-50); border-radius: 0 0 0 var(--spacing-xs);}
+.formerMemberBox .formerMemberInfoBox .termBox .term{font-weight: var(--semi-bold); font-size: var(--font-size-s); color: var(--success-500);}
+.formerMemberBox .formerMemberInfoBox .termBox .date{font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-600);}
+.formerMemberBox .formerMemberList{flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid var(--gray-900);}
+.formerMemberBox .formerMemberList li{padding: var(--spacing-m) var(--spacing-m) var(--spacing-lm); border: 1px solid var(--gray-100);}
+.formerMemberBox .formerMemberList li .name{margin-bottom: var(--spacing-s); display: block; color: var(--gray-900); font-size: var(--font-size-xxxl); font-weight: var(--bold); font-family: 'RiaSans';}
+.formerMemberBox .formerMemberList li .info{margin-bottom: var(--spacing-m); display: block; color: var(--gray-600); font-weight: var(--medium);}
+.formerMemberBox .formerMemberList li .imgBox{max-width: 180px; height: 217px; overflow: hidden; border-radius: 0 0 var(--spacing-2xl) 0; background-color: var(--gray-100);}
+.formerMemberBox .formerMemberList li .imgBox img{height: 100%; object-fit: cover;}
+
+@media (max-width: 1280px){
+  
+  .formerMemberBox .formerMemberList{grid-template-columns: repeat(3, 1fr)}
+  
+
+}
+
+@media (max-width: 1024px){
+
+  .formerMemberBox .formerMemberLayoutBox{flex-direction: column; gap: 0 0;}
+  .formerMemberBox .formerMemberInfoBox{margin-bottom: var(--spacing-s); display: flex; justify-content: space-between; flex-wrap: wrap; position: static; width: 100%;}
+  .formerMemberBox .formerMemberInfoBox h4{flex-shrink: 0; margin: 0; font-size: var(--H4);}
+  .formerMemberBox .formerMemberInfoBox .infoBox{display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs);}
+  .formerMemberBox .formerMemberInfoBox .personnel{margin: 0;}
+  .formerMemberBox .formerMemberList{width: 100%;}
+  .formerMemberBox .formerMemberList li:nth-child(4n){border-right:1px solid var(--gray-100);}
+  .formerMemberBox .formerMemberList li{padding: var(--spacing-s) var(--spacing-s) var(--spacing-ml);}
+  .formerMemberBox .formerMemberList li .name{margin-bottom: var(--spacing-xs);font-size: var(--font-size-l);}
+  .formerMemberBox .formerMemberList li .info{margin-bottom: var(--spacing-s);}
+
+}
+
+@media (max-width: 768px){
+
+  .formerMemberBox .formerMemberList li .imgBox{border-radius: 0 0 var(--radius-l) 0;}
+
+}
+
+@media (max-width: 576px){
+
+  .formerMemberBox .formerMemberList li .imgBox{height: 170px;}
+
+}
+
+@media (max-width: 480px){
+
+  .formerMemberBox .formerMemberList li .imgBox{height: 250px;}
+  .formerMemberBox .formerMemberInfoBox h4{font-size: var(--H5);}
+  .formerMemberBox .formerMemberList{grid-template-columns: repeat(2, 1fr);}
+  .formerMemberBox .formerMemberList li{padding: var(--spacing-s) var(--spacing-s) var(--spacing-ml) var(--spacing-xs);}
+  .formerMemberBox .formerMemberList li .info{font-size: var(--font-size-s);}
+
+}
+
+@media (max-width: 414px){
+
+    .formerMemberBox .formerMemberList li .imgBox{height: 200px;}
+
+}
+
+@media (max-width: 360px){
+
+    .formerMemberBox .formerMemberList li .imgBox{height: 180px;}
+
+}
+
+@media (max-width: 320px){
+
+    .formerMemberBox .formerMemberList li .imgBox{height: 160px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 모달 */
+#memberModalWrap{display: none; position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99999999999999999;}
+.memberModalBox{max-width: 560px; width: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: var(--white); border-radius: var(--spacing-lm); overflow: hidden;}
+.memberModalBox .memberTermList{position: relative; padding: var(--spacing-s) var(--spacing-ms); display: flex; justify-content: center; flex-wrap: wrap; gap: 0 var(--spacing-xs); background: linear-gradient(to right, #FFFEFD, #E1D8CD, #FFFFFF);}
+.memberModalBox .memberTermList li{padding: var(--spacing-xs); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s);}
+.memberModalBox .memberTermList li.current{background-color: var(--secondary-900); color: var(--white);}
+.memberModalBox .profileLayoutBox{padding: var(--spacing-ml) var(--spacing-m); display: flex; gap: 0 var(--spacing-lm);}
+.memberModalBox .memberProfileBox .memberImgBox{flex-shrink: 0; width: 210px; height: 293px; border-radius: 160px; overflow: hidden; box-shadow: 10px 10px 40px rgba(0,0,0,.1); background: linear-gradient(to bottom, #E8EBED, #F7F8F9);}
+.memberModalBox .memberProfileBox .memberImgBox img{height: 100%; object-fit: cover;}
+.memberModalBox .memberProfileBox .memberInfoBox{flex: 1;}
+.memberModalBox .memberProfileBox .memberInfoBox .infoText01{display: inline-block; margin-bottom: var(--spacing-xs); padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-s); color: var(--secondary-200); font-weight: var(--bold); background-color: var(--gray-600);}
+.memberModalBox .memberProfileBox .memberInfoBox .nameBox{margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: 0 var(--radius-xs);}
+.memberModalBox .memberProfileBox .memberInfoBox .nameBox .name01{color: var(--gray-900); font-size: var(--H4); font-weight: var(--bold);}
+.memberModalBox .memberProfileBox .memberInfoBox .nameBox .name02{color: var(--gray-400); font-weight: var(--medium); font-size: var(--body-2);}
+.memberModalBox .memberProfileBox dl{padding-left: 14px; position: relative; margin-bottom: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.memberModalBox .memberProfileBox dl::before{content: ''; position: absolute; top:8px; left:0; width: 6px; height: 6px; border-radius: 50%; background-color: var(--primary-500);}
+.memberModalBox .memberProfileBox dl:last-child{margin-bottom: 0;}
+.memberModalBox .memberProfileBox dl dt{width: 80px; flex-shrink: 0; color: var(--gray-600); font-size: var(--body-2); font-weight: var(--bold);}
+.memberModalBox .memberProfileBox dl dd{color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-2);}
+.memberModalBox .memberProfileBox .infoBox{ margin: var(--spacing-ms) 0;}
+.memberModalBox .memberProfileBox .infoBox span{position: relative; padding-left: var(--spacing-ml); display: block; margin-bottom: var(--spacing-xs); font-size: var(--body-2); font-weight: var(--medium); color: var(--gray-600);}
+.memberModalBox .memberProfileBox .infoBox span::before{content: ''; position: absolute; top:0; left:0; width: 24px; height: 24px;}
+.memberModalBox .memberProfileBox .infoBox span.phone::before{background: url(../images/sub/phone02.svg)no-repeat center / cover;}
+.memberModalBox .memberProfileBox .infoBox span.email::before{background: url(../images/sub/email.svg)no-repeat center / cover;}
+.memberModalBox .memberProfileBox .infoBox span a{font-size: var(--body-2); font-weight: var(--medium); color: var(--gray-600);}
+.memberModalBox .memberProfileBox .infoBox span:last-child{margin-bottom: 0;}
+.memberModalBox .memberProfileBox .attendanceRateBox{padding: var(--spacing-s); display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--spacing-s); border-radius: var(--radius-s); background-color: var(--primary-900);}
+.memberModalBox .memberProfileBox .attendanceRateBox span{color: var(--secondary-200); font-weight: var(--bold); font-size: var(--font-size-s);}
+.memberModalBox .memberProfileBox .attendanceRateBox em{font-style: normal; color: var(--white); font-weight: var(--bold); font-size: var(--H6);}
+.memberModalBox .line{display: block; height: 4px; border: 1px solid #BF9F17; background-color: var(#F9F7F1);}
+.memberModalBox .backgroundBox{padding: var(--spacing-m);}
+.memberModalBox .backgroundBox h3{margin-bottom: var(--spacing-s);}
+.memberModalBox .backgroundBox .historyBox{display: flex; gap: 0 var(--spacing-xs);}
+.memberModalBox .backgroundBox .historyBox h4{width: 56px; flex-shrink: 0; font-weight: var(--bold); font-size: var(--body-1); color: var(--gray-900);}
+.memberModalBox .backgroundBox .historyBox .historyList{flex: 1; height: 152px; overflow-y: auto;}
+.memberModalBox .backgroundBox .historyBox .historyList li{margin-bottom: var(--spacing-xs); color: var(--gray-600); font-size: var(--body-2); font-weight: var(--medium);} 
+.memberModalBox .backgroundBox .historyBox .historyList li:last-child{margin-bottom: 0;}
+.memberModalBox .modalFooterBox{padding: 12px var(--spacing-ms); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap:var(--spacing-xs); background-color: #C7CACD;}
+.memberModalBox .modalFooterBox .modalBtn{min-width: 96px; min-height: 32px; line-height: 32px; padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--gray-600); border-radius: var(--radius-s); text-align: center;}
+.memberModalBox .modalFooterBox .modalBtn span{ font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: var(--radius-xs);}
+.memberModalBox .modalFooterBox .modalBtn:hover span{background-color: var(--gray-500);}
+
+@media (max-width: 576px){
+
+  #memberModalWrap{background: none; backdrop-filter:none; top: 97px;}
+  .memberModalBox{max-width: none; width: 100%; top:0; left:0; transform: none; right:0; border-radius: 0;}
+  .memberModalBox .profileLayoutBox{flex-direction: column; gap: 0 0; align-items: center;}
+  .memberModalBox .memberProfileBox .memberImgBox{margin-bottom: var(--spacing-m); width: 144px; height: 201px;}
+  .memberModalBox .memberProfileBox .memberInfoBox{width: 100%;}
+  .memberModalBox .memberProfileBox .memberInfoBox .nameBox{flex-direction: column;}
+  .memberModalBox .memberProfileBox .memberInfoBox .nameBox .name01{margin-bottom: var(--spacing-xs);}
+  .memberModalBox .memberProfileBox .memberInfoBox .infoText01{display: block; width: 57px; margin: 0 auto var(--spacing-xs); font-size: var(--font-size-s);}
+  .memberModalBox .memberProfileBox .attendanceRateBox{min-height: 48px; padding: var(--spacing-xs) var(--spacing-s);}
+ 
+}
+
+@media(max-width: 480px){
+
+  #memberModalWrap{top: 93px;}
 
 }
