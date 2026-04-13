@@ -107,4 +107,22 @@ $(function () {
     $(this).parent().next().children('.currentMemberTabContent').eq($(this).index()).show();
   });
 
+  //역대의원
+  $('.formerMemberBox .formerMemberLayoutBox').hide();
+  $('.formerMemberBox .formerMemberLayoutBox').first().show();
+
+  $('.formerMemberBox .tabList li .tabBtn').attr('aria-selected', 'false');
+  $('.formerMemberBox .tabList li').first().children('.tabBtn').attr('aria-selected', 'true');
+
+  $('.formerMemberBox .tabList li').click(function () {
+    $('.formerMemberBox .tabList li').removeClass('active');
+    $(this).addClass('active');
+
+    $('.formerMemberBox .tabList li').children('.tabBtn').removeClass('active').attr('aria-selected', 'false');
+    $(this).children('.tabBtn').addClass('active').attr('aria-selected', 'true');
+
+    $('.formerMemberBox .formerMemberLayoutBox').hide();
+    $('.formerMemberBox .formerMemberLayoutBox').eq($(this).index()).show();
+  });
+
 });
