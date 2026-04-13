@@ -73,41 +73,38 @@ $(function () {
     );
   }).trigger('scroll');
 
-
-
-
-  //현역의원
   //현역의원
   $('.currentMemberBox .tabContentBox').hide();
   $('.currentMemberBox .tabContentBox').first().show();
+
+  $('.currentMemberBox .tabList li .tabBtn').attr('aria-selected', 'false');
+  $('.currentMemberBox .tabList li').first().children('.tabBtn').attr('aria-selected', 'true');
 
   $('.currentMemberBox .currentMemberTabContent').hide();
   $('.currentMemberBox .tabContentBox').eq(1).find('.currentMemberTabContent').first().show();
   $('.currentMemberBox .tabContentBox').eq(2).find('.currentMemberTabContent').first().show();
 
+  $('.currentMemberBox .currentMemberTab').each(function () {
+    $(this).find('.tabBtn').attr('aria-selected', 'false');
+    $(this).find('li').first().children('.tabBtn').attr('aria-selected', 'true');
+  });
+
+  // 상단 탭
   $('.currentMemberBox .tabList li').click(function () {
-
-    $('.currentMemberBox .tabList li').children().removeClass('active');
-    $(this).children().addClass('active');
-
-    let idx = $(this).index();
+    $('.currentMemberBox .tabList li').children().removeClass('active').attr('aria-selected', 'false');
+    $(this).children().addClass('active').attr('aria-selected', 'true');
 
     $('.currentMemberBox .tabContentBox').hide();
-    $('.currentMemberBox .tabContentBox').eq(idx).show();
-
+    $('.currentMemberBox .tabContentBox').eq($(this).index()).show();
   });
 
+  // 내부 탭
   $('.currentMemberBox .currentMemberTab li').click(function () {
-
-    $(this).parent().children().children().removeClass('active');
-    $(this).children().addClass('active');
-
-    let idx = $(this).index();
+    $(this).parent().children().children().removeClass('active').attr('aria-selected', 'false');
+    $(this).children().addClass('active').attr('aria-selected', 'true');
 
     $(this).parent().next().children('.currentMemberTabContent').hide();
-    $(this).parent().next().children('.currentMemberTabContent').eq(idx).show();
-
+    $(this).parent().next().children('.currentMemberTabContent').eq($(this).index()).show();
   });
-
 
 });

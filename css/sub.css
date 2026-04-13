@@ -1401,18 +1401,8 @@ main{flex: 1;}
 
 }
 
-
-
-
-
-
-
-
-
-
-
 /* 모달 */
-#memberModalWrap{display: none; position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99999999999999999;}
+#memberModalWrap{display: none; position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99999999;}
 .memberModalBox{max-width: 560px; width: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: var(--white); border-radius: var(--spacing-lm); overflow: hidden;}
 .memberModalBox .memberTermList{position: relative; padding: var(--spacing-s) var(--spacing-ms); display: flex; justify-content: center; flex-wrap: wrap; gap: 0 var(--spacing-xs); background: linear-gradient(to right, #FFFEFD, #E1D8CD, #FFFFFF);}
 .memberModalBox .memberTermList li{padding: var(--spacing-xs); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s);}
@@ -1455,7 +1445,7 @@ main{flex: 1;}
 
 @media (max-width: 576px){
 
-  #memberModalWrap{background: none; backdrop-filter:none; top: 97px;}
+  #memberModalWrap{background: none; backdrop-filter:none; top: 97px; z-index: 99999; overflow-y: auto;}
   .memberModalBox{max-width: none; width: 100%; top:0; left:0; transform: none; right:0; border-radius: 0;}
   .memberModalBox .profileLayoutBox{flex-direction: column; gap: 0 0; align-items: center;}
   .memberModalBox .memberProfileBox .memberImgBox{margin-bottom: var(--spacing-m); width: 144px; height: 201px;}
