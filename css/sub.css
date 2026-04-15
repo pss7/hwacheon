@@ -1450,7 +1450,7 @@ main{flex: 1;}
 .boardListTable thead tr th:first-child{border-radius: var(--radius-xs) 0 0 0;}
 .boardListTable thead tr th:last-child{border-radius: 0 var(--radius-xs) 0 0;}
 .boardListTable thead tr th{height: 35px; font-size: var(--font-size-m); font-weight: var(--bold); background-color: var(--gray-600); color: var(--white);}
-.boardListTable tbody tr{transition: all .3s;}
+.boardListTable tbody tr{transition: all .3s; background-color: var(--white);}
 .boardListTable tbody tr td{border-bottom: 1px solid var(--gray-100); transition: all .3s; text-align: center; font-weight: var(--medium); font-size: var(--font-size-m); color: var(--gray-900);}
 .boardListTable tbody tr td .id{display: inline-block; padding: var(--spacing-2xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-400); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--gray-100);}
 .boardListTable tbody tr td .category{min-width: 80px; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--primary-500);}

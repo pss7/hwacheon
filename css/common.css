@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+.blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+
 /* 공통 - 버튼 */
 .btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 58px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
 .btn.btnPrimary{background-color: var(--gray-600);}
@@ -16,3 +18,47 @@
   transform: translateY(-100%);}
 .slideText:hover .slideTextPrimary{transform: translateY(100%);}
 .slideText:hover .slideTextClone{transform: translateY(0);}
+
+/* 공통 - 게시판목록 */
+.boardListTable{width: 100%; table-layout: fixed; border-spacing: 0;}
+.boardListTable colgroup .id{width: 100px;}
+.boardListTable colgroup .title{width: auto;}
+.boardListTable colgroup .author{width: 176px;}
+.boardListTable colgroup .date{width: 144px;}
+.boardListTable thead tr th:first-child{border-radius: var(--radius-xs) 0 0 0;}
+.boardListTable thead tr th:last-child{border-radius: 0 var(--radius-xs) 0 0;}
+.boardListTable thead tr th{height: 35px; font-size: var(--font-size-m); font-weight: var(--bold); background-color: var(--gray-600); color: var(--white);}
+.boardListTable tbody tr{transition: all .3s; background-color: var(--white);}
+.boardListTable tbody tr td{border-bottom: 1px solid var(--gray-100); transition: all .3s; text-align: center; font-weight: var(--medium); font-size: var(--font-size-m); color: var(--gray-900);}
+.boardListTable tbody tr td .id{display: inline-block; padding: var(--spacing-2xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-400); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--gray-100);}
+.boardListTable tbody tr td .category{min-width: 80px; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--primary-500);}
+.boardListTable tbody tr td .link{display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-ml) var(--spacing-m) var(--spacing-ml) var(--spacing-m); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.boardListTable tbody tr td .link .file{flex-shrink: 0;}
+.boardListTable tbody tr td .link .file img{display: block;}
+.boardListTable tbody tr td .link .titleText{min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--H6); font-weight: var(--medium); color: var(--gray-900);}
+.boardListTable tbody tr td .date{font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400);}
+
+@media (max-width: 1024px){
+
+  .boardListTable tr{padding: var(--spacing-s) 0; display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--gray-100)!important;}
+  .boardListTable tbody tr td .date{margin-left: var(--spacing-xs);}
+  .boardListTable tbody tr td .category{padding: var(--spacing-2xs) var(--spacing-xs);}
+  .boardListTable tbody tr td .link{padding: var(--spacing-s) var(--spacing-ms) var(--spacing-s) 0;}
+  .boardListTable tbody tr td .link .titleText{font-size: var(--Subtitle-1);}
+  .boardListTable tbody tr td{font-size: var(--body-2);}
+  .boardListTable{border-top: 2px solid #000!important;}
+  .boardListTable thead{display: none;}
+  .boardListTable,
+  .boardListTable tbody,
+  .boardListTable td{display: block;}
+  .boardListTable tbody tr td{border: 0;}
+  .boardListTable tbody tr td.title{flex-basis: 100%; width: 100%;}
+
+
+}
+
+@media (max-width: 480px){
+
+  .boardListTable tbody tr td .link .titleText{font-size: var(--font-size-m);}
+
+}
