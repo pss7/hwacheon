@@ -125,4 +125,16 @@ $(function () {
     $('.formerMemberBox .formerMemberLayoutBox').eq($(this).index()).show();
   });
 
+  //드롭다운
+  $('.toggleBtn').click(function (e) {
+    e.stopPropagation();
+    $(this).parent().toggleClass('active');
+  });
+
+  $('.selectCloseBtn').click(function () {
+    $(this).parent().parent().removeClass('active');
+  });
+
+
+
 });

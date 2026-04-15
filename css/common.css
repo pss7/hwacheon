@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* 공통 - 버튼 */
+.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 58px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
+.btn.btnPrimary{background-color: var(--gray-600);}
+.btn:hover{background-color: var(--gray-400);} 
+.btn.btnSecondary{background-color: var(--gray-400);}
+.btn.btnNegative:hover{background-color: var(--pp-red);}
+.btn.btnPositive:hover{background-color: var(--pp-blue);}
+
+/* 공통 - 호버 시 텍스트 슬라이드 */
+.slideText{position: relative; display: block; width: 100%; overflow: hidden; text-align: center;}
+.slideTextItem{display: block;  white-space: nowrap; transition: transform .45s cubic-bezier(.22, 1, .36, 1);}
+.slideTextPrimary{transform: translateY(0);}
+.slideTextClone{position: absolute; top: 0; left: 0; width: 100%;
+  transform: translateY(-100%);}
+.slideText:hover .slideTextPrimary{transform: translateY(100%);}
+.slideText:hover .slideTextClone{transform: translateY(0);}

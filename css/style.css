@@ -6,7 +6,21 @@
 /* 공통 */
 .mobileNonScroll{overflow: hidden;}
 
+@media (min-width: 1281px){
+
+  .mobileNonScroll{overflow: visible;}
+
+}
+
 /* 공통 - 호버 시 텍스트 슬라이드 */
+.slideText{position: relative; display: block; width: 100%; overflow: hidden; text-align: center;}
+.slideTextItem{display: block;  white-space: nowrap; transition: transform .45s cubic-bezier(.22, 1, .36, 1);}
+.slideTextPrimary{transform: translateY(0);}
+.slideTextClone{position: absolute; top: 0; left: 0; width: 100%;
+  transform: translateY(-100%);}
+.slideText:hover .slideTextPrimary{transform: translateY(100%);}
+.slideText:hover .slideTextClone{transform: translateY(0);}
+
 .hoverSlide:not(.active){position: relative; display: inline-grid; overflow: hidden;
   vertical-align: middle;}
 .hoverSlide:not(.active) .hoverSlideText{ grid-area: 1 / 1; display: block;

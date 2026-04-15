@@ -7,6 +7,9 @@ body{height: 100%;}
 main{flex: 1;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
+/* 공통 - 정렬 */
+.textLeft{text-align: left!important;}
+
 /* 공통 - 탭 */
 .tabList{margin: var(--spacing-xs) 0; display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
 .tabList li .tabBtn{padding: var(--spacing-xs) var(--spacing-s); background-color: var(--gray-100); border-radius: var(--radius-s); font-size: var(--Subtitle-2); background-color: var(--gray-100); font-weight: var(--bold); transition: all .3s;}
@@ -126,23 +129,8 @@ main{flex: 1;}
 #contentWrap .contentTopBox .subMenuBox .subMenuList{padding: var(--spacing-s) 0; position: absolute; top: 56px; right: 0;
     min-width: 160px; width: max-content; max-width: 300px; max-height: 240px; border: 1px solid var(--gray-600); border-radius: var(--radius-m); box-shadow: 10px 10px 40px rgba(0,0,0,.1); z-index: 9999; background-color: var(--white); overflow-y: auto; overflow-x: hidden; opacity: 0; visibility: hidden; transform: translateY(-16px); transform-origin: top center;}
 #contentWrap .contentTopBox .subMenuBox.active .subMenuList{opacity: 1; visibility: visible; animation: dropBounceMotion .35s forwards;}
+@keyframes dropBounceMotion{ 0%{ opacity: 0; transform: translateY(-12px); } 70%{ opacity: 1; transform: translateY(2px); } 100%{ opacity: 1; transform: translateY(0); } }
 #contentWrap .contentTopBox .subMenuBox.active .subMenuBtn::before{transform: translate(-50%, -50%) rotate(-180deg);}
-
-@keyframes dropBounceMotion{
-    0%{
-        opacity: 0;
-        transform: translateY(-12px);
-    }
-    70%{
-        opacity: 1;
-        transform: translateY(2px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 #contentWrap .contentTopBox .subMenuBox .subMenuList li h4 a{padding: var(--spacing-xs) var(--spacing-m) var(--spacing-xs) var(--spacing-ms); display: block; color: var(--gray-600); font-weight: var(--medium);} 
 #contentWrap .contentTopBox .utilBox{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
 #contentWrap .contentTopBox .subMenuBox .subMenuList li h4 a.active{display: flex; align-items: center; color: var(--gray-900);}
@@ -980,16 +968,6 @@ main{flex: 1;}
 .convocationBox .sessionBox01 .sessionPeriodBox img.pc{display: block;}
 .convocationBox .sessionBox01 .sessionPeriodBox img.tablet{display: none;}
 .convocationBox .sessionBox01 .sessionPeriodBox img.mobile{display: none;}
-
-
-
-
-
-
-
-
-
-
 .convocationBox .sessionBox02{margin-bottom: var(--spacing-3xl);}
 .convocationBox .sessionBox02 h4{margin-bottom: var(--spacing-m); font-size: var(--font-size-xxxl); font-weight: var(--semi-bold); text-align: center;}
 .convocationBox .sessionBox02 .sessionCompare {display: grid; grid-template-columns: 132px 1fr 132px; align-items: stretch; max-width: 1200px; margin: 0 auto;}
@@ -1271,21 +1249,6 @@ main{flex: 1;}
 .currentMemberBox .currentMemberList li .memberInfoModalBox{margin-top: var(--spacing-m); width: 100%; padding: var(--spacing-xs); display: flex; gap: 0 0; border: 1px solid var(--gray-200); border-radius: var(--radius-s);}
 .currentMemberBox .currentMemberList li .memberInfoModalBox .memberBtn{height: 40px; flex: 1; color: var(--gray-600); font-weight: var(--bold); text-align: center; border-radius: var(--spacing-xs);}
 
-
-.currentMemberTabContent{}
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1280px){
 
   .currentMemberBox .currentMemberTextBox{width: calc(100% - 220px); height: 240px;}
@@ -1462,3 +1425,438 @@ main{flex: 1;}
   #memberModalWrap{top: 93px;}
 
 }
+
+/* 공통 - 검색 */
+.searchWrap{margin-bottom: var(--spacing-lm); padding: var(--spacing-m) var(--spacing-ms); border-radius: var(--radius-m); background: linear-gradient(to right, var(--gray-100), var(--primary-50)), var(--gray-100);}
+.searchBox{position: relative; display: flex; align-items: center; gap: 0 var(--spacing-s); max-width: 540px; margin: 0 auto; height: 72px; overflow: hidden; background-color: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius-s);}
+.searchBox .searchBtn{width: 40px; height: 100%; position: absolute; top: 50%; transform: translateY(-50%); right:16px; background: url(../images/sub/search_icon.svg)no-repeat center / contain;}
+.searchBox .searchSelectBox{height: 100%;}
+.searchBox .searchSelectBox #searchSelect{flex-shrink: 0; padding-left: var(--spacing-m); width: 98px; height: 100%; color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-m);  cursor: pointer; border: 0;}
+.searchBox .inputBox{flex: 1; height: 100%;}
+.searchBox #search{padding-right:  var(--spacing-2xl); width: 100%; height: 100%; font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400); border: 0;}
+.searchBox #search::placeholder{color: var(--gray-400);}
+.searchBox .bar{display: block; width: 1px; height: 15px; background-color: var(--gray-200);}
+.searchBox .searchSelectBox #searchSelect,
+.searchBox #search,
+.searchBox .searchBtn{outline: 0;}
+
+/* 공통 - 게시판목록 */
+.boardListBox{margin-bottom: 64px;}
+.boardListTable{width: 100%; table-layout: fixed; border-spacing: 0;}
+.boardListTable colgroup .id{width: 100px;}
+.boardListTable colgroup .title{width: auto;}
+.boardListTable colgroup .author{width: 176px;}
+.boardListTable colgroup .date{width: 144px;}
+.boardListTable thead tr th:first-child{border-radius: var(--radius-xs) 0 0 0;}
+.boardListTable thead tr th:last-child{border-radius: 0 var(--radius-xs) 0 0;}
+.boardListTable thead tr th{height: 35px; font-size: var(--font-size-m); font-weight: var(--bold); background-color: var(--gray-600); color: var(--white);}
+.boardListTable tbody tr{transition: all .3s;}
+.boardListTable tbody tr td{border-bottom: 1px solid var(--gray-100); transition: all .3s; text-align: center; font-weight: var(--medium); font-size: var(--font-size-m); color: var(--gray-900);}
+.boardListTable tbody tr td .id{display: inline-block; padding: var(--spacing-2xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-400); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--gray-100);}
+.boardListTable tbody tr td .category{min-width: 80px; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--primary-500);}
+.boardListTable tbody tr td .link{display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-ml) var(--spacing-m) var(--spacing-ml) var(--spacing-m); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.boardListTable tbody tr td .link .file{flex-shrink: 0;}
+.boardListTable tbody tr td .link .file img{display: block;}
+.boardListTable tbody tr td .link .titleText{min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--H6); font-weight: var(--medium); color: var(--gray-900);}
+.boardListTable tbody tr td .date{font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400);}
+.boardCountWrap{margin-bottom: var(--spacing-m);}
+.boardCountWrap .boardCountBox{display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs) var(--spacing-s); }
+.boardCountWrap .boardCountBox span{padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--gray-100); border-radius: var(--radius-xs); font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400);}
+.boardCountWrap .boardCountBox span strong{color: var(--gray-600);}
+.boardCountWrap .boardCountBox p{color: var(--gray-600); font-weight: var(--medium);}
+.boardCountWrap .boardCountBox p strong{color: var(--primary-500);}
+
+@media (max-width: 1024px){
+
+  .searchBox{height: 64px;}
+
+  .boardCountWrap{margin-bottom: var(--spacing-s);}
+
+  .boardListTable tr{padding: var(--spacing-s) 0; display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--gray-100)!important;}
+  .boardListTable tbody tr td .date{margin-left: var(--spacing-xs);}
+  .boardListTable tbody tr td .category{padding: var(--spacing-2xs) var(--spacing-xs);}
+  .boardListTable tbody tr td .link{padding: var(--spacing-s) var(--spacing-ms) var(--spacing-s) 0;}
+  .boardListTable tbody tr td .link .titleText{font-size: var(--Subtitle-1);}
+  .boardListTable tbody tr td{font-size: var(--body-2);}
+  .boardListTable{border-top: 2px solid #000!important;}
+  .boardListTable thead{display: none;}
+  .boardListTable,
+  .boardListTable tbody,
+  .boardListTable td{display: block;}
+  .boardListTable tbody tr td{border: 0;}
+  .boardListTable tbody tr td.title{flex-basis: 100%; width: 100%;}
+
+
+}
+
+@media (max-width: 576px){
+
+  .searchWrap{padding: 0; background: 0;}
+  .searchBox{width: 100%; box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
+
+}
+
+@media (max-width: 480px){
+
+  .searchWrap{padding: 0; background: 0;}
+  .searchBox{width: 100%; box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1); gap: 0 var(--spacing-xs);}
+  .searchBox #search{padding-right: var(--spacing-l);}
+  .searchBox .searchBtn{right: 5px;}
+
+  .boardListTable tbody tr td .link .titleText{font-size: var(--font-size-m);}
+
+}
+
+/* 공통 - 페이지네이션 */
+.paginationBox{margin: 60px 0 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap:var(--spacing-2xs);}
+.paginationBox .pageLink{display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: var(--spacing-xs); background-color: var( --gray-50); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-600); border-radius: var(--radius-xs);}
+.paginationBox .pageLink.active{color: var(--white); background-color: var(--primary-800);}
+.paginationBox .pageLinkFirst,
+.paginationBox .pageLinkLast{background: 0;}
+.paginationBox .pageLinkFirst{background: url(../images/sub/arrow_icon05.svg)no-repeat center / contain;}
+.paginationBox .pageLinkLast{transform: rotate(180deg); background: url(../images/sub/arrow_icon05.svg)no-repeat center / contain;}
+.paginationBox .pageLinkPrev{background: url(../images/sub/arrow_icon06.svg)no-repeat center / contain;}
+.paginationBox .pageLinkNext{transform: rotate(180deg); background: url(../images/sub/arrow_icon06.svg)no-repeat center / contain;}
+
+@media (max-width: 576px ){
+
+  .paginationBox .pageLink{min-width: 32px; min-height: 32px; border-radius:var(--radius-xs );}
+
+}
+
+/* 공통 - 버튼 */
+.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
+.btn.btnPrimary{background-color: var(--gray-600);}
+.btn:hover{background-color: var(--gray-400);} 
+.btn.btnSecondary{background-color: var(--gray-400);}
+.btn.btnNegative:hover{background-color: var(--pp-red);}
+.btn.btnPositive:hover{background-color: var(--pp-blue);}
+
+/* 공통 - 버튼(정렬) */
+.btnBox{margin: var(--spacing-2xl) 0 var(--spacing-ms); display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.btnBox.left {justify-content: flex-start;}
+.btnBox.center {justify-content: center;}
+.btnBox.right {justify-content: flex-end;}
+.btnBox.between {justify-content: space-between; width: 100%;}
+
+@media (max-width: 1024px){
+
+  .btn{min-width: 80px; height: 48px; font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
+
+}            
+
+/* 공통 - 게시판상세 */
+.boardViewBox{padding-top: var(--spacing-s); margin-bottom: var(--spacing-lm); position: relative;}
+.boardViewBox::after{content: ''; position: absolute; top:0; left:0; right:0; height: 16px; background: linear-gradient(to right, var(--gray-100), var(--primary-50), var(--gray-100));}
+.boardViewBox .boardViewTopBox{padding: var(--spacing-lm) var(--spacing-ms); border-bottom: 2px solid var(--gray-100); text-align: center;}
+.boardViewBox .boardViewTopBox .category{display: inline-block; margin-bottom: var(--spacing-xs); padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-xs); background-color: var(--primary-500); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white);}
+.boardViewBox .boardViewTopBox h4{margin-bottom: var(--spacing-s); color: var(--gray-900); font-size: var(--H1); font-weight: var(--bold); word-break: keep-all;}
+.boardViewBox .boardViewTopBox .boardViewInfoBox{display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap:var(--spacing-xs) var(--spacing-m);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewAuthor{font-weight: var(--bold); color: var(--gray-600);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewDate{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-400); font-weight: var(--bold);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewDate::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/date_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewCount{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-400); font-weight: var(--bold);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewCount::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/view_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewContentBox{padding: var(--spacing-l) 0;}
+.boardViewBox .boardViewContentBox .viewContentBox ,
+.boardViewBox .boardViewContentBox .viewContentBox p, 
+.boardViewBox .boardViewContentBox .viewContentBox span{color: var(--gray-600);}
+.boardViewBox .boardViewContentBox .viewContentBox p, 
+.boardViewBox .boardViewContentBox .viewContentBox span{margin-top: var(--spacing-lm); }
+.boardViewBox .boardViewContentBox .viewContentBox img{width: auto; max-width: 720px; width: 100%; margin: 0 auto var(--spacing-s);}
+.boardViewBox .boardViewFileBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-m); padding: var(--spacing-lm) var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.boardViewBox .boardViewFileBox .boardViewFileTitle{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-m);}
+.boardViewBox .boardViewFileList li{margin-bottom: var(--spacing-s);}
+.boardViewBox .boardViewFileList li:last-child{margin-bottom: 0;}
+.boardViewBox .boardViewFileList li a{display: flex; flex-wrap: wrap; align-items: center;}
+.boardViewBox .boardViewFileList li a .boardViewFileIcon{width: 24px; height: 28px; margin-right: var(--spacing-xs);}
+.boardViewBox .boardViewFileList li a.fileHwp .boardViewFileIcon{background: url(../images/sub/hwp_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewFileList li a.filePdf .boardViewFileIcon{background: url(../images/sub/pdf_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewFileList li a.fileXlsx .boardViewFileIcon{background: url(../images/sub/xlsx_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewFileList li a.fileJpg .boardViewFileIcon{background: url(../images/sub/jpg_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewFileList li a.filePpt .boardViewFileIcon{background: url(../images/sub/ppt_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewFileList li a.fileZip .boardViewFileIcon{background: url(../images/sub/zip_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewFileList li a .boardViewFileName{margin-right: var(--spacing-2xs); color: var(--gray-600);}
+.boardViewBox .boardViewFileList li a .boardViewFileSize{color: var(--gray-400);}
+.boardViewBox .boardViewLayoutBox{padding: 0 var(--spacing-m); display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-xl);}
+.boardViewBox .viewContentInfoBox dl{margin-bottom: var(--spacing-m); display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
+.boardViewBox .viewContentInfoBox dl dt{ padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s); background-color: var(--gray-100); border-radius: var(--radius-xs);}
+.boardViewBox .viewContentInfoBox dl dd{color: var(--gray-600); font-size: var(--Subtitle-1); font-weight: var(--medium);}
+.boardViewBox .viewParticipationBox{max-width: 200px; width: 100%; padding: var(--spacing-m) var(--spacing-ms); border-radius: var(--radius-m); border: 1px solid var(--gray-100);}
+.boardViewBox .viewParticipationBox p{margin-bottom: var(--spacing-s); line-height: 1.7; color: var(--gray-600); font-weight: var(--medium);}
+.boardViewBox .viewParticipationList{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
+.boardViewBox .viewParticipationList li .imgBox{margin: 0 auto var(--spacing-2xs); width: 32px; height: 32px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100);}
+.boardViewBox .viewParticipationList li .imgBox img{height: 100%; object-fit: cover;}
+.boardViewBox .viewParticipationList li .name{display: block; color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-xs); text-align: center;}
+
+@media (max-width: 1024px){
+
+  .boardViewBox{margin-bottom: var(--spacing-m);}
+  .boardViewBox .boardViewTopBox h4{font-size: var(--H4);}
+  .boardViewBox .boardViewFileBox{padding: var(--spacing-ml) var(--spacing-m);}
+
+  .boardViewBox .viewContentInfoBox{width: 100%; display: flex; justify-content: center; gap: 0 var(--spacing-ml);}
+  .boardViewBox .boardViewLayoutBox{padding: 0; flex-direction: column; gap: var(--spacing-lm) 0;}
+  .boardViewBox .viewContentInfoBox dl{margin: 0; align-items: center;}
+  .boardViewBox .boardViewContentBox .viewContentBox img{max-width: none;}
+  .boardViewBox .viewParticipationBox{max-width: none;}
+
+}
+
+@media (max-width: 768px){
+
+  .boardViewBox .boardViewFileBox{padding: var(--spacing-m) var(--spacing-s); flex-direction: column; gap: var(--spacing-ms) 0;}
+  .boardViewBox .boardViewFileList li a .boardViewFileSize{font-size: var(--body-2);}
+  .boardViewBox .viewContentInfoBox dl dd{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardViewBox .boardViewTopBox h4{font-size: var(--H5);}
+  .boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewAuthor{width: 100%;}
+  .boardViewBox .boardViewTopBox .boardViewInfoBox span{font-size: var(--font-size-s);}
+
+}
+
+/* 공통 - 이전글, 다음글 */
+.boardViewNavBox{padding-top: 3px; position: relative; margin:var(--spacing-3xl) 0 var(--spacing-lm); border-bottom: 1px solid var(--gray-100);}
+.boardViewNavBox::after{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
+.boardViewNavBox .boardViewNavItem{padding: var(--spacing-s) 0; display: flex; align-items: center; min-height: 54px; }
+.boardViewNavBox .boardViewNavIcon{margin-right:var(--spacing-xs); width: 24px; height: 24px;}
+.boardViewNavBox .boardViewNavItem.prev .boardViewNavIcon{background: url(../images/sub/arrow_icon07.svg)no-repeat center;}
+.boardViewNavBox .boardViewNavItem.next .boardViewNavIcon{transform: rotate(180deg); background: url(../images/sub/arrow_icon07.svg)no-repeat center;}
+.boardViewNavBox .boardViewNavLabel{flex-shrink: 0; margin-right: 30px; color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--bold);}
+.boardViewNavBox .boardViewNavTitle{flex: 1 1 auto; min-width: 0; color: var(--gray-600); font-weight: var(--bold); font-size: var(--Subtitle-2);}
+.boardViewNavBox .boardViewNavDate{flex: 0 0 auto; color: var(--gray-500); font-weight: var(--medium); font-size: var(--body-2);} 
+.boardViewNavBox .boardViewNavContent{width: 100%; display: flex; align-items: center; justify-content: space-between;}
+
+@media (max-width: 1024px){
+
+  .boardViewNavBox{margin: var(--spacing-2xl) 0 var(--spacing-lm);}
+  .boardViewNavBox .boardViewNav{margin: var(--spacing-2xl) 0 var(--spacing-lm);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardViewNavBox .boardViewNavTitle{font-size: var(--font-size-s);}
+  .boardViewNavBox .boardViewNavContent{flex-direction: column; align-items:flex-start; gap: var(--spacing-xs) 0;}
+
+}
+
+/* 공통 - 글쓰기 */
+.boardWriteBox{margin-bottom: var(--spacing-2xl);}
+.boardWriteBox h4{margin-bottom: var(--spacing-s); color: var(--gray-600); font-size: var(--spacing-m); font-weight: var(--bold);}
+
+/* 폼 - 레이아웃 */
+.boardWriteField{padding-bottom: var(--spacing-m); display: flex; flex-direction: column; gap: var(--spacing-xs);}
+.boardWriteField.row{padding: var(--spacing-ml) 0; flex-direction: row; align-items: center; border-top: 1px solid var(--gray-100);}
+.boardWriteField.row.start{align-items: flex-start;}
+.boardWriteContent{flex: 1 1 auto; min-width: 0; width: 100%;}
+.boardWriteField:last-child{margin-bottom: 0;}
+.boardWriteForm{padding: var(--spacing-ml); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.boardWriteEditor{display: flex; align-items: center; justify-content: center; height: 407px; border-radius: var(--radius-s); border: 1px solid var(--gray-100); background-color: var(--white); font-weight: var(--medium);}
+
+/* 폼 - 제목 */
+.boardWriteLabel{width: 120px; flex-shrink: 0; font-size: var(--Subtitle-2); font-weight: var(--bold); color: var(--gray-600);}
+.boardWriteLabel .required{color: var(--warning-500);}
+
+/* 폼 - 파일 */
+.boardWriteFile{margin-bottom: var(--spacing-s);}
+.boardWriteFile:last-child{margin-bottom: 0;}
+.boardWriteFile .boardWriteFileBtn{display: flex; align-items: center; gap: 0 var(--spacing-xs); max-width: 699px; height: 48px; padding:0 var(--spacing-s); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--white); cursor: pointer;}
+.boardWriteFile:first-child .boardWriteFileBtn{max-width: none; width: 100%;}
+.boardWriteFile .boardWriteFileBtn::before{content: ''; margin-top: 2px; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center / contain;}
+.boardWriteFile .boardWriteFileItem{margin-top: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.boardWriteFile .boardWriteFileItem .boardWriteFileDel{display: flex; align-items: center; justify-content: center; width: 48px; height: 28px; border-radius: var(--radius-xs); background-color: var(--gray-600); color: var(--white); font-size: var(--font-size-s); font-weight: var(--semi-bold);}
+.boardWriteFile .boardWriteFileItem .boardWriteFileName{color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
+
+/* 폼 - 체크 */
+.chkBtn{display: inline-flex; align-items: center;  gap: 0 var(--spacing-xs);
+    padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 48px; background-color: var(--white);
+    border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600);
+    font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer;}
+.chkBtn::before {content: ''; width: 22px; height: 22px; background: url(../images/sub/chk_icon.svg) no-repeat center / contain;}
+#noticeChk:checked + .chkBtn::before {background: url(../images/sub/chk_icon.svg) no-repeat center / contain;}
+
+/* 폼 - 선택 */
+#select{padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 48px;
+    border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600);
+    font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer; background: #fff url(../images/sub/arrow_icon01.svg) right 16px center no-repeat;}
+#select{appearance: none;-webkit-appearance: none; -moz-appearance: none;}
+.memberSelectBox{position: relative;}
+.memberSelectBox .memberSelectBtn{display: flex; align-items: center; gap: 0 var(--spacing-s); padding: 0 var(--spacing-xs); width: 160px; height: 64px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
+.memberSelectBox .memberSelectBtn span{flex-shrink: 0; display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
+.memberSelectBox .memberSelectBtn span::before{content: ''; width: 48px; height: 48px; background: url(../images/sub/parliament.svg)no-repeat center / contain;}
+.memberSelectBox .memberSelectBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/sub/arrow_icon08.svg)no-repeat center / contain;}
+.memberSelectBox .memberSelectBox{padding: var(--spacing-m); position: absolute; top:76px; left:0; max-width: 714px; width: 100%; border-radius: var(--radius-l); box-shadow: 0 0  40px rgba(0,0,0, .2); background-color: var(--gray-50);}
+.memberSelectBox .memberSelectBox strong{display: block; margin-bottom: var(--spacing-m); font-size: var(--Subtitle-1);}
+.memberSelectBox .memberSelectBox .memberSelectList{display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
+.memberSelectBox .memberSelectBox .memberSelectList li{max-width: 160px; width: 100%;}
+.memberSelectBox .memberSelectBox .memberSelectList li .button{display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-xs ); width: 100%; border-radius: var(--radius-s); background-color: var(--white);     box-shadow: 0 0 40px rgba(0, 0, 0, .15);}
+.memberSelectBox .memberSelectBox .memberSelectList li .button .selectImgBox{width: 36px; height: 36px; border-radius: var(--radius-m); background-color: var(--gray-100); overflow: hidden;}
+.memberSelectBox .memberSelectBox .memberSelectList li .button .selectImgBox img{height: 100%; object-fit: cover;}
+.memberSelectBox .memberSelectBox .memberSelectList li .button .name{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
+.memberSelectBox .btnBox{margin: var(--spacing-m) 0 0;}
+.memberSelectBox .btnBox .btn{padding: 0 var(--spacing-s); min-width: auto; height: 36px; font-size: var(--font-size-s);}
+.memberSelectBox .selectCloseBtn{position: absolute; top:24px; right:24px; width: 32px; height: 32px; background: var(--gray-100) url(../images/sub/close.svg)no-repeat center; border-radius: var(--radius-m);}
+.memberSelectBox .selectCloseBtn:hover{background-color: var(--gray-400);}
+.memberList{margin-top: var(--spacing-ms); display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
+.memberList li{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); background-color: var(--gray-100); border-radius: var(--radius-xs); font-weight: var(--medium);}
+
+@media (max-width: 768px){
+
+  .memberSelectBox .memberSelectBox strong{font-size: var(--spacing-s);}
+  .memberSelectBox .memberSelectBox{border-radius: var(--radius-s);}
+
+}
+
+@media (max-width: 576px){
+
+  .memberSelectBox .memberSelectBox .memberSelectList li{width: 100%; max-width: none;}
+
+}
+
+/* 공통 - 폼 */
+input{padding: var(--spacing-ms) var(--spacing-s); width: 100%; border: 1px solid var(--gray-100); border-radius:var(--radius-s); color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
+input::placeholder{color: var(--gray-600);}
+#boardTitle{font-size: var(--font-size-xl);}
+
+@media (max-width: 1024px){
+
+  .boardWriteBox{margin-bottom: var(--spacing-lm);}
+  .boardWriteForm{padding: var(--spacing-s);}
+  .boardWriteField.row{padding: var(--spacing-ms) 0;}
+
+}
+
+@media (max-width: 768px){
+
+  input{font-size: var(--font-size-l);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardWriteField{padding-bottom: var(--spacing-s);}
+  .boardWriteField.row{padding: var(--spacing-s) 0;}
+  .boardWriteLabel{font-size: var(--font-size-s);}
+  .boardWriteField.row{flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
+
+  input{font-size: var(--font-size-s);}
+
+}
+
+/* 공통 - 게시판(텍스트) */
+.textBoardList{position: relative; padding-top: 3px;}
+.textBoardList::before{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17;}
+.textBoardList li{border-bottom: 1px solid var(--gray-100);}
+.textBoardList li a{padding: var(--spacing-m) 0; display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-xl)}
+.textBoardList li a .textBox h4{margin-bottom: var(--spacing-xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
+.textBoardList li a .textBox h5{margin-bottom:var(--spacing-s); color: var(--gray-900); font-size: var(--H5);}
+.textBoardList li a .textBox .date{margin-bottom: var(--spacing-m ); display: block; color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--medium);}
+.textBoardList li a .imgBox{width: 376px; height: 199px; border-radius: var(--radius-m); overflow: hidden;}
+.textBoardList li a .imgBox img{height: 100%; object-fit: cover;}
+.textBoardList li a .participationBox{display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-s);}
+.textBoardList li a .participationBox strong{flex-shrink: 0; color: var(--gray-600);}
+.textBoardList li a .participationBox .participationList{display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
+.textBoardList li a .participationBox .participationList li{flex: 0 0 auto; width: 32px; height: 32px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100);}
+.textBoardList li a .participationBox .participationList li img{height: 100%; object-fit: cover;}
+
+@media (max-width: 1024px){
+
+  .textBoardList li a .textBox h5{font-size: var(--H6);}
+
+}
+
+@media (max-width: 768px){
+
+  .textBoardList li a .textBox{width: 100%;}
+  .textBoardList li a .textBox h5{margin-bottom: var(--spacing-xs);}
+  .textBoardList li a{flex-direction: column; gap: var(--spacing-ml) 0; text-align: center;}
+  .textBoardList li a .imgBox{position: relative; width: 100%; height: 0; padding-top: 50%; border-radius: var(--radius-s);}
+  .textBoardList li a .imgBox img{position: absolute; top:0; left:0; right:0; bottom: 0;}
+  .textBoardList li a .participationBox{flex-direction: column; gap: var(--spacing-xs) 0;}
+
+}
+
+@media (max-width: 480px){
+
+  .textBoardList li a .participationBox strong{font-size: var(--font-size-s);}
+ 
+}
+
+/* 공통 - 게시판(이미지) */
+.photoBoardList{position: relative; padding-top: 43px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-2xl) var(--spacing-s)}
+.photoBoardList::before{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17;}
+.photoBoardList li a{display: block;}
+.photoBoardList li a .photoBoardImgBox{padding-top: 65%; margin-bottom: var(--spacing-m); position: relative; border-radius: var(--radius-m); overflow: hidden;}
+.photoBoardList li a .photoBoardImgBox::after{content: ''; position: absolute;
+    left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(
+        to bottom,rgba(0, 0, 0, 0) 0%,rgba(30, 43, 55, 0.70) 40%,rgba(30, 43, 55, 0.96) 100%
+    ); backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(1px);}
+.photoBoardList li a .photoBoardImgBox .img{height: 100%; position: absolute; top:0; left:0; right:0; bottom: 0; object-fit: cover; transition: all 1.3s;}
+.photoBoardList li a .photoBoardImgBox .participationBox{position: absolute; right: 0; left:24px; bottom: 26px; display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-s); z-index: 99;}
+.photoBoardList li a .photoBoardImgBox .participationBox strong{flex-shrink: 0; color: var(--white);}
+.photoBoardList li a .photoBoardImgBox .participationListBox{width: calc(100% - 63px); overflow-x: auto;}
+.photoBoardList li a .photoBoardImgBox .participationListBox::-webkit-scrollbar-thumb{background-color: var(--gray-300);}
+.photoBoardList li a .photoBoardImgBox .participationBox .participationList{display: flex; gap: var(--spacing-2xs);}
+.photoBoardList li a .photoBoardImgBox .participationBox .participationList li{flex: 0 0 auto; width: 32px; height: 32px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100);}
+.photoBoardList li a .photoBoardImgBox .participationBox .participationList li img{height: 100%; object-fit: cover;}
+.photoBoardList li a .photoBoardTextBox h4{margin-bottom: var(--spacing-xs); color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--bold);}
+.photoBoardList li a .photoBoardTextBox h5{margin-bottom: var(--spacing-s); color: var( --gray-900); font-size: var(--H5); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;} 
+.photoBoardList li a .photoBoardTextBox .date{display: block; color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--medium);}
+/* .photoBoardList li a:hover .photoBoardImgBox .img{transform: scale(1.3);} */
+
+@media (max-width: 1024px){
+
+  .photoBoardList li a .photoBoardTextBox h5{font-size: var(--H6);}
+  .photoBoardList li a .photoBoardImgBox::after{height: 80px;}
+  .photoBoardList li a .photoBoardImgBox .participationListBox::-webkit-scrollbar-thumb{
+    border: 5px solid transparent;}
+  .photoBoardList li a .photoBoardImgBox .participationBox{left: 20px;}
+
+}
+
+@media (max-width: 768px){
+
+  .photoBoardList li a .photoBoardImgBox{margin-bottom: var(--spacing-s); border-radius: var(--radius-s);}
+  .photoBoardList li a .photoBoardTextBox h5{margin-bottom: var(--spacing-xs);}
+  .photoBoardList{grid-template-columns: 1fr; gap: var(--spacing-xl) 0;}
+
+}
+
+@media (max-width: 576px){
+
+  .photoBoardList li a .photoBoardImgBox .participationBox{bottom: 10px;}
+
+}
+
+@media (max-width: 480px){
+
+  .photoBoardList{gap: var(--spacing-lm) 0;}
+  .photoBoardList li a .photoBoardImgBox .participationBox strong{font-size: var(--font-size-s);}
+
+}
+
+@media (max-width: 360px){
+
+  .photoBoardList li a .photoBoardImgBox::after{height: 55px;}
+
+}
+
+/* 공통 - 애니메이션(드롭다운) */
+.dropdown{opacity: 0; visibility: hidden; transform: translateY(-12px);
+  pointer-events: none; transition: opacity .3s ease, transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear .55s;}
+.active .dropdown{opacity: 1; visibility: visible; transform: translateY(0);
+  pointer-events: auto; transition:opacity .3s ease,
+    transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear 0s;}
+.toggleBtn::after{transition: transform .3s ease;}
+.active .toggleBtn::after{transform: rotate(-180deg);}
