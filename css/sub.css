@@ -1669,14 +1669,14 @@ main{flex: 1;}
 .boardWriteLabel .required{color: var(--warning-500);}
 
 /* 폼 - 파일 */
-.boardWriteFile{margin-bottom: var(--spacing-s);}
-.boardWriteFile:last-child{margin-bottom: 0;}
-.boardWriteFile .boardWriteFileBtn{display: flex; align-items: center; gap: 0 var(--spacing-xs); max-width: 699px; height: 48px; padding:0 var(--spacing-s); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--white); cursor: pointer;}
-.boardWriteFile:first-child .boardWriteFileBtn{max-width: none; width: 100%;}
-.boardWriteFile .boardWriteFileBtn::before{content: ''; margin-top: 2px; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center / contain;}
-.boardWriteFile .boardWriteFileItem{margin-top: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
-.boardWriteFile .boardWriteFileItem .boardWriteFileDel{display: flex; align-items: center; justify-content: center; width: 48px; height: 28px; border-radius: var(--radius-xs); background-color: var(--gray-600); color: var(--white); font-size: var(--font-size-s); font-weight: var(--semi-bold);}
-.boardWriteFile .boardWriteFileItem .boardWriteFileName{color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
+.boardWriteFileBox .boardWriteFile{margin-bottom: var(--spacing-s);}
+.boardWriteFileBox .boardWriteFile:last-child{margin-bottom: 0;}
+.boardWriteFileBox .boardWriteFileBtn{display: flex; align-items: center; gap: 0 var(--spacing-xs); max-width: 699px; height: 48px; padding:0 var(--spacing-s); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--white); cursor: pointer;}
+.boardWriteFileBox:first-child .boardWriteFileBtn{max-width: none; width: 100%;}
+.boardWriteFileBox .boardWriteFileBtn::before{content: ''; margin-top: 2px; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center / contain;}
+.boardWriteFileBox .boardWriteFileItem{margin-top: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.boardWriteFileBox .boardWriteFileItem .boardWriteFileDel{display: flex; align-items: center; justify-content: center; width: 48px; height: 28px; border-radius: var(--radius-xs); background-color: var(--gray-600); color: var(--white); font-size: var(--font-size-s); font-weight: var(--semi-bold);}
+.boardWriteFileBox .boardWriteFileItem .boardWriteFileName{color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
 
 /* 폼 - 체크 */
 .chkBtn{display: inline-flex; align-items: center;  gap: 0 var(--spacing-xs);
@@ -1725,9 +1725,9 @@ main{flex: 1;}
 }
 
 /* 공통 - 폼 */
-input{padding: var(--spacing-ms) var(--spacing-s); width: 100%; border: 1px solid var(--gray-100); border-radius:var(--radius-s); color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
+input{padding: var(--spacing-ms) var(--spacing-s); width: 100%; border: 1px solid var(--gray-100); border-radius: var(--radius-xs);  color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
 input::placeholder{color: var(--gray-600);}
-#boardTitle{font-size: var(--font-size-xl);}
+#boardTitle{font-size: var(--font-size-xl); border-radius:var(--radius-s);}
 
 @media (max-width: 1024px){
 
@@ -1860,3 +1860,8 @@ input::placeholder{color: var(--gray-600);}
     transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear 0s;}
 .toggleBtn::after{transition: transform .3s ease;}
 .active .toggleBtn::after{transform: rotate(-180deg);}
+
+
+/* 폼 - 일정 */
+.boardWriteDateBox{max-width: 188px; position: relative;}
+.boardWriteDateBox .calendarBtn{width: 24px; height: 24px; position: absolute; top:50%; transform: translateY(-50%); right:16px; background: url(../images/sub/calendar_icon.svg)no-repeat center;}

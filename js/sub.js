@@ -135,6 +135,26 @@ $(function () {
     $(this).parent().parent().removeClass('active');
   });
 
+  // 참여의원
+  $('.memberSelectBox .toggleBtn').click(function () {
+    if ($(this).parent().hasClass('active')) {
+      $(this).attr('aria-expanded', 'true');
+    } else {
+      $(this).attr('aria-expanded', 'false');
+    }
+  });
+
+  $('.memberSelectBox .selectCloseBtn').click(function () {
+    $(this).parent().siblings('.toggleBtn').attr('aria-expanded', 'false').focus();
+  });
+
+  $('.memberSelectBox .memberSelectList .button').click(function () {
+    if ($(this).attr('aria-pressed') == 'true') {
+      $(this).attr('aria-pressed', 'false');
+    } else {
+      $(this).attr('aria-pressed', 'true');
+    }
+  });
 
 
 });
