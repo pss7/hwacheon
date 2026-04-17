@@ -104,11 +104,11 @@ main{flex: 1;}
 #contentWrap{max-width: 1920px; margin: 0 auto;  display: flex; align-items:stretch; gap: 0 60px; padding: 80px 0 ;}
 
 /* 왼쪽 메뉴 영역 */
-#contentWrap aside{position: sticky; top:30px; flex-shrink: 0; width: 140px; border-right: 1px solid var(--gray-100);} 
+#contentWrap aside{position: sticky; top:30px; flex-shrink: 0; min-width: 140px; border-right: 1px solid var(--gray-100);} 
 #contentWrap aside .depth01{padding: var(--spacing-2xs) 0;}
 #contentWrap aside .depth01 li{margin-bottom: var(--spacing-m);}
 #contentWrap aside .depth01 li:last-child{margin-bottom: 0;}
-#contentWrap aside .depth01 li h2 a{padding-left: var(--spacing-ms); display: block; color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-xl); word-break: keep-all; text-shadow: 0 0 4px rgba(30, 43, 55, 0.1);}
+#contentWrap aside .depth01 li h2 a{padding: 0  var(--spacing-ml) 0 var(--spacing-ms); display: block; color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-xl); word-break: keep-all; text-shadow: 0 0 4px rgba(30, 43, 55, 0.1);}
 #contentWrap aside .depth01 li h2 a.active{color: var(--gray-900);}
 
 /* 오른쪽 콘텐츠 영역 */
@@ -1444,9 +1444,11 @@ main{flex: 1;}
 .boardListBox{margin-bottom: 64px;}
 .boardListTable{width: 100%; table-layout: fixed; border-spacing: 0;}
 .boardListTable colgroup .id{width: 100px;}
-.boardListTable colgroup .title{width: auto;}
+.boardListTable colgroup .category{width: 100px;}
+.boardListTable colgroup .title{ width: auto;}
 .boardListTable colgroup .author{width: 176px;}
 .boardListTable colgroup .date{width: 144px;}
+.boardListTable thead tr th.title{padding-left: var(--spacing-m);}
 .boardListTable thead tr th:first-child{border-radius: var(--radius-xs) 0 0 0;}
 .boardListTable thead tr th:last-child{border-radius: 0 var(--radius-xs) 0 0;}
 .boardListTable thead tr th{height: 35px; font-size: var(--font-size-m); font-weight: var(--bold); background-color: var(--gray-600); color: var(--white);}
@@ -1472,7 +1474,7 @@ main{flex: 1;}
 
   .boardCountWrap{margin-bottom: var(--spacing-s);}
 
-  .boardListTable tr{padding: var(--spacing-s) 0; display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--gray-100)!important;}
+  .boardListTable tr{padding: var(--spacing-s) 0;  display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--gray-100)!important;}
   .boardListTable tbody tr td .date{margin-left: var(--spacing-xs);}
   .boardListTable tbody tr td .category{padding: var(--spacing-2xs) var(--spacing-xs);}
   .boardListTable tbody tr td .link{padding: var(--spacing-s) var(--spacing-ms) var(--spacing-s) 0;}
@@ -1533,7 +1535,7 @@ main{flex: 1;}
 .btn.btnPositive:hover{background-color: var(--pp-blue);}
 
 /* 공통 - 버튼(정렬) */
-.btnBox{margin: var(--spacing-2xl) 0 var(--spacing-ms); display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.btnBox{display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
 .btnBox.left {justify-content: flex-start;}
 .btnBox.center {justify-content: center;}
 .btnBox.right {justify-content: flex-end;}
@@ -1567,8 +1569,8 @@ main{flex: 1;}
 .boardViewBox .boardViewContentBox .viewContentBox ,
 .boardViewBox .boardViewContentBox .viewContentBox p, 
 .boardViewBox .boardViewContentBox .viewContentBox span{color: var(--gray-600);}
-.boardViewBox .boardViewContentBox .viewContentBox p, 
-.boardViewBox .boardViewContentBox .viewContentBox span{margin-top: var(--spacing-lm); }
+/* .boardViewBox .boardViewContentBox .viewContentBox p, 
+.boardViewBox .boardViewContentBox .viewContentBox span{margin-top: var(--spacing-lm); } */
 .boardViewBox .boardViewContentBox .viewContentBox img{width: auto; max-width: 720px; width: 100%; margin: 0 auto var(--spacing-s);}
 .boardViewBox .boardViewFileBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-m); padding: var(--spacing-lm) var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
 .boardViewBox .boardViewFileBox .boardViewFileTitle{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-m);}
@@ -1619,6 +1621,7 @@ main{flex: 1;}
 
 @media (max-width: 480px){
 
+  .boardViewBox .boardViewContentBox{padding: var(--spacing-lm) 0;}
   .boardViewBox .boardViewTopBox h4{font-size: var(--H5);}
   .boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewAuthor{width: 100%;}
   .boardViewBox .boardViewTopBox .boardViewInfoBox span{font-size: var(--font-size-s);}
@@ -1653,7 +1656,20 @@ main{flex: 1;}
 
 /* 공통 - 글쓰기 */
 .boardWriteBox{margin-bottom: var(--spacing-2xl);}
-.boardWriteBox h4{margin-bottom: var(--spacing-s); color: var(--gray-600); font-size: var(--spacing-m); font-weight: var(--bold);}
+.boardWriteBox h4{margin-bottom: var(--spacing-s); color: var(--gray-600); font-size: var(--H5); font-weight: var(--bold);}
+
+@media (max-width: 768px){
+
+  .boardWriteBox h4{font-size: var(--H6);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardWriteBox h4{font-size: var(--Subtitle-1);}
+
+}
+
 
 /* 폼 - 레이아웃 */
 .boardWriteField{padding-bottom: var(--spacing-m); display: flex; flex-direction: column; gap: var(--spacing-xs);}
@@ -1739,7 +1755,7 @@ input::placeholder{color: var(--gray-600);}
 
 @media (max-width: 768px){
 
-  input{font-size: var(--font-size-l);}
+  input{font-size: var(--font-size-l)!important;}
 
 }
 
@@ -1750,7 +1766,7 @@ input::placeholder{color: var(--gray-600);}
   .boardWriteLabel{font-size: var(--font-size-s);}
   .boardWriteField.row{flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
 
-  input{font-size: var(--font-size-s);}
+  input{font-size: var(--font-size-s)!important;}
 
 }
 
@@ -1861,7 +1877,100 @@ input::placeholder{color: var(--gray-600);}
 .toggleBtn::after{transition: transform .3s ease;}
 .active .toggleBtn::after{transform: rotate(-180deg);}
 
-
 /* 폼 - 일정 */
 .boardWriteDateBox{max-width: 188px; position: relative;}
 .boardWriteDateBox .calendarBtn{width: 24px; height: 24px; position: absolute; top:50%; transform: translateY(-50%); right:16px; background: url(../images/sub/calendar_icon.svg)no-repeat center;}
+
+/* 의회에바란다 - 목록 */
+.hopeListBox .myPost{padding: var(--spacing-s); color: var(--white); border-radius: var(--radius-s); color: #fff; font-weight: var(--bold); background: linear-gradient(to right, var(--primary-500), var(--secondary-500));}
+.hopeListBox .boardCountWrap{display: flex; align-items: flex-end; justify-content: space-between;}
+.boardListTable .state{display: inline-block; padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-xs); font-weight: var(--bold); font-size: var(--font-size-s);}
+.boardListTable .state.review{background-color: #F96A6A; color: var(--white);}
+.boardListTable .state.complete{background-color: #41B75B; color: var(--white);}
+.boardListTable .state.receipt{color: var(--gray-600); border: 1px solid var(--gray-100);}
+.hopeInfoTextBox{margin: var(--spacing-s) 0 var(--spacing-m); padding: var(--spacing-m); border-radius: var(--radius-m); border: 1px solid var(--gray-600); background-color: var(--white); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
+.hopeInfoTextBox .hopeInfoText{color: var(--gray-600);} 
+
+@media (max-width: 1024px){
+
+  .boardListTable .state{margin-top: var(--spacing-ms);}
+  .boardListTable tbody tr td.category{flex-basis:100%; text-align: left;}
+
+}
+
+@media (max-width: 480px){
+
+  .hopeListBox .myPost{ border-radius: var(--radius-xs);}
+  .hopeListBox .boardCountWrap{flex-direction: column; flex-direction: column-reverse; align-items: flex-start; gap: var(--spacing-s) 0;}
+
+  .hopeInfoTextBox{padding: var(--spacing-ms) var(--spacing-s); border-radius: var(--spacing-s);}
+  .hopeInfoTextBox .hopeInfoText br{display: none;}
+
+}
+
+/* 의회에바란다 - 상세 */
+.hopeViewBox .boardViewBox{padding: var(--spacing-lm) var(--spacing-ml); border: 2px solid var(--gray-100); border-radius: var(--radius-l);}
+.hopeViewBox .boardViewBox::after{display: none;}
+.hopeViewBox .boardViewTopBox{padding:0 0 var(--spacing-lm);}
+.hopeViewBox .boardViewTopBox h4{text-align: left; font-size: var(--H4);}
+.hopeViewBox .boardViewTopBox .boardViewInfoBox{ justify-content: flex-start;}
+.hopeViewBox .boardViewStateBox em{display: inline-block; padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); font-weight: var(--bold); font-size: var(--font-size-s); font-style: normal;}
+.hopeViewBox .boardViewStateBox .opinion{background-color: var(--gray-100); color: var(--gray-600);}
+.hopeViewBox .boardViewStateBox .answer{background-color: #41B75B; color: var(--white);}
+.hopeViewBox .boardViewStateBox{margin-bottom: var(--spacing-lm); display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; gap: var(--spacing-xs) var(--spacing-s);}
+.hopeViewBox .boardViewStateBox p{display: flex; align-items: center; gap: 0 var(--spacing-2xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+.hopeViewBox .boardViewStateBox p::before{content:''; width: 6px; height: 6px; border-radius: var(--radius-2xs);}
+.hopeViewBox .boardViewStateBox p.receipt::before{ background-color: var(--gray-200);}
+.hopeViewBox .boardViewStateBox p.review::before{ background-color: #F96A6A;}
+.hopeViewBox .boardViewStateBox p.complete::before{ background-color: #41B75B;}
+.hopeViewBox .answerBox .answerManagerBox{position: relative; display: flex; align-items: center; gap: 0 0; padding: var(--spacing-m); border: 1px solid var(--gray-600); border-radius: var(--radius-m); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
+.hopeViewBox .answerBox .answerManagerBox .answerBtn{min-height: 56px; padding: var(--spacing-xs) var(--spacing-s); position: absolute; top: 50%; transform: translateY(-50%); right:24px; border-radius: var(--radius-s); background-color: var(--primary-500); color: var(--white);}
+.hopeViewBox .answerBox .managerLabel{width: 120px; flex-shrink: 0; font-size: var(--Subtitle-2); font-weight: var(--bold); color: var(--gray-600);}
+.hopeViewBox .answerBox .managerLabel .required{color: var(--warning-500);}
+.hopeViewBox .answerBox .managerBox{display: flex; flex-direction: column; gap: var(--spacing-s) 0;}
+.hopeViewBox .answerBox .managerSelectWrap{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.hopeViewBox .answerBox .managerSelectWrap .managerSelect{min-width: 57px; height: 36px; display: inline-block; padding: var(--spacing-xs); border-radius: var(--radius-s); font-size: var(--font-size-s); font-weight: var(--bold); text-align: center;}
+.hopeViewBox .answerBox .managerSelectBox{position: relative;}
+.hopeViewBox .answerBox .managerSelectBox .managerSelectBtn{padding: var(--spacing-xs) var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-xs); border: 1px solid var(--gray-100); border-radius: var(--radius-s); color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--bold);}
+.hopeViewBox .answerBox .managerSelectBox .managerSelectBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/sub/arrow_icon08.svg)no-repeat center;}
+.hopeViewBox .answerBox .managerSelectBox .managerSelectList{padding: var(--spacing-xs) 0;
+    position: absolute; top: 56px; left: 0; right: 0; border: 1px solid var(--gray-100);   border-radius: var(--radius-xs); box-shadow: 10px 10px 40px rgba(0, 0, 0, .1);
+    z-index: 9999; background-color: var(--white); color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--bold);}
+.hopeViewBox .answerBox .managerSelectBox .managerSelectList li .managerListBtn{display: block; padding: var(--spacing-xs) var(--spacing-s);}
+.hopeViewBox .answerBox .managerBox p{color: var(--gray-400); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+.hopeViewBox .answerBox .managerBox p strong{color: var(--gray-600); font-weight: var(--semi-bold);}
+.hopeViewBox .answerBox .boardViewBox{border: 1px solid var(--gray-600); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
+
+@media (max-width: 1024px){
+
+  .hopeViewBox .boardViewBox{padding: var(--spacing-ml) var(--spacing-ms); border-radius: var(--radius-m); border: 1px solid var(--gray-100)}
+  .hopeViewBox .boardViewTopBox h4{font-size: var(--H5);}
+
+}
+
+@media (max-width: 768px){
+
+  .hopeViewBox .answerBox .answerManagerBox{flex-direction: column; gap: 20px; align-items: center;}
+  .hopeViewBox .answerBox .answerManagerBox .answerBtn{position: static; transform: none;}
+
+}
+
+@media (max-width: 480px){
+
+  .hopeViewBox .boardViewStateBox{margin-bottom: var(--spacing-ml);}
+  .hopeViewBox .boardViewTopBox{padding: 0 0 var(--spacing-m);}
+  .hopeViewBox .boardViewTopBox .boardViewInfoBox{justify-content: center;}
+  .hopeViewBox .boardViewTopBox h4{text-align: center;}
+  .hopeViewBox .answerBox .managerSelectWrap{flex-direction: column; gap: var(--spacing-xs) 0;}
+  .hopeViewBox .answerBox .managerBox,
+  .hopeViewBox .answerBox .managerLabel{width: 100%; text-align: center;}
+
+}
+
+/* 의회에바란다 - 글쓰기 */
+.hopeWriteBox .hopeInfoTextBox{margin-bottom: var(--spacing-2xl);}
+.hopeWriteBox .hopeInfoTextBox .hopeInfoText{margin-bottom: var(--spacing-s); padding-bottom: var(--spacing-s); border-bottom: 1px solid var(--gray-100);}
+.hopeWriteBox .hopeInfoTextBox h5{margin-bottom:var(--spacing-xs); color: var(--gray-900); font-size: var(--Subtitle-2);}
+.hopeWriteBox .hopeInfoTextBox .bulletIcon{margin-bottom: var(--spacing-s);}
+.hopeWriteBox .hopeInfoTextBox .chkBtn{max-width: none; background-color: var(--gray-50);}
+.hopeWriteBox .hopeInfoTextBox .link{margin: var(--spacing-xs) 0; display: inline-block; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: var(--radius-s); background-color: var(--gray-600);}
