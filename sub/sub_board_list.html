@@ -8,7 +8,7 @@
     <meta name="Author" content="" />
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>의회에바란다</title>
+    <title>자유게시판</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -1041,10 +1041,10 @@
                             </a>
                         </li>
                         <li>
-                            <span>시민참여</span>
+                            <span>의회소식</span>
                         </li>
                         <li><span>
-                                의회에 바란다</span>
+                                자유게시판</span>
                         </li>
                     </ul>
                     <!-- //breadcrumbList -->
@@ -1063,7 +1063,7 @@
                     <ul class="depth01">
                         <li>
                             <h2>
-                                <a href="#" class="active">의회에 바란다</a>
+                                <a href="#">의회에 바란다</a>
                             </h2>
                         </li>
                         <li>
@@ -1078,7 +1078,7 @@
                         </li>
                         <li>
                             <h2>
-                                <a href="#">자유게시판</a>
+                                <a href="#" class="active">자유게시판</a>
                             </h2>
                         </li>
                     </ul>
@@ -1098,7 +1098,7 @@
                                 <!-- 상단 제목, 서브메뉴 영역-->
                                 <div class="titleBox">
                                     <h3>
-                                        의회에 바란다
+                                        자유게시판
                                     </h3>
                                 </div>
                                 <!-- //titleBox -->
@@ -1124,190 +1124,364 @@
                     <!-- 콘텐츠 영역 -->
                     <div class="contentBox">
 
-                        <!-- 의회에바란다 콘텐츠 -->
-                        <div class="hopeWriteBox">
-                            <div class="container">
-
-                                <h4 class="bulletTitle">작성안내</h4>
-
-                                <div class="boardInfoTextBox">
-                                    <p class="boardInfoText">
-                                        이곳은 의회의 기능에 맞는 <strong>자치법령의 제도개선사항</strong>, 또는 <strong>의원들의 의정활동</strong>과 관련된
-                                        다양한
-                                        의견을 게시할 수 있는 곳입니다. <br>
-                                        게시하여 주신 소중한 의견에 대하여는 답변을 제공하고 귀중한 의정활동 자료로 활용하도록 하겠습니다.
-                                    </p>
-                                    <!-- //boardInfoText -->
-
-                                    <h5>안내사항</h5>
-                                    <ul class="bulletIcon">
-                                        <li>
-                                            일상생활에서의 불편사항이나 시행정에 대한 문의, 건의사항 등은 화천군청의 관계부서에서 처리하여야 할 사항이므로
-                                            화천군청청홈페이지<a
-                                                href="https://www.ihc.go.kr/mayor/index.do#section4">(https://www.ihc.go.kr/mayor/index.do#section4)</a>
-                                            '군수에게 바란다'를 이용해 주시기
-                                            바랍니다. <br>
-                                            <a href="#" class="link">
-                                                군수에게 바란다 바로가기
-                                            </a>
-                                        </li>
-                                        <li>군정 및 의정활동 등에 관한 진정은 우편 또는 직접방문하여 접수하시기 바랍니다.</li>
-                                        <li>개인정보의 불법이용을 막기 위해 이용자께서는 주민등록번호, 휴대폰번호, 신용카드정보 등의 개인정보 게시를 주의하시기 바랍니다.</li>
-                                        <li>건전한 게시판 운영을 위해 실명으로 운영되고 있으며 특정 개인 및 단체·부서에 대한 비방, 상업성광고, 욕설, 중복성 글, 정치적 성향을
-                                            포함한 글 등은 별도의 통보없이 삭제됩니다</li>
-                                    </ul>
-
-                                    <div class="inputChkBox">
-                                        <input type="checkbox" id="secret" class="blind" required>
-                                        <label for="secret" class="chkBtn">
-                                            [필수] 안내사항을 확인했어요
+                        <!-- 자유게시판 콘텐츠 -->
+                        <div class="container">
+                            <div class="searchWrap">
+                                <div class="searchBox">
+                                    <div class="searchSelectBox">
+                                        <label for="searchSelect" class="blind">
+                                            선택
                                         </label>
+                                        <select id="searchSelect">
+                                            <option value="">
+                                                전체
+                                            </option>
+                                        </select>
                                     </div>
-                                    <!-- //inputChkBox -->
-
+                                    <span class="bar"></span>
+                                    <div class="inputBox">
+                                        <input id="search" type="text" placeholder="검색어를 입력하세요.">
+                                        <label for="search" class="blind">검색어입력</label>
+                                    </div>
+                                    <button type="submit" class="searchBtn" aria-label="검색"></button>
                                 </div>
-                                <!-- //boardInfoTextBox -->
-
-                                <div class="boardWriteBox">
-
-                                    <h4>
-                                        의견 작성
-                                    </h4>
-
-                                    <form class="boardWriteForm">
-
-                                        <!-- 제목 -->
-                                        <div class="boardWriteField">
-                                            <label for="boardTitle" class="blind">제목</label>
-                                            <input type="text" id="boardTitle" placeholder="의견의 제목을 입력해 주세요">
-                                        </div>
-                                        <!-- //boardWriteField -->
-
-                                        <!-- 스마트에디터 -->
-                                        <div class="boardWriteField">
-                                            <div class="boardWriteEditor">
-                                                스마트에디터 영역
-                                            </div>
-                                        </div>
-                                        <!-- //boardWriteField -->
-
-                                        <!-- 비밀글여부 -->
-                                        <div class="boardWriteField row">
-                                            <span class="boardWriteLabel">
-                                                비밀글 여부
-                                                <span class="required" aria-hidden="true">*</span>
-                                                <span class="blind">필수 입력</span>
-                                            </span>
-                                            <div class="boardWriteContent">
-
-                                                <div class="boardWriteSecretBox">
-                                                    <div class="inputChkBox">
-                                                        <input type="checkbox" id="secret" class="blind" required>
-                                                        <label for="secret" class="chkBtn">
-                                                            비밀글 설정
-                                                        </label>
-                                                    </div>
-                                                    <!-- //inputChkBox -->
-
-                                                </div>
-                                                <!-- //boardWriteSecretBox -->
-
-                                            </div>
-                                            <!-- //boardWriteContent -->
-
-                                        </div>
-                                        <!-- //boardWriteField -->
-
-
-                                        <!-- 작성자 -->
-                                        <div class="boardWriteField row">
-                                            <span class="boardWriteLabel">
-                                                작성자
-                                                <span class="required" aria-hidden="true">*</span>
-                                                <span class="blind">필수 입력</span>
-                                            </span>
-                                            <div class="boardWriteContent">
-
-                                                <div class="boardWriteAddressBox">
-                                                    <label for="author" class="blind">
-                                                        작성자
-                                                    </label>
-                                                    <input id="author" type="text" placeholder="텍스트">
-                                                </div>
-                                                <!-- //boardWriteAddressBox -->
-
-                                            </div>
-                                            <!-- //boardWriteContent -->
-
-                                        </div>
-                                        <!-- //boardWriteField -->
-
-                                        <!-- 첨부파일 -->
-                                        <div class="boardWriteField row start">
-                                            <span class="boardWriteLabel">
-                                                첨부파일
-                                                <span class="required" aria-hidden="true">*</span>
-                                                <span class="blind">필수 입력</span>
-                                            </span>
-                                            <!-- //boardWriteLabel -->
-
-                                            <div class="boardWriteContent">
-
-                                                <div class="boardWriteFileBox">
-                                                    <div class="boardWriteFile">
-                                                        <input type="file" id="boardFile01" class="blind">
-                                                        <label for="boardFile01" class="boardWriteFileBtn">첨부파일을
-                                                            업로드해주세요.</label>
-
-                                                        <div class="boardWriteFileItem">
-                                                            <button type="button" class="boardWriteFileDel"
-                                                                aria-label="첨부파일.jpg 삭제">삭제</button>
-                                                            <span class="boardWriteFileName">첨부파일.jpg</span>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <!-- //boardWriteFileBox -->
-
-                                            </div>
-                                            <!-- //boardWriteContent -->
-
-                                        </div>
-                                        <!-- //boardWriteField -->
-
-                                    </form>
-                                    <!-- //boardWriteForm -->
-
-                                </div>
-                                <!-- //boardWriteBox -->
-
-                                <div class="btnBox">
-                                    <button type="button" class="btn btnSecondary btnNegative">
-                                        <div class="slideText">
-                                            <span class="slideTextItem slideTextPrimary">취소</span>
-                                            <span class="slideTextItem slideTextClone" aria-hidden="true">취소</span>
-                                        </div>
-                                    </button>
-                                    <button type="button" class="btn btnPrimary btnPositive">
-                                        <div class="slideText">
-                                            <span class="slideTextItem slideTextPrimary">등록</span>
-                                            <span class="slideTextItem slideTextClone" aria-hidden="true">등록</span>
-                                        </div>
-                                    </button>
-                                </div>
-                                <!-- //btnBox -->
+                                <!-- //searchBox -->
 
                             </div>
-                            <!-- //container -->
+                            <!-- //searchWrap -->
+
+                            <div class="boardCountWrap">
+                                <div class="boardCountBox">
+                                    <span>
+                                        <strong>1</strong>
+                                        / 50
+                                    </span>
+                                    <p>
+                                        총 <strong>410</strong>건의 게시글이 있습니다.
+                                    </p>
+                                </div>
+                                <!-- //boardCountBox -->
+
+                            </div>
+                            <!-- //boardCountWrap -->
+
+                            <div class="boardListBox">
+                                <table class="boardListTable">
+                                    <caption class="blind">
+                                        자유게시판 테이블
+                                    </caption>
+                                    <colgroup>
+                                        <col class="id">
+                                        <col class="title">
+                                        <col class="author">
+                                        <col class="date">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">
+                                                번호
+                                            </th>
+                                            <th scope="col" class="title textLeft">
+                                                제목
+                                            </th>
+                                            <th scope="col">
+                                                작성자
+                                            </th>
+                                            <th scope="col">
+                                                날짜
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="notice">
+                                            <td>
+                                                <span class="category" aria-label="공지">
+                                                    공지
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다. 게시글 목록 텍스트입니다. 게시글 목록 텍스트입니다. 게시글 목록 텍스트입니다.
+                                                        게시글 목록 텍스트입니다. 게시글 목록 텍스트입니다.
+                                                        게시글
+                                                        목록 텍스트입니다.
+                                                    </span>
+                                                    <span class="file">
+                                                        <img src="../images/sub/file_icon.svg" alt="첨부파일">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                    <span class="file">
+                                                        <img src="../images/sub/file_icon.svg" alt="첨부파일">
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="id">
+                                                    5
+                                                </span>
+                                            </td>
+
+                                            <td class="title">
+                                                <a href="../sub/sub_notice_view.html" class="link">
+                                                    <span class="titleText">
+                                                        게시글 목록 텍스트입니다.
+                                                    </span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                관리자
+                                            </td>
+                                            <td>
+                                                <span class="date">
+                                                    2024-01-03
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //boardListBox -->
+
+                            <nav class="paginationBox" aria-label="페이지 네비게이션">
+                                <a href="#" class="pageLink pageLinkFirst" aria-label="첫 페이지로 이동">
+                                </a>
+                                <a href="#" class="pageLink pageLinkPrev" aria-label="이전 페이지로 이동">
+                                </a>
+                                <a href="#" class="pageLink active" aria-current="page">
+                                    1
+                                </a>
+                                <a href="#" class="pageLink">
+                                    2
+                                </a>
+                                <a href="#" class="pageLink">
+                                    3
+                                </a>
+                                <a href="#" class="pageLink">
+                                    4
+                                </a>
+                                <a href="#" class="pageLink">
+                                    5
+                                </a>
+                                <a href="#" class="pageLink pageLinkNext" aria-label="다음 페이지로 이동">
+                                </a>
+                                <a href="#" class="pageLink pageLinkLast" aria-label="마지막 페이지로 이동">
+                                </a>
+                            </nav>
+                            <!-- //paginationBox -->
+
+                            <div class="btnBox">
+                                <button type="button" class="btn btnPrimary btnPositive">
+                                    <div class="slideText">
+                                        <span class="slideTextItem slideTextPrimary">등록</span>
+                                        <span class="slideTextItem slideTextClone" aria-hidden="true">등록</span>
+                                    </div>
+                                </button>
+                            </div>
+                            <!-- //btnBox -->
 
                         </div>
-                        <!-- //hopeListBox -->
+                        <!-- //container -->
 
                     </div>
                     <!-- //contentBox -->
 
                 </div>
-                <!-- //contentBox -->
+                <!-- //contentRightBox -->
 
             </div>
             <!-- //contentWrap -->

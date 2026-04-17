@@ -1891,8 +1891,6 @@ input::placeholder{color: var(--gray-600);}
 .boardListTable .state.review{background-color: #F96A6A; color: var(--white);}
 .boardListTable .state.complete{background-color: #41B75B; color: var(--white);}
 .boardListTable .state.receipt{color: var(--gray-600); border: 1px solid var(--gray-100);}
-.hopeInfoTextBox{margin: var(--spacing-s) 0 var(--spacing-m); padding: var(--spacing-m); border-radius: var(--radius-m); border: 1px solid var(--gray-600); background-color: var(--white); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
-.hopeInfoTextBox .hopeInfoText{color: var(--gray-600);} 
 
 @media (max-width: 1024px){
 
@@ -1905,9 +1903,6 @@ input::placeholder{color: var(--gray-600);}
 
   .hopeListBox .myPost{ border-radius: var(--radius-xs);}
   .hopeListBox .boardCountWrap{flex-direction: column; flex-direction: column-reverse; align-items: flex-start; gap: var(--spacing-s) 0;}
-
-  .hopeInfoTextBox{padding: var(--spacing-ms) var(--spacing-s); border-radius: var(--spacing-s);}
-  .hopeInfoTextBox .hopeInfoText br{display: none;}
 
 }
 
@@ -1969,15 +1964,6 @@ input::placeholder{color: var(--gray-600);}
   .hopeViewBox .answerBox .managerLabel{width: 100%; text-align: center;}
 
 }
-
-/* 의회에바란다 - 글쓰기 */
-.hopeWriteBox .hopeInfoTextBox{margin-bottom: var(--spacing-2xl);}
-.hopeWriteBox .hopeInfoTextBox .hopeInfoText{margin-bottom: var(--spacing-s); padding-bottom: var(--spacing-s); border-bottom: 1px solid var(--gray-100);}
-.hopeWriteBox .hopeInfoTextBox h5{margin-bottom:var(--spacing-xs); color: var(--gray-900); font-size: var(--Subtitle-2);}
-.hopeWriteBox .hopeInfoTextBox .bulletIcon{margin-bottom: var(--spacing-s);}
-.hopeWriteBox .hopeInfoTextBox .chkBtn{max-width: none; background-color: var(--gray-50);}
-.hopeWriteBox .hopeInfoTextBox .link{margin: var(--spacing-xs) 0; display: inline-block; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: var(--radius-s); background-color: var(--gray-600);}
-
 /* 방청/견학안내 */
 .visitGuideBox .visitGuideTitle{margin-bottom: var(--spacing-m); font-weight: var(--medium); line-height: 1.6; color: var(--gray-900); font-size: var(--font-size-xxxl);}
 .visitGuideBox .visitGuideTopWrap{margin-bottom: var(--spacing-3xl); padding: var(--spacing-lm) var(--spacing-m); display: flex; gap: 0 var(--spacing-lm); border-radius: var(--radius-m); background-color: var(--gray-50);}
@@ -2061,5 +2047,22 @@ input::placeholder{color: var(--gray-600);}
 
   .questionText{padding-left: var(--spacing-lm); font-size: var(--font-size-l);}
   .questionText::before{width: 30px; height: 30px;}
+
+}
+
+/* 공통 - 게시판 안내 텍스트 */
+.boardInfoTextBox{margin: var(--spacing-s) 0 var(--spacing-m); padding: var(--spacing-m); border-radius: var(--radius-m); border: 1px solid var(--gray-600); background-color: var(--white); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
+.boardInfoTextBox .boardInfoText{color: var(--gray-600);} 
+.boardInfoTextBox{margin-bottom: var(--spacing-2xl);}
+.boardInfoTextBox .boardInfoText{margin-bottom: var(--spacing-s); padding-bottom: var(--spacing-s); border-bottom: 1px solid var(--gray-100);}
+.boardInfoTextBox h5{margin-bottom:var(--spacing-xs); color: var(--gray-900); font-size: var(--Subtitle-2);}
+.boardInfoTextBox .bulletIcon{margin-bottom: var(--spacing-s);}
+.boardInfoTextBox .chkBtn{max-width: none; background-color: var(--gray-50);}
+.boardInfoTextBox .link{margin: var(--spacing-xs) 0; display: inline-block; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: var(--radius-s); background-color: var(--gray-600);}
+
+@media (max-width: 480px){
+
+  .boardInfoTextBox{padding: var(--spacing-ms) var(--spacing-s); border-radius: var(--spacing-s);}
+  .boardInfoTextBox .boardInfoText br{display: none;}
 
 }
