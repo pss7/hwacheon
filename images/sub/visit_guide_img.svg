@@ -1,0 +1,20 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M38 103H122V133C122 137.418 118.418 141 114 141H46C41.5817 141 38 137.418 38 133V103Z" fill="#544F3C"/>
+<path d="M44 35C44 26.1634 51.1634 19 60 19H100C108.837 19 116 26.1634 116 35V103H44V35Z" fill="#E1E6EA"/>
+<rect x="34" y="103" width="92" height="4" fill="#706D64"/>
+<path d="M64 87C64 78.1634 71.1634 71 80 71C88.8366 71 96 78.1634 96 87V103H64V87Z" fill="#859CAD"/>
+<rect x="78" y="89" width="34" height="14" rx="2" fill="white"/>
+<rect x="80" y="91" width="30" height="10" rx="2" fill="#454C53"/>
+<rect x="84" y="93" width="4" height="6" fill="#EF9999"/>
+<rect x="90" y="93" width="4" height="6" fill="#EF9999"/>
+<rect x="96" y="93" width="4" height="6" fill="#798692"/>
+<rect x="102" y="93" width="4" height="6" fill="#EF9999"/>
+<circle cx="74" cy="61" r="2" fill="#859CAD"/>
+<circle cx="86" cy="61" r="2" fill="#859CAD"/>
+<circle cx="92" cy="55" r="2" fill="#859CAD"/>
+<circle cx="80" cy="55" r="2" fill="#859CAD"/>
+<circle cx="68" cy="55" r="2" fill="#859CAD"/>
+<circle cx="74" cy="49" r="2" fill="#859CAD"/>
+<circle cx="86" cy="49" r="2" fill="#859CAD"/>
+<rect x="56" y="25" width="48" height="12" rx="4" fill="#454C53"/>
+</svg>
