@@ -29,6 +29,8 @@ main{flex: 1;}
 }
 
 /* 공통 - 여백 */
+.mt10{margin-top: 10px;}
+.mt20{margin-top: 20px;}
 .mb10{margin-bottom: 10px;}
 .mb20{margin-bottom: 20px;}
 
