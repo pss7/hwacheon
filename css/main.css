@@ -40,7 +40,7 @@
 
 /* 메인슬라이드 영역 - 프로필 */
 #visualWrap .introduceBox{max-width: 1165px; width: 100%; padding: 0 var(--spacing-ms); margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end;}
-#visualWrap .introduceBox .chairmanBox{position: relative; width: 312px; z-index: 99999;}
+#visualWrap .introduceBox .chairmanBox{position: relative; width: 312px; z-index: 9;}
 #visualWrap .introduceBox .chairmanBox .imgBox img{width: 211px; margin: 0 auto;}
 #visualWrap .introduceBox .chairmanBox .box{position: relative; padding: var(--spacing-ml) var(--spacing-m); height: 225px; background-color: var(--white); border-radius: var(--radius-l) var(--radius-l) 0 0; z-index: 99;}
 #visualWrap .introduceBox .chairmanBox .textBox{margin-bottom: var(--spacing-ml);}

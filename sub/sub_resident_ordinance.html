@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <meta name="Author" content="" />
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <title>주민조례청구</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/script.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrap" class="main">
+
+        <!-- 헤더 영역 -->
+        <header id="headerWrap">
+
+            <!-- masthead -->
+            <div id="krds-masthead">
+                <div class="toggle-wrap">
+                    <div class="toggle-head">
+                        <div class="inner">
+                            <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //masthead -->
+
+            <div class="headerCenterWrap">
+                <div class="container">
+                    <div class="headerCenterBox">
+
+                        <!-- sns -->
+                        <div class="leftBox">
+                            <div class="snsBox">
+                                <a href="https://facebook.com/..." aria-label="페이스북">
+                                    <img src="../images/common/facebook_icon.svg" alt="">
+                                </a>
+                                <a href="https://instagram.com/..." aria-label="인스타그램">
+                                    <img src="../images/common/insta_icon.svg" alt="">
+                                </a>
+                                <a href="https://youtube.com/..." aria-label="유튜브">
+                                    <img src="../images/common/youtube_icon.svg" alt="">
+                                </a>
+                                <a href="https://naver.com/..." aria-label="네이버">
+                                    <img src="../images/common/naver_icon.svg" alt="">
+                                </a>
+                            </div>
+
+                            <ul class="linkList">
+                                <li>
+                                    <button class="hoverSlide modalBtn" data-text="의원누리집" type="button"
+                                        aria-haspopup="dialog" aria-controls="memberSiteModal">
+                                        <span>의원누리집</span>
+                                    </button>
+
+                                    <div class="modalBox" id="memberSiteModal" role="dialog" aria-modal="true"
+                                        aria-labelledby="memberSiteModalTitle">
+                                        <h3 id="memberSiteModalTitle">의원누리집</h3>
+
+                                        <ul class="list">
+                                            <li>
+                                                <div class="imgBox">
+                                                    <img src="../images/common/member01.png" alt="">
+                                                </div>
+                                                <span class="name">류희상</span>
+                                            </li>
+                                            <li>
+                                                <div class="imgBox">
+                                                    <img src="../images/common/member02.png" alt="">
+                                                </div>
+                                                <span class="name">조웅희</span>
+                                            </li>
+                                            <li>
+                                                <div class="imgBox">
+                                                    <img src="../images/common/member03.png" alt="">
+                                                </div>
+                                                <span class="name">노이업</span>
+                                            </li>
+                                            <li>
+                                                <div class="imgBox">
+                                                    <img src="../images/common/member04.png" alt="">
+                                                </div>
+                                                <span class="name">김동완</span>
+                                            </li>
+                                            <li>
+                                                <div class="imgBox">
+                                                    <img src="../images/common/member05.png" alt="">
+                                                </div>
+                                                <span class="name">김명진</span>
+                                            </li>
+                                            <li>
+                                                <div class="imgBox">
+                                                    <img src="../images/common/member06.png" alt="">
+                                                </div>
+                                                <span class="name">이선희</span>
+                                            </li>
+                                            <li>
+                                                <div class="imgBox">
+                                                    <img src="../images/common/member07.png" alt="">
+                                                </div>
+                                                <span class="name">조재규</span>
+                                            </li>
+                                        </ul>
+
+                                        <button class="closeBtn" type="button" aria-label="닫기"></button>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="hoverSlide" data-text="인터넷방송">
+                                        <span>인터넷방송</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hoverSlide" data-text="화천군청">
+                                        <span>화천군청</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //leftBox -->
+
+                        <!-- 로그인 -->
+                        <div class="rightBox">
+                            <div class="zoomControlBox" role="group" aria-label="화면 크기 조절">
+                                <button class="zoomBtn zoomOut" type="button" aria-label="화면 축소">
+                                    <img src="../images/common/zoomout_icon.svg" alt="">
+                                </button>
+                                <button class="zoomBtn zoomIn" type="button" aria-label="화면 확대">
+                                    <img src="../images/common/zoomin_icon.svg" alt="">
+                                </button>
+                                <button class="zoomBtn zoomReset" type="button" aria-label="화면 크기 초기화">
+                                    <img src="../images/common/zoomreset_icon.svg" alt="">
+                                </button>
+
+                                <div class="zoomTooltip" id="zoomTooltip" aria-live="polite">100%</div>
+                            </div>
+
+                            <div class="authBox">
+                                <a href="#" class="authBtn hoverSlide" data-text="로그인">
+                                    <span>로그인</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- //rightBox -->
+
+                    </div>
+                    <!-- //headerCenterBox -->
+
+                </div>
+                <!-- //container -->
+
+            </div>
+            <!-- //headerCenterWrap -->
+
+            <div class="headerBottomWrap">
+                <div class="container">
+                    <div class="headerBottomBox">
+
+                        <!-- 메뉴 -->
+                        <div class="menuBox">
+                            <nav>
+                                <ul class="depth01">
+                                    <li>
+                                        <h2>
+                                            <a href="#">의회안내</a>
+                                        </h2>
+                                        <!-- 서브메뉴 -->
+                                        <div class="subMenuBox">
+                                            <div class="leftBox">
+                                                <div class="titlBox">
+                                                    <h2>의회안내</h2>
+                                                    <p>화천군의회를 안내합니다</p>
+                                                </div>
+                                                <div class="linkBox">
+                                                    <a href="#" class="link01">전자회의록</a>
+                                                    <a href="#" class="link02">영상회의록</a>
+                                                    <a href="#" class="link03">인터넷방송</a>
+                                                </div>
+                                            </div>
+                                            <div class="rightBox">
+                                                <ul class="depth02">
+                                                    <li>
+                                                        <h3><a href="#">의장실</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의장 인사말"><span>의장 인사말</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의장 프로필"><span>의장 프로필</span></a></h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">의회연혁</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">의회구성</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="조직 및 직원 현황"><span>조직 및 직원
+                                                                            현황</span></a></h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">청사안내</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="청사안내도"><span>청사안내도</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="찾아오시는 길"><span>찾아오시는 길</span></a>
+                                                                </h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">의회기능</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="운영 및 권한"><span>운영 및 권한</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의안처리"><span>의안처리</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="청원·진정"><span>청원·진정</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="회기·소집"><span>회기·소집</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="예산심의"><span>예산심의</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="행정사무감사"><span>행정사무감사</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="만화로 보는 화천군의회"><span>만화로 보는
+                                                                            화천군의회</span></a></h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //subMenuBox -->
+                                    </li>
+
+                                    <li>
+                                        <h2><a href="#">의원광장</a></h2>
+                                        <!-- 서브메뉴 -->
+                                        <div class="subMenuBox">
+                                            <div class="leftBox">
+                                                <div class="titlBox">
+                                                    <h2>의원광장</h2>
+                                                    <p>의원을 소개합니다</p>
+                                                </div>
+                                                <div class="linkBox">
+                                                    <a href="#" class="link01">전자회의록</a>
+                                                    <a href="#" class="link02">영상회의록</a>
+                                                    <a href="#" class="link03">인터넷방송</a>
+                                                </div>
+                                            </div>
+                                            <div class="rightBox">
+                                                <ul class="depth02">
+                                                    <li>
+                                                        <h3><a href="#">의원윤리강령</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">헌역의원</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">역대의원</a></h3>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //subMenuBox -->
+                                    </li>
+
+                                    <li>
+                                        <h2><a href="#">의정활동</a></h2>
+                                        <!-- 서브메뉴 -->
+                                        <div class="subMenuBox">
+                                            <div class="leftBox">
+                                                <div class="titlBox">
+                                                    <h2>의정활동</h2>
+                                                    <p>회의를 눈으로 확인해보세요</p>
+                                                </div>
+                                                <div class="linkBox">
+                                                    <a href="#" class="link01">전자회의록</a>
+                                                    <a href="#" class="link02">영상회의록</a>
+                                                    <a href="#" class="link03">인터넷방송</a>
+                                                </div>
+                                            </div>
+                                            <div class="rightBox">
+                                                <ul class="depth02">
+                                                    <li>
+                                                        <h3><a href="#">의사일정</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">전자회의록</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="회의록 검색"><span>회의록 검색</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의안 현황"><span>의안 현황</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="군정 질문"><span>군정 질문</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="10분 자유발언"><span>10분 자유발언</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의안 통계"><span>의안 통계</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="회기 통계"><span>회기 통계</span></a></h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">영상회의록</a></h3>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //subMenuBox -->
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- //nav -->
+
+                            <div class="logoBox">
+                                <h1>
+                                    <a href="#">
+                                        <img src="../images/common/logo.svg" alt="의회 화천군의회 Hwacheon County Council"
+                                            class="pc">
+                                        <img src="../images/common/m_logo.svg" alt="" class="m">
+                                    </a>
+                                </h1>
+                            </div>
+                            <!-- //logoBox -->
+
+                            <nav>
+                                <ul class="depth01">
+                                    <li>
+                                        <h2><a href="#">의회소식</a></h2>
+                                        <!-- 서브메뉴 -->
+                                        <div class="subMenuBox">
+                                            <div class="leftBox">
+                                                <div class="titlBox">
+                                                    <h2>의회소식</h2>
+                                                    <p>지금 화천군의회는?</p>
+                                                </div>
+                                                <div class="linkBox">
+                                                    <a href="#" class="link01">전자회의록</a>
+                                                    <a href="#" class="link02">영상회의록</a>
+                                                    <a href="#" class="link03">인터넷방송</a>
+                                                </div>
+                                            </div>
+                                            <div class="rightBox">
+                                                <ul class="depth02">
+                                                    <li>
+                                                        <h3><a href="#">공지사항</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">고시·공고</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">조례안</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">포토의정</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">보도자료</a></h3>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //subMenuBox -->
+                                    </li>
+
+                                    <li>
+                                        <h2><a href="#">시민참여</a></h2>
+                                        <!-- 서브메뉴 -->
+                                        <div class="subMenuBox">
+                                            <div class="leftBox">
+                                                <div class="titlBox">
+                                                    <h2>시민참여</h2>
+                                                    <p>우리 같이 참여해요</p>
+                                                </div>
+                                                <div class="linkBox">
+                                                    <a href="#" class="link01">전자회의록</a>
+                                                    <a href="#" class="link02">영상회의록</a>
+                                                    <a href="#" class="link03">인터넷방송</a>
+                                                </div>
+                                            </div>
+                                            <div class="rightBox">
+                                                <ul class="depth02">
+                                                    <li>
+                                                        <h3><a href="#">의회에 바란다</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">방청·견학안내</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">주민조례청구</a></h3>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //subMenuBox -->
+                                    </li>
+
+                                    <li>
+                                        <h2><a href="#">정보공개</a></h2>
+                                        <!-- 서브메뉴 -->
+                                        <div class="subMenuBox">
+                                            <div class="leftBox">
+                                                <div class="titlBox">
+                                                    <h2>정보공개</h2>
+                                                    <p>상세한 정보를 확인하세요</p>
+                                                </div>
+                                                <div class="linkBox">
+                                                    <a href="#" class="link01">전자회의록</a>
+                                                    <a href="#" class="link02">영상회의록</a>
+                                                    <a href="#" class="link03">인터넷방송</a>
+                                                </div>
+                                            </div>
+                                            <div class="rightBox">
+                                                <ul class="depth02">
+                                                    <li>
+                                                        <h3><a href="#">의정활동 정보공개</a></h3>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">의회 운영 분야</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의회 회기 운영"><span>의회 회기 운영</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의정비 심의위원회"><span>의정비 심의위원회</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원겸직 현황"><span>의원겸직 현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="업무추진비 집행현황"><span>업무추진비
+                                                                            집행현황</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="국제교류 현황"><span>국제교류 현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원 정책연구현황"><span>의원 정책연구현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="학술연구 용역 현황"><span>학술연구 용역
+                                                                            현황</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원역량 강화현황"><span>의원역량 강화현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="행사개최 현황"><span>행사개최 현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원 징계현황"><span>의원 징계현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">의원활동 분야</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="행정사무감사"><span>행정사무감사</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="행정사무감사 조치결과"><span>행정사무감사
+                                                                            조치결과</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="행정사무조사"><span>행정사무조사</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="회의록 검색"><span>회의록 검색</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="지방의회 질의답변 현황"><span>지방의회 질의답변
+                                                                            현황</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의안 처리현황"><span>의안 처리현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="위원회 안건검토 및 심사보고서"><span>위원회 안건검토 및
+                                                                            심사보고서</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원별 회의 출석률 현황"><span>의원별 회의 출석률
+                                                                            현황</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원별 의정보고회 개최현황"><span>의원별 의정보고회
+                                                                            개최현황</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="교섭단체 운영현황"><span>교섭단체 운영현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="정책지원관 현황"><span>정책지원관 현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원정책개발비 운영현황"><span>의원정책개발비
+                                                                            운영현황</span></a></h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <h3><a href="#">의회사무 분야</a></h3>
+                                                        <ul class="depth03">
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의원입법 지원현황"><span>의원입법 지원현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="예결산분석 지원현황"><span>예결산분석
+                                                                            지원현황</span></a></h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의회 민원처리현황"><span>의회 민원처리현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의회발간물 현황"><span>의회발간물 현황</span></a>
+                                                                </h4>
+                                                            </li>
+                                                            <li>
+                                                                <h4><a href="#" class="hoverSlide"
+                                                                        data-text="의회자료체계 구축 현황"><span>의회자료체계 구축
+                                                                            현황</span></a></h4>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //subMenuBox -->
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- //nav -->
+
+                            <div class="mobileMenuBtnBox">
+                                <button class="mobileBtn mobileOpenBtn" type="button" aria-label="모바일 메뉴 열기"
+                                    aria-controls="mobileMenuBox" aria-expanded="false">
+                                    <span></span><span></span><span></span>
+                                </button>
+
+                                <button class="mobileBtn mobileCloseBtn" type="button" aria-label="모바일 메뉴 닫기"
+                                    aria-controls="mobileMenuBox">
+                                    <span></span><span></span>
+                                </button>
+                            </div>
+                            <!-- //mobileMenuBtnBox -->
+
+                        </div>
+                        <!-- //menuBox -->
+
+                    </div>
+                    <!-- //headerBottomBox -->
+
+                </div>
+                <!-- //container -->
+
+            </div>
+            <!-- //headerBottomWrap -->
+
+            <!-- 모바일 메뉴 -->
+            <div id="mobileMenuBox">
+                <div class="mobileTopBox">
+                    <div class="mobileModalBox">
+                        <button class="mobileModalBtn modalBtn" type="button" aria-haspopup="dialog"
+                            aria-controls="mobileMemberSiteModal">
+                            9대 의원 누리집
+                        </button>
+
+                        <div class="modalBox" id="mobileMemberSiteModal" role="dialog" aria-modal="true"
+                            aria-labelledby="mobileMemberSiteModalTitle">
+                            <h3 id="mobileMemberSiteModalTitle">의원누리집</h3>
+
+                            <ul class="list">
+                                <li>
+                                    <div class="imgBox"><img src="../images/common/member01.png" alt=""></div><span
+                                        class="name">류희상</span>
+                                </li>
+                                <li>
+                                    <div class="imgBox"><img src="../images/common/member02.png" alt=""></div><span
+                                        class="name">조웅희</span>
+                                </li>
+                                <li>
+                                    <div class="imgBox"><img src="../images/common/member03.png" alt=""></div><span
+                                        class="name">노이업</span>
+                                </li>
+                                <li>
+                                    <div class="imgBox"><img src="../images/common/member04.png" alt=""></div><span
+                                        class="name">김동완</span>
+                                </li>
+                                <li>
+                                    <div class="imgBox"><img src="../images/common/member05.png" alt=""></div><span
+                                        class="name">김명진</span>
+                                </li>
+                                <li>
+                                    <div class="imgBox"><img src="../images/common/member06.png" alt=""></div><span
+                                        class="name">이선희</span>
+                                </li>
+                                <li>
+                                    <div class="imgBox"><img src="../images/common/member07.png" alt=""></div><span
+                                        class="name">조재규</span>
+                                </li>
+                            </ul>
+
+                            <button class="closeBtn" type="button" aria-label="닫기"></button>
+                        </div>
+                    </div>
+                    <!-- //mobileModalBox -->
+
+                    <div class="mobileAothBox">
+                        <p>로그인해주세요</p>
+                        <a href="#" class="btn">로그인</a>
+                    </div>
+                    <!-- //mobileAothBox -->
+                </div>
+                <!-- //mobileTopBox -->
+
+                <div class="mobileDepthLayoutBox">
+                    <ul class="mobileDepth01">
+                        <li>
+                            <h2><a href="#">의회안내</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="#">의원광장</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="#">의정활동</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="#">의회소식</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="#">시민참여</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="#">정보공개</a></h2>
+                        </li>
+                    </ul>
+                    <!-- //mobileDepth01 -->
+
+                    <div class="mobileDepthBox">
+                        <div class="box">
+                            <ul class="mobileDepth02">
+                                <li>
+                                    <h3><a href="#">의장실</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">의장 인사말</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의장 프로필</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3><a href="#">의회연혁</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">의회구성</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">조직 및 직원 현황</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3><a href="#">청사안내</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">청사안내도</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">찾아오시는 길</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3><a href="#">의회기능</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">운영 및 권한</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의안처리</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">청원·진정</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">회기·소집</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">예산 심의</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">행정사무감사</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">만화로 보는 화천군의회</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- //mobileDepth02 -->
+                        </div>
+
+                        <div class="box">
+                            <ul class="mobileDepth02">
+                                <li>
+                                    <h3><a href="#">의원윤리강령</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">헌역의원</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">역대의원</a></h3>
+                                </li>
+                            </ul>
+                            <!-- //mobileDepth02 -->
+                        </div>
+
+                        <div class="box">
+                            <ul class="mobileDepth02">
+                                <li>
+                                    <h3><a href="#">의사일정</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">전자회의록</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">회의록 검색검색</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의안 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">군정 질문</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">10분 자유발언</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의안 통계</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">회기 통계</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3><a href="#">영상회의록</a></h3>
+                                </li>
+                            </ul>
+                            <!-- //mobileDepth02 -->
+                        </div>
+
+                        <div class="box">
+                            <ul class="mobileDepth02">
+                                <li>
+                                    <h3><a href="#">공지사항</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">고시·공고</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">조례안</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">포토의정</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">보도자료</a></h3>
+                                </li>
+                            </ul>
+                            <!-- //mobileDepth02 -->
+                        </div>
+
+                        <div class="box">
+                            <ul class="mobileDepth02">
+                                <li>
+                                    <h3><a href="#">의회에 바란다</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">방청·견학안내</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">주민조례청구</a></h3>
+                                </li>
+                            </ul>
+                            <!-- //mobileDepth02 -->
+                        </div>
+
+                        <div class="box">
+                            <ul class="mobileDepth02">
+                                <li>
+                                    <h3><a href="#">의정활동 정보공개</a></h3>
+                                </li>
+                                <li>
+                                    <h3><a href="#">의회 운영 분야</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">의회 회기 운영</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의정비 심의위원회</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의원겸직 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">업무추진비 집행현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">국제교류 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의원 정책연구현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">학술연구 용역 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의원역량 강화현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">행사개최 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의원 징계현황</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3><a href="#">의원활동 분야</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">행정사무감사</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">행정사무감사 조치결과</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">행정사무조사</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">회의록 검색</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">지방의회 질의답변 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의안 처리현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">위원회 안건검토 및 심사보고서</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의원별 회의 출석률 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의원별 의정보고회 개최현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">교섭단체 운영현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">정책지원관 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의원정책개발비 운영현황</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3><a href="#">의회사무 분야</a></h3>
+                                    <ul class="mobileDepth03">
+                                        <li>
+                                            <h4><a href="#">의원입법 지원현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">예결산분석 지원현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의회 민원처리현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의회발간물 현황</a></h4>
+                                        </li>
+                                        <li>
+                                            <h4><a href="#">의회자료체계 구축 현황</a></h4>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- //mobileDepth02 -->
+                        </div>
+                    </div>
+                    <!-- //mobileDepthBox -->
+                </div>
+                <!-- //mobileDepthLayoutBox -->
+
+                <div class="mobileLinkBox">
+                    <a href="#" class="link link01">영상회의록</a>
+                    <a href="#" class="link link02">전자회의록</a>
+                    <a href="#" class="link link03">인터넷방송</a>
+                    <a href="#" class="link link04">화천군의회</a>
+                </div>
+                <!-- //mobileLinkBox -->
+            </div>
+            <!-- //mobileMenuBox -->
+
+        </header>
+        <!-- //headerWrap -->
+
+        <!-- 메인 영역 -->
+        <main>
+
+            <!-- 서브 상단 비주얼 영역 -->
+            <div id="subVisualWrap">
+                <div class="visualBox">
+                    <img src="../images/sub/sub_bg01.jpg" alt="서브 상단 배경 이미지">
+                </div>
+                <!-- //visualBox -->
+
+                <div class="titleBox">
+                    <h3>
+                        <div class="rollingText">
+                            <span>군민과 함께하는 의정</span>
+                            <span>행복한 군민</span>
+                            <span>공정과 상식으로 만들어가는</span>
+                            <span>새로운 화천군의회</span>
+                        </div>
+                    </h3>
+                </div>
+                <!-- //titleBox -->
+
+                <!-- 브레드크럼 영역-->
+                <div class="breadcrumbBox">
+                    <ul class="breadcrumbList">
+                        <li>
+                            <a href="/" class="home" aria-label="홈으로 이동">
+                                <img src="../images/sub/home_icon.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <span>의회소식</span>
+                        </li>
+                        <li>
+                            <span>
+                                주민조례청구
+                            </span>
+                        </li>
+                    </ul>
+                    <!-- //breadcrumbList -->
+
+                </div>
+                <!-- //breadcrumbBox -->
+
+            </div>
+            <!-- //subVisualWrap -->
+
+
+            <div id="contentWrap">
+
+                <!-- 왼쪽 메뉴 영역 -->
+                <aside>
+                    <ul class="depth01">
+                        <li>
+                            <h2>
+                                <a href="#">의회에 바란다</a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                <a href="#">방청/견학안내</a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                <a href="#" class="active">주민조례청구</a>
+                            </h2>
+                        </li>
+                        <li>
+                            <h2>
+                                <a href="#">자유게시판</a>
+                            </h2>
+                        </li>
+                    </ul>
+                    <!-- //depth01 -->
+
+                </aside>
+                <!-- aside -->
+
+                <!-- 오른쪽 콘텐츠 영역 -->
+                <div class="contentRightBox">
+
+                    <!-- 콘텐츠 상단 영역 -->
+                    <div class="contentTopBox">
+                        <div class="container">
+                            <div class="layoutBox">
+
+                                <!-- 상단 제목, 서브메뉴 영역-->
+                                <div class="titleBox">
+                                    <h3>
+                                        주민조례청구
+                                    </h3>
+                                </div>
+                                <!-- //titleBox -->
+
+                                <!-- 공유, 인쇄 영역 -->
+                                <div class="utilBox">
+                                    <button type="button" class="shareBtn" aria-label="공유하기">
+                                    </button>
+                                    <button type="button" class="printBtn" aria-label="인쇄하기">
+                                    </button>
+                                </div>
+                                <!-- //utilBox -->
+
+                            </div>
+                            <!-- //layoutBox -->
+
+                        </div>
+                        <!-- //container -->
+
+                    </div>
+                    <!-- //contentTopBox -->
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="contentBox">
+
+                        <!-- 주민조례청구 콘텐츠 -->
+                        <div class="residentOrdinanceBox">
+                            <div class="container">
+
+                                <div class="residentOrdinanceTopBox">
+                                    <p>
+                                        이런 조례가 필요해요!
+                                    </p>
+                                </div>
+                                <!-- //residentOrdinanceTopBox -->
+
+                                <div class="questionBox">
+                                    <p class="questionText">
+                                        <strong class="color01">주민조례청구</strong>란 <strong class="color02">무엇</strong>인가요?
+                                    </p>
+                                    <p class="questionDescription">
+                                        주민조례(발안)청구 제도는 주민이 직접 조례를 제안할 수 있는 제도입니다. <br>
+                                        쉽게 말해 “이런 조례가 필요해요! ”라고 주민들이 모여 의견을 내고 일정수 이상의 서명을 받아 제출하면 해당 조례가 실제로 논의될 수 있도록
+                                        하는 제도입니다.
+                                    </p>
+                                </div>
+                                <!-- //questionBox -->
+
+                                <div class="questionBox">
+                                    <p class="questionText">
+                                        <strong class="color01">주민조례청구</strong>란 <strong class="color02">근거</strong>가
+                                        궁금해요
+                                    </p>
+                                    <p class="questionDescription">
+                                        「지방자치법」 제19조(조례의 제정과 개정, 폐지 청구), 「주민조례 발안에 관한 법률」과 「인제군 주민조례 발안에 관한 조례」에 근거합니다.
+                                    </p>
+                                </div>
+                                <!-- //questionBox -->
+
+                                <div class="residentOrdinanceMethodBox">
+                                    <P class="methodText">
+                                        그럼 <strong class="color01">청구</strong>는 <br>
+                                        <strong class="color02">어떻게</strong> 하나요?
+                                    </P>
+
+                                    <div class="methodDescriptionBox">
+                                        <div class="methodDescriptionListBox">
+                                            <div class="box">
+                                                <p class="tit">
+                                                    청구인 자격 기준이 충족 되어야 해요
+                                                </p>
+                                                <ul class="bulletIcon">
+                                                    <li>
+                                                        만18세 이상의 관할구역에 주민등록이 되어 있는 지역주민(선거권 없는자 제외)
+                                                    </li>
+                                                    <li>
+                                                        외국인은 영주 체류자격 취득일 후 3년이 경과한 자중 외국인등록표에 등록된 자
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="box">
+                                                <p class="tit">
+                                                    일정 비율의 연대 서명이 필요해요
+                                                </p>
+                                                <ul class="bulletIcon">
+                                                    <li>
+                                                        청구권자 수(1,380명) 이상의 연대서명이 필요하며, 이는 청구권자 총수의 20분의 1 이상입니다.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- //methodDescriptionListBox -->
+
+                                        <div class="processLayoutBox">
+                                            <h4 class="tit">
+                                                청구 절차
+                                            </h4>
+
+                                            <ul class="processList">
+                                                <li>
+                                                    <span class="step step01">
+                                                        Step.1
+                                                    </span>
+                                                    <div class="processContentBox">
+                                                        <h4>
+                                                            청구인 대표자
+                                                        </h4>
+                                                        <ul class="bulletIcon">
+                                                            <li>청구서 및 주민청구 조례안을 첨부하여 「주민청구조례 대표자 증명서」발급 신청</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span class="step step02">
+                                                        Step.2
+                                                    </span>
+                                                    <div class="processContentBox">
+                                                        <h4>
+                                                            화천군의회의장
+                                                        </h4>
+                                                        <ul class="bulletIcon">
+                                                            <li>
+                                                                「주민청구조례 대표자 증명서」발급
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span class="step step03">
+                                                        Step.3
+                                                    </span>
+                                                    <div class="processContentBox">
+                                                        <h4>
+                                                            청구인 대표자
+                                                        </h4>
+                                                        <ul class="processList02 arrowIcon">
+                                                            <li>
+                                                                <em>
+                                                                    3-1. 서명 요청
+                                                                </em>
+                                                                <div class="processListBox listType01">
+                                                                    <ul class="bulletIcon">
+                                                                        <li>
+                                                                            서명요청기간동안 자격있는 주민을 대상으로 청구인명부에 6개월 이내 서명요청
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <em>
+                                                                    3-2. 제출
+                                                                </em>
+                                                                <div class="processListBox listType01">
+                                                                    <ul class="bulletIcon">
+                                                                        <li>
+                                                                            기간내 「청구인 서명부」를 화천군의회 의장에게 제출
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span class="step step04">
+                                                        Step.4
+                                                    </span>
+                                                    <div class="processContentBox">
+                                                        <h4>
+                                                            화천의회의장
+                                                        </h4>
+                                                        <ul class="processList02 arrowIcon">
+                                                            <li>
+                                                                <em>
+                                                                    4-1. 청구인명부 열람
+                                                                </em>
+                                                            </li>
+                                                            <li>
+                                                                <em>
+                                                                    4-2. 이의신청 접수·심사·결정
+                                                                </em>
+                                                            </li>
+                                                            <li>
+                                                                <em>
+                                                                    4-3. 청구인명부 보정기간
+                                                                </em>
+                                                            </li>
+                                                            <li>
+                                                                <em>
+                                                                    4-4. 심의
+                                                                </em>
+                                                            </li>
+                                                            <li>
+                                                                <em>
+                                                                    4-5. 수리 혹은 각하
+                                                                </em>
+                                                            </li>
+                                                            <li>
+                                                                <em>
+                                                                    4-6. 발의 및 심사
+                                                                </em>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <!-- //processList -->
+
+                                            <div class="boardViewFileBox">
+                                                <h5 class="boardViewFileTitle">청구양식</h5>
+                                                <ul class="boardViewFileList">
+                                                    <li class="boardViewFileItem">
+                                                        <a href="#" class="boardViewFileLink fileHwp">
+                                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                                            <span class="boardViewFileName">[별지 제1호 서식] 제6호
+                                                                서식.hwp</span>
+                                                            <span class="boardViewFileSize">(79 KB)</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="boardViewFileItem">
+                                                        <a href="#" class="boardViewFileLink filePdf">
+                                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                                            <span class="boardViewFileName">2024 주민조례청구 업무
+                                                                매뉴얼.pdf</span>
+                                                            <span class="boardViewFileSize">(79 KB)</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <!-- //boardViewFileList -->
+
+                                            </div>
+                                            <!-- //boardViewFileBox -->
+
+                                        </div>
+                                        <!-- //processLayoutBox -->
+
+                                    </div>
+                                    <!-- //methodDescriptionBox -->
+
+                                </div>
+                                <!-- //residentOrdinanceMethodBox -->
+
+                                <div class="chairmanMessageBox">
+                                    <div class="chairmanImgBox">
+                                        <img src="../images/sub/chairman_img02.png" alt="">
+                                    </div>
+                                    <div class="chairmanTextBox">
+                                        <span class="name">
+                                            - 화천군의회 의장 류희상
+                                        </span>
+                                        <p>
+                                            개정된 지방자치법 시행으로 주민이 주인이 되는 진정한 자치분권이 앞당겨 지고, 4년마다 투표로 주민의 정치 참여가 제한적이었으나, 이제
+                                            주민조례발의제가 도입되어 상시적인 정치참여가 가능해졌습니다. 주민 중심의 지방자치의 시대를 위해 화천군의회가 더욱더 노력하겠습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- //chairmanMessageBox -->
+
+                            </div>
+                            <!-- //container -->
+
+                        </div>
+                        <!-- //residentOrdinanceBox -->
+
+                    </div>
+                    <!-- //contentBox -->
+
+                </div>
+                <!-- //contentRightBox -->
+
+            </div>
+            <!-- //contentWrap -->
+
+        </main>
+        <!-- //main -->
+
+        <!-- 푸터 영역 -->
+        <footer id="footerWrap">
+            <div class="container">
+                <div class="footerBox">
+
+                    <div class="footerLeftBox">
+
+                        <!-- 로고 -->
+                        <div class="footerLogoBox">
+                            <h2>
+                                <img src="../images/common/logo.svg" alt="화천군의회">
+                            </h2>
+                        </div>
+                        <!--// footerLogoBox -->
+
+                        <!-- 안내 -->
+                        <div class="footerInfoBox">
+                            <div class="phoneBox">
+                                <dl>
+                                    <dt>T.</dt>
+                                    <dd>033) 440-2738</dd>
+                                </dl>
+                                <dl>
+                                    <dt>F.</dt>
+                                    <dd>033) 440-2710</dd>
+                                </dl>
+                            </div>
+                            <!-- //phoneBox -->
+
+                            <div class="timeBox">
+                                <dl>
+                                    <dt>평일</dt>
+                                    <dd>09:00~18:00</dd>
+                                </dl>
+                                <dl>
+                                    <dt>점심시간</dt>
+                                    <dd>12:00~13:00</dd>
+                                </dl>
+                            </div>
+                            <!-- //timeBox -->
+
+                            <address>
+                                (24124) 강원특별자치도 화천군 화천읍 화천새싹길 40 화천군의회
+                            </address>
+                            <span class="copy">Copyright (c) 2022 Hwacheon County All rights reserved.</span>
+                        </div>
+                        <!--// footerInfoBox -->
+                    </div>
+                    <!-- //footerLeftBox -->
+
+                    <!-- 링크 -->
+                    <div class="footerLinkBox">
+                        <div class="linkBox">
+                            <a href="#" class="link privacyPolicy">개인정보처리방침</a>
+                            <a href="#" class="link">의회에 바란다</a>
+                            <a href="#" class="link">의원윤리강령</a>
+                            <a href="#" class="link">직원안내</a>
+                            <a href="#" class="link">찾아오시는 길</a>
+                        </div>
+                        <!-- //linkBox -->
+
+                        <div class="selectBox">
+                            <div class="box">
+                                <button class="selectBtn" type="button" aria-controls="footerSiteList01"
+                                    aria-expanded="false">
+                                    화천군 관련사이트
+                                </button>
+                                <ul class="selectList" id="footerSiteList01">
+                                    <li><a href="https://www.ihc.go.kr/www/index.do" class="link">화천군청</a></li>
+                                    <li><a href="https://tour.ihc.go.kr/tour" class="link">화천관광</a></li>
+                                    <li><a href="https://hcedu.ihc.go.kr/portal" class="link">평생교육센터</a></li>
+                                    <li><a href="https://www.ihc.go.kr/health/index.do" class="link">보건의료원</a></li>
+                                    <li><a href="http://www.hcmunhwa.or.kr/" class="link">화천문화원</a></li>
+                                    <li><a href="https://www.narafestival.com/01_icenara/"
+                                            class="link">나라페스티벌(산천어축제)</a></li>
+                                    <li><a href="https://www.ihc.go.kr/www/farminIntroduceView.do?key=307#n"
+                                            class="link">농업기술센터</a></li>
+                                    <li><a href="https://www.hanokschool.co.kr/" class="link">화천한옥학교</a></li>
+                                    <li><a href="https://www.ihc.go.kr/www/contents.do?key=418" class="link">화천박물관</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="box">
+                                <button class="selectBtn" type="button" aria-controls="footerSiteList02"
+                                    aria-expanded="false">
+                                    강원특별자치도 시군의회
+                                </button>
+                                <ul class="selectList" id="footerSiteList02">
+                                    <li><a href="http://www.gncl.go.kr" class="link">강릉시의회</a></li>
+                                    <li><a href="https://council.gwgs.go.kr" class="link">고성군의회</a></li>
+                                    <li><a href="http://www.dhcc.go.kr" class="link">동해시의회</a></li>
+                                    <li><a href="http://www.sccl.go.kr" class="link">삼척시의회</a></li>
+                                    <li><a href="http://www.sokchocl.go.kr" class="link">속초시의회</a></li>
+                                    <li><a href="http://www.ygcl.go.kr" class="link">양구군의회</a></li>
+                                    <li><a href="http://yangyangcouncil.go.kr" class="link">양양군의회</a></li>
+                                    <li><a href="https://council.yw.go.kr" class="link">영월군의회</a></li>
+                                    <li><a href="http://www.injecl.go.kr" class="link">인제군의회</a></li>
+                                    <li><a href="http://council.jeongseon.go.kr" class="link">정선군의회</a></li>
+                                    <li><a href="https://www.cwg.go.kr" class="link">철원군의회</a></li>
+                                    <li><a href="http://council.chuncheon.go.kr" class="link">춘천시의회</a></li>
+                                    <li><a href="http://cl.happy700.or.kr" class="link">평창군의회</a></li>
+                                    <li><a href="http://council.taebaek.go.kr" class="link">태백시의회</a></li>
+                                    <li><a href="http://www.hccouncil.go.kr" class="link">홍천군의회</a></li>
+                                    <li><a href="http://council.hsg.go.kr" class="link">횡성군의회</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //selectBox -->
+
+                    </div>
+                    <!-- //footerLinkBox -->
+
+                </div>
+                <!-- //footerBox -->
+
+            </div>
+            <!-- //container -->
+
+        </footer>
+        <!-- //footerWrap -->
+
+    </div>
+    <!-- //wrap -->
+
+</body>
+
+</html>

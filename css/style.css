@@ -1,9 +1,14 @@
 @charset "UTF-8";
+html,
+body{height: 100%;}
 
 /* 가운데영역 */
 .container{max-width: 1480px; margin: 0 auto; padding: 0 var(--spacing-ms);}
 
 /* 공통 */
+.dimmed{position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99;}
+#wrap{height: 100%;}
+.blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 .mobileNonScroll{overflow: hidden;}
 
 @media (min-width: 1281px){
@@ -12,9 +17,44 @@
 
 }
 
+/* 공통 - 버튼 */
+.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
+.btn.btnPrimary{background-color: var(--gray-600);}
+.btn:hover{background-color: var(--gray-400);} 
+.btn.btnSecondary{background-color: var(--gray-400);}
+.btn.btnNegative:hover{background-color: var(--pp-red);}
+.btn.btnPositive:hover{background-color: var(--pp-blue);}
+
+/* 공통 - 버튼(정렬) */
+.btnBox{margin: var(--spacing-ml) 0; display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.btnBox.left {justify-content: flex-start;}
+.btnBox.center {justify-content: center;}
+.btnBox.right {justify-content: flex-end;}
+.btnBox.between {justify-content: space-between; width: 100%;}
+.btnLayoutBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
+
+@media (max-width: 1024px){
+
+  .btn{min-width: 80px; height: 48px; font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
+
+}   
+
+/* 공통 - 닫기버튼 */
+.closeBtn{position: relative; width: 40px; height: 40px; background: var(--gray-100); border-radius: var(--spacing-ms);}
+.closeBtn::after{content: ''; width: 15px; height: 15px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/common/close.svg)no-repeat center / contain;}
+.closeBtn:hover{background: var(--gray-400);}
+
 /* 공통 - 호버 시 텍스트 슬라이드 */
 .slideText{position: relative; display: block; width: 100%; overflow: hidden; text-align: center;}
-.slideTextItem{display: block;  white-space: nowrap; transition: transform .45s cubic-bezier(.22, 1, .36, 1);}
+.slideText,
+.slideTextItem{display: flex; align-items: center; justify-content: center; height: 100%;}
+.slideTextItem{white-space: nowrap; transition: transform .45s cubic-bezier(.22, 1, .36, 1);}
 .slideTextPrimary{transform: translateY(0);}
 .slideTextClone{position: absolute; top: 0; left: 0; width: 100%;
   transform: translateY(-100%);}
@@ -73,7 +113,7 @@
 #mobileMenuBox{display: none;}
 
 /* 헤더 영역 - 상단 안내  */
-#krds-masthead{position: relative; background-color: #EEF2F7; color: #1E2124; font-size: 15px; z-index: 99999999;}
+#krds-masthead{position: relative; background-color: #EEF2F7; color: #1E2124; font-size: 15px; z-index: 9;}
 #krds-masthead .inner{max-width: 1480px; margin: 0 auto; padding: 0 20px;}
 #krds-masthead .nuri-txt{display: flex; align-items: center; gap: 0 8px; padding: 5px 0; font-size: 15px;}
 #krds-masthead .nuri-txt::before{content: ''; width: 24px; height: 16px; background: url(../images/common/taegeukgi.jpg)no-repeat center;}
@@ -85,7 +125,7 @@
 }
 
 /* 헤더 영역 - sns  */
-#headerWrap .headerCenterWrap{position: relative; z-index: 9999999;}
+#headerWrap .headerCenterWrap{position: relative; z-index: 9;}
 #headerWrap .headerCenterBox{display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-m); padding: var(--spacing-xs) 0;}
 #headerWrap .headerCenterBox .leftBox .snsBox{display: flex; align-items: center; gap: 0 var(--spacing-2xs);}
 #headerWrap .headerCenterBox .leftBox .linkList{display: flex;}
@@ -110,7 +150,7 @@
 #headerWrap .headerCenterBox .rightBox .authBtn:hover{background-color: var(--gray-100);}
 
 /* 헤더 영역 - 메뉴 */
-#headerWrap .headerBottomWrap{position: relative; margin-top: var(--spacing-2xs);  z-index: 999999; background-color: var(--white);}
+#headerWrap .headerBottomWrap{position: relative; margin-top: var(--spacing-2xs);  z-index: 9; background-color: var(--white);}
 #headerWrap .headerBottomBox{position: relative;}
 #headerWrap .headerBottomBox .menuBox{display: flex; justify-content: space-between;}
 #headerWrap .headerBottomBox nav{flex: 1;}
@@ -351,4 +391,116 @@
   #footerWrap .footerInfoBox address,
   #footerWrap .footerLinkBox .linkBox .link{text-align: center;}
   
+}
+
+/* 로그인모달 */
+#loginModalWrap{position: fixed; top:50%; left: 50%; transform: translate(-50%, -50%); max-width: 640px; width: 90%; padding: var(--spacing-l) var(--spacing-2xl); border-radius: var(--radius-xl); background-color: var(--white); z-index: 999999999999;}
+#loginModalWrap h2{margin: 0 auto var(--spacing-s); display: flex; align-items: center; justify-content: center; width: 53px; height: 25px; border-radius: var(--radius-xs); background-color: var(--gray-100); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+#loginModalWrap .text01{margin-bottom: var(--spacing-m); text-align: center; color: var(--gray-600); font-weight: var(--bold); font-size: var(--H4);}
+#loginModalWrap .loginModalBtnBox{margin-bottom: var(--spacing-m); display: flex; justify-content: center; gap: 0 var(--spacing-xs);}
+#loginModalWrap .loginModalLink{position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-ms);}
+#loginModalWrap .loginModalLinkBox{position: relative; max-width: 245px; width: 100%; height: 278px; text-align: center; border-radius: var(--radius-xl); overflow: hidden; z-index: 1;}
+#loginModalWrap .loginModalLinkBox .loginModalTextBox,
+#loginModalWrap .loginModalLinkBox .loginModalTextBox p,
+#loginModalWrap .loginModalLinkBox .loginModalImgBox img{transition: all 1.3s;}
+#loginModalWrap .loginModalLinkBox .loginModalTextBox{width: 100%; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; z-index: 99;}
+#loginModalWrap .loginModalLinkBox .loginModalTextBox p{opacity: 0; margin-top: var(--spacing-xs); font-size: var(--body-2);color: rgba(255,255,255,.8);}
+#loginModalWrap .loginModalLinkBox .loginModalTextBox h3{display: flex; flex-direction: column; align-items: center; font-family: 'RiaSans'; font-weight: var(--bold); font-size: var(--font-size-xxxl); color: var(--white);}
+#loginModalWrap .loginModalLinkBox .loginModalImgBox img{width: 168px; margin: 0 auto; }
+#loginModalWrap .loginModalLink::after{content: '';position: absolute; left:0; right:0; top:0; bottom: 0;}
+#loginModalWrap .loginModalLinkBox01 .loginModalLink::after{background: url(../images/common/login_bg01.png)no-repeat center / cover;}
+#loginModalWrap .loginModalLinkBox01{background-color: #56D9AB;}
+#loginModalWrap .loginModalLinkBox02{background-color: #F5A56C;}
+#loginModalWrap .loginModalLinkBox02 .loginModalLink::after{background: url(../images/common/login_bg02.png)no-repeat center / cover;}
+#loginModalWrap .loginModalLinkBox:hover .loginModalImgBox img{transform: scale(1.1) translateY(-10px);}
+#loginModalWrap .loginModalLinkBox:hover .loginModalTextBox{transform: translateX(-50%) translateY(-25px);}
+#loginModalWrap .loginModalLinkBox:hover .loginModalTextBox p{opacity: 1;}
+#loginModalWrap .text02{margin-bottom: var(--spacing-l); text-align: center; color: var(--gray-600); font-weight: var(--medium);}
+#loginModalWrap .loginModalCloseBtn{display: block; margin: 0 auto; }
+
+@media (max-width: 1024px){
+
+  #loginModalWrap .text01{font-size: var(--H5);}
+  #loginModalWrap .loginModalBtnBox .loginModalLinkBox{width: 200px; height: 240px;}
+  #loginModalWrap .loginModalLinkBox .loginModalTextBox h3{font-size: var(--H6);}
+  #loginModalWrap .loginModalLinkBox .loginModalImgBox img{width: 150px;}
+  #loginModalWrap .loginModalBtnBox .loginModalLinkBox::after{top: 5px;}
+
+}
+
+@media (max-width: 576px){
+
+  #loginModalWrap{padding: var(--spacing-l) var(--spacing-m);}
+
+}
+
+@media (max-width: 480px){
+
+  #loginModalWrap{border-radius: var(--radius-l);}
+  #loginModalWrap .loginModalBtnBox .loginModalLinkBox{border-radius: var(--radius-l);}
+  #loginModalWrap .loginModalLinkBox .loginModalImgBox img{width: 130px;}
+
+}
+
+/* 로그인 */
+#loginWrap{position: relative; display: flex; align-items: center; justify-content: center; min-height: 100vh; background: url(../images/common/login_bg.png)no-repeat center / cover; overflow: hidden;}
+#loginWrap::after{content: ''; width: 629px; height: 637px; position: absolute; left: calc(50% - 42px); top: 50%; transform: translateY(-50%); background: url(../images/common/parliament_badge.svg)no-repeat center / contain; z-index: -1;}
+#loginWrap .loginBox{padding: var(--spacing-l); max-width: 640px; width: 90%; border-radius: var(--radius-xl); background-color: var(--white);}
+#loginWrap .loginBox .loginLogoBox{margin-bottom: 115px;}
+#loginWrap .loginBox .loginLogoBox h1 a img{width: 137px;}
+#loginWrap .loginInputBox{position: relative; padding-bottom: var(--spacing-2xl); border-bottom: 1px solid var(--gray-50); z-index: 1;}
+#loginWrap .loginInputBox::after{content: ''; width: 120px; height: 120px; position: absolute; top:-58px; right:0; z-index: -1;}
+#loginWrap .loginInputBox h2{margin-bottom: var(--spacing-m); color: var(--gray-900); font-size: var(--H4);}
+#loginWrap .inputCheckBox input:checked + .checkLabel{box-shadow: 0 0 0 2px var(--gray-600); background: url(../images/common/chk_icon02.svg)no-repeat var(--spacing-s) center;}
+#loginWrap .loginInputBox .checkLabel{padding-left: 53px; display: flex; align-items: center; width: 100%; height: 72px; border: 1px solid var(--gray-50); border-radius: var(--radius-xs); background: url(../images/common/chk_icon.svg)no-repeat var(--spacing-s) center; cursor: pointer;}
+#loginWrap .loginInputBox .checkLabel span{display: flex; align-items: center; gap: 0 var(--spacing-xs); font-weight: var(--medium); font-size: var(--font-size-m);}
+#loginWrap .loginInputBox .checkLabel span::before{content: ''; width: 32px; height: 32px; background: url(../images/common/man_img.svg)no-repeat center / contain;}
+#loginWrap .loginInputBox .inputTextBox{margin-bottom: var(--spacing-xs);}
+#loginWrap .loginInputBox .inputCheckBox .chkBtn,
+#loginWrap .loginInputBox  input{padding-left: 50px; width: 100%; height: 72px; border: 1px solid var(--gray-50); border-radius: var(--radius-xs); font-weight: var(--medium); font-size: var(--font-size-m);}
+#loginWrap .loginInputBox  input::placeholder{color: var(--gray-400);}
+#loginWrap .loginInputBox  input#id{background: url(../images/common/login_icon.svg)no-repeat var(--spacing-s) center;}
+#loginWrap .loginInputBox  input#password{background: url(../images/common/lock.svg)no-repeat var(--spacing-s) center;}
+#loginWrap .loginInputBox .loginBtn{display: block; margin-top: var(--spacing-s); width: 100%; height: 72px; font-weight: var(--bold); font-size: var(--font-size-l);}
+#loginWrap .loginInfoBox{padding-top: var(--spacing-ms); display: flex; align-items: center; justify-content: space-between;}
+#loginWrap .loginInfoBox p{font-weight: var(--medium); color: var(--gray-600);}
+#loginWrap .loginInfoBox p strong{color: var(--primary-500); font-weight: var(--medium);}
+#loginWrap .loginInfoBox .loginLinkBox{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+#loginWrap .loginInfoBox .loginLinkBox a{padding: var(--spacing-s);}
+#loginWrap .loginInfoBox .loginLinkBox .loginLink01{color: var(--gray-600); font-weight: var(--bold); font-size: var(--body-1);}
+#loginWrap .loginInfoBox .loginLinkBox .loginLink02{ color: var(--white); font-weight: var(--bold); font-size: var(--body-1); background-color: var(--primary-500); border-radius: var(--radius-s);}
+
+/* 로그인 - 의원로그인 */
+#loginWrap.loginMemberWrap .loginInputBox::after{background: url(../images/common/login_img01.png)no-repeat center / contain;}
+
+/* 로그인 - 시민로그인 */
+#loginWrap.loginCitizenWrap .loginInputBox::after{background: url(../images/common/login_img02.png)no-repeat center / contain;}
+#loginWrap.loginCitizenWrap .loginInfoBox{justify-content: center;}
+
+@media (max-width: 1024px){
+
+  #loginWrap .loginInputBox{padding-bottom: var(--spacing-lm);}
+  #loginWrap::after{width: 548px; height: 557px; left: calc(50% - -2px);}
+
+  #loginWrap.loginCitizenWrap .loginInputBox{padding-bottom: var(--spacing-2xl);}
+
+}
+
+@media (max-width: 576px){
+
+  #loginWrap .loginBox{padding: var(--spacing-l) var(--spacing-m);}
+  #loginWrap .loginBox .loginLogoBox{margin-bottom: var(--spacing-lm);}
+  #loginWrap .loginInputBox::after{display: none;}
+  #loginWrap .loginInputBox h2{text-align: center; font-size: var(--H5);}
+  #loginWrap .loginInputBox .checkLabel,
+  #loginWrap .loginInputBox .loginBtn,
+  #loginWrap .loginInputBox input{height: 64px;}
+  #loginWrap .loginInfoBox{flex-direction: column; gap: var(--spacing-ms) 0;}
+  #loginWrap .loginInputBox input,
+  #loginWrap .loginInfoBox p{font-size: var(--font-size-s);}
+
+  #loginWrap::after{top: auto; width: 286px; height: 291px; left: 54%; transform: translateX(-50%); bottom: -139px;}
+
+  #loginWrap .loginInputBox{padding-bottom: var(--spacing-lm)!important;}
+
 }

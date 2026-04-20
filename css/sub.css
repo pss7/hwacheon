@@ -5,7 +5,12 @@ html,
 body{height: 100%;}
 #wrap{height: 100%; display: flex; flex-direction: column;}
 main{flex: 1;}
-.blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+
+@media (max-width: 576px){
+
+  #headerWrap{position: relative; z-index: 999;}
+
+}
 
 /* 공통 - 정렬 */
 .textLeft{text-align: left!important;}
@@ -830,7 +835,7 @@ main{flex: 1;}
 
 @media (max-width: 480px){
 
-  .processList > li{min-height: 96px;}
+  .processList > li{min-height: 96px; gap: 0 var(--spacing-s);}
   .processList li .step::after{width: 56px; height: 56px;}
   .processList li .bulletIcon li br{display: none;}
 
@@ -1367,8 +1372,7 @@ main{flex: 1;}
 }
 
 /* 모달 */
-#memberModalWrap{display: none; position: fixed; top:0; left:0; right:0; bottom: 0;background: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); z-index: 99999999;}
-.memberModalBox{max-width: 560px; width: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: var(--white); border-radius: var(--spacing-lm); overflow: hidden;}
+#memberModalWrap{max-width: 560px; width: 90%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: var(--white); border-radius: var(--spacing-lm); z-index: 999; overflow: hidden;}
 .memberModalBox .memberTermList{position: relative; padding: var(--spacing-s) var(--spacing-ms); display: flex; justify-content: center; flex-wrap: wrap; gap: 0 var(--spacing-xs); background: linear-gradient(to right, #FFFEFD, #E1D8CD, #FFFFFF);}
 .memberModalBox .memberTermList li{padding: var(--spacing-xs); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s);}
 .memberModalBox .memberTermList li.current{background-color: var(--secondary-900); color: var(--white);}
@@ -1410,8 +1414,7 @@ main{flex: 1;}
 
 @media (max-width: 576px){
 
-  #memberModalWrap{background: none; backdrop-filter:none; top: 97px; z-index: 99999; overflow-y: auto;}
-  .memberModalBox{max-width: none; width: 100%; top:0; left:0; transform: none; right:0; border-radius: 0;}
+  #memberModalWrap{max-width: none; width: 100%; top:97px; left:0; bottom: 0; transform: none; right:0; border-radius: 0; z-index: 99999; overflow-y: auto;}
   .memberModalBox .profileLayoutBox{flex-direction: column; gap: 0 0; align-items: center;}
   .memberModalBox .memberProfileBox .memberImgBox{margin-bottom: var(--spacing-m); width: 144px; height: 201px;}
   .memberModalBox .memberProfileBox .memberInfoBox{width: 100%;}
@@ -1422,7 +1425,7 @@ main{flex: 1;}
  
 }
 
-@media(max-width: 480px){
+@media (max-width: 480px){
 
   #memberModalWrap{top: 93px;}
 
@@ -1527,35 +1530,7 @@ main{flex: 1;}
   .paginationBox .pageLink{min-width: 32px; min-height: 32px; border-radius:var(--radius-xs );}
 
 }
-
-/* 공통 - 버튼 */
-.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
-.btn.btnPrimary{background-color: var(--gray-600);}
-.btn:hover{background-color: var(--gray-400);} 
-.btn.btnSecondary{background-color: var(--gray-400);}
-.btn.btnNegative:hover{background-color: var(--pp-red);}
-.btn.btnPositive:hover{background-color: var(--pp-blue);}
-
-/* 공통 - 버튼(정렬) */
-.btnBox{margin: var(--spacing-ml) 0; display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
-.btnBox.left {justify-content: flex-start;}
-.btnBox.center {justify-content: center;}
-.btnBox.right {justify-content: flex-end;}
-.btnBox.between {justify-content: space-between; width: 100%;}
-.btnLayoutBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
-
-@media (max-width: 1024px){
-
-  .btn{min-width: 80px; height: 48px; font-size: var(--font-size-m);}
-
-}
-
-@media (max-width: 480px){
-
-  .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
-
-}            
-
+        
 /* 공통 - 게시판상세 */
 .boardViewBox{padding-top: var(--spacing-s); margin-bottom: var(--spacing-lm); position: relative;}
 .boardViewBox::after{content: ''; position: absolute; top:0; left:0; right:0; height: 16px; background: linear-gradient(to right, var(--gray-100), var(--primary-50), var(--gray-100));}
@@ -1575,20 +1550,20 @@ main{flex: 1;}
 /* .boardViewBox .boardViewContentBox .viewContentBox p, 
 .boardViewBox .boardViewContentBox .viewContentBox span{margin-top: var(--spacing-lm); } */
 .boardViewBox .boardViewContentBox .viewContentBox img{width: auto; max-width: 720px; width: 100%; margin: 0 auto var(--spacing-s);}
-.boardViewBox .boardViewFileBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-m); padding: var(--spacing-lm) var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
-.boardViewBox .boardViewFileBox .boardViewFileTitle{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-m);}
-.boardViewBox .boardViewFileList li{margin-bottom: var(--spacing-s);}
-.boardViewBox .boardViewFileList li:last-child{margin-bottom: 0;}
-.boardViewBox .boardViewFileList li a{display: flex; flex-wrap: wrap; align-items: center;}
-.boardViewBox .boardViewFileList li a .boardViewFileIcon{width: 24px; height: 28px; margin-right: var(--spacing-xs);}
-.boardViewBox .boardViewFileList li a.fileHwp .boardViewFileIcon{background: url(../images/sub/hwp_icon.svg)no-repeat center / contain;}
-.boardViewBox .boardViewFileList li a.filePdf .boardViewFileIcon{background: url(../images/sub/pdf_icon.svg)no-repeat center / contain;}
-.boardViewBox .boardViewFileList li a.fileXlsx .boardViewFileIcon{background: url(../images/sub/xlsx_icon.svg)no-repeat center / contain;}
-.boardViewBox .boardViewFileList li a.fileJpg .boardViewFileIcon{background: url(../images/sub/jpg_icon.svg)no-repeat center / contain;}
-.boardViewBox .boardViewFileList li a.filePpt .boardViewFileIcon{background: url(../images/sub/ppt_icon.svg)no-repeat center / contain;}
-.boardViewBox .boardViewFileList li a.fileZip .boardViewFileIcon{background: url(../images/sub/zip_icon.svg)no-repeat center / contain;}
-.boardViewBox .boardViewFileList li a .boardViewFileName{margin-right: var(--spacing-2xs); color: var(--gray-600);}
-.boardViewBox .boardViewFileList li a .boardViewFileSize{color: var(--gray-400);}
+.boardViewFileBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-m); padding: var(--spacing-lm) var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.boardViewFileTitle{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-m);}
+.boardViewFileList li{margin-bottom: var(--spacing-s);}
+.boardViewFileList li:last-child{margin-bottom: 0;}
+.boardViewFileList li a{display: flex; flex-wrap: wrap; align-items: center;}
+.boardViewFileList li a .boardViewFileIcon{width: 24px; height: 28px; margin-right: var(--spacing-xs);}
+.boardViewFileList li a.fileHwp .boardViewFileIcon{background: url(../images/sub/hwp_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.filePdf .boardViewFileIcon{background: url(../images/sub/pdf_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileXlsx .boardViewFileIcon{background: url(../images/sub/xlsx_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileJpg .boardViewFileIcon{background: url(../images/sub/jpg_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.filePpt .boardViewFileIcon{background: url(../images/sub/ppt_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileZip .boardViewFileIcon{background: url(../images/sub/zip_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a .boardViewFileName{margin-right: var(--spacing-2xs); color: var(--gray-600);}
+.boardViewFileList li a .boardViewFileSize{color: var(--gray-400);}
 .boardViewBox .boardViewLayoutBox{padding: 0 var(--spacing-m); display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-xl);}
 .boardViewBox .viewContentInfoBox dl{margin-bottom: var(--spacing-m); display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
 .boardViewBox .viewContentInfoBox dl dt{ padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s); background-color: var(--gray-100); border-radius: var(--radius-xs);}
@@ -1604,7 +1579,7 @@ main{flex: 1;}
 
   .boardViewBox{margin-bottom: var(--spacing-m);}
   .boardViewBox .boardViewTopBox h4{font-size: var(--H4);}
-  .boardViewBox .boardViewFileBox{padding: var(--spacing-ml) var(--spacing-m);}
+  .boardViewFileBox{padding: var(--spacing-ml) var(--spacing-m);}
 
   .boardViewBox .viewContentInfoBox{width: 100%; display: flex; justify-content: center; gap: 0 var(--spacing-ml);}
   .boardViewBox .boardViewLayoutBox{padding: 0; flex-direction: column; gap: var(--spacing-lm) 0;}
@@ -1616,8 +1591,8 @@ main{flex: 1;}
 
 @media (max-width: 768px){
 
-  .boardViewBox .boardViewFileBox{padding: var(--spacing-m) var(--spacing-s); flex-direction: column; gap: var(--spacing-ms) 0;}
-  .boardViewBox .boardViewFileList li a .boardViewFileSize{font-size: var(--body-2);}
+  .boardViewFileBox{padding: var(--spacing-m) var(--spacing-s); flex-direction: column; gap: var(--spacing-ms) 0;}
+  .boardViewFileList li a .boardViewFileSize{font-size: var(--body-2);}
   .boardViewBox .viewContentInfoBox dl dd{font-size: var(--font-size-m);}
 
 }
@@ -2064,5 +2039,71 @@ input::placeholder{color: var(--gray-600);}
 
   .boardInfoTextBox{padding: var(--spacing-ms) var(--spacing-s); border-radius: var(--spacing-s);}
   .boardInfoTextBox .boardInfoText br{display: none;}
+
+}
+
+/* 주민조례청구 */
+.residentOrdinanceBox .residentOrdinanceTopBox{margin-bottom: var(--spacing-lm); position: relative; display: flex; align-items: center; justify-content: center; height: 351px; background: url(../images/sub/residen_ordinance_img.png)no-repeat center / cover; border-radius: var(--radius-m); overflow: hidden; z-index: 1;}
+.residentOrdinanceBox .residentOrdinanceTopBox::after{content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(30, 43, 55, 0) 0%, rgba(30, 43, 55, 1) 100%); z-index: -1;}
+.residentOrdinanceBox .residentOrdinanceTopBox p{gap: var(--spacing-s) 0; display: flex; flex-direction: column; justify-content: center; align-items: center; font-weight: var(--bold); font-size: var(--H1); color: var(--white);}
+.residentOrdinanceBox .residentOrdinanceTopBox p::before{content: ''; width: 93px; height: 83px; background: url(../images/sub/residen_ordinance_icon.svg)no-repeat center / contain;}
+.residentOrdinanceBox .questionBox{margin-bottom: var(--spacing-2xl);}
+.residentOrdinanceBox .questionBox .questionDescription{color: var(--gray-600);}
+.residentOrdinanceBox .residentOrdinanceMethodBox{display: flex; gap: 0 var(--spacing-3xl); margin: var(--spacing-5xl) 0 var(--spacing-3xl);}
+.residentOrdinanceBox .residentOrdinanceMethodBox .methodText{font-size: var(--H1); font-weight: var(--bold); color: var(--gray-400); line-height: 1.6;}
+.residentOrdinanceBox .residentOrdinanceMethodBox .methodText .color01{color: var(--gray-900);}
+.residentOrdinanceBox .residentOrdinanceMethodBox .methodText .color02{color: var(--primary-500);}
+.residentOrdinanceBox .methodDescriptionBox{flex: 1;}
+.residentOrdinanceBox .methodDescriptionBox .methodDescriptionListBox{margin-bottom: var(--spacing-lm); padding: var(--spacing-lm); background-color: var(--gray-50); border-radius: var(--radius-m );}
+.residentOrdinanceBox .methodDescriptionBox .box{margin-bottom: var(--spacing-lm);}
+.residentOrdinanceBox .methodDescriptionBox .box:last-child{margin-bottom: 0;}
+.residentOrdinanceBox .methodDescriptionBox .box .tit{display: flex; gap: 0 var(--spacing-s); margin-bottom: var(--spacing-m); color: var(--gray-600); font-size: var(--H6); font-weight: var(--bold);}
+.residentOrdinanceBox .methodDescriptionBox .box .tit::before{content: ''; margin-top: 3px; width: 22px; height: 17px; background: url(../images/sub/chk_icon02.svg)no-repeat center / contain;}
+.residentOrdinanceBox .methodDescriptionBox .processLayoutBox{padding: var(--spacing-lm); border-radius: var(--radius-m); border: 1px solid var(--gray-600); box-shadow: 8px 8px 40px rgba(30, 43, 55, 0.1);}
+.residentOrdinanceBox .methodDescriptionBox .processLayoutBox .tit{margin-bottom: var(--spacing-lm);}
+.residentOrdinanceBox .methodDescriptionBox .processList{margin-bottom: var(--spacing-lm);}
+.residentOrdinanceBox .methodDescriptionBox .processList li:nth-child(1) .step::after{background: url(../images/sub/step_icon14.svg)no-repeat center / contain;}
+.residentOrdinanceBox .methodDescriptionBox .processList li:nth-child(2) .step::after{background: url(../images/sub/step_icon15.svg)no-repeat center / contain;}
+.residentOrdinanceBox .methodDescriptionBox .processList li:nth-child(3) .step::after{background: url(../images/sub/step_icon14.svg)no-repeat center / contain;}
+.residentOrdinanceBox .methodDescriptionBox .processList li:nth-child(4) .step::after{background: url(../images/sub/step_icon15.svg)no-repeat center / contain;}
+.residentOrdinanceBox .chairmanMessageBox{border-top: 1px dashed var(--gray-600); display: flex; align-items: center; gap: 0 var(--spacing-lm);}
+.residentOrdinanceBox .chairmanMessageBox .chairmanImgBox img{width: 186px;}
+.residentOrdinanceBox .chairmanMessageBox .chairmanTextBox .name{display: block; margin-bottom: var(--spacing-s); color: var(--gray-900); font-weight: var(--semi-bold);}
+.residentOrdinanceBox .chairmanMessageBox .chairmanTextBox p{color: var(--gray-600); font-weight: var(--medium); font-size: var(--H6);}
+
+@media (max-width: 1024px){
+
+
+  .residentOrdinanceBox .residentOrdinanceTopBox p::before{width: 73px; height: 63px;}
+  .residentOrdinanceBox .residentOrdinanceTopBox p{font-size: var(--H4);}
+  .residentOrdinanceBox .residentOrdinanceMethodBox{flex-direction: column; gap: var(--spacing-ml) 0;}
+  .residentOrdinanceBox .residentOrdinanceMethodBox .methodText{font-size: var(--H4); line-height: 1.5;}
+  .residentOrdinanceBox .chairmanMessageBox .chairmanTextBox p{font-size: var(--font-size-l);}
+
+}
+
+@media (max-width: 768px){
+
+  .residentOrdinanceBox .residentOrdinanceTopBox{height: 290px;}
+  .residentOrdinanceBox .residentOrdinanceTopBox p::before{width: 63px; height: 53px;}
+  .residentOrdinanceBox .residentOrdinanceTopBox p{gap: var(--spacing-xs) 0; font-size: var(--H5);}
+
+  .residentOrdinanceBox .residentOrdinanceMethodBox{gap: var(--spacing-m) 0;}
+  .residentOrdinanceBox .residentOrdinanceMethodBox .methodText{font-size: var(--H5);}
+  .residentOrdinanceBox .methodDescriptionBox .methodDescriptionListBox{padding: var(--spacing-lm) var(--spacing-m);}
+  .residentOrdinanceBox .methodDescriptionBox .box .tit::before{width: 18px; height: 13px;}
+  .residentOrdinanceBox .methodDescriptionBox .box .tit{font-size: var(--font-size-l);}
+
+  .residentOrdinanceBox .chairmanMessageBox{gap: var(--spacing-ms) 0;  flex-direction: column; text-align: center;}
+
+}
+
+@media (max-width: 480px){
+
+  .residentOrdinanceBox .methodDescriptionBox .processLayoutBox{padding:0; box-shadow: none; background-color: 0; border: 0;}
+  .residentOrdinanceBox .questionBox .questionDescription br{display: none;}
+  .residentOrdinanceBox .residentOrdinanceMethodBox{margin: var(--spacing-3xl) 0;}
+  .residentOrdinanceBox .chairmanMessageBox .chairmanTextBox p{font-size: var(--font-size-m);}
 
 }
