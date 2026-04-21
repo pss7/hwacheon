@@ -150,7 +150,7 @@ body{height: 100%;}
 #headerWrap .headerCenterBox .rightBox .authBtn:hover{background-color: var(--gray-100);}
 
 /* 헤더 영역 - 메뉴 */
-#headerWrap .headerBottomWrap{position: relative; margin-top: var(--spacing-2xs);  z-index: 9; background-color: var(--white);}
+#headerWrap .headerBottomWrap{position: relative; margin-top: var(--spacing-2xs);  z-index: 99; background-color: var(--white);}
 #headerWrap .headerBottomBox{position: relative;}
 #headerWrap .headerBottomBox .menuBox{display: flex; justify-content: space-between;}
 #headerWrap .headerBottomBox nav{flex: 1;}

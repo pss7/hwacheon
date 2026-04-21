@@ -115,7 +115,8 @@ main{flex: 1;}
 #contentWrap aside .depth01{padding: var(--spacing-2xs) 0;}
 #contentWrap aside .depth01 li{margin-bottom: var(--spacing-m);}
 #contentWrap aside .depth01 li:last-child{margin-bottom: 0;}
-#contentWrap aside .depth01 li h2 a{padding: 0  var(--spacing-ml) 0 var(--spacing-ms); display: block; color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-xl); word-break: keep-all; text-shadow: 0 0 4px rgba(30, 43, 55, 0.1);}
+#contentWrap aside .depth01 li h2 a{padding: 0  var(--spacing-ml) 0 var(--spacing-ms); display: block; color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-xl); word-break: keep-all; text-shadow: 0 0 4px rgba(30, 43, 55, 0.1); transition: all .3s;}
+#contentWrap aside .depth01 li h2 a:hover{color: var(--gray-900); text-shadow: 0 0 4px rgba(30, 43, 55, 0.1);}
 #contentWrap aside .depth01 li h2 a.active{color: var(--gray-900);}
 
 /* 오른쪽 콘텐츠 영역 */
@@ -1677,8 +1678,8 @@ main{flex: 1;}
     padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 48px; background-color: var(--white);
     border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600);
     font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer;}
-.chkBtn::before {content: ''; width: 22px; height: 22px; background: url(../images/sub/chk_icon.svg) no-repeat center / contain;}
-#noticeChk:checked + .chkBtn::before {background: url(../images/sub/chk_icon.svg) no-repeat center / contain;}
+.chkBtn::before {content: ''; width: 22px; height: 22px; background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
+#noticeChk:checked + .chkBtn::before {background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
 
 /* 폼 - 선택 */
 #select{padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 48px;
@@ -2105,5 +2106,122 @@ input::placeholder{color: var(--gray-600);}
   .residentOrdinanceBox .questionBox .questionDescription br{display: none;}
   .residentOrdinanceBox .residentOrdinanceMethodBox{margin: var(--spacing-3xl) 0;}
   .residentOrdinanceBox .chairmanMessageBox .chairmanTextBox p{font-size: var(--font-size-m);}
+
+}
+
+/* 의정활동 정보공개 */
+.activityBox .activityInfoBox{margin-bottom: var(--spacing-2xl);}
+.activityBox .activityInfoBox h4{margin-bottom: var(--spacing-s);}
+.activityBox .activityInfoBox .activityList{margin-top: var(--spacing-xs);}
+.activityBox .activityInfoBox .activityList li{margin-bottom: var(--spacing-xs);}
+.activityBox .activityInfoBox .activityList li:last-child{margin-bottom: 0;}
+.activityBox .activityInfoBox .activityList li span{display: inline-block; padding: var(--spacing-xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s); border-radius: var(--radius-xs); background-color: var(--gray-100);}
+.activityBox .activityTitle{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-m); color: var(--gray-900); font-size:var(--H5);}
+.activityBox .activityTitle::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/badge.svg)no-repeat center;}
+.activityBox .publicItemWrap{display: flex; gap: var(--spacing-m);}
+.activityBox .publicItemBox{flex: 1; padding: var(--spacing-ml) var(--spacing-m); border-radius: var(--radius-m); border: 1px solid var(--gray-600);}
+.activityBox .publicItemBox h5{margin-bottom: var(--spacing-s); color: var(--gray-900); font-size: var(--font-size-m);}
+.activityBox .publicItemBox .bulletDot li{margin-bottom: var(--spacing-xs);} 
+.activityBox .publicItemBox .bulletDot li a{display: inline-block; text-decoration: underline;} 
+.activityBox .publicItemBox .bulletDot li:last-child{margin-bottom: 0;}
+
+@media (max-width: 1024px){
+
+  .activityBox .publicItemWrap{gap: var(--spacing-s);}
+
+}
+
+@media (max-width: 768px){
+
+  .activityBox .publicItemWrap{flex-direction: column;}
+
+}
+
+@media (max-width: 576px){
+
+  .activityBox .activityTitle{font-size: var(--H6);}
+
+}
+
+/* 의원별 회의 출석율 현황 */
+.attendanceRateStatusList > li{margin-bottom: var(--spacing-m); padding: var(--spacing-ml); border: 1px solid var(--gray-100); border-radius: var(--radius-m);}
+.attendanceRateStatusList > li:last-child{margin-bottom: 0;}
+.attendanceRateStatusList li .memberInfoWrap{margin-bottom: var(--spacing-m); display: flex; align-items: center; justify-content: space-between;}
+.attendanceRateStatusList li .memberInfoBox{ display: flex; align-items: center; gap: 0 var(--spacing-s);}
+.attendanceRateStatusList li .memberInfoBox .imgBox{width: 64px; height: 64px; border-radius: var(--radius-m); background-color: var(--gray-100); overflow: hidden;}
+.attendanceRateStatusList li .memberInfoBox .imgBox img{height: 100%; object-fit: cover;}
+.attendanceRateStatusList li .memberInfoBox .textBox .name{display: block; margin-bottom: var(--spacing-2xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--H6);}
+.attendanceRateStatusList li .memberInfoBox .textBox em{font-style: normal; color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-2);}
+.attendanceRateStatusList li .memberInfoBtnBox{padding: 0 var(--spacing-xs); display: flex; align-items: center; max-width: 238px; width: 100%; border: 1px solid var(--gray-200); border-radius: var(--radius-s);}
+.attendanceRateStatusList li .memberInfoBtnBox .memberInfoBtn{ flex: 1; height: 48px; color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--bold); text-align: center;}
+.attendanceRateStatusList li .attendanceRateInfoBox{position: relative; margin-bottom: var(--spacing-lm); background-color: var(--gray-100); border-radius: var(--radius-xs); overflow: hidden;}
+.attendanceRateStatusList li .attendanceRateInfoBox .attendanceRateInfoBar{position: absolute; top:0; left:0; bottom: 0; border-radius: var(--radius-xs); background: linear-gradient(to right, var(--gray-600), var(--gray-500));}
+.attendanceRateStatusList li .attendanceRateInfoText{position: relative; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--body-2); color: var(--white); line-height: 1.2;}
+.attendanceRateList{display: flex; gap: var(--spacing-ml);}
+.attendanceRateList li{flex: 1;}
+.attendanceRateList li .category{margin-bottom: var(--spacing-s); display: inline-flex; align-items: center; gap: 0 var(--spacing-2xs); padding: var(--spacing-xs); background-color: var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
+.attendanceRateList li .category::before{content: ''; width: 8px; height: 8px; border-radius: 50%;} 
+.attendanceRateList li .attendanceRatePercentBox01{margin-bottom: var(--spacing-xs); display: flex; align-items: center; justify-content: space-between;}
+.attendanceRateList li .attendanceRatePercentBox01 span{color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
+.attendanceRateList li .attendanceRatePercentBox01 .percent{color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s); font-style: normal;}
+.attendanceRateList li .attendanceRatePercentBox02{margin-bottom: var(--spacing-xs); height: 4px; background-color: var(--gray-100); border-radius: var(--radius-2xs);}
+.attendanceRateList li .attendanceRateStatus{display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
+.attendanceRateList li .attendanceRateStatus .attendanceRateStatusItem{padding: var(--spacing-2xs) var(--spacing-xs); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); font-size: var(--font-size-xs);}
+.attendanceRateList li .attendanceRatePercent{display: block; height: 100%;     border-radius: var(--radius-2xs);}
+.attendanceRateList li.plenary .category::before,
+.attendanceRateList li.plenary .attendanceRatePercent{background-color: #FF8539;} 
+.attendanceRateList li.budgetSpecial .category::before,
+.attendanceRateList li.budgetSpecial .attendanceRatePercent{background-color: #61ACF6;}
+.attendanceRateList li.ordinanceSpecial .category::before,
+.attendanceRateList li.ordinanceSpecial .attendanceRatePercent{background-color: #5D3FD3;}
+.attendanceRateList li.auditSpecial .category::before,
+.attendanceRateList li.auditSpecial .attendanceRatePercent{background-color: #C77654;}
+
+@media (max-width: 1024px){
+
+  .attendanceRateList{flex-wrap: wrap;}
+  .attendanceRateList li{flex: 1 1 calc(50% - 16px);}
+
+}
+
+@media (max-width: 768px){
+
+  .attendanceRateStatusList > li{padding: var(--spacing-ml) var(--spacing-s);}
+  .attendanceRateList li{flex: 100%;}
+  .attendanceRateStatusList li .memberInfoBox .textBox .name{font-size: var(--font-size-l);}
+
+}
+
+@media (max-width: 576px){
+
+  .attendanceRateStatusList li .attendanceRateInfoBox{margin-bottom: var(--spacing-ml);}
+  .attendanceRateStatusList li .memberInfoWrap{flex-direction: column; gap: var(--spacing-ms) 0;}
+
+}
+
+/* 의회용어 */
+.councilTermsBox .councilTermsList{position: relative; padding-top: 3px;}
+.councilTermsBox .councilTermsList::before{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17;}
+.councilTermsBox .councilTermsList li{padding: var(--spacing-lm) 0; display: flex; border-bottom: 1px solid var(--gray-100);}
+.councilTermsBox .councilTermsList li h4{width: 184px; flex-shrink: 0; font-size: var(--font-size-xl);}
+.councilTermsBox .councilTermsList li p{color: var(--gray-600); font-size: var(--body-1);}
+.councilTermsBox .initialFilter{margin-bottom: var(--spacing-lm); display: flex; flex-wrap: wrap; gap: var(--spacing-xs)}
+.councilTermsBox .initialFilter .initialFilterBtn{display: flex; align-items: center; justify-content: center; width: 32px; height: 37px; border-radius: var(--radius-s); color: var(--gray-400); font-weight: var(--bold); font-size: var(--Subtitle-1);}
+.councilTermsBox .initialFilter .initialFilterBtn.active{background-color: var(--primary-800); color: var(--white);}
+.councilTermsBox .initialResult{margin-bottom: var(--spacing-s);}
+.councilTermsBox .initialResult .initialResultTitle{color: var(--gray-600); font-weight: var(--bold); font-size: var(--H6);}
+.councilTermsBox .initialResult .initialResultTitle strong{color: var(--primary-500); font-size: var(--H4);}
+
+@media (max-width: 1024px){
+
+  .councilTermsBox .councilTermsList li h4{width: 130px;}
+
+}
+
+@media (max-width: 768px){
+
+  .councilTermsBox .councilTermsList li h4{width: auto; font-size: var(--font-size-l);}
+  .councilTermsBox .councilTermsList li{flex-direction: column; align-items: center; gap: var(--spacing-ms) 0;}
+  .councilTermsBox .initialResult .initialResultTitle strong{font-size: var(--H5);}
 
 }
