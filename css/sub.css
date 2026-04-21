@@ -5,6 +5,7 @@ html,
 body{height: 100%;}
 #wrap{height: 100%; display: flex; flex-direction: column;}
 main{flex: 1;}
+.borderBar{display: block; height: 3px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
 
 @media (max-width: 576px){
 
@@ -1790,7 +1791,7 @@ input::placeholder{color: var(--gray-600);}
 
 /* 공통 - 게시판(이미지) */
 .photoBoardList{position: relative; padding-top: 43px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-2xl) var(--spacing-s)}
-.photoBoardList::before{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17;}
+.photoBoardList::before{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
 .photoBoardList li a{display: block;}
 .photoBoardList li a .photoBoardImgBox{padding-top: 65%; margin-bottom: var(--spacing-m); position: relative; border-radius: var(--radius-m); overflow: hidden;}
 .photoBoardList li a .photoBoardImgBox::after{content: ''; position: absolute;
@@ -2201,10 +2202,9 @@ input::placeholder{color: var(--gray-600);}
 
 /* 의회용어 */
 .councilTermsBox .councilTermsList{position: relative; padding-top: 3px;}
-.councilTermsBox .councilTermsList::before{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17;}
-.councilTermsBox .councilTermsList li{padding: var(--spacing-lm) 0; display: flex; border-bottom: 1px solid var(--gray-100);}
-.councilTermsBox .councilTermsList li h4{width: 184px; flex-shrink: 0; font-size: var(--font-size-xl);}
-.councilTermsBox .councilTermsList li p{color: var(--gray-600); font-size: var(--body-1);}
+.councilTermsBox .councilTermsList .termItem{padding: var(--spacing-lm) 0; display: flex; border-bottom: 1px solid var(--gray-100);}
+.councilTermsBox .councilTermsList .termItem dt{width: 184px; flex-shrink: 0; font-size: var(--font-size-xl); font-weight: var(--bold);}
+.councilTermsBox .councilTermsList .termItem dd{color: var(--gray-600); font-size: var(--body-1); line-height: 1.6;}
 .councilTermsBox .initialFilter{margin-bottom: var(--spacing-lm); display: flex; flex-wrap: wrap; gap: var(--spacing-xs)}
 .councilTermsBox .initialFilter .initialFilterBtn{display: flex; align-items: center; justify-content: center; width: 32px; height: 37px; border-radius: var(--radius-s); color: var(--gray-400); font-weight: var(--bold); font-size: var(--Subtitle-1);}
 .councilTermsBox .initialFilter .initialFilterBtn.active{background-color: var(--primary-800); color: var(--white);}
@@ -2214,14 +2214,20 @@ input::placeholder{color: var(--gray-600);}
 
 @media (max-width: 1024px){
 
-  .councilTermsBox .councilTermsList li h4{width: 130px;}
+  .councilTermsBox .councilTermsList .termItem dt{width: 130px;}
 
 }
 
 @media (max-width: 768px){
 
-  .councilTermsBox .councilTermsList li h4{width: auto; font-size: var(--font-size-l);}
-  .councilTermsBox .councilTermsList li{flex-direction: column; align-items: center; gap: var(--spacing-ms) 0;}
+  .councilTermsBox .councilTermsList .termItem dt{width: auto; font-size: var(--font-size-l);}
+  .councilTermsBox .councilTermsList .termItem{flex-direction: column; align-items: center; gap: var(--spacing-ms) 0;}
   .councilTermsBox .initialResult .initialResultTitle strong{font-size: var(--H5);}
+
+}
+
+@media (max-width: 480px){
+
+  .councilTermsBox .councilTermsList .termItem{padding: var(--spacing-ml) 0;}
 
 }
