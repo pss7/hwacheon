@@ -13,6 +13,52 @@ main{flex: 1;}
 
 }
 
+
+/* 공통 - 버튼 */
+.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
+.btn.btnPrimary{background-color: var(--gray-600);}
+.btn:hover{background-color: var(--gray-400);} 
+.btn.btnSecondary{background-color: var(--gray-400);}
+.btn.btnNegative:hover{background-color: var(--pp-red);}
+.btn.btnPositive:hover{background-color: var(--pp-blue);}
+
+/* 공통 - 버튼(정렬) */
+.btnBox{margin: var(--spacing-ml) 0; display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.btnBox.left {justify-content: flex-start;}
+.btnBox.center {justify-content: center;}
+.btnBox.right {justify-content: flex-end;}
+.btnBox.between {justify-content: space-between; width: 100%;}
+.btnLayoutBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
+
+@media (max-width: 1024px){
+
+  .btn{min-width: 80px; height: 48px; font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
+
+}   
+
+/* 공통 - 선택 */
+.toggleBtnBox{position: relative;}
+.toggleBtn{display: flex;   align-items: center; justify-content: space-between; padding: 0 var(--spacing-xs) 0 var(--spacing-s); width: 112px; height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
+.toggleBtn span{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
+.toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain; border: 1px solid var(--gray-100); border-radius: var(--radius-l); transition: all .3s;}
+.toggleBtn:hover:after{background-color: var(--gray-100);}
+
+/* 공통 - 애니메이션(드롭다운) */
+.dropdown{opacity: 0; visibility: hidden; transform: translateY(-12px);
+  pointer-events: none; transition: all .3s, transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear .55s;}
+.active .dropdown{opacity: 1; visibility: visible; transform: translateY(0);
+  pointer-events: auto; transition:all .3s,
+    transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear 0s;}
+.active .toggleBtn::after{transform: rotate(-180deg);}
+
+
+
 /* 공통 - 정렬 */
 .textLeft{text-align: left!important;}
 
@@ -1691,7 +1737,7 @@ main{flex: 1;}
 .memberSelectBox .memberSelectBtn{display: flex; align-items: center; gap: 0 var(--spacing-s); padding: 0 var(--spacing-xs); width: 160px; height: 64px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
 .memberSelectBox .memberSelectBtn span{flex-shrink: 0; display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
 .memberSelectBox .memberSelectBtn span::before{content: ''; width: 48px; height: 48px; background: url(../images/sub/parliament.svg)no-repeat center / contain;}
-.memberSelectBox .memberSelectBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/sub/arrow_icon08.svg)no-repeat center / contain;}
+.memberSelectBox .memberSelectBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/sub/arrow_icon08.svg)no-repeat center / contain; border: 0;}
 .memberSelectBox .memberSelectBox{padding: var(--spacing-m); position: absolute; top:76px; left:0; max-width: 714px; width: 100%; border-radius: var(--radius-l); box-shadow: 0 0  40px rgba(0,0,0, .2); background-color: var(--gray-50);}
 .memberSelectBox .memberSelectBox strong{display: block; margin-bottom: var(--spacing-m); font-size: var(--Subtitle-1);}
 .memberSelectBox .memberSelectBox .memberSelectList{display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
@@ -1847,15 +1893,6 @@ input::placeholder{color: var(--gray-600);}
   .photoBoardList li a .photoBoardImgBox::after{height: 55px;}
 
 }
-
-/* 공통 - 애니메이션(드롭다운) */
-.dropdown{opacity: 0; visibility: hidden; transform: translateY(-12px);
-  pointer-events: none; transition: opacity .3s ease, transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear .55s;}
-.active .dropdown{opacity: 1; visibility: visible; transform: translateY(0);
-  pointer-events: auto; transition:opacity .3s ease,
-    transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear 0s;}
-.toggleBtn::after{transition: transform .3s ease;}
-.active .toggleBtn::after{transform: rotate(-180deg);}
 
 /* 폼 - 일정 */
 .boardWriteDateBox{max-width: 188px; position: relative;}
@@ -2145,6 +2182,13 @@ input::placeholder{color: var(--gray-600);}
 }
 
 /* 의원별 회의 출석율 현황 */
+.attendanceRateTopBox{display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs); margin-bottom: var(--spacing-ml);}
+.attendanceRateTopBox .btn{min-width: 69px; height: 36px; font-size: var(--font-size-s);}
+.attendanceRateTopBox .selectLayoutBox{display: flex; align-items: center; gap: 0 26px;}
+.attendanceRateTopBox .termSelectBtn{width: auto; padding: 0; gap: 0 var(--spacing-xs); justify-content: flex-start; border: 0;}
+.attendanceRateTopBox .memberSelectBtn{position: relative;}
+.attendanceRateTopBox .memberSelectBtn::before{content: ''; position: absolute; top:16px; left:-17px; width: 5px; height: 5px; border-radius: var(--radius-s); background-color: var(--gray-400); border: 0;}
+.attendanceRateTopBox .termSelectBtn span{font-size: var(--font-size-xxxl); color: var(--gray-600); font-weight: var(--bold);}
 .attendanceRateStatusList > li{margin-bottom: var(--spacing-m); padding: var(--spacing-ml); border: 1px solid var(--gray-100); border-radius: var(--radius-m);}
 .attendanceRateStatusList > li:last-child{margin-bottom: 0;}
 .attendanceRateStatusList li .memberInfoWrap{margin-bottom: var(--spacing-m); display: flex; align-items: center; justify-content: space-between;}
@@ -2190,6 +2234,7 @@ input::placeholder{color: var(--gray-600);}
   .attendanceRateStatusList > li{padding: var(--spacing-ml) var(--spacing-s);}
   .attendanceRateList li{flex: 100%;}
   .attendanceRateStatusList li .memberInfoBox .textBox .name{font-size: var(--font-size-l);}
+  .attendanceRateTopBox .termSelectBtn span{font-size: var(--font-size-xxl);}
 
 }
 
@@ -2197,6 +2242,8 @@ input::placeholder{color: var(--gray-600);}
 
   .attendanceRateStatusList li .attendanceRateInfoBox{margin-bottom: var(--spacing-ml);}
   .attendanceRateStatusList li .memberInfoWrap{flex-direction: column; gap: var(--spacing-ms) 0;}
+
+  .attendanceRateTopBox{flex-direction: column; align-items: flex-start;}
 
 }
 
