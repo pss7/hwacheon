@@ -443,7 +443,7 @@ body{height: 100%;}
 }
 
 /* 로그인 */
-#loginWrap{padding: 0 var(--spacing-s); position: relative; display: flex; align-items: center; justify-content: center; min-height: 100vh; background: url(../images/common/login_bg.png)no-repeat center / cover; overflow: hidden;}
+#loginWrap{padding: 0 var(--spacing-s); position: relative; display: flex; align-items: center; justify-content: center; min-height: 100vh; min-height: 100dvh; background: url(../images/common/login_bg.png)no-repeat center / cover; overflow: hidden;}
 #loginWrap::after{content: ''; width: 629px; height: 637px; position: absolute; left: calc(50% - 42px); top: 50%; transform: translateY(-50%); background: url(../images/common/parliament_badge.svg)no-repeat center / contain; z-index: -1;}
 #loginWrap .loginBox{padding: var(--spacing-l); max-width: 640px; width: 100%; border-radius: var(--radius-xl); background-color: var(--white);}
 #loginWrap .loginBox .loginLogoBox{margin-bottom: 115px;}
