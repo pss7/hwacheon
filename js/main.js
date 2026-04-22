@@ -33,7 +33,7 @@ $(function () {
     this.style.setProperty('--index', index);
   });
 
-  $('.btnArrowBox .btn').on('click', function () {
+  $('.btnArrowBox .arrowBtn').on('click', function () {
     $list.removeClass('motion');
     void $list[0].offsetWidth; // 재실행
     $list.addClass('motion');
@@ -78,17 +78,17 @@ $(function () {
     ]
   });
 
-  $('#introduceWrap .btnBox .btn').on('click', function () {
+  $('#introduceWrap .btnBox .memberBtn').on('click', function () {
     const idx = $(this).index();
     $('#introduceWrap .slider-for').slick('slickGoTo', idx);
   });
 
   $('#introduceWrap .slider-for').on('afterChange', function (event, slick, currentSlide) {
-    $('#introduceWrap .btnBox .btn').removeClass('active');
-    $('#introduceWrap .btnBox .btn').eq(currentSlide).addClass('active');
+    $('#introduceWrap .btnBox .memberBtn').removeClass('active');
+    $('#introduceWrap .btnBox .memberBtn').eq(currentSlide).addClass('active');
   });
 
-  $('#introduceWrap .btnBox .btn').first().addClass('active');
+  $('#introduceWrap .btnBox .memberBtn').first().addClass('active');
 
   //화천군의회 소개 영역 - 탭
   $('#introduceWrap .noticeContentBox').hide().attr('aria-hidden', 'true');

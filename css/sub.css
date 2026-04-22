@@ -13,34 +13,6 @@ main{flex: 1;}
 
 }
 
-/* 공통 - 버튼 */
-.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
-.btn.btnPrimary{background-color: var(--gray-600);}
-.btn:hover{background-color: var(--gray-400);} 
-.btn.btnSecondary{background-color: var(--gray-400);}
-.btn.btnNegative:hover{background-color: var(--pp-red);}
-.btn.btnPositive:hover{background-color: var(--pp-blue);}
-
-/* 공통 - 버튼(정렬) */
-.btnBox{margin: var(--spacing-ml) 0; display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
-.btnBox.left {justify-content: flex-start;}
-.btnBox.center {justify-content: center;}
-.btnBox.right {justify-content: flex-end;}
-.btnBox.between {justify-content: space-between; width: 100%;}
-.btnLayoutBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
-
-@media (max-width: 1024px){
-
-  .btn{min-width: 80px; height: 48px; font-size: var(--font-size-m);}
-
-}
-
-@media (max-width: 480px){
-
-  .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
-
-}   
-
 /* 공통 - 선택 */
 .toggleBtnBox{position: relative;}
 .toggleBtn{display: flex;   align-items: center; justify-content: space-between; padding: 0 var(--spacing-xs) 0 var(--spacing-s); width: 112px; height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}

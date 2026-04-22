@@ -246,13 +246,13 @@
 #introduceWrap .introduceLeftBox .introduceListBox{flex-shrink: 0; width: 222px;}
 #introduceWrap .introduceLeftBox .introduceListBox .btnBox{display: grid;
   grid-template-columns: repeat(2, 67px); gap: var(--spacing-s) var(--spacing-xs);}
-#introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn{height: 110px;}
-#introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn .imgBox{margin-bottom: var(--spacing-2xs); width: 100%; height: 89px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100); border: 2px solid transparent; transition: border-color .3s, background-color .3s;}
-#introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn .imgBox img{height: 100%; object-fit: cover;}
-#introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn .name{display: block; text-align: center; font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+#introduceWrap .introduceLeftBox .introduceListBox .btnBox .memberBtn{height: 110px;}
+#introduceWrap .introduceLeftBox .introduceListBox .btnBox .memberBtn .imgBox{margin-bottom: var(--spacing-2xs); width: 100%; height: 89px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100); border: 2px solid transparent; transition: border-color .3s, background-color .3s;}
+#introduceWrap .introduceLeftBox .introduceListBox .btnBox .memberBtn .imgBox img{height: 100%; object-fit: cover;}
+#introduceWrap .introduceLeftBox .introduceListBox .btnBox .memberBtn .name{display: block; text-align: center; font-weight: var(--semi-bold); font-size: var(--font-size-s);}
 #introduceWrap .introduceLeftBox .introduceLayoutBox{display: flex;}
-#introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn.active .name{color: var(--primary-700); font-weight: var(--bold);}
-#introduceWrap .introduceLeftBox .introduceListBox .btnBox .btn.active .imgBox{background-color: var(--primary-50); border: 2px solid var(--primary-500);}
+#introduceWrap .introduceLeftBox .introduceListBox .btnBox .memberBtn.active .name{color: var(--primary-700); font-weight: var(--bold);}
+#introduceWrap .introduceLeftBox .introduceListBox .btnBox .memberBtn.active .imgBox{background-color: var(--primary-50); border: 2px solid var(--primary-500);}
 #introduceWrap .introduceLeftBox .introduceSlideBox{position: relative; padding: var(--spacing-m); width: 348px; height: 577px; border-radius: var(--radius-m); background: url(../images/main/bg.jpg)no-repeat center / cover; }
 #introduceWrap .introduceLeftBox .box{display: block; width: 284px; margin: 0 auto var(--spacing-s); border-radius: var(--radius-l); background-color: var(--white);}
 #introduceWrap .introduceLeftBox .textBox{padding: var(--spacing-ms);}

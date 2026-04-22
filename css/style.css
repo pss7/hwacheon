@@ -17,6 +17,36 @@ body{height: 100%;}
 
 }
 
+
+/* 공통 - 버튼 */
+.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
+.btn.btnPrimary{background-color: var(--gray-600);}
+.btn:hover{background-color: var(--gray-400);} 
+.btn.btnSecondary{background-color: var(--gray-400);}
+.btn.btnNegative:hover{background-color: var(--pp-red);}
+.btn.btnPositive:hover{background-color: var(--pp-blue);}
+
+/* 공통 - 버튼(정렬) */
+.btnBox{margin: var(--spacing-ml) 0; display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.btnBox.left {justify-content: flex-start;}
+.btnBox.center {justify-content: center;}
+.btnBox.right {justify-content: flex-end;}
+.btnBox.between {justify-content: space-between; width: 100%;}
+.btnLayoutBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
+
+@media (max-width: 1024px){
+
+  .btn{min-width: 80px; height: 48px; font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
+
+}   
+
+
 /* 공통 - 닫기버튼 */
 .closeBtn{position: relative; width: 40px; height: 40px; background: var(--gray-100); border-radius: var(--spacing-ms);}
 .closeBtn::after{content: ''; width: 15px; height: 15px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: url(../images/common/close.svg)no-repeat center / contain;}
@@ -63,11 +93,11 @@ body{height: 100%;}
 
 /* 공통 - 버튼 */
 .btnArrowBox{display: flex; gap: 0 var(--spacing-xs);}
-.btnArrowBox .btn{width: 24px; height: 24px; transition: all .3s;}
-.btnArrowBox .btn.prevArrowBtn{background: url(../images/main/arrow_icon01.svg)no-repeat center;}
-.btnArrowBox .btn.nextArrowBtn{background: url(../images/main/arrow_icon02.svg)no-repeat center;}
-.btnArrowBox .btn:hover.prevArrowBtn{background: url(../images/main/arrow_icon03.svg)no-repeat center;}
-.btnArrowBox .btn:hover.nextArrowBtn{background: url(../images/main/arrow_icon04.svg)no-repeat center;}
+.btnArrowBox .arrowBtn{width: 24px; height: 24px; transition: all .3s;}
+.btnArrowBox .arrowBtn.prevArrowBtn{background: url(../images/main/arrow_icon01.svg)no-repeat center;}
+.btnArrowBox .arrowBtn.nextArrowBtn{background: url(../images/main/arrow_icon02.svg)no-repeat center;}
+.btnArrowBox .arrowBtn:hover.prevArrowBtn{background: url(../images/main/arrow_icon03.svg)no-repeat center;}
+.btnArrowBox .arrowBtn:hover.nextArrowBtn{background: url(../images/main/arrow_icon04.svg)no-repeat center;}
 
 /* 공통 - 더보기 */
 .viewLinkBox{display: flex; align-items: center; gap: 0 var(--spacing-s);}
