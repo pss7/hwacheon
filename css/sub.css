@@ -13,7 +13,6 @@ main{flex: 1;}
 
 }
 
-
 /* 공통 - 버튼 */
 .btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
 .btn.btnPrimary{background-color: var(--gray-600);}
