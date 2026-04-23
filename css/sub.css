@@ -15,7 +15,7 @@ main{flex: 1;}
 
 /* 공통 - 선택 */
 .toggleBtnBox{position: relative;}
-.toggleBtn{display: flex;   align-items: center; justify-content: space-between; padding: 0 var(--spacing-xs) 0 var(--spacing-s); width: 112px; height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
+.toggleBtn{display: flex;   align-items: center; justify-content: space-between; padding: 0 var(--spacing-xs) 0 var(--spacing-s); min-width: 112px; height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
 .toggleBtn span{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
 .toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain; border: 1px solid var(--gray-100); border-radius: var(--radius-l); transition: all .3s;}
 .toggleBtn:hover:after{background-color: var(--gray-100);}
@@ -1625,6 +1625,12 @@ main{flex: 1;}
 
 }
 
+@media (max-width: 320px){
+
+  .boardViewBox .viewContentInfoBox{flex-direction: column; gap: var(--spacing-lm) 0;}
+
+}
+
 /* 공통 - 이전글, 다음글 */
 .boardViewNavBox{padding-top: 3px; position: relative; margin:var(--spacing-3xl) 0 var(--spacing-lm); border-bottom: 1px solid var(--gray-100);}
 .boardViewNavBox::after{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
@@ -1752,7 +1758,7 @@ input::placeholder{color: var(--gray-600);}
 
 @media (max-width: 768px){
 
-  input{font-size: var(--font-size-l)!important;}
+  #boardTitle{font-size: var(--font-size-l)!important;}
 
 }
 
@@ -1865,9 +1871,24 @@ input::placeholder{color: var(--gray-600);}
 
 }
 
-/* 폼 - 일정 */
-.boardWriteDateBox{max-width: 188px; position: relative;}
+/* 폼 - 일정, 시간 */
+.boardWriteTimeWrap,
+.boardWriteDateWrap{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
+.boardWriteDateWrap .boardWriteDateBox{max-width: 220px;}
+.boardWriteDateBox{max-width: 188px; width: 100%; position: relative;}
 .boardWriteDateBox .calendarBtn{width: 24px; height: 24px; position: absolute; top:50%; transform: translateY(-50%); right:16px; background: url(../images/sub/calendar_icon.svg)no-repeat center;}
+
+.boardWriteTimeBox{max-width: 165px; width: 100%; padding: var(--spacing-xs) var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-xs); background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-xs);}
+.boardWriteTimeBox input{padding: var(--spacing-xs); font-size: var(--font-size-s); text-align: center; border-radius: var(--radius-2xs);}
+
+@media (max-width: 480px){
+
+  .boardWriteTimeWrap,
+  .boardWriteDateWrap{flex-direction: column; gap: 0;}
+  .boardWriteTimeWrap .boardWriteTimeBox,
+  .boardWriteDateWrap .boardWriteDateBox{max-width: none; width: 100%;}
+
+}
 
 /* 의회에바란다 - 목록 */
 .hopeListBox .myPost{padding: var(--spacing-s); color: var(--white); border-radius: var(--radius-s); color: #fff; font-weight: var(--bold); background: linear-gradient(to right, var(--primary-500), var(--secondary-500));}
@@ -2300,6 +2321,9 @@ input::placeholder{color: var(--gray-600);}
 .calendarBox .calendarGrid .calendarCell .dateBtn.disabled .scheduleDot{background-color: var(--white);}
 .calendarBox .calendarGrid .calendarCell .dateBtn.selected{background-color: var(--primary-500);}
 .calendarBox .calendarGrid .calendarCell .dateBtn.selected .date{color: var(--white);}
+.eventStatusViewBox .boardViewBox .boardViewLayoutBox .viewContentInfoBox{width: 320px; flex-shrink: 0;}
+.eventStatusViewBox .boardViewBox .boardViewLayoutBox{gap: var(--spacing-lm) var(--spacing-2xl);}
+.eventStatusViewBox .boardViewBox .viewContentInfoBox dl dd .time{display: inline-block; margin-top: var(--spacing-s); padding: var(--spacing-xs); font-weight: var(--semi-bold); border-radius: var(--radius-xs); border: 1px solid var(--gray-100); font-size: var(--font-size-m);}
 
 @media (max-width: 1024px){
 
@@ -2307,6 +2331,9 @@ input::placeholder{color: var(--gray-600);}
   .calendarScheduleBox{width: auto;}
   .calendarScheduleBox .calendarScheduleList{height: 355px;}
   .calendarBox .calendarHeader h4{font-size: var(--H2);}
+
+  .eventStatusViewBox .boardViewBox .boardViewLayoutBox .viewContentInfoBox{width: 100%;}
+  .eventStatusViewBox .boardViewBox .viewContentInfoBox dl dd{text-align: center;}
 
 }
 

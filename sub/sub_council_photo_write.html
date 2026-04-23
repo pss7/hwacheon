@@ -1614,6 +1614,10 @@
             $("#date").datepicker({
                 dateFormat: "yy-mm-dd"
             });
+
+            $(".calendarBtn").on("click", function () {
+                $("#date").datepicker("show");
+            });
         });
     </script>
 

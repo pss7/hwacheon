@@ -15,11 +15,15 @@
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/sub.js"></script>
     <script src="../js/script.js"></script>
+
 
 </head>
 
@@ -1155,9 +1159,197 @@
                         <!-- 행사개최 현황 콘텐츠 -->
                         <div class="eventStatusBox">
                             <div class="container">
-
                                 <div class="eventStatusWriteBox">
-                              
+                                    <div class="boardWriteBox">
+
+                                        <h4>
+                                            글 작성
+                                        </h4>
+
+                                        <form class="boardWriteForm">
+
+                                            <!-- 제목 -->
+                                            <div class="boardWriteField">
+                                                <label for="boardTitle" class="blind">제목</label>
+                                                <input type="text" id="boardTitle" placeholder="제목을 입력해 주세요">
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <!-- 스마트에디터 -->
+                                            <div class="boardWriteField">
+                                                <div class="boardWriteEditor">
+                                                    스마트에디터 영역
+                                                </div>
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <!-- 행사 일정 -->
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    행사 일정
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteDateWrap">
+                                                        <div class="boardWriteDateBox">
+                                                            <input id="startDate" type="text" placeholder="시작">
+                                                            <label for="startDate" class="blind">시작</label>
+                                                            <button type="button" class="calendarBtn"
+                                                                aria-label="시작 일정 달력 열기">
+                                                            </button>
+                                                        </div>
+                                                        <!-- //boardWriteDateBox -->
+                                                        ~
+                                                        <div class="boardWriteDateBox">
+                                                            <input id="endDate" type="text" placeholder="종료">
+                                                            <label for="endDate" class="blind">종료</label>
+                                                            <button type="button" class="calendarBtn"
+                                                                aria-label="종료 일정 달력 열기">
+                                                            </button>
+                                                        </div>
+                                                        <!-- //boardWriteDateBox -->
+
+                                                    </div>
+                                                    <!-- //dateWrap -->
+
+                                                </div>
+                                                <!-- //boardWriteDateWrap -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <!-- 행사 시간 -->
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    행사 시간
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteTimeWrap">
+                                                        <div class="boardWriteTimeBox">
+                                                            <div class="inputTextBox">
+                                                                <label for="hour01" class="blind">
+                                                                    시작 시
+                                                                </label>
+                                                                <input id="hour01" type="text" placeholder="00시">
+                                                            </div>
+                                                            :
+                                                            <div class="inputTextBox">
+                                                                <label for="minute01" class="blind">
+                                                                    시작 분
+                                                                </label>
+                                                                <input id="minute01" type="text" placeholder="00분">
+                                                            </div>
+                                                        </div>
+                                                        <!-- //boardWriteTimeBox -->
+                                                        ~
+                                                        <div class="boardWriteTimeBox">
+                                                            <div class="inputTextBox">
+                                                                <label for="hour02" class="blind">
+                                                                    종료 시
+                                                                </label>
+                                                                <input id="hour02" type="text" placeholder="00시">
+                                                            </div>
+                                                            :
+                                                            <div class="inputTextBox">
+                                                                <label for="minute02" class="blind">
+                                                                    종료 분
+                                                                </label>
+                                                                <input id="minute02" type="text" placeholder="00분">
+                                                            </div>
+                                                        </div>
+                                                        <!-- //boardWriteTimeBox -->
+
+                                                    </div>
+                                                    <!-- //boardWriteTimeWrap -->
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <!-- 행사장소 -->
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    행사 장소
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteAddressBox">
+                                                        <label for="address" class="blind">
+                                                            행사 장소
+                                                        </label>
+                                                        <input id="address" type="text" placeholder="장소">
+                                                    </div>
+                                                    <!-- //boardWriteAddressBox -->
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <!-- 첨부파일 -->
+                                            <div class="boardWriteField row start">
+                                                <span class="boardWriteLabel">
+                                                    첨부파일
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <!-- //boardWriteLabel -->
+
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteFileBox">
+                                                        <div class="boardWriteFile">
+                                                            <input type="file" id="boardFile01" class="blind">
+                                                            <label for="boardFile01" class="boardWriteFileBtn">첨부파일을
+                                                                업로드해주세요.</label>
+
+                                                            <div class="boardWriteFileItem">
+                                                                <button type="button" class="boardWriteFileDel"
+                                                                    aria-label="첨부파일.jpg 삭제">삭제</button>
+                                                                <span class="boardWriteFileName">첨부파일.jpg</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- //boardWriteFileBox -->
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                        </form>
+                                        <!-- //boardWriteForm -->
+
+                                    </div>
+                                    <!-- //boardWriteBox -->
+
+                                    <div class="btnBox">
+                                        <button type="button" class="btn btnSecondary btnNegative">
+                                            <div class="slideText">
+                                                <span class="slideTextItem slideTextPrimary">취소</span>
+                                                <span class="slideTextItem slideTextClone" aria-hidden="true">취소</span>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn btnPrimary btnPositive">
+                                            <div class="slideText">
+                                                <span class="slideTextItem slideTextPrimary">등록</span>
+                                                <span class="slideTextItem slideTextClone" aria-hidden="true">등록</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                    <!-- //btnBox -->
 
                                 </div>
                                 <!-- //eventStatusWriteBox -->
@@ -1304,6 +1496,22 @@
 
     </div>
     <!-- //wrap -->
+
+    <script>
+        $(function () {
+            $("#startDate, #endDate").datepicker({
+                dateFormat: "yy-mm-dd",
+            });
+
+            $(".calendarBtn").eq(0).on("click", function () {
+                $("#startDate").datepicker("show");
+            });
+
+            $(".calendarBtn").eq(1).on("click", function () {
+                $("#endDate").datepicker("show");
+            });
+        });
+    </script>
 
 </body>
 
