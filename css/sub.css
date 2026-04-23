@@ -2273,7 +2273,7 @@ input::placeholder{color: var(--gray-600);}
 
 /* 행사일정 */
 .calendarWrap{display: flex; height: 658px; border-radius: var(--radius-l); border: 4px solid var(--gray-100); border-radius: var(--radius-l); overflow: hidden;  background-color: var(--gray-50);} 
-.calendarScheduleBox{padding: var(--spacing-ml) var(--spacing-m); width: 360px; flex-shrink: 0; border-radius: var(--radius-m); background-color: var(--white);} 
+.calendarScheduleBox{display: flex; flex-direction: column; padding: var(--spacing-ml) var(--spacing-m); width: 360px; flex-shrink: 0; border-radius: var(--radius-m); background-color: var(--white);} 
 .calendarScheduleBox .date{display: block; margin-bottom: var(--spacing-xs); color: #9AAF4E; font-weight: var(--bold); font-size: var(--H5);} 
 .calendarScheduleBox h4{margin-bottom: var(--spacing-ml); color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-xl);} 
 .calendarScheduleBox .calendarScheduleList{margin-bottom: var(--spacing-ms); height: 417px; overflow-y: auto;}
@@ -2283,7 +2283,14 @@ input::placeholder{color: var(--gray-600);}
 .calendarScheduleBox .calendarScheduleList li .time{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-xs);color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
 .calendarScheduleBox .calendarScheduleList li .time::before{content: ''; width: 4px; height: 4px; background-color: var(--gray-600); border-radius: 50%;}
 .calendarScheduleBox .calendarScheduleList li p{padding: var(--spacing-xs); background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-900); font-size: var(--Subtitle-1); font-weight: var(--medium);}
-.calendarScheduleBox .btn{width: 100%;}
+.calendarScheduleBox .btn{margin-top: auto; width: 100%;}
+.calendarScheduleBox .scheduleEmptyBox{padding: var(--spacing-ml);}
+.calendarScheduleBox .scheduleEmptyContentBox{position: relative; padding-top: var(--spacing-4xl);}
+.calendarScheduleBox .scheduleEmptyContentBox::after{content: ''; width: 72px; height: 72px; position: absolute; left: 50%; transform: translateX(-50%); top:0; background: url(../images/sub/step_icon11.svg) no-repeat center / contain;}
+.calendarScheduleBox .scheduleEmptyTitle{margin-bottom: var(--spacing-2xs);font-weight: var(--bold); font-size: var(--Subtitle-1); text-align: center;
+  color: var(--gray-600);}
+.calendarScheduleBox .scheduleEmptyText{font-size: var(--body-2); text-align: center;
+    color: var(--gray-400);}
 .calendarBox{width: 100%; padding: var(--spacing-ml);}
 .calendarBox .calendarHeader{margin-bottom: var(--spacing-m); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-m);}
 .calendarBox .calendarHeader h4{color: var(--gray-900); font-weight: var(--T-black); font-size: var(--H1); line-height: 1.3;}
@@ -2356,6 +2363,8 @@ input::placeholder{color: var(--gray-600);}
   .calendarScheduleBox{padding: var(--spacing-ml) var(--spacing-ms);}
   .calendarScheduleBox h4{margin-bottom: var(--spacing-m);}
   .calendarBox .calendarGrid .calendarCell .scheduleDot{width: 4px; height: 4px;}
+  .calendarScheduleBox .scheduleEmptyContentBox{padding-top: var(--spacing-3xl);}
+  .calendarScheduleBox .scheduleEmptyTitle{font-size: var(--font-size-m);}
 
 }
 
