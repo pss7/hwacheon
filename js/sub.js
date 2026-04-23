@@ -125,22 +125,6 @@ $(function () {
     $('.formerMemberBox .formerMemberLayoutBox').eq($(this).index()).show();
   });
 
-  //드롭다운
-  $('.toggleBtn').click(function (e) {
-    e.stopPropagation();
-    $(this).parent().toggleClass('active');
-
-    if ($(this).parent().hasClass('active')) {
-      $(this).attr('aria-expanded', 'true');
-    } else {
-      $(this).attr('aria-expanded', 'false');
-    }
-  });
-  $('.selectCloseBtn').click(function () {
-    $(this).parent().parent().removeClass('active');
-    $(this).parent().siblings('.toggleBtn').attr('aria-expanded', 'false').focus();
-  });
-
   // 참여의원
   $('.memberSelectBox .memberSelectList .button').click(function () {
     if ($(this).attr('aria-pressed') == 'true') {

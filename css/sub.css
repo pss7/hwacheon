@@ -9,7 +9,7 @@ main{flex: 1;}
 
 @media (max-width: 576px){
 
-  #headerWrap{position: relative; z-index: 999;}
+  #headerWrap{position: relative; z-index: 9999;}
 
 }
 
@@ -19,16 +19,6 @@ main{flex: 1;}
 .toggleBtn span{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
 .toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain; border: 1px solid var(--gray-100); border-radius: var(--radius-l); transition: all .3s;}
 .toggleBtn:hover:after{background-color: var(--gray-100);}
-
-/* 공통 - 애니메이션(드롭다운) */
-.dropdown{opacity: 0; visibility: hidden; transform: translateY(-12px);
-  pointer-events: none; transition: all .3s, transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear .55s;}
-.active .dropdown{opacity: 1; visibility: visible; transform: translateY(0);
-  pointer-events: auto; transition:all .3s,
-    transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear 0s;}
-.active .toggleBtn::after{transform: rotate(-180deg);}
-
-
 
 /* 공통 - 정렬 */
 .textLeft{text-align: left!important;}
@@ -1391,7 +1381,7 @@ main{flex: 1;}
 }
 
 /* 모달 */
-#memberModalWrap{max-width: 560px; width: 90%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: var(--white); border-radius: var(--spacing-lm); z-index: 999; overflow: hidden;}
+#memberModalWrap{max-width: 560px; width: 90%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: var(--white); border-radius: var(--spacing-lm); z-index: 9999; overflow: hidden;}
 .memberModalBox .memberTermList{position: relative; padding: var(--spacing-s) var(--spacing-ms); display: flex; justify-content: center; flex-wrap: wrap; gap: 0 var(--spacing-xs); background: linear-gradient(to right, #FFFEFD, #E1D8CD, #FFFFFF);}
 .memberModalBox .memberTermList li{padding: var(--spacing-xs); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s);}
 .memberModalBox .memberTermList li.current{background-color: var(--secondary-900); color: var(--white);}

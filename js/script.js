@@ -56,7 +56,7 @@ $(function () {
   $('#headerWrap .mobileOpenBtn').click(function () {
     $(this).hide().attr('aria-expanded', 'true');
     $('#headerWrap .mobileCloseBtn').fadeIn();
-    $('#mobileMenuBox').addClass('active');
+    $('#mobileMenuBox').addClass('on');
     $('.mobilebg').addClass('active');
     $('body').addClass('mobileNonScroll');
   });
@@ -64,7 +64,7 @@ $(function () {
   $('#headerWrap .mobileCloseBtn').click(function () {
     $(this).hide();
     $('#headerWrap .mobileOpenBtn').fadeIn().attr('aria-expanded', 'false').focus();
-    $('#mobileMenuBox').removeClass('active');
+    $('#mobileMenuBox').removeClass('on');
     $('.mobilebg').removeClass('active');
     $('body').removeClass('mobileNonScroll');
   });
@@ -101,15 +101,16 @@ $(function () {
   });
 
   /* 헤더 - 모달 */
-  $('#headerWrap .modalBtn').click(function () {
-    $(this).addClass('active');
-    $(this).next('.modalBox').addClass('active');
-  });
+  // $('#headerWrap .modalBtn').click(function () {
+  //   $(this).addClass('active');
+  //   $(this).next('.modalBox').addClass('active');
+  // });
 
-  $('#headerWrap .closeBtn').click(function () {
-    $(this).parents('.modalBox').removeClass('active');
-    $(this).parents('.modalBox').prev('.modalBtn').focus();
-  });
+  // $('#headerWrap .closeBtn').click(function () {
+  //   $(this).parents('.modalBox').removeClass('active');
+  //   $('#headerWrap .modalBtn').removeClass('active');
+  //   $(this).parents('.modalBox').prev('.modalBtn').focus();
+  // });
 
   /* 헤더 - 화면 축소, 확대, 초기화 */
   $('.zoomIn').click(function () {
@@ -176,6 +177,22 @@ $(function () {
       $(this).addClass('active').attr('aria-expanded', 'true');
       $(this).parents('.box').addClass('active');
     }
+  });
+
+  //드롭다운
+  $('.toggleBtn').click(function (e) {
+    e.stopPropagation();
+    $(this).parent().toggleClass('active');
+
+    if ($(this).parent().hasClass('active')) {
+      $(this).attr('aria-expanded', 'true');
+    } else {
+      $(this).attr('aria-expanded', 'false');
+    }
+  });
+  $('.selectCloseBtn').click(function () {
+    $(this).parent().parent().removeClass('active');
+    $(this).parent().siblings('.toggleBtn').attr('aria-expanded', 'false').focus();
   });
 
 });
