@@ -49,92 +49,120 @@
                         <!-- sns -->
                         <div class="leftBox">
                             <div class="snsBox">
-                                <a href="https://facebook.com/..." aria-label="페이스북">
+                                <a href="#" aria-label="페이스북">
                                     <img src="images/common/facebook_icon.svg" alt="">
                                 </a>
-                                <a href="https://instagram.com/..." aria-label="인스타그램">
+                                <a href="#" aria-label="인스타그램">
                                     <img src="images/common/insta_icon.svg" alt="">
                                 </a>
-                                <a href="https://youtube.com/..." aria-label="유튜브">
+                                <a href="#" aria-label="유튜브">
                                     <img src="images/common/youtube_icon.svg" alt="">
                                 </a>
-                                <a href="https://naver.com/..." aria-label="네이버">
+                                <a href="#" aria-label="네이버">
                                     <img src="images/common/naver_icon.svg" alt="">
                                 </a>
                             </div>
 
                             <ul class="linkList">
                                 <li>
-                                    <button class="hoverSlide modalBtn" type="button" aria-haspopup="dialog"
-                                        aria-controls="memberSiteModal">
-                                        <span class="hoverSlideText">의원누리집</span>
-                                        <span class="hoverSlideText hoverSlideClone" aria-hidden="true">의원누리집</span>
+
+                                    <button class="slideTextBtn toggleBtn" type="button" aria-haspopup="dialog"
+                                        aria-controls="memberSiteModal" aria-expanded="false" aria-label="의원누리집 열기">
+                                        <span class="slideText">
+                                            <span class="slideTextItem slideTextPrimary">의원누리집</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">의원누리집</span>
+                                        </span>
                                     </button>
 
-                                    <div class="modalBox" id="memberSiteModal" role="dialog" aria-modal="true"
+                                    <div class="modalBox dropdown" id="memberSiteModal" role="dialog" aria-modal="true"
                                         aria-labelledby="memberSiteModalTitle">
                                         <h3 id="memberSiteModalTitle">의원누리집</h3>
 
                                         <ul class="list">
                                             <li>
-                                                <div class="imgBox">
-                                                    <img src="images/common/member01.png" alt="">
-                                                </div>
-                                                <span class="name">류희상</span>
+                                                <a href="#" class="link">
+                                                    <div class="imgBox">
+                                                        <img src="images/common/member01.png" alt="">
+                                                    </div>
+                                                    <span class="name">류희상</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="imgBox">
-                                                    <img src="images/common/member02.png" alt="">
-                                                </div>
-                                                <span class="name">조웅희</span>
+                                                <a href="#" class="link">
+                                                    <div class="imgBox">
+                                                        <img src="images/common/member02.png" alt="">
+                                                    </div>
+                                                    <span class="name">조웅희</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="imgBox">
-                                                    <img src="images/common/member03.png" alt="">
-                                                </div>
-                                                <span class="name">노이업</span>
+                                                <a href="#" class="link">
+                                                    <div class="imgBox">
+                                                        <img src="images/common/member03.png" alt="">
+                                                    </div>
+                                                    <span class="name">노이업</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="imgBox">
-                                                    <img src="images/common/member04.png" alt="">
-                                                </div>
-                                                <span class="name">김동완</span>
+                                                <a href="#" class="link">
+                                                    <div class="imgBox">
+                                                        <img src="images/common/member04.png" alt="">
+                                                    </div>
+                                                    <span class="name">김동완</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="imgBox">
-                                                    <img src="images/common/member05.png" alt="">
-                                                </div>
-                                                <span class="name">김명진</span>
+                                                <a href="#" class="link">
+                                                    <div class="imgBox">
+                                                        <img src="images/common/member05.png" alt="">
+                                                    </div>
+                                                    <span class="name">김명진</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="imgBox">
-                                                    <img src="images/common/member06.png" alt="">
-                                                </div>
-                                                <span class="name">이선희</span>
+                                                <a href="#" class="link">
+                                                    <div class="imgBox">
+                                                        <img src="images/common/member06.png" alt="">
+                                                    </div>
+                                                    <span class="name">이선희</span>
+                                                </a>
                                             </li>
                                             <li>
-                                                <div class="imgBox">
-                                                    <img src="images/common/member07.png" alt="">
-                                                </div>
-                                                <span class="name">조재규</span>
+                                                <a href="#" class="link">
+                                                    <div class="imgBox">
+                                                        <img src="images/common/member07.png" alt="">
+                                                    </div>
+                                                    <span class="name">조재규</span>
+                                                </a>
                                             </li>
                                         </ul>
 
-                                        <button class="closeBtn" type="button" aria-label="닫기"></button>
+                                        <button class="closeBtn selectCloseBtn" type="button"
+                                            aria-label="의원누리집 닫기"></button>
                                     </div>
+
                                 </li>
 
                                 <li>
-                                    <a href="#" class="hoverSlide">
-                                        <span class="hoverSlideText">인터넷방송</span>
-                                        <span class="hoverSlideText hoverSlideClone" aria-hidden="true">인터넷방송</span>
+
+                                    <a href="#" class="slideTextBtn link">
+                                        <span class="slideText">
+                                            <span class="slideTextItem slideTextPrimary">인터넷방송</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">인터넷방송</span>
+                                        </span>
                                     </a>
+
                                 </li>
+
                                 <li>
-                                    <a href="#" class="hoverSlide">
-                                        <span class="hoverSlideText">화천군청</span>
-                                        <span class="hoverSlideText hoverSlideClone" aria-hidden="true">화천군청</span>
+
+                                    <a href="#" class="slideTextBtn link">
+                                        <span class="slideText">
+                                            <span class="slideTextItem slideTextPrimary">화천군청</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">화천군청</span>
+                                        </span>
                                     </a>
+
                                 </li>
                             </ul>
                         </div>
@@ -157,9 +185,13 @@
                             </div>
 
                             <div class="authBox">
-                                <a href="#" class="authBtn hoverSlide">
-                                    <span class="hoverSlideText">로그인</span>
-                                    <span class="hoverSlideText hoverSlideClone" aria-hidden="true">로그인</span>
+                                <a href="#" class="slideTextBtn authBtn">
+
+                                    <span class="slideText">
+                                        <span class="slideTextItem slideTextPrimary">로그인</span>
+                                        <span class="slideTextItem slideTextClone" aria-hidden="true">로그인</span>
+                                    </span>
+
                                 </a>
                             </div>
                         </div>
@@ -664,47 +696,62 @@
             <div id="mobileMenuBox">
                 <div class="mobileTopBox">
                     <div class="mobileModalBox">
-                        <button class="mobileModalBtn modalBtn" type="button" aria-haspopup="dialog"
-                            aria-controls="mobileMemberSiteModal">
+
+                        <button class="mobileModalBtn toggleBtn" type="button" aria-haspopup="dialog"
+                            aria-controls="mobileMemberSiteModal" aria-expanded="false" aria-label="의원누리집 열기">
                             9대 의원 누리집
                         </button>
 
-                        <div class="modalBox" id="mobileMemberSiteModal" role="dialog" aria-modal="true"
+                        <div class="modalBox dropdown" id="memberSiteModal" role="dialog" aria-modal="true"
                             aria-labelledby="mobileMemberSiteModalTitle">
                             <h3 id="mobileMemberSiteModalTitle">의원누리집</h3>
 
                             <ul class="list">
                                 <li>
-                                    <div class="imgBox"><img src="images/common/member01.png" alt=""></div><span
-                                        class="name">류희상</span>
+                                    <a href="#" class="link">
+                                        <div class="imgBox"><img src="images/common/member01.png" alt=""></div><span
+                                            class="name">류희상</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox"><img src="images/common/member02.png" alt=""></div><span
-                                        class="name">조웅희</span>
+                                    <a href="#" class="link">
+                                        <div class="imgBox"><img src="images/common/member02.png" alt=""></div><span
+                                            class="name">조웅희</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox"><img src="images/common/member03.png" alt=""></div><span
-                                        class="name">노이업</span>
+                                    <a href="#" class="link">
+                                        <div class="imgBox"><img src="images/common/member03.png" alt=""></div><span
+                                            class="name">노이업</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox"><img src="images/common/member04.png" alt=""></div><span
-                                        class="name">김동완</span>
+                                    <a href="#" class="link">
+                                        <div class="imgBox"><img src="images/common/member04.png" alt=""></div><span
+                                            class="name">김동완</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox"><img src="images/common/member05.png" alt=""></div><span
-                                        class="name">김명진</span>
+                                    <a href="#" class="link">
+                                        <div class="imgBox"><img src="images/common/member05.png" alt=""></div><span
+                                            class="name">김명진</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox"><img src="images/common/member06.png" alt=""></div><span
-                                        class="name">이선희</span>
+                                    <a href="#" class="link">
+                                        <div class="imgBox"><img src="images/common/member06.png" alt=""></div><span
+                                            class="name">이선희</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <div class="imgBox"><img src="images/common/member07.png" alt=""></div><span
-                                        class="name">조재규</span>
+                                    <a href="#" class="link">
+                                        <div class="imgBox"><img src="images/common/member07.png" alt=""></div><span
+                                            class="name">조재규</span>
+                                    </a>
                                 </li>
                             </ul>
 
-                            <button class="closeBtn" type="button" aria-label="닫기"></button>
+                            <button class="closeBtn selectCloseBtn" type="button" aria-label="의원누리집 닫기"></button>
                         </div>
                     </div>
                     <!-- //mobileModalBox -->
@@ -714,7 +761,6 @@
                         <a href="#" class="btn">로그인</a>
                     </div>
                     <!-- //mobileAothBox -->
-
                 </div>
                 <!-- //mobileTopBox -->
 
@@ -1016,7 +1062,8 @@
         <!-- //headerWrap -->
 
         <!-- 로그인 모달 -->
-        <div id="loginModalWrap" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle" aria-describedby="loginModalDesc">
+        <div id="loginModalWrap" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle"
+            aria-describedby="loginModalDesc">
 
             <h2 id="loginModalTitle">
                 로그인

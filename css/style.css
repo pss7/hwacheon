@@ -110,7 +110,8 @@ body{height: 100%;}
 #headerWrap .headerCenterBox .leftBox .snsBox{display: flex; align-items: center; gap: 0 var(--spacing-2xs);}
 #headerWrap .headerCenterBox .leftBox .linkList{display: flex;}
 #headerWrap .headerCenterBox .leftBox .linkList > li{position: relative;}
-#headerWrap .headerCenterBox .slideTextBtn{display: block; border-radius: var(--radius-xs);}
+#headerWrap .headerCenterBox .slideTextBtn{display: block; border-radius: var(--radius-xs); height: auto; min-width: auto; padding: 0; border: 0;}
+#headerWrap .headerCenterBox .slideTextBtn::after{display: none;}
 #headerWrap .headerCenterBox .slideTextBtn:hover{background-color: var(--gray-100);}
 #headerWrap .headerCenterBox .slideTextBtn .slideTextItem{display: block; padding: var(--spacing-xs); line-height: 1.2; font-size: var(--font-size-s); color: var(--gray-600); font-weight: var(--medium); border-radius: var(--radius-xs);}
 #headerWrap .headerCenterBox .leftBox .linkList > li.active .slideTextBtn{color: var(--gray-600); font-weight: var(--medium); background-color: var(--gray-100); font-size: var(--font-size-s); line-height: 1.2;}
