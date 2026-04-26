@@ -115,4 +115,24 @@ $(function () {
       .attr('aria-hidden', 'false');
   });
 
+  //스크롤 그라데이션 
+  $('.councilActivityListWrap').each(function () {
+    const $wrap = $(this);
+    const $list = $wrap.find('.councilActivityList');
+
+    $list.scroll(function () {
+      const scrollTop = $(this).scrollTop();
+      const listHeight = $(this).innerHeight();
+      const scrollHeight = this.scrollHeight;
+
+      const hasScroll = scrollHeight > listHeight + 1;
+      const isScrollEnd = scrollTop + listHeight >= scrollHeight - 5;
+
+      $wrap.toggleClass('hasScroll', hasScroll);
+      $wrap.toggleClass('scrollEnd', hasScroll && isScrollEnd);
+    });
+
+    $list.scroll();
+  });
+
 });
