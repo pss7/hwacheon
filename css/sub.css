@@ -152,7 +152,8 @@ main{flex: 1;}
 #contentWrap .contentTopBox .utilBox{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
 #contentWrap .contentTopBox .subMenuBox .subMenuList li h4 a.active{display: flex; align-items: center; color: var(--gray-900);}
 #contentWrap .contentTopBox .subMenuBox .subMenuList li h4 a.active::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/arrow_icon02.svg)no-repeat center / contain;}
-#contentWrap .contentTopBox .utilBox button{width: 40px; height: 40px;}
+#contentWrap .contentTopBox .utilBox button{width: 40px; height: 40px; border-radius: var(--radius-xs); transition: all .3s;}
+#contentWrap .contentTopBox .utilBox button:hover{background-color: var(--gray-50);}
 #contentWrap .contentTopBox .utilBox .shareBtn{background: url(../images/sub/share_icon.svg)no-repeat center;}
 #contentWrap .contentTopBox .utilBox .printBtn{background: url(../images/sub/print_icon.svg)no-repeat center;}
 
@@ -1526,14 +1527,26 @@ main{flex: 1;}
 
 /* 공통 - 페이지네이션 */
 .paginationBox{margin: 60px 0 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap:var(--spacing-2xs);}
-.paginationBox .pageLink{display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: var(--spacing-xs); background-color: var( --gray-50); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-600); border-radius: var(--radius-xs);}
+.paginationBox .pageLink{position: relative; display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: var(--spacing-xs); background-color: var( --gray-50); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-600); border-radius: var(--radius-xs); transition: all .3s;}
+.paginationBox .pageLink:hover{background-color: var(--gray-100);}
 .paginationBox .pageLink.active{color: var(--white); background-color: var(--primary-800);}
+
 .paginationBox .pageLinkFirst,
-.paginationBox .pageLinkLast{background: 0;}
-.paginationBox .pageLinkFirst{background: url(../images/sub/arrow_icon05.svg)no-repeat center / contain;}
-.paginationBox .pageLinkLast{transform: rotate(180deg); background: url(../images/sub/arrow_icon05.svg)no-repeat center / contain;}
-.paginationBox .pageLinkPrev{background: url(../images/sub/arrow_icon06.svg)no-repeat center / contain;}
-.paginationBox .pageLinkNext{transform: rotate(180deg); background: url(../images/sub/arrow_icon06.svg)no-repeat center / contain;}
+.paginationBox .pageLinkLast{z-index: 1; background:0;}
+
+.paginationBox .pageLinkFirst::after,
+.paginationBox .pageLinkLast::after{content: ''; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background-color: var(--gray-500); border-radius: var(--radius-l); z-index: -1; transition: all 3.s;}
+.paginationBox .pageLinkFirst::before,
+.paginationBox .pageLinkLast::before{content: ''; width: 7px; height: 10px; position: absolute; top: 51%; left: 50%; transform: translate(-50%, -50%);}
+.paginationBox .pageLinkFirst::before{left: 49%; background: url(../images/sub/arrow02.svg)no-repeat center / contain;}
+.paginationBox .pageLinkLast::before{left: 51%; background: url(../images/sub/arrow03.svg)no-repeat center / contain;}
+
+.paginationBox .pageLinkFirst:hover:after,
+.paginationBox .pageLinkLast:hover:after{background-color: var(--gray-600);}
+
+
+.paginationBox .pageLinkPrev{background: url(../images/sub/arrow.svg)no-repeat center / contain; background-size: 7px 10px;}
+.paginationBox .pageLinkNext{transform: rotate(180deg); background: url(../images/sub/arrow.svg)no-repeat center / contain; background-size: 7px 10px;}
 
 @media (max-width: 576px ){
 
@@ -2386,7 +2399,7 @@ input::placeholder{color: var(--gray-600);}
 #wrap.memberWrap #contentWrap .contentRightBox .contentBox{padding-top: var(--spacing-2xl);}
 #wrap.memberWrap #contentWrap .contentRightBox .container{padding: 0;}
 #wrap.memberWrap #contentWrap aside{min-width: 240px; border: 0;}
-#wrap.memberWrap #contentWrap{padding: var(--spacing-lm) 0 var(--spacing-5xl); gap:0; background: url(../images/sub/bg02.png)no-repeat center top / contain;}
+#wrap.memberWrap #contentWrap{position: relative; padding: var(--spacing-lm) 0 var(--spacing-5xl); gap:0; background: url(../images/sub/bg02.png)no-repeat center top;}
 #wrap.memberWrap #contentWrap aside .depth01 li{margin-bottom: var(--spacing-ml);}
 #wrap.memberWrap #contentWrap aside .depth01 li h2 a{font-size: var(--Subtitle-1); font-weight: var(--medium); text-shadow: none!important; color: var(--gray-600);}
 #wrap.memberWrap #contentWrap aside .depth01 li h2 a.active{color: var(--gray-900); font-weight: var(--bold);}

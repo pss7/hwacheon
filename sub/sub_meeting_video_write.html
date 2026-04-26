@@ -820,405 +820,86 @@
                     <div class="contentBox">
 
                         <!-- 전자회의록 콘텐츠 -->
-                        <div class="meetingVideoListBox">
+                        <div class="meetingVideoWriteBox">
                             <div class="container">
 
-                                <ul class="tabList mb40">
-                                    <li class="active">
-                                        <button type="button" class="tabBtn active" role="tab" aria-selected="true">
-                                            군정질문
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="tabBtn" role="tab" aria-selected="false">
-                                            10분 자유발언
-                                        </button>
-                                    </li>
-                                </ul>
-                                <!-- //tabList -->
+                                <div class="boardWriteBox">
 
-                                <ul class="memberActivityImgList">
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
+                                    <h4>
+                                        글 작성
+                                    </h4>
+
+                                    <form class="boardWriteForm">
+
+                                        <!-- 제목 -->
+                                        <div class="boardWriteField">
+                                            <label for="boardTitle" class="blind">제목</label>
+                                            <input type="text" id="boardTitle" placeholder="제목을 입력해 주세요">
+                                        </div>
+                                        <!-- //boardWriteField -->
+
+                                        <!-- 유튜브주소 -->
+                                        <div class="boardWriteField row">
+                                            <span class="boardWriteLabel">
+                                                유튜브주소
+                                                <span class="required" aria-hidden="true">*</span>
+                                                <span class="blind">필수 입력</span>
+                                            </span>
+                                            <div class="boardWriteContent">
+
+                                                <div class="boardWriteAddressBox">
+                                                    <label for="address" class="blind">
+                                                        작성자
+                                                    </label>
+                                                    <input id="address" type="text" placeholder="텍스트">
                                                 </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
+                                                <!-- //boardWriteAddressBox -->
+
                                             </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
+                                            <!-- //boardWriteContent -->
 
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
+                                        <!-- //boardWriteField -->
+
+                                        <!-- 구분 -->
+                                        <div class="boardWriteField row">
+                                            <span class="boardWriteLabel">
+                                                구분
+                                                <span class="required" aria-hidden="true">*</span>
+                                                <span class="blind">필수 입력</span>
+                                            </span>
+                                            <div class="boardWriteContent">
+
+                                                <div class="boardWriteSelectBox">
+                                                    <label for="select" class="blind">
+                                                        고시공고 유형 선택
+                                                    </label>
+                                                    <select id="select">
+                                                        <option value="">선택</option>
+                                                    </select>
                                                 </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
+                                                <!-- //boardWriteSelectBox -->
+
                                             </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
+                                            <!-- //boardWriteContent -->
 
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
+                                        <!-- //boardWriteField -->
 
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
+                                    </form>
+                                    <!-- //boardWriteForm -->
 
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
-
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
-
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
-
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
-
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
-
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="memberActivityImgBox">
-                                            <img src="../images/sub/member_activity_img02.jpg" alt="">
-                                            <div class="memberActivityTextBox">
-                                                <div class="activityTextTopBox">
-                                                    <span class="category">
-                                                        의정 활동 사진
-                                                    </span>
-                                                    <span class="date">
-                                                        2025-03-31
-                                                    </span>
-                                                </div>
-                                                <h4>
-                                                    2025년 1분기 의용소방대장 합동 이·취임식
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">삭제</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">삭제</span>
-                                                </div>
-                                            </button>
-
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">수정</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">수정</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <!-- //memberActivityImgList -->
-
-                                <nav class="paginationBox" aria-label="페이지 네비게이션">
-                                    <a href="#" class="pageLink pageLinkFirst" aria-label="첫 페이지로 이동">
-                                    </a>
-                                    <a href="#" class="pageLink pageLinkPrev" aria-label="이전 페이지로 이동">
-                                    </a>
-                                    <a href="#" class="pageLink active" aria-current="page">
-                                        1
-                                    </a>
-                                    <a href="#" class="pageLink">
-                                        2
-                                    </a>
-                                    <a href="#" class="pageLink">
-                                        3
-                                    </a>
-                                    <a href="#" class="pageLink">
-                                        4
-                                    </a>
-                                    <a href="#" class="pageLink">
-                                        5
-                                    </a>
-                                    <a href="#" class="pageLink pageLinkNext" aria-label="다음 페이지로 이동">
-                                    </a>
-                                    <a href="#" class="pageLink pageLinkLast" aria-label="마지막 페이지로 이동">
-                                    </a>
-                                </nav>
-                                <!-- //paginationBox -->
+                                </div>
+                                <!-- //boardWriteBox -->
 
                                 <div class="btnBox">
+                                    <button type="button" class="btn btnSecondary btnNegative">
+                                        <div class="slideText">
+                                            <span class="slideTextItem slideTextPrimary">취소</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">취소</span>
+                                        </div>
+                                    </button>
+
                                     <button type="button" class="btn btnPrimary btnPositive">
                                         <div class="slideText">
                                             <span class="slideTextItem slideTextPrimary">등록</span>
