@@ -584,18 +584,6 @@
 #memberActivityWrap h3{display: flex; align-items: flex-end; margin-bottom: var(--spacing-lm); color: var(--gray-900); font-weight: var(--bold); font-size: var(--H1); gap: 0 var(--spacing-s);}
 #memberActivityWrap h3 .live{display: inline-flex; align-items: center; gap: 0 var(--spacing-2xs); padding: var(--spacing-xs); min-width: 54px; min-height: 30px; position: relative; font-size: var(--font-size-s); font-weight: var(--semi-bold); color: var(--gray-600); border-radius: var(--radius-xs); background-color: var(--gray-100);}
 #memberActivityWrap h3 .live::before{content: ''; width: 6px; height: 6px; border-radius: var(--radius-xs); background-color: var(--primary-500);}
-#memberActivityWrap .memberActivityImgList{margin-bottom: var(--spacing-2xl); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-m);}
-#memberActivityWrap .memberActivityImgList li{text-align: right;}
-#memberActivityWrap .memberActivityImgList li .memberActivityImgBox{position: relative; height: 0; padding-top: 55%; border-radius: var(--radius-m); overflow: hidden; } 
-#memberActivityWrap .memberActivityImgList li .memberActivityImgBox::after{content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 128px; background: linear-gradient(
-        to bottom,rgba(0, 0, 0, 0) 0%,rgba(30, 43, 55, 0.70) 40%,rgba(30, 43, 55, 0.96) 100%
-    ); backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(1px);}
-#memberActivityWrap .memberActivityImgList li .memberActivityImgBox img{position: absolute; top:0; left:0; right:0; bottom: 0; height: 100%; object-fit: cover;}
-#memberActivityWrap .memberActivityImgList li .memberActivityTextBox{position: absolute; left:32px; bottom: 32px; right: 32px; z-index: 9; text-align: left;}
-#memberActivityWrap .memberActivityImgList li .memberActivityTextBox .date{color: var(--white); font-weight: var(--bold); font-size: var(--font-size-s);}
-#memberActivityWrap .memberActivityImgList li .memberActivityTextBox .category{padding: var(--spacing-2xs) var(--spacing-xs); color: var(--primary-700); background-color: var(--primary-50); border: 1px solid var(--primary-200); border-radius: 0 0 0 var(--radius-xs); font-weight: var(--semi-bold); font-size: var(--font-size-xs);}
-#memberActivityWrap .memberActivityImgList li .memberActivityTextBox h4{font-size: var(--font-size-xxxl); font-weight: var(--bold); color: var(--white); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-#memberActivityWrap .memberActivityImgList li .activityTextTopBox{margin-bottom: var(--spacing-xs); display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs);} 
 #memberActivityWrap .viewLinkBox{margin-top: var(--spacing-s); display: inline-block; padding: var(--spacing-xs) var(--spacing-s); background-color: var(--gray-100); border-radius: var(--radius-s); transition: all .3s;}
 #memberActivityWrap .memberActivityList{display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-2xl); text-align: left;}
 #memberActivityWrap .memberActivityList li .category{display: inline-block; margin-bottom: var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs);
@@ -632,9 +620,7 @@
 
   #memberActivityWrap{border: 0; border-radius: 0;}
   #memberActivityWrap h3{ margin-bottom: var(--spacing-m);}
-  #memberActivityWrap .memberActivityImgList li .memberActivityTextBox h4{font-size: var(--font-size-l);}
   #memberActivityWrap .memberActivityList{gap: var(--spacing-lm);}
-  #memberActivityWrap .memberActivityImgList li .memberActivityImgBox{padding-top: 62.4%;}
 
   #memberIntroduceWrap{padding: var(--spacing-lm) 0 var(--spacing-lm);}
   #memberIntroduceWrap .memberIntroduceBox{flex-direction: column; gap: var(--spacing-3xl) 0;}
@@ -648,18 +634,13 @@
 
 @media (max-width: 768px){
 
-  #memberActivityWrap .memberActivityList,
-  #memberActivityWrap .memberActivityImgList{grid-template-columns: 1fr;}
+  #memberActivityWrap .memberActivityList{grid-template-columns: 1fr;}
 
 }
 
 @media (max-width: 480px){
 
-  #memberActivityWrap .memberActivityImgList li .memberActivityImgBox{padding-top: 68.4%;}
-  #memberActivityWrap .memberActivityListBox,
-  #memberActivityWrap .memberActivityImgList li{text-align: center;}
-  #memberActivityWrap .memberActivityImgList li .memberActivityTextBox{left: 24px; right: 24px; bottom: 24px;}
-
+  #memberActivityWrap .memberActivityListBox{text-align: center;}
   #memberIntroduceWrap .memberIntroTit h3{font-size: var(--font-size-xxxl);}
   #memberIntroduceWrap .memberIntroInfoBox{flex-wrap: wrap; width: 100%;}
   #memberIntroduceWrap .memberIntroInfoBox .box{flex: 0 0 calc((100% - var(--spacing-xs)) / 2); padding: var(--spacing-s); text-align: left;}

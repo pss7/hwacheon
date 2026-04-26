@@ -2512,4 +2512,9 @@ input::placeholder{color: var(--gray-600);}
 }
 
  /* 의원누리집 - 발의의안 */
-  #wrap.memberWrap .councilActivityList{padding: 0; height: auto;}
+#wrap.memberWrap .councilActivityList{padding: 0; height: auto;}
+
+/* 의원누리집 - 전자회의록 */
+#wrap.memberWrap .meetingVideoListBox .memberActivityImgList{gap: var(--spacing-lm) var(--spacing-s);}
+#wrap.memberWrap .meetingVideoListBox .memberActivityImgList li .btnBox{margin: var(--spacing-xs) 0 0; gap: var(--spacing-2xs);}
+#wrap.memberWrap .meetingVideoListBox .memberActivityImgList li .btnBox .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
