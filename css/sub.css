@@ -46,6 +46,7 @@ main{flex: 1;}
 .mt20{margin-top: 20px;}
 .mb10{margin-bottom: 10px;}
 .mb20{margin-bottom: 20px;}
+.mb40{margin-bottom: 40px;}
 
 /* 공통 - 불릿 */
 .bulletDot > li{position: relative; padding-left: var(--spacing-ms);}
@@ -1445,7 +1446,7 @@ main{flex: 1;}
 .searchBox{position: relative; display: flex; align-items: center; gap: 0 var(--spacing-s); max-width: 540px; margin: 0 auto; height: 72px; overflow: hidden; background-color: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius-s);}
 .searchBox .searchBtn{width: 40px; height: 100%; position: absolute; top: 50%; transform: translateY(-50%); right:16px; background: url(../images/sub/search_icon.svg)no-repeat center / contain;}
 .searchBox .searchSelectBox{height: 100%;}
-.searchBox .searchSelectBox #searchSelect{flex-shrink: 0; padding-left: var(--spacing-m); width: 98px; height: 100%; color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-m);  cursor: pointer; border: 0;}
+.searchBox .searchSelectBox #searchSelect{flex-shrink: 0; padding-left: var(--spacing-m); width: 98px; height: 100%; color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-m);  cursor: pointer; border: 0; background-color: var(--white);}
 .searchBox .inputBox{flex: 1; height: 100%;}
 .searchBox #search{padding-right:  var(--spacing-2xl); width: 100%; height: 100%; font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400); border: 0;}
 .searchBox #search::placeholder{color: var(--gray-400);}
@@ -2385,7 +2386,7 @@ input::placeholder{color: var(--gray-600);}
 #wrap.memberWrap #contentWrap .contentRightBox .contentBox{padding-top: var(--spacing-2xl);}
 #wrap.memberWrap #contentWrap .contentRightBox .container{padding: 0;}
 #wrap.memberWrap #contentWrap aside{min-width: 240px; border: 0;}
-#wrap.memberWrap #contentWrap{padding: var(--spacing-lm) 0 var(--spacing-5xl); gap:0; background: url(../images/sub/bg02.png)no-repeat center top / cover;}
+#wrap.memberWrap #contentWrap{padding: var(--spacing-lm) 0 var(--spacing-5xl); gap:0; background: url(../images/sub/bg02.png)no-repeat center top / contain;}
 #wrap.memberWrap #contentWrap aside .depth01 li{margin-bottom: var(--spacing-ml);}
 #wrap.memberWrap #contentWrap aside .depth01 li h2 a{font-size: var(--Subtitle-1); font-weight: var(--medium); text-shadow: none!important; color: var(--gray-600);}
 #wrap.memberWrap #contentWrap aside .depth01 li h2 a.active{color: var(--gray-900); font-weight: var(--bold);}
@@ -2511,4 +2512,4 @@ input::placeholder{color: var(--gray-600);}
 }
 
  /* 의원누리집 - 발의의안 */
-  #wrap.memberWrap .memberBillBox .councilActivityList{padding: 0; height: auto;}
+  #wrap.memberWrap .councilActivityList{padding: 0; height: auto;}
