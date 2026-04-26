@@ -15,7 +15,7 @@ main{flex: 1;}
 
 /* 공통 - 선택 */
 .toggleBtnBox{position: relative;}
-.toggleBtn{display: flex;   align-items: center; justify-content: space-between; padding: 0 var(--spacing-xs) 0 var(--spacing-s); min-width: 112px; height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
+.toggleBtn{display: flex; align-items: center; justify-content: space-between; padding: 0 var(--spacing-xs) 0 var(--spacing-s); min-width: 112px; height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
 .toggleBtn span{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
 .toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain; border: 1px solid var(--gray-100); border-radius: var(--radius-l); transition: all .3s;}
 .toggleBtn:hover:after{background-color: var(--gray-100);}
@@ -2428,28 +2428,87 @@ input::placeholder{color: var(--gray-600);}
 }
 
  /* 의원누리집 - 인사말 */ 
-.memberGreetingBox p{color: var(--gray-600); font-size: var(--font-size-xl); line-height: 1.6;}
-.memberGreetingBox p strong{color: var(--gray-900); font-size: var(--font-size-xxxl);}
-.memberGreetingBox .memberIntroDetailBox{flex-shrink: 0; width: 440px;}
-.memberGreetingBox .memberGreetingLayoutBox{display: flex; gap: 0 352px; justify-content: space-between;}
+#wrap.memberWrap .memberGreetingBox p{color: var(--gray-600); font-size: var(--font-size-xl); line-height: 1.6;}
+#wrap.memberWrap .memberGreetingBox p strong{color: var(--gray-900); font-size: var(--font-size-xxxl);}
+#wrap.memberWrap .memberGreetingBox .memberIntroDetailBox{flex-shrink: 0; width: 440px;}
+#wrap.memberWrap .memberGreetingBox .memberGreetingLayoutBox{display: flex; gap: 0 352px; justify-content: space-between;}
 
 @media (max-width: 1440px){
 
-  .memberGreetingBox .memberGreetingLayoutBox{gap: 0 var(--spacing-2xl);}
+  #wrap.memberWrap .memberGreetingBox .memberGreetingLayoutBox{gap: 0 var(--spacing-2xl);}
 
 }
 
 @media (max-width: 1024px){
 
-  .memberGreetingBox .memberGreetingLayoutBox{flex-direction: column; align-items: center; gap: var(--spacing-2xl) 0;}
-  .memberGreetingBox .memberIntroDetailBox{width: 100%;}
-  .memberGreetingBox .memberIntroImgBox{margin-bottom: -62px; height: 516px;}
+  #wrap.memberWrap .memberGreetingBox .memberGreetingLayoutBox{flex-direction: column; align-items: center; gap: var(--spacing-2xl) 0;}
+  #wrap.memberWrap .memberGreetingBox .memberIntroDetailBox{width: 100%;}
+  #wrap.memberWrap .memberGreetingBox .memberIntroImgBox{margin-bottom: -62px; height: 516px;}
 
 }
 
 @media (max-width: 480px){
   
-  .memberGreetingBox p{font-size: var(--font-size-m);}
-  .memberGreetingBox .memberIntroImgBox{margin: 0; height: 315px;}
+  #wrap.memberWrap .memberGreetingBox p{font-size: var(--font-size-m);}
+  #wrap.memberWrap .memberGreetingBox .memberIntroImgBox{margin: 0; height: 315px;}
 
 }
+
+ /* 의원누리집 - 프로필 */
+#wrap.memberWrap .memberProfileBox .memberProfileTopBox{display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-ms); background: linear-gradient(to right, #FFFEFD, #E1D8CD, #FFFFFF);}
+#wrap.memberWrap .memberProfileBox .memberCouncilTabs{display: flex; gap: var(--spacing-xs); }
+#wrap.memberWrap .memberProfileBox .memberCouncilTabs .councilTab{display: flex; align-items: center; justify-content: center; width: 38px; height: 32px; border-radius: var(--radius-xs); background-color: var(--white); font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-400);}
+#wrap.memberWrap .memberProfileBox .memberCouncilTabs .councilTab:hover{background-color: var(--gray-300); color: var(--gray-600);}
+#wrap.memberWrap .memberProfileBox .memberCouncilTabs .councilTab.active{background-color: var(--secondary-900); color: var(--white);}
+#wrap.memberWrap .memberProfileBox .memberCareerBox{margin-bottom: var(--spacing-lm); padding: var(--spacing-lm) var(--spacing-m); border-radius: 0 0 var(--radius-l) var(--radius-l); background-color: var(--gray-50);}
+#wrap.memberWrap .memberProfileBox .memberCareerBox h5{width: 56px; flex-shrink: 0; color: var(--gray-900); font-weight: var(--bold); font-size: var(--body-1);}
+#wrap.memberWrap .memberProfileBox .memberCareerBox h4{margin-bottom: var(--spacing-s);}
+#wrap.memberWrap .memberProfileBox .memberCareerContent{display: flex; gap: var(--spacing-xs);}
+#wrap.memberWrap .memberProfileBox .memberCareerList li{margin-bottom: var(--spacing-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-2);}
+#wrap.memberWrap .memberProfileBox .memberCareerList li:last-child{margin-bottom: 0;}
+#wrap.memberWrap .memberProfileBox .memberProfileDetailBox{padding: var(--spacing-ml) var(--spacing-ms); display: flex; justify-content: center; align-items: center; gap: 0 var(--spacing-lm)}
+#wrap.memberWrap .memberProfileBox .memberProfileImgBox{flex-shrink: 0; width: 210px; height: 293px; border-radius: 160px; overflow: hidden; box-shadow: 10px 10px 40px rgba(0,0,0, .1); background: linear-gradient(to bottom, var(--gray-100), var(--gray-50));}
+#wrap.memberWrap .memberProfileBox .memberProfileImgBox img{height: 100%; object-fit: cover;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox{width: 240px;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileRole{margin-bottom: var(--spacing-xs); padding: var(--spacing-xs); display: inline-flex; align-items: center; justify-content: center; min-width: 57px; height: 33px; background-color: var(--gray-600); border-radius: var(--radius-s); color: var(--secondary-200); font-weight: var(--bold); font-size: var(--font-size-s);}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileNameBox{margin-bottom: var(--spacing-m); display: flex; align-items: center; gap: 0 var(--spacing-xs)}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileNameBox .name01{color: var(--gray-900); font-weight: var(--bold); font-size: var(--H4);}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileNameBox .name02{color: var(--gray-400); font-weight: var(--medium); font-size: var(--body-2); font-style: normal;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox dl{padding-left: 14px; position: relative; margin-bottom: var(--spacing-xs); display: flex; gap: var(--spacing-xs); align-items: center;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox dl::before{content: ''; position: absolute; top:7px; left:0; width: 6px; height: 6px; border-radius: var(--radius-2xs); background-color: var(--primary-500);}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox dl dt{width: 80px; flex-shrink: 0; color: var(--gray-600); font-weight: var(--bold); font-size: var(--body-2); text-align: left;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox dl dd{color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-2);}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileInfoBox{ margin: var(--spacing-ms) 0 var(--spacing-s);}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileInfoBox span{position: relative; padding-left: var(--spacing-ml); display: block; margin-bottom: var(--spacing-xs); font-size: var(--body-2); font-weight: var(--medium); color: var(--gray-600); text-align: left;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileInfoBox span::before{content: ''; position: absolute; left:0; width: 24px; height: 24px;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileInfoBox span.memberProfilePhone::before{ top:-2px; background: url(../images/sub/phone02.svg)no-repeat center / cover;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileInfoBox span.memberProfileEmail::before{ top:0; background: url(../images/sub/email.svg)no-repeat center / cover;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileInfoBox span a{font-size: var(--body-2); font-weight: var(--medium); color: var(--gray-600);}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileInfoBox span:last-child{margin-bottom: 0;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .attendanceRateBox{padding: var(--spacing-s); display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: var(--spacing-s); border-radius: var(--radius-s); background-color: var(--primary-900); line-height: 1;}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .attendanceRateBox span{color: var(--secondary-200); font-weight: var(--bold); font-size: var(--font-size-s);}
+#wrap.memberWrap .memberProfileBox .memberProfileTextBox .attendanceRateBox em{font-style: normal; color: var(--white); font-weight: var(--bold); font-size: var(--H6);}
+
+@media (max-width: 1024px){
+
+  #wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileNameBox .name01{font-size: var(--H5);}
+
+}
+
+@media (max-width: 768px){
+
+  #wrap.memberWrap .memberProfileBox .memberProfileDetailBox{padding: var(--spacing-ml) 0; flex-direction: column; gap: var(--spacing-m) 0;}
+  #wrap.memberWrap .memberProfileBox .memberProfileTextBox .memberProfileNameBox{justify-content: center;}
+  #wrap.memberWrap .memberProfileBox .memberProfileTextBox{width: 100%; text-align: center;}
+  #wrap.memberWrap .memberProfileBox .memberProfileTextBox dl dt{width: 50px;}
+
+}
+
+@media (max-width: 480px){
+
+  #wrap.memberWrap .memberProfileBox .memberProfileTopBox{flex-direction: column; gap: var(--spacing-s) 0;}
+
+}
+
+ /* 의원누리집 - 발의의안 */
+  #wrap.memberWrap .memberBillBox .councilActivityList{padding: 0; height: auto;}

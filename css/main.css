@@ -580,28 +580,6 @@
 #memberIntroduceWrap .activityTabListTopBox .activityTabList{display: flex; justify-content: space-between; gap: var(--spacing-ms);}
 #memberIntroduceWrap .activityTabListTopBox .activityTabList li .activityTabBtn{color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-xl);}
 #memberIntroduceWrap .activityTabListTopBox .activityTabList li .activityTabBtn.active{color: var(--gray-900);}
-.councilActivityListWrap{position: relative; overflow: hidden; border-radius: var(--radius-m); background-color: var(--white); border: 1px solid var(--gray-100); }
-.councilActivityListWrap::after{content: ''; opacity: 0; height: 64px; position: absolute; left:-20px; right:-20px; bottom: 0;  background: url(../images/main/bg03.png)no-repeat center bottom / cover;}
-.councilActivityListWrap.hasScroll:not(.scrollEnd)::after{opacity: 1;}
-.councilActivityListWrap .councilActivityList{height: 914px; padding: var(--spacing-lm); overflow-y: auto; }
-.councilActivityListWrap .councilActivityList li{margin-bottom: var(--spacing-2xl); display: flex; gap: 0 var(--spacing-lm);}
-.councilActivityListWrap .councilActivityList li:last-child{margin-bottom: 0;}
-.councilActivityListWrap .councilActivityList li .councilActivityImgBox{flex-shrink: 0;}
-.councilActivityListWrap .councilActivityList li .councilActivityImgBox .imgBox{margin-bottom:var(--spacing-xs); margin: 0 auto var(--spacing-xs); width: 48px; height: 48px; border-radius: var(--radius-m); background-color: var(--gray-100); overflow: hidden;}
-.councilActivityListWrap .councilActivityList li .councilActivityImgBox .imgBox img{height: 100%; object-fit: cover;}
-.councilActivityListWrap .councilActivityList li .councilActivityImgBox .name{display: block; margin-bottom: var(--spacing-s); text-align: center; color: var(--gray-600); font-weight: var(--bold); line-height: 1;}
-.councilActivityListWrap .councilActivityList li .councilActivityImgBox .date{display: block; color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-xs);}
-.councilActivityListWrap .councilActivityList li .councilActivityTextBox{overflow: hidden;}
-.councilActivityListWrap .councilActivityList li .councilActivityTextBox h4{margin-bottom: var(--spacing-xs); color: var(--gray-900); font-weight: var(--semi-bold); font-size: var(--font-size-m); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-.councilActivityListWrap .councilActivityList li .councilActivityTextBox p{color: var(--gray-600); font-size: var(--font-size-s);  display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.7;}
-.councilActivityListWrap .councilActivityList li .councilActivityTextBox .activityInfoBox{margin-bottom: var(--spacing-s); display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs);}
-.councilActivityListWrap .councilActivityList li .councilActivityTextBox .activityTitle{ padding: var(--spacing-xs); background-color: #EAEACB; color: #4E4E1D; border-radius: 0 0 var(--radius-s) 0; font-weight: var(--semi-bold); font-size: var(--font-size-xs);}
-.councilActivityListWrap .councilActivityList li .councilActivityTextBox .activityType{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
-.councilActivityListWrap .councilActivityList li .activityResultInfoBox{display: inline-flex; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--gray-100); border-radius: var(--radius-xs);}
-.councilActivityListWrap .councilActivityList li .activityResultInfoBox .activityResultLabel{flex-shrink: 0; display: flex; align-items: center; gap: 0 var(--spacing-2xs); font-size: var(--body-2); font-weight: var(--bold); color: var(--gray-600);}
-.councilActivityListWrap .councilActivityList li .activityResultInfoBox .activityResultLabel::before{content: ''; width: 6px; height: 6px; background-color: var(--primary-500); border-radius: var(--radius-2xs);}
-.councilActivityListWrap .councilActivityList li .activityResultInfoBox .activityResultStatus{font-size: var(--body-2); font-weight: var(--medium); color: var(--gray-600);}
-
 #memberActivityWrap{margin: 0 20px; padding: var(--spacing-3xl) 0 0; border-radius: var(--radius-xl)  var(--radius-xl) 0 0; border: 1px solid var(--gray-200); border-width: 1px 1px 0 1px; background-color: var(--white);}
 #memberActivityWrap h3{display: flex; align-items: flex-end; margin-bottom: var(--spacing-lm); color: var(--gray-900); font-weight: var(--bold); font-size: var(--H1); gap: 0 var(--spacing-s);}
 #memberActivityWrap h3 .live{display: inline-flex; align-items: center; gap: 0 var(--spacing-2xs); padding: var(--spacing-xs); min-width: 54px; min-height: 30px; position: relative; font-size: var(--font-size-s); font-weight: var(--semi-bold); color: var(--gray-600); border-radius: var(--radius-xs); background-color: var(--gray-100);}
@@ -647,9 +625,6 @@
   #memberIntroduceWrap .memberIntroDetailBox{flex-direction: column; gap: var(--spacing-s) 0;}
   #memberIntroduceWrap .memberIntroInfoBox .box strong{font-size: var(--font-size-l);}
   #memberIntroduceWrap .memberIntroInfoBox{display: flex; gap: var(--spacing-2xs);}
-
-  .councilActivityListWrap .councilActivityList{padding: var(--spacing-lm) var(--spacing-m);}
-  .councilActivityListWrap .councilActivityList li{gap: 0 var(--spacing-m);}
   
 }
 
@@ -669,8 +644,6 @@
   #memberIntroduceWrap .memberIntroLinkBox .memberIntroLink{padding: 0 var(--spacing-ms); max-width: none; flex: 1; justify-content: center;}
   #memberIntroduceWrap .memberIntroRightBox{width: 100%;}
   
-  .councilActivityListWrap .councilActivityList{height: 475px;}
-
 }
 
 @media (max-width: 768px){
@@ -698,9 +671,5 @@
   #memberIntroduceWrap .activityTabListTopBox{flex-direction: column; gap: var(--spacing-ms) 0;}
   #memberIntroduceWrap .activityTabListTopBox .activityTabList{gap: 0 var(--spacing-s)}
   #memberIntroduceWrap .activityTabListTopBox .activityTabList li .activityTabBtn{ font-size: var(--font-size-m);}
-
-  .councilActivityListWrap .councilActivityList{padding: var(--spacing-lm) var(--spacing-s);}
-  .councilActivityListWrap .councilActivityList li .councilActivityTextBox .activityInfoBox{flex-direction: column; gap: var(--spacing-xs) 0; align-items: flex-start;}
-  .councilActivityListWrap .councilActivityList li .councilActivityTextBox h4{font-size: var(--font-size-s);}
 
 }

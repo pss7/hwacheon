@@ -529,18 +529,42 @@ body{height: 100%;}
 .memberIntroTextBox .topBox .bar{width: 28px; height: 36px; background: url(../images/main/bar_icon.svg)no-repeat center / contain;}
 .memberIntroTextBox .topBox span{font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-600); line-height: 1.5;}
 .memberIntroTextBox .topBox span img{width: 18px; margin-bottom: var(--radius-s);}
+.councilActivityListWrap{position: relative; overflow: hidden; border-radius: var(--radius-m); background-color: var(--white); border: 1px solid var(--gray-100); }
+.councilActivityListWrap::after{content: ''; opacity: 0; height: 64px; position: absolute; left:-20px; right:-20px; bottom: 0;  background: url(../images/main/bg03.png)no-repeat center bottom / cover;}
+.councilActivityListWrap.hasScroll:not(.scrollEnd)::after{opacity: 1;}
+.councilActivityList{height: 914px; padding: var(--spacing-lm); overflow-y: auto; }
+.councilActivityList li{margin-bottom: var(--spacing-2xl); display: flex; gap: 0 var(--spacing-lm);}
+.councilActivityList li:last-child{margin-bottom: 0;}
+.councilActivityList li .councilActivityImgBox{flex-shrink: 0;}
+.councilActivityList li .councilActivityImgBox .imgBox{margin-bottom:var(--spacing-xs); margin: 0 auto var(--spacing-xs); width: 48px; height: 48px; border-radius: var(--radius-m); background-color: var(--gray-100); overflow: hidden;}
+.councilActivityList li .councilActivityImgBox .imgBox img{height: 100%; object-fit: cover;}
+.councilActivityList li .councilActivityImgBox .name{display: block; margin-bottom: var(--spacing-s); text-align: center; color: var(--gray-600); font-weight: var(--bold); line-height: 1;}
+.councilActivityList li .councilActivityImgBox .date{display: block; color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-xs);}
+.councilActivityList li .councilActivityTextBox{overflow: hidden;}
+.councilActivityList li .councilActivityTextBox h4{margin-bottom: var(--spacing-xs); color: var(--gray-900); font-weight: var(--semi-bold); font-size: var(--font-size-m); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.councilActivityList li .councilActivityTextBox p{color: var(--gray-600); font-size: var(--font-size-s);  display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.7;}
+.councilActivityList li .councilActivityTextBox .activityInfoBox{margin-bottom: var(--spacing-s); display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.councilActivityList li .councilActivityTextBox .activityTitle{ padding: var(--spacing-xs); background-color: #EAEACB; color: #4E4E1D; border-radius: 0 0 var(--radius-s) 0; font-weight: var(--semi-bold); font-size: var(--font-size-xs);}
+.councilActivityList li .councilActivityTextBox .activityType{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
+.councilActivityList li .activityResultInfoBox{display: inline-flex; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--gray-100); border-radius: var(--radius-xs);}
+.councilActivityList li .activityResultInfoBox .activityResultLabel{flex-shrink: 0; display: flex; align-items: center; gap: 0 var(--spacing-2xs); font-size: var(--body-2); font-weight: var(--bold); color: var(--gray-600);}
+.councilActivityList li .activityResultInfoBox .activityResultLabel::before{content: ''; width: 6px; height: 6px; background-color: var(--primary-500); border-radius: var(--radius-2xs);}
+.councilActivityList li .activityResultInfoBox .activityResultStatus{font-size: var(--body-2); font-weight: var(--medium); color: var(--gray-600);}
 
 @media (max-width: 1280px){
 
- 
   .memberIntroImgBox{width: auto;}
+
+  .councilActivityList{padding: var(--spacing-lm) var(--spacing-m);}
+  .councilActivityList li{gap: 0 var(--spacing-m);}
 
 }
 
 @media (max-width: 1024px){
-
  
   .memberIntroImgBox{margin-bottom: -27px; width: 100%; height: 440px;}
+
+  .councilActivityList{height: 475px;}
 
 }
 
@@ -549,5 +573,9 @@ body{height: 100%;}
   .memberIntroImgBox{height: 347px;}
   .memberIntroTextBox{max-width: none;}
   .memberIntroImgBox .imgBox{height: 267px;}
+
+  .councilActivityList{padding: var(--spacing-lm) var(--spacing-s);}
+  .councilActivityList li .councilActivityTextBox .activityInfoBox{flex-direction: column; gap: var(--spacing-xs) 0; align-items: flex-start;}
+  .councilActivityList li .councilActivityTextBox h4{font-size: var(--font-size-s);}
 
 }
