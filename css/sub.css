@@ -1446,8 +1446,9 @@ main{flex: 1;}
 /* 모달 */
 #memberModalWrap{max-width: 560px; width: 90%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: var(--white); border-radius: var(--spacing-lm); z-index: 9999; overflow: hidden;}
 .memberModalBox .memberTermList{position: relative; padding: var(--spacing-s) var(--spacing-ms); display: flex; justify-content: center; flex-wrap: wrap; gap: 0 var(--spacing-xs); background: linear-gradient(to right, #FFFEFD, #E1D8CD, #FFFFFF);}
-.memberModalBox .memberTermList li{padding: var(--spacing-xs); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s);}
-.memberModalBox .memberTermList li.current{background-color: var(--secondary-900); color: var(--white);}
+.memberModalBox .memberTermList li .memberTermBtn{padding: var(--spacing-xs); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-400); font-weight: var(--bold); font-size: var(--font-size-s);}
+.memberModalBox .memberTermList li .memberTermBtn:hover{background-color: var(--gray-300); color: var(--gray-600);}
+.memberModalBox .memberTermList li .memberTermBtn.active{background-color: var(--secondary-900); color: var(--white);}
 .memberModalBox .profileLayoutBox{padding: var(--spacing-ml) var(--spacing-m); display: flex; gap: 0 var(--spacing-lm);}
 .memberModalBox .memberProfileBox .memberImgBox{flex-shrink: 0; width: 210px; height: 293px; border-radius: 160px; overflow: hidden; box-shadow: 10px 10px 40px rgba(0,0,0,.1); background: linear-gradient(to bottom, #E8EBED, #F7F8F9);}
 .memberModalBox .memberProfileBox .memberImgBox img{height: 100%; object-fit: cover;}
@@ -1479,10 +1480,16 @@ main{flex: 1;}
 .memberModalBox .backgroundBox .historyBox .historyList{flex: 1; height: 152px; overflow-y: auto;}
 .memberModalBox .backgroundBox .historyBox .historyList li{margin-bottom: var(--spacing-xs); color: var(--gray-600); font-size: var(--body-2); font-weight: var(--medium);} 
 .memberModalBox .backgroundBox .historyBox .historyList li:last-child{margin-bottom: 0;}
+
+
 .memberModalBox .modalFooterBox{padding: 12px var(--spacing-ms); display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap:var(--spacing-xs); background-color: #C7CACD;}
 .memberModalBox .modalFooterBox .modalBtn{min-width: 96px; min-height: 32px; line-height: 32px; padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--gray-600); border-radius: var(--radius-s); text-align: center;}
 .memberModalBox .modalFooterBox .modalBtn span{ font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); border-radius: var(--radius-xs);}
 .memberModalBox .modalFooterBox .modalBtn:hover span{background-color: var(--gray-500);}
+
+
+
+
 
 @media (max-width: 576px){
 
@@ -2531,10 +2538,10 @@ input::placeholder{color: var(--gray-600);}
 
  /* 의원누리집 - 프로필 */
 #wrap.memberWrap .memberProfileBox .memberProfileTopBox{display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-ms); background: linear-gradient(to right, #FFFEFD, #E1D8CD, #FFFFFF);}
-#wrap.memberWrap .memberProfileBox .memberCouncilTabs{display: flex; gap: var(--spacing-xs); }
-#wrap.memberWrap .memberProfileBox .memberCouncilTabs .councilTab{display: flex; align-items: center; justify-content: center; width: 38px; height: 32px; border-radius: var(--radius-xs); background-color: var(--white); font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-400);}
-#wrap.memberWrap .memberProfileBox .memberCouncilTabs .councilTab:hover{background-color: var(--gray-300); color: var(--gray-600);}
-#wrap.memberWrap .memberProfileBox .memberCouncilTabs .councilTab.active{background-color: var(--secondary-900); color: var(--white);}
+.memberCouncilTabs{display: flex; gap: var(--spacing-xs); }
+.memberCouncilTabs .councilTab{display: flex; align-items: center; justify-content: center; width: 38px; height: 32px; border-radius: var(--radius-xs); background-color: var(--white); font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-400);}
+.memberCouncilTabs .councilTab:hover{background-color: var(--gray-300); color: var(--gray-600);}
+.memberCouncilTabs .councilTab.active{background-color: var(--secondary-900); color: var(--white);}
 #wrap.memberWrap .memberProfileBox .memberCareerBox{margin-bottom: var(--spacing-lm); padding: var(--spacing-lm) var(--spacing-m); border-radius: 0 0 var(--radius-l) var(--radius-l); background-color: var(--gray-50);}
 #wrap.memberWrap .memberProfileBox .memberCareerBox h5{width: 56px; flex-shrink: 0; color: var(--gray-900); font-weight: var(--bold); font-size: var(--body-1);}
 #wrap.memberWrap .memberProfileBox .memberCareerBox h4{margin-bottom: var(--spacing-s);}
