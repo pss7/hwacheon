@@ -544,8 +544,9 @@ body{height: 100%;}
 
   /* 의원누리집 - 공통 */ 
 .memberIntroImgBox{margin-bottom: -62px; display: flex; align-items: center; justify-content: center; width: 440px; height: 516px; border-radius: var(--radius-m); background: url(../images/main/bg.jpg) no-repeat center / cover; box-shadow: inset 0 4px 40px rgba(247, 248, 249, 1);} 
-.memberIntroImgBox .imgBox{max-width: 269px; height: 360px; background-color: var(--white); border-radius: var(--radius-m) var(--radius-m) var(--radius-l) var(--radius-m); overflow: hidden;} 
+.memberIntroImgBox .imgBox{position: relative; max-width: 269px; height: 360px; background-color: var(--white); border-radius: var(--radius-m) var(--radius-m) var(--radius-l) var(--radius-m); overflow: hidden;} 
 .memberIntroImgBox .imgBox img{height: 100%; object-fit: cover;}
+.memberIntroImgBox .imgBox .politicalParty{position: absolute; bottom: 20px; right:20px;}
 .memberIntroTextBox{position: relative; max-width: 316px; margin: 0 auto; padding: var(--spacing-ml) var(--spacing-m); height: 139px; background: linear-gradient(to bottom, var(--white) 70%, rgba(255,255,255,0) 100%);
    border-radius: var(--radius-l) var(--radius-l) 0 0; z-index: 99;}
 .memberIntroTextBox .textBox{margin-bottom: var(--spacing-ml);}
