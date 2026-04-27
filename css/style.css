@@ -69,6 +69,25 @@ body{height: 100%;}
 .slideText:hover .slideTextPrimary{transform: translateY(100%);}
 .slideText:hover .slideTextClone{transform: translateY(0);}
 
+.hoverSlide:not(.active){padding: var(--spacing-xs); position: relative; line-height: 1.2; font-size: var(--font-size-s); color: var(--gray-600); font-weight: var(--medium); border-radius: var(--radius-xs); transition: background-color .3s; overflow: hidden;}
+.hoverSlide:not(.active) span{display: block;}
+.hoverSlide:not(.active)::before{content: attr(data-text); position: absolute; inset: 8px; transform: translateY(-150%); color: var(--gray-600); line-height: 1.2;}
+.hoverSlide:not(.active):hover{background-color: var(--gray-100);}
+.hoverSlide:not(.active):hover span{animation: textOutBounce .45s forwards;}
+.hoverSlide:not(.active):hover::before{animation: textInBounce .45s forwards;}
+
+@keyframes textOutBounce {
+  0%   { transform: translateY(0); }
+  70%  { transform: translateY(165%); }   
+  100% { transform: translateY(150%); }
+}
+
+@keyframes textInBounce {
+  0%   { transform: translateY(-150%); }
+  70%  { transform: translateY(12%); }  
+  100% { transform: translateY(0); }
+}
+
 /* 공통 - 버튼 */
 .btnArrowBox{display: flex; gap: 0 var(--spacing-xs);}
 .btnArrowBox .arrowBtn{width: 24px; height: 24px; transition: all .3s;}
@@ -81,7 +100,7 @@ body{height: 100%;}
 .viewLinkBox{display: flex; align-items: center; gap: 0 var(--spacing-s);}
 .viewLink{display: inline-flex; align-items: center; gap: 0 var(--spacing-xs); font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-600);}
 .viewLink::after{content: ''; margin-top: 1px; width: 24px; height: 24px; background: url(../images/main/plus_icon.svg)no-repeat center; transition: all .3s;}
-.viewLink:hover{font-weight: var(--bold);}
+.viewLink:hover{color: var(--gray-900);}
 .viewLink:hover::after{transform: rotate(-90deg); background: url(../images/main/plus_icon02.svg)no-repeat center;}
 
 /* 공통 - dots */
@@ -226,7 +245,8 @@ body{height: 100%;}
 
   #mobileMenuBox .mobileModalBox{position: relative; max-width: 243px;width: 100%;}
   #mobileMenuBox .modalBox{top: 40px;}
-  #mobileMenuBox .mobileTopBox .mobileModalBtn{width: 100%; padding: 0 0 0 var(--spacing-s); height: 40px; display: flex; align-items: center; font-weight: var(--bold); font-size: var(--font-size-m); color: var(--white); border-radius: var(--spacing-xs); background:  url("../images/common/person_img.png") no-repeat bottom right, linear-gradient(to right, #50BEEF, #FB8D3E); line-height: normal;}
+  #mobileMenuBox .mobileTopBox .mobileModalBtn{width: 100%; padding: 0 0 0 var(--spacing-s); height: 40px; display: flex; align-items: center; font-weight: var(--bold); font-size: var(--font-size-m); color: var(--white); border-radius: var(--spacing-xs); background:  url("../images/common/person_img.png") no-repeat bottom right, linear-gradient(to right, #50BEEF, #FB8D3E); line-height: normal; border: 0;}
+  #mobileMenuBox .mobileTopBox .mobileModalBtn::after{display: none;}
   #mobileMenuBox .mobileAothBox{display: flex; align-items: center; gap: 0 var(--spacing-xs);}
   #mobileMenuBox .mobileAothBox p{font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white);}
   #mobileMenuBox .mobileAothBox .btn{padding: var(--spacing-2xs) var(--spacing-xs); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-600); background-color: var(--white); border-radius: var(--radius-2xs);}
@@ -500,6 +520,7 @@ body{height: 100%;}
   @media (max-width: 1280px){
 
       #wrap.memberWrap #mobileMenuBox{top: 129px;}
+      #wrap.memberWrap #mobileMenuBox .mobileDepth01{width: 100%;}
 
   }
 

@@ -50,7 +50,7 @@ $(function () {
   });
 
   //프린트
-  $('#contentWrap .utilBox .printerBtn').click(function (e) {
+  $('#contentWrap .utilBox .printBtn').click(function (e) {
     e.preventDefault();
     window.print();
   });
