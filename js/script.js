@@ -100,36 +100,6 @@ $(function () {
     return false;
   });
 
-  /* 상단으로 이동 */
-  $('#top').click(function () {
-    $('html, body').animate({
-      scrollTop: 0
-    },
-      500);
-    return false;
-  });
-
-  /* 스크롤 시 top 버튼 */
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('#top').fadeIn();
-    } else {
-      $('#top').fadeOut();
-    }
-  });
-
-  /* 헤더 - 모달 */
-  // $('#headerWrap .modalBtn').click(function () {
-  //   $(this).addClass('active');
-  //   $(this).next('.modalBox').addClass('active');
-  // });
-
-  // $('#headerWrap .closeBtn').click(function () {
-  //   $(this).parents('.modalBox').removeClass('active');
-  //   $('#headerWrap .modalBtn').removeClass('active');
-  //   $(this).parents('.modalBox').prev('.modalBtn').focus();
-  // });
-
   /* 헤더 - 화면 축소, 확대, 초기화 */
   $('.zoomIn').click(function () {
     if (scale < maxScale) {
@@ -182,6 +152,24 @@ $(function () {
   });
 
   $('.zoomTooltip').text(Math.round(scale * 100) + '%');
+
+  /* 상단으로 이동 */
+  $('#top').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    },
+      500);
+    return false;
+  });
+
+  /* 스크롤 시 top 버튼 */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#top').fadeIn();
+    } else {
+      $('#top').fadeOut();
+    }
+  });
 
   /* 푸터 */
   $('#footerWrap .selectBtn').click(function () {
