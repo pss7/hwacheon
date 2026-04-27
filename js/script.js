@@ -100,6 +100,24 @@ $(function () {
     return false;
   });
 
+  /* 상단으로 이동 */
+  $('#top').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    },
+      500);
+    return false;
+  });
+
+  /* 스크롤 시 top 버튼 */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#top').fadeIn();
+    } else {
+      $('#top').fadeOut();
+    }
+  });
+
   /* 헤더 - 모달 */
   // $('#headerWrap .modalBtn').click(function () {
   //   $(this).addClass('active');
