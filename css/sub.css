@@ -28,6 +28,16 @@ main{flex: 1;}
 .tabList li .tabBtn{padding: var(--spacing-xs) var(--spacing-s); background-color: var(--gray-100); border-radius: var(--radius-s); font-size: var(--Subtitle-2); background-color: var(--gray-100); font-weight: var(--bold); transition: all .3s;}
 .tabList li .tabBtn:hover{background-color: var(--gray-400); color: var(--white);}
 .tabList li .tabBtn.active{background-color: var(--primary-500); color: var(--white);}
+.tabList.tabListType02{gap: var(--spacing-m);}
+.tabList.tabListType02 li .tabBtn{padding: 0; font-size: var(--H4); color: var(--gray-400); background:0; transition: all .3s;}
+.tabList.tabListType02 li .tabBtn:hover{color: var(--primary-500);}
+.tabList.tabListType02 li .tabBtn.active{color: var(--gray-900);}
+
+@media (max-width: 1024px){
+
+  .tabList.tabListType02 li .tabBtn{font-size: var(--font-size-xxxl);}
+
+}
 
 /* 공통 - 제목 */
 .tit{font-size: var(--H4); font-weight: var(--bold); color: var(--gray-900);}
@@ -549,6 +559,57 @@ main{flex: 1;}
     width: calc((100% - var(--spacing-ms)) / 2);}
   .orgchartBox .orgChartList01 > li::after{left: calc((100% - var(--spacing-ms)) / 4);
     width: calc(((100% - var(--spacing-ms)) / 4) + var(--spacing-ms));}
+
+}
+
+/* 청사안내도 */ 
+.buildingMapBox h4{margin-bottom: var(--spacing-m);}
+.buildingMapBox .buildingMapTopBox{margin-bottom: var(--spacing-3xl); padding: var(--spacing-2xl) var(--spacing-ms) var( --spacing-lm ); border: 1px solid var(--gray-600); border-radius: var(--radius-m);}
+.buildingMapBox .buildingMapTopBox img{width: auto; max-width: 100%; margin: 0 auto var(--spacing-lm );}
+.buildingMapBox .buildingMapInfoBox{margin-bottom: var(--spacing-lm); display: flex; flex-wrap: wrap; gap: var(--spacing-m); justify-content: center;} 
+.buildingMapBox .buildingMapInfoBox .buildingMapInfo{display: flex; align-items: center; gap: var(--spacing-xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--body-2);}
+.buildingMapBox .buildingMapInfoBox .buildingMapInfo::before{content: '';}
+ .buildingMapBox .buildingMapInfoBox .buildingMapInfo.toilet::before{width: 86px; height: 28px; background: url(../images/sub/toilet.svg)no-repeat center;}
+.buildingMapBox .buildingMapInfoBox .buildingMapInfo.elevator::before{width: 28px; height: 28px; background: url(../images/sub/elevator.svg)no-repeat center;}
+.buildingMapBox .buildingMapInfoBox .buildingMapInfo.entrance::before{width: 24px; height: 12px; background: url(../images/sub/entrance.svg)no-repeat center;}
+.buildingMapBox .buildingMapTopBox .buildingMapInfoTextBox{text-align: center;}
+.buildingMapBox .buildingMapTopBox .buildingMapInfoText{display: inline-flex; gap: 0 var(--spacing-2xs); padding: var(--spacing-xs); color: var(--gray-900); font-size: var(--font-size-s); border-radius: var(--radius-s); border: 1px solid var(--gray-100); color: var(--gray-900); box-shadow: 0 4px 40px rgba(30, 43, 55, 0.1); font-family: 'RiaSans';}
+.buildingMapBox .buildingMapTopBox .buildingMapInfoText::before{content: ''; flex-shrink: 0; width: 20px; height: 20px; background: url(../images/sub/accent_icon.svg)no-repeat center;}
+.buildingMapBox .facilityInfoBox{padding-top: var(--spacing-s); border-top: 2px solid var(--gray-600);}
+.buildingMapBox .facilityInfoBox dl{margin-bottom: var(--spacing-m); padding: var(--spacing-s) 0; display: flex; gap: 0 var(--spacing-ms);}
+.buildingMapBox .facilityInfoBox dl dt{flex-shrink: 0; width: 148px; color: var(--gray-600); font-weight: var(--bold); font-size: var(--H6 );}
+.buildingMapBox .facilityInfoBox dl dd{position: relative; padding-left: var(--spacing-s); /*display: flex; gap: 0 6px;*/ color: var(--gray-600); font-size: var(--body-1);}
+.buildingMapBox .facilityInfoBox dl dd::before{content: ''; position: absolute; top:0; left:0; width: 12px; height: 24px; background: url(../images/sub/bullet_icon02.svg) no-repeat center;}
+.buildingMapBox .tabList{margin-bottom: var(--spacing-m);}
+.buildingMapBox .btnBox{justify-content: flex-start; margin: var(--spacing-xs) 0 0;}
+.buildingMapBox .btn{padding: var(--spacing-xs) var(--spacing-s); height: 36px; line-height: 36px; font-size: var(--font-size-s);}
+.buildingMapBox .facilityInfoText{display: inline-block; margin: var(--spacing-xs) 0 0; padding: var(--spacing-2xs) var(--spacing-xs); font-weight: var(--semi-bold); color: var(--gray-600); font-size: var(--font-size-s ); background-color: var(--gray-100); border-radius: var(--radius-xs);}
+.buildingMapBox .buildingMapZoomArea{overflow: hidden;}
+.buildingMapBox .buildingMapImg{cursor: grab;}
+
+@media (max-width: 1024px){
+
+  .buildingMapBox h4{margin-bottom: var(--spacing-s);}
+  .buildingMapBox .buildingMapTopBox img{margin: 0 auto var(--spacing-m);}
+  .buildingMapBox .buildingMapInfoBox{margin-bottom: var(--spacing-m);}
+
+}
+
+@media (max-width: 768px){
+
+  .buildingMapBox .buildingMapTopBox{margin-bottom: var(--spacing-2xl); padding: var(--spacing-lm) var(--spacing-ms);}
+  .buildingMapBox .facilityInfoBox dl{flex-direction: column; align-items: flex-start;}
+  .buildingMapBox .facilityInfoBox dl dt{width: 100%; margin-bottom: var(--spacing-xs); font-size: var(--Subtitle-1);}
+
+}
+
+@media (max-width: 480px){
+
+  .buildingMapBox .buildingMapTopBox{padding: var(--spacing-m) var(--spacing-ms);}
+  .buildingMapBox .buildingMapTopBox .buildingMapInfoText,
+  .buildingMapBox .buildingMapInfoBox .buildingMapInfo{font-size: var(--font-size-xs);}
+  .buildingMapBox .facilityInfoBox dl dd{font-size: var(--body-2);}
+  .buildingMapBox .facilityInfoBox dl dd::before{margin-top: -3px;}
 
 }
 

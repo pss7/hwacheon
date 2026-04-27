@@ -89,13 +89,15 @@ $(function () {
     $(this).find('li').first().children('.tabBtn').attr('aria-selected', 'true');
   });
 
-  // 상단 탭
-  $('.currentMemberBox .tabList li').click(function () {
-    $('.currentMemberBox .tabList li').children().removeClass('active').attr('aria-selected', 'false');
+  // 공통 - 탭
+  $('.tabContentBox').hide();
+  $('.tabContentBox').first().show();
+  $('.tabList li').click(function () {
+    $('.tabList li').children().removeClass('active').attr('aria-selected', 'false');
     $(this).children().addClass('active').attr('aria-selected', 'true');
 
-    $('.currentMemberBox .tabContentBox').hide();
-    $('.currentMemberBox .tabContentBox').eq($(this).index()).show();
+    $('.tabContentBox').hide();
+    $('.tabContentBox').eq($(this).index()).show();
   });
 
   // 내부 탭
