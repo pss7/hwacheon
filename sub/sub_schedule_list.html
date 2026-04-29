@@ -1176,15 +1176,16 @@
                         <!-- 회기별일정 콘텐츠 -->
                         <div class="scheduleListBox">
                             <div class="container">
+
                                 <div class="scheduleTabBox">
                                     <ul class="tabList scheduleTabList">
                                         <li>
-                                            <button type="button" class="tabBtn calendarBtn active">
+                                            <button type="button" class="tabBtn calendarBtn">
                                                 달력
                                             </button>
                                         </li>
                                         <li>
-                                            <button type="button" class="tabBtn listBtn">
+                                            <button type="button" class="tabBtn listBtn active">
                                                 목록
                                             </button>
                                         </li>
@@ -1205,7 +1206,7 @@
                                     <!-- //viewLinkBox-->
 
                                 </div>
-                                <!-- //schedulescheduleTabBox -->
+                                <!-- //scheduleTabBox -->
 
                                 <!-- 클래스 색상 적용 
                                  본회의 > plenary
@@ -1214,396 +1215,336 @@
                                  행정사무감사특별위 > auditSpecial
                                 -->
 
-                                <div class="calendarWrap">
-
-                                    <!-- //왼쪽영역 -->
-                                    <section class="calendarScheduleBox">
-                                        <span class="date">03.17</span>
-
-                                        <h4>
-                                            제295회 임시회
-                                        </h4>
-
-                                        <ul class="calendarScheduleList">
-                                            <li>
-                                                <span class="time">10:00</span>
-                                                <span class="category plenary">본회의</span>
-                                            </li>
-                                            <li>
-                                                <span class="time">13:00</span>
-                                                <span class="category budgetSpecial">예산결산특별위원회</span>
-                                            </li>
-                                            <li>
-                                                <span class="time">15:00</span>
-                                                <span class="category ordinanceSpecial">조례등의안심사특별위</span>
-                                            </li>
-                                            <li>
-                                                <span class="time">17:00</span>
-                                                <span class="category auditSpecial">행정사무감사특별위</span>
-                                            </li>
-                                        </ul>
-                                        <!-- //calendarScheduleList -->
-
-                                        <div class="btnBox">
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">자세히보기</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">자세히보기</span>
-                                                </div>
-                                            </button>
-                                            <!-- //btn -->
-
-                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                <div class="slideText">
-                                                    <span class="slideTextItem slideTextPrimary">등록</span>
-                                                    <span class="slideTextItem slideTextClone"
-                                                        aria-hidden="true">등록</span>
-                                                </div>
-                                            </button>
-                                            <!-- //btn -->
-
+                                <div class="searchWrap">
+                                    <div class="searchBox">
+                                        <div class="searchSelectBox">
+                                            <label for="searchSelect" class="blind">
+                                                선택
+                                            </label>
+                                            <select id="searchSelect">
+                                                <option value="">
+                                                    전체
+                                                </option>
+                                            </select>
                                         </div>
-                                        <!-- //btnBox -->
-
-                                        <!-- 내용 없을 경우 
-                                            <div class="scheduleEmptyBox">
-                                                <div class="scheduleEmptyContentBox">
-                                                    <p class="scheduleEmptyTitle">등록된 내용이 없어요</p>
-                                                    <p class="scheduleEmptyText">새로운 정보가 준비 중이에요</p>
-                                                </div>
-                                            </div>
-                                            -->
-                                        <!-- //scheduleEmptyBox -->
-
-                                    </section>
-                                    <!-- //calendarScheduleBox -->
-
-                                    <!-- //오른쪽영역 -->
-                                    <section class="calendarBox">
-                                        <header class="calendarHeader">
-                                            <button type="button" class="calendarBtn calendarPrev"
-                                                aria-label="이전달"></button>
-                                            <h4>2026.4</h4>
-                                            <button type="button" class="calendarBtn calendarNext"
-                                                aria-label="다음달"></button>
-                                        </header>
-
-                                        <div class="calendarWeek">
-                                            <div class="week sun">일</div>
-                                            <div class="week">월</div>
-                                            <div class="week">화</div>
-                                            <div class="week">수</div>
-                                            <div class="week">목</div>
-                                            <div class="week">금</div>
-                                            <div class="week sat">토</div>
+                                        <span class="bar"></span>
+                                        <div class="inputBox">
+                                            <input id="search" type="text" placeholder="검색어를 입력하세요.">
+                                            <label for="search" class="blind">검색어입력</label>
                                         </div>
-                                        <!-- //calendarWeek -->
-
-                                        <div class="calendarGrid">
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sun disabled" disabled="">
-                                                    <span class="date">30</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn disabled" disabled="">
-                                                    <span class="date">31</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn hasSchedule">
-                                                    <span class="date">1</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                    <span class="scheduleDots" aria-hidden="true">
-                                                        <span class="scheduleDot plenary"></span>
-                                                        <span class="scheduleDot budgetSpecial"></span>
-                                                        <span class="scheduleDot ordinanceSpecial"></span>
-                                                        <span class="scheduleDot auditSpecial"></span>
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn hasSchedule">
-                                                    <span class="date">2</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                    <span class="scheduleDots" aria-hidden="true">
-                                                        <span class="scheduleDot plenary"></span>
-                                                        <span class="scheduleDot budgetSpecial"></span>
-                                                        <span class="scheduleDot ordinanceSpecial"></span>
-                                                        <span class="scheduleDot auditSpecial"></span>
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">3</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">4</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sat">
-                                                    <span class="date">5</span>
-                                                </button>
-                                            </div>
-
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sun">
-                                                    <span class="date">6</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn hasSchedule">
-                                                    <span class="date">7</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                    <span class="scheduleDots" aria-hidden="true">
-                                                        <span class="scheduleDot plenary"></span>
-                                                        <span class="scheduleDot budgetSpecial"></span>
-                                                        <span class="scheduleDot ordinanceSpecial"></span>
-                                                        <span class="scheduleDot auditSpecial"></span>
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn hasSchedule">
-                                                    <span class="date">8</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                    <span class="scheduleDots" aria-hidden="true">
-                                                        <span class="scheduleDot plenary"></span>
-                                                        <span class="scheduleDot budgetSpecial"></span>
-                                                        <span class="scheduleDot ordinanceSpecial"></span>
-                                                        <span class="scheduleDot auditSpecial"></span>
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn hasSchedule">
-                                                    <span class="date">9</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                    <span class="scheduleDots" aria-hidden="true">
-                                                        <span class="scheduleDot plenary"></span>
-                                                        <span class="scheduleDot budgetSpecial"></span>
-                                                        <span class="scheduleDot ordinanceSpecial"></span>
-                                                        <span class="scheduleDot auditSpecial"></span>
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn hasSchedule">
-                                                    <span class="date">10</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                    <span class="scheduleDots" aria-hidden="true">
-                                                        <span class="scheduleDot plenary"></span>
-                                                        <span class="scheduleDot budgetSpecial"></span>
-                                                        <span class="scheduleDot ordinanceSpecial"></span>
-                                                        <span class="scheduleDot auditSpecial"></span>
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn hasSchedule selected">
-                                                    <span class="date">11</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                    <span class="scheduleDots" aria-hidden="true">
-                                                        <span class="scheduleDot plenary"></span>
-                                                        <span class="scheduleDot budgetSpecial"></span>
-                                                        <span class="scheduleDot ordinanceSpecial"></span>
-                                                        <span class="scheduleDot auditSpecial"></span>
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sat">
-                                                    <span class="date">12</span>
-                                                </button>
-                                            </div>
-
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sun">
-                                                    <span class="date">13</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">14</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">15</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">16</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">17</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">18</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sat">
-                                                    <span class="date">19</span>
-                                                </button>
-                                            </div>
-
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sun">
-                                                    <span class="date">20</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">21</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">22</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">23</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">24</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">25</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sat">
-                                                    <span class="date">26</span>
-                                                </button>
-                                            </div>
-
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sun">
-                                                    <span class="date">27</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">28</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">29</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn">
-                                                    <span class="date">30</span>
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn disabled" disabled>
-                                                    <span class="date">1</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn disabled" disabled>
-                                                    <span class="date">2</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-
-                                                </button>
-                                            </div>
-                                            <div class="calendarCell">
-                                                <button type="button" class="dateBtn sat disabled" disabled>
-                                                    <span class="date">3</span>
-
-                                                    <span class="scheduleInfoText">
-                                                        제295회 임시회
-                                                    </span>
-
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- //calendarGrid -->
-
-                                        <ul class="scheduleInfoList">
-                                            <li class="plenary">
-                                                본회의
-                                            </li>
-                                            <li class="budgetSpecial">
-                                                예산결산특별위
-                                            </li>
-                                            <li class="ordinanceSpecial">
-                                                조례등의안심사특별위
-                                            </li>
-                                            <li class="auditSpecial">
-                                                행정사무감사특별위
-                                            </li>
-                                        </ul>
-                                        <!-- //scheduleInfoList -->
-
-                                    </section>
-                                    <!-- //calendarBox -->
+                                        <button type="submit" class="searchBtn" aria-label="검색"></button>
+                                    </div>
+                                    <!-- //searchBox -->
 
                                 </div>
-                                <!-- //calendarWrap -->
+                                <!-- //searchWrap -->
+
+                                <div class="boardCountWrap">
+                                    <div class="boardCountBox">
+                                        <span>
+                                            <strong>1</strong>
+                                            / 50
+                                        </span>
+                                        <p>
+                                            총 <strong>410</strong>건의 게시글이 있습니다.
+                                        </p>
+                                    </div>
+                                    <!-- //boardCountBox -->
+
+                                </div>
+                                <!-- //boardCountWrap -->
+
+                                <span class="borderBar"></span>
+                                <ul class="scheduleList">
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제295회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    임시회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제294회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    임시회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제293회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    정례회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제292회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    임시회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제291회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    임시회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제290회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    정례회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제289회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    임시회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제288회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    임시회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제287회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    정례회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="scheduleNumber">제286회</span>
+                                            <div class="scheduleInfo">
+                                                <h4>
+                                                    임시회
+                                                </h4>
+                                                <span class="date">2025.06.04 ~ 2025.06.13</span>
+                                                <ul class="scheduleInfoList">
+                                                    <li class="plenary">
+                                                        본회의
+                                                    </li>
+                                                    <li class="budgetSpecial">
+                                                        예산결산특별위
+                                                    </li>
+                                                    <li class="ordinanceSpecial">
+                                                        조례등의안심사특별위
+                                                    </li>
+                                                    <li class="auditSpecial">
+                                                        행정사무감사특별위
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- //scheduleList -->
+
+                                <nav class="paginationBox" aria-label="페이지 네비게이션">
+                                    <a href="#" class="pageLink pageLinkFirst" aria-label="첫 페이지로 이동">
+                                    </a>
+                                    <a href="#" class="pageLink pageLinkPrev" aria-label="이전 페이지로 이동">
+                                    </a>
+                                    <a href="#" class="pageLink active" aria-current="page">
+                                        1
+                                    </a>
+                                    <a href="#" class="pageLink">
+                                        2
+                                    </a>
+                                    <a href="#" class="pageLink">
+                                        3
+                                    </a>
+                                    <a href="#" class="pageLink">
+                                        4
+                                    </a>
+                                    <a href="#" class="pageLink">
+                                        5
+                                    </a>
+                                    <a href="#" class="pageLink pageLinkNext" aria-label="다음 페이지로 이동">
+                                    </a>
+                                    <a href="#" class="pageLink pageLinkLast" aria-label="마지막 페이지로 이동">
+                                    </a>
+                                </nav>
+                                <!-- //paginationBox -->
+
+                                <div class="btnBox">
+                                    <button type="button" class="btn btnPrimary">
+                                        <div class="slideText">
+                                            <span class="slideTextItem slideTextPrimary">목록</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">목록</span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <!-- //btnBox -->
 
                             </div>
                             <!-- //container -->
