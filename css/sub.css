@@ -2344,7 +2344,7 @@ input::placeholder{color: var(--gray-600);}
 }
 
 /* 행사일정 */
-.calendarWrap{display: flex; height: 658px; border-radius: var(--radius-l); border: 4px solid var(--gray-100); border-radius: var(--radius-l); overflow: hidden;  background-color: var(--gray-50);} 
+.calendarWrap{display: flex; min-height: 658px; border-radius: var(--radius-l); border: 4px solid var(--gray-100); border-radius: var(--radius-l); overflow: hidden;  background-color: var(--gray-50);} 
 .calendarScheduleBox{display: flex; flex-direction: column; padding: var(--spacing-ml) var(--spacing-m); width: 360px; flex-shrink: 0; border-radius: var(--radius-m); background-color: var(--white);} 
 .calendarScheduleBox .date{display: block; margin-bottom: var(--spacing-xs); color: #9AAF4E; font-weight: var(--bold); font-size: var(--H5);} 
 .calendarScheduleBox h4{margin-bottom: var(--spacing-ml); color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-xl);} 
@@ -2357,8 +2357,8 @@ input::placeholder{color: var(--gray-600);}
 .calendarScheduleBox .calendarScheduleList li p{padding: var(--spacing-xs); background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-900); font-size: var(--Subtitle-1); font-weight: var(--medium);}
 .calendarScheduleBox .btn{margin-top: auto; width: 100%;}
 .calendarScheduleBox .scheduleEmptyBox{padding: var(--spacing-ml);}
-.calendarScheduleBox .scheduleEmptyContentBox{position: relative; padding-top: var(--spacing-4xl);}
-.calendarScheduleBox .scheduleEmptyContentBox::after{content: ''; width: 72px; height: 72px; position: absolute; left: 50%; transform: translateX(-50%); top:0; background: url(../images/sub/step_icon11.svg) no-repeat center / contain;}
+.calendarScheduleBox .scheduleEmptyContentBox{position: relative; padding-top: var(--spacing-3xl);}
+.calendarScheduleBox .scheduleEmptyContentBox::after{content: ''; width: 72px; height: 72px; position: absolute; left: 50%; transform: translateX(-50%); top:0; background: url(../images/sub/document_icon.svg) no-repeat center / contain;}
 .calendarScheduleBox .scheduleEmptyTitle{margin-bottom: var(--spacing-2xs);font-weight: var(--bold); font-size: var(--Subtitle-1); text-align: center;
   color: var(--gray-600);}
 .calendarScheduleBox .scheduleEmptyText{font-size: var(--body-2); text-align: center;
@@ -2434,7 +2434,6 @@ input::placeholder{color: var(--gray-600);}
   .calendarScheduleBox{padding: var(--spacing-ml) var(--spacing-ms);}
   .calendarScheduleBox h4{margin-bottom: var(--spacing-m);}
   .calendarBox .calendarGrid .calendarCell .scheduleDot{width: 4px; height: 4px;}
-  .calendarScheduleBox .scheduleEmptyContentBox{padding-top: var(--spacing-3xl);}
   .calendarScheduleBox .scheduleEmptyTitle{font-size: var(--font-size-m);}
 
 }
@@ -2599,3 +2598,90 @@ input::placeholder{color: var(--gray-600);}
 #wrap.memberWrap .meetingVideoListBox .memberActivityImgList{gap: var(--spacing-lm) var(--spacing-s);}
 #wrap.memberWrap .meetingVideoListBox .memberActivityImgList li .btnBox{margin: var(--spacing-xs) 0 0; gap: var(--spacing-2xs);}
 #wrap.memberWrap .meetingVideoListBox .memberActivityImgList li .btnBox .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
+
+/* 회기별 일정 */
+.sessionScheduleListBox .calendarScheduleBox .date{color: var(--primary-800);}
+.sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li{display: flex; flex-wrap: wrap; justify-content: space-between; gap:var(--spacing-xs); background: 0; border: 1px solid #E6E6E6;}
+.sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li .time{margin: 0;}
+.sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li .category{min-width: 53px; min-height: 25px; padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); color: var(--white); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+.sessionScheduleListBox .calendarBox .calendarGrid .plenary,
+.sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li .plenary,
+.sessionScheduleListBox .scheduleInfoList li.plenary::before
+{background-color: #FF8539!important;}
+.sessionScheduleListBox .calendarBox .calendarGrid .budgetSpecial,
+.sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li .budgetSpecial,
+.sessionScheduleListBox .scheduleInfoList li.budgetSpecial::before
+{background-color: #61ACF6!important;}
+.sessionScheduleListBox .calendarBox .calendarGrid .ordinanceSpecial,
+.sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li .ordinanceSpecial,
+.sessionScheduleListBox .scheduleInfoList li.ordinanceSpecial::before
+{background-color: #5D3FD3!important;}
+.sessionScheduleListBox .calendarBox .calendarGrid .auditSpecial,
+.sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li .auditSpecial,
+.sessionScheduleListBox .scheduleInfoList li.auditSpecial::before
+{background-color: #C77654!important;}
+.sessionScheduleListBox .calendarScheduleBox .btnBox{margin: auto 0 0;}
+.sessionScheduleListBox .calendarScheduleBox .btn{width: auto; flex: 1 1 auto;}
+.sessionScheduleListBox .calendarScheduleBox{width: 304px;}
+.sessionScheduleListBox .calendarGrid .calendarCell .scheduleInfoText{margin: var(--spacing-2xs) 0; padding: var(--spacing-2xs); background-color: #2F3F61; color: var(--white); border-radius: var(--radius-2xs); font-size: var(--font-size-xs); font-weight: var(--bold);}
+.sessionScheduleListBox .calendarGrid .calendarCell .dateBtn.disabled .scheduleInfoText{background-color: var(--gray-400);}
+.sessionScheduleListBox .scheduleInfoList{margin: var(--spacing-s) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: var(--spacing-2xs);}
+.sessionScheduleListBox .scheduleInfoList li{display: flex; align-items: center; gap: 0 var(--spacing-2xs); padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--white); border-radius: var(--radius-xs); font-weight: var(--bold); font-size: var(--font-size-xs); color: var(--gray-600);}
+.sessionScheduleListBox .scheduleInfoList li::before{content: ''; width: 8px; height: 8px; border-radius: 50%;}
+.sessionScheduleListBox .scheduleTabList{margin-bottom: var(--spacing-m); display:inline-flex; padding: var(--spacing-2xs); background: var(--gray-100); border-radius: var(--radius-m);}
+.sessionScheduleListBox .scheduleTabList li .tabBtn{display: flex; align-items: center; gap: 0 var(--spacing-2xs); width: 79px; height: 34px; border-radius: var(--radius-m); color: var(--gray-400); font-size: var(--body-2); background-color: var(--white);}
+.sessionScheduleListBox .scheduleTabList li .tabBtn:hover{background-color: var(--gray-50); color: var(--gray-600);}
+.sessionScheduleListBox .scheduleTabList li .tabBtn.active{background-color: var(--gray-600); color: var(--white);}
+.sessionScheduleListBox .scheduleTabList li .tabBtn.calendarBtn.active::before{background: url(../images/sub/calendar_icon03.svg)no-repeat center / contain;}
+.sessionScheduleListBox .scheduleTabList li .tabBtn.listBtn.active::before{background: url(../images/sub/list_icon02.svg)no-repeat center / contain;}
+.sessionScheduleListBox .scheduleTabList li .tabBtn::before{content: ''; width: 18px; height: 18px;}
+.sessionScheduleListBox .scheduleTabList li .tabBtn.calendarBtn::before{background: url(../images/sub/calendar_icon02.svg)no-repeat center / contain;}
+.sessionScheduleListBox .scheduleTabList li .tabBtn.listBtn::before{background: url(../images/sub/list_icon.svg)no-repeat center / contain;}
+.sessionScheduleListBox .sessionScheduleTabBox{display: flex; align-items: center; justify-content: space-between;}
+.sessionScheduleListBox .viewLinkBox{display: flex; flex-wrap: wrap; gap: 0 var(--spacing-s);}
+.sessionScheduleListBox .viewLinkBox .viewLink::before{content: ''; width: 32px; height: 32px;}
+.sessionScheduleListBox .viewLinkBox .viewLink.electronic::before{background: url(../images/common/link_icon02.svg) no-repeat center / contain;}
+.sessionScheduleListBox .viewLinkBox .viewLink.video::before{background: url(../images/common/link_icon01.svg) no-repeat center / contain;}
+.sessionScheduleListBox .viewLinkBox .viewLink.broadcast::before{background: url(../images/common/link_icon03.svg) no-repeat center / contain;}
+.sessionScheduleListBox .sessionScheduleList li{border-bottom: 1px solid var(--gray-100);}
+.sessionScheduleListBox .sessionScheduleList li a{padding: var(--spacing-m) 0; display: flex; align-items: flex-start; gap: 0 var(--spacing-ml);}
+.sessionScheduleListBox .sessionScheduleList li a .sessionScheduleNumber{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); font-weight: var(--bold); color: var(--white); font-size: var(--H6); background-color: var(--gray-600);}
+.sessionScheduleListBox .sessionScheduleList li a h4{margin-bottom: var(--spacing-s); font-size: var(--H6); color:var(--gray-600);}
+.sessionScheduleListBox .sessionScheduleList li a .date{margin-bottom: var(--spacing-m); display: block; color: var(--gray-400); font-size: var(--body-2); font-weight: var(--bold);}
+.sessionScheduleListBox .sessionScheduleList li a .sessionScheduleInfo{width: 100%;}
+.sessionScheduleListBox .sessionScheduleList li a .scheduleInfoList{margin: 0; justify-content: flex-start; padding: var(--spacing-s); background-color: var(--gray-50); border-radius: var(--radius-s);}
+.sessionScheduleListBox .searchWrap{background: linear-gradient(
+    to right,var(--gray-100) 0%, var(--primary-100) 50%, var(--gray-100) 100%);}
+
+@media (max-width: 1024px) {
+
+  .sessionScheduleListBox .calendarScheduleBox{width: 100%;}
+  
+}
+
+@media (max-width: 768px){
+
+  .sessionScheduleListBox .scheduleTabList{margin: 0;}
+  .sessionScheduleListBox .sessionScheduleTabBox{margin-bottom: var(--spacing-m); align-items: flex-end;}
+  .sessionScheduleListBox .viewLinkBox{flex-direction: column;}
+
+  .sessionScheduleListBox .sessionScheduleList li a .sessionScheduleNumber,
+  .sessionScheduleListBox .sessionScheduleList li a h4{font-size: var(--font-size-l);}
+
+}
+
+@media (max-width: 576px){
+
+  .sessionScheduleListBox .calendarGrid .calendarCell .scheduleInfoText{display: none;}
+  .sessionScheduleListBox .sessionScheduleList li a{flex-direction: column; align-items: center; text-align: center; gap: var(--spacing-s) 0;}
+  .sessionScheduleListBox .sessionScheduleList li a .sessionScheduleNumber,
+  .sessionScheduleListBox .sessionScheduleList li a h4{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 360px){
+  
+  .sessionScheduleListBox .sessionScheduleTabBox{margin-bottom: var(--spacing-ms); flex-direction: column-reverse; align-items: center; gap: var(--spacing-s) 0;}
+  .sessionScheduleListBox .calendarScheduleBox .calendarScheduleList li{flex-direction: column; align-items: flex-start;}
+
+}
