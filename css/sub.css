@@ -1773,7 +1773,7 @@ main{flex: 1;}
 .chkBtn{display: inline-flex; align-items: center;  gap: 0 var(--spacing-xs);
     padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 48px; background-color: var(--white);
     border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600);
-    font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer;}
+    font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer; white-space: nowrap;}
 .chkBtn::before {content: ''; width: 22px; height: 22px; background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
 #noticeChk:checked + .chkBtn::before {background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
 
@@ -1951,7 +1951,7 @@ input::placeholder{color: var(--gray-600);}
 .boardWriteDateBox .calendarBtn{width: 24px; height: 24px; position: absolute; top:50%; transform: translateY(-50%); right:16px; background: url(../images/sub/calendar_icon.svg)no-repeat center;}
 
 .boardWriteTimeBox{max-width: 165px; width: 100%; padding: var(--spacing-xs) var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-xs); background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-xs);}
-.boardWriteTimeBox input{padding: var(--spacing-xs); font-size: var(--font-size-s); text-align: center; border-radius: var(--radius-2xs);}
+.boardWriteTimeBox input{padding: 0!important; font-size: var(--font-size-s); text-align: center; border-radius: var(--radius-2xs);}
 
 @media (max-width: 480px){
 
@@ -2822,5 +2822,96 @@ input::placeholder{color: var(--gray-600);}
   .scheduleViewBox .scheduleViewContentBox .scheduleMeetingCategory::before{width: 6px; height: 6px;}
   .scheduleViewBox .scheduleViewContentBox .scheduleMeetingCategory{font-size: var(--Subtitle-1);}
   .scheduleViewBox .scheduleViewContentBox .scheduleViewContent{gap:0 var(--spacing-ms);}
+
+}
+
+/* 회기별일정 - 등록 */
+.scheduleWriteBox .scheduleFormWriteBox{padding: var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.scheduleWriteBox .scheduleWriteTopBox{margin-bottom: var(--spacing-2xl);}
+.scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession{position: relative; margin-bottom: var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-ml);}
+.scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession::before{content: ''; position: absolute; top:17px; left:162px; width: 4px; height: 4px; border-radius: 50%; background-color: var(--gray-400);}
+.scheduleWriteBox .scheduleWriteTopBox .sessionNumBox{position: relative;}
+.scheduleWriteBox .scheduleWriteTopBox .sessionNum{gap: 0 var(--spacing-xs); padding: 0; border: 0; font-weight: var(--bold); font-size: var(--H4); color:var(--gray-900);}
+.scheduleWriteBox .scheduleWriteTopBox .sessionNumList{position: absolute; left:0; top:50px; right:0;}
+.scheduleWriteBox .scheduleWriteTopBox .sessionType{color: var(--gray-600); font-weight: var(--medium); font-size: var(--H5);} 
+.scheduleWriteBox .scheduleWriteTopBox .sessionPeriod{display: inline-block; margin-bottom: var(--spacing-s); padding: var(--spacing-2xs) var(--spacing-xs);   border-radius: 0 0 0 var(--radius-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--success-50);}
+.scheduleWriteBox .scheduleWriteTopBox .sessionPeriod strong{margin-right: 10px; color: var(--success-500); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+.scheduleWriteBox .formStepTit{margin-bottom: var(--radius-s); display: flex; align-items: center ; gap: 0 var(--spacing-xs);}
+.scheduleWriteBox .formStepTit .step{display: flex; align-items: center; justify-content: center; width: 64px; height: 24px; border-radius: var(--spacing-xs); background-color: var(--primary-900); color: var(--white); font-weight: var(--bold); font-size: var(--font-size-s);}
+.scheduleWriteBox .formStepTit .tit{color: var(--gray-900); font-weight: var(--bold); font-size: var(--H5);}
+.scheduleWriteBox .boardWriteField{padding: var(--spacing-ms) 0; background-color: var(--gray-50); border: 0; border-radius: var(--radius-m);}
+.scheduleWriteBox .scheduleFormBox{margin-bottom: var(--spacing-lm );}
+.scheduleWriteBox .boardWriteFieldBox{display: flex; align-items: center; border-bottom: 1px solid var(--gray-100);}
+.scheduleWriteBox .boardWriteFieldBox .boardWriteField{flex: 1;}
+.scheduleWriteBox .scheduleInfoList{margin-bottom: var(--spacing-ms); display: flex; flex-wrap: wrap; align-items: center;  gap: var(--spacing-2xs);}
+.scheduleWriteBox .scheduleInfoList li{display: flex; align-items: center; gap: 0 var(--spacing-2xs); padding: var(--spacing-xs); background-color: var(--white); border-radius: var(--radius-xs); font-weight: var(--medium); font-size: var(--body-1); color: var(--gray-600);}
+.scheduleWriteBox .scheduleInfoList li::before{content: ''; width: 8px; height: 8px; border-radius: 50%;}
+.scheduleWriteBox .scheduleInfoList li.plenary.active{background-color: #FF8539!important; color: var(--white);}
+.scheduleWriteBox .scheduleInfoList li.plenary.active::before{background-color: var(--white)!important;}
+.scheduleWriteBox .scheduleInfoList li.plenary::before{background-color: #FF8539!important;}
+.scheduleWriteBox .scheduleInfoList li.budgetSpecial.active::before{background-color: var(--white)!important;}
+.scheduleWriteBox .scheduleInfoList li.budgetSpecial.active{background-color: #61ACF6!important; color: var(--white);}
+.scheduleWriteBox .scheduleInfoList li.budgetSpecial::before{background-color: #61ACF6!important;}
+.scheduleWriteBox .scheduleInfoList li.ordinanceSpecial.active::before{background-color: var(--white)!important;}
+.scheduleWriteBox .scheduleInfoList li.ordinanceSpecial.active{background-color: #5D3FD3!important; color: var(--white);}
+.scheduleWriteBox .scheduleInfoList li.ordinanceSpecial::before{background-color: #5D3FD3!important;}
+.scheduleWriteBox .scheduleInfoList li.auditSpecial.active::before{background-color: var(--white)!important;}
+.scheduleWriteBox .scheduleInfoList li.auditSpecial.active{background-color: #C77654!important; color: var(--white);}
+.scheduleWriteBox .scheduleInfoList li.auditSpecial::before
+{background-color: #C77654!important;}
+.scheduleWriteBox .sortFormBox{margin-bottom: var(--spacing-m); padding: var(--spacing-m); background-color: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-m);}
+.scheduleWriteBox input{height: 48px; padding: 0 var(--spacing-s);}
+.scheduleWriteBox .sortFormBox .sortFormList{margin-top: var(--spacing-s); border-top: 2px solid var(--gray-900);}
+.scheduleWriteBox .sortFormBox .sortFormItem{ gap: 0 var(--spacing-xs); display: flex; align-items: center; padding:var(--spacing-ms) 0; border-bottom: 1px solid var(--gray-100);}
+.scheduleWriteBox .sortFormBox .sortFormItem:last-child{border-bottom: 0;}
+.scheduleWriteBox .sortFormBox .sortFormItem .sortFormDragBtn{width: 32px; height: 48px; background: url(../images/sub/drag_icon.svg)no-repeat center;}
+.scheduleWriteBox .sortFormBox .sortFormItem .sortFormDeleteBtn{width: 32px; height: 48px; background: url(../images/sub/delete_icon.svg)no-repeat center;}
+.scheduleWriteBox .sortFormBox .sortFormItem  .inputChkBox input:checked + label{background-color: var(--primary-500); color: var(--white); border: 1px solid var(--primary-500);}
+.scheduleWriteBox .sortFormBox .sortFormItem  .inputChkBox input:checked + label::before{background: url(../images/sub/chk_on_icon.svg) no-repeat center / contain;}
+.scheduleWriteBox .sortFormBox .sortFormItem .sortFormTitleCell{flex: 1;}
+.scheduleWriteBox .sortFormBox .sortFormItem .sortFormDeptCell{width: 185px;}
+.scheduleWriteBox .sortFormBox .sortFormItem .chkBtn{max-width: 87px;}
+.scheduleWriteBox .scheduleFormWriteBox .btnBox{gap: 0 var(--spacing-2xs); margin: 0;}
+.scheduleWriteBox .scheduleFormWriteBox .btnBox .btn{padding: 0 var(--spacing-s); min-width: auto; height: 36px; font-size: var(--font-size-s);}
+
+@media (max-width: 1024px){
+
+  .scheduleWriteBox .scheduleFormWriteBox{padding: var(--spacing-m) var(--spacing-s);}
+  .scheduleWriteBox .boardWriteFieldBox{flex-direction: column; align-items: flex-start;}
+  .scheduleWriteBox .boardWriteFieldBox .boardWriteField{width: 100%;}
+
+  .scheduleWriteBox .scheduleWriteTopBox .sessionNum{font-size: var(--H5);}
+  .scheduleWriteBox .scheduleWriteTopBox .sessionType{font-size: var(--H6);}
+  .scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession::before{left: 134px}
+  .scheduleWriteBox .scheduleWriteTopBox{margin-bottom: var(--spacing-xl);}
+  .scheduleWriteBox .formStepTit .tit{font-size: var(--H6);}
+
+}
+
+@media  (max-width: 768px) {
+
+  .scheduleWriteBox .sortFormBox {padding: var(--spacing-s);}
+  .scheduleWriteBox .sortFormBox .sortFormItem {display: grid; grid-template-columns: 32px 1fr 32px; gap: var(--spacing-xs); align-items: center; padding: var(--spacing-s) 0;}
+  .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDragCell {grid-column: 1; grid-row: 1;}
+  .scheduleWriteBox .sortFormBox .sortFormItem .sortFormCheckCell {grid-column: 2; grid-row: 1;}
+  .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDeleteCell {grid-column: 3; grid-row: 1;}
+  .scheduleWriteBox .sortFormBox .sortFormItem .sortFormTitleCell {grid-column: 1 / -1; grid-row: 2; flex: none; width: 100%; }
+  .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDeptCell {grid-column: 1 / -1; grid-row: 3; width: 100%;}
+  .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDragBtn,
+  .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDeleteBtn{width: 32px; height: 40px;}
+  .scheduleWriteBox .scheduleInfoList li{font-size: var(--font-size-s);}
+  .scheduleWriteBox .scheduleInfoList{margin-bottom: var(--spacing-s);}
+
+}
+
+@media (max-width: 480px){
+
+  .scheduleWriteBox .scheduleWriteTopBox{margin-bottom: var(--spacing-s);}
+  .scheduleWriteBox .scheduleWriteTopBox .sessionNum{font-size: var(--H6);}
+  .scheduleWriteBox .scheduleWriteTopBox .sessionType{font-size: var(--Subtitle-1);}
+  .scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession{margin-bottom: var(--spacing-xs); gap: 0 var(--spacing-m);}
+  .scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession::before{left: 111px; top: 18px;}
+  .scheduleWriteBox .scheduleWriteTopBox .sessionNum{min-width: auto; gap: 0 var(--spacing-2xs)}
+  .scheduleWriteBox .formStepTit .tit{font-size: var(--Subtitle-1);}
 
 }
