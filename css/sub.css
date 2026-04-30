@@ -15,7 +15,7 @@ main{flex: 1;}
 
 /* 공통 - 선택 */
 .toggleBtnBox{position: relative;}
-.toggleBtn{display: flex; align-items: center; justify-content: space-between; padding: 0 var(--spacing-xs) 0 var(--spacing-s); min-width: 112px; height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
+.toggleBtn{display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-xs); padding: 0 var(--spacing-xs) 0 var(--spacing-s); height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
 .toggleBtn span{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
 .toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain; border: 1px solid var(--gray-100); border-radius: var(--radius-l); transition: all .3s;}
 .toggleBtn:hover:after{background-color: var(--gray-100);}
@@ -2643,12 +2643,13 @@ input::placeholder{color: var(--gray-600);}
 .scheduleListBox .viewLinkBox .viewLink.electronic::before{background: url(../images/common/link_icon02.svg) no-repeat center / contain;}
 .scheduleListBox .viewLinkBox .viewLink.video::before{background: url(../images/common/link_icon01.svg) no-repeat center / contain;}
 .scheduleListBox .viewLinkBox .viewLink.broadcast::before{background: url(../images/common/link_icon03.svg) no-repeat center / contain;}
-.scheduleListBox .scheduleList li{border-bottom: 1px solid var(--gray-100);}
+.scheduleListBox .scheduleList > li{border-bottom: 1px solid var(--gray-100);}
 .scheduleListBox .scheduleList li a{padding: var(--spacing-m) 0; display: flex; align-items: flex-start; gap: 0 var(--spacing-ml);}
-.scheduleListBox .scheduleList li a .sessionScheduleNumber{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); font-weight: var(--bold); color: var(--white); font-size: var(--H6); background-color: var(--gray-600);}
+.scheduleListBox .scheduleList li a .scheduleNumber{flex-shrink: 0; padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); font-weight: var(--bold); color: var(--white); font-size: var(--H6); background-color: var(--gray-600);}
+.scheduleListBox .scheduleList li a .scheduleNumber.active{background-color: var(--primary-500);}
 .scheduleListBox .scheduleList li a h4{margin-bottom: var(--spacing-s); font-size: var(--H6); color:var(--gray-600);}
 .scheduleListBox .scheduleList li a .date{margin-bottom: var(--spacing-m); display: block; color: var(--gray-400); font-size: var(--body-2); font-weight: var(--bold);}
-.scheduleListBox .scheduleList li a .sessionScheduleInfo{width: 100%;}
+.scheduleListBox .scheduleList li a .scheduleInfo{width: 100%;}
 .scheduleListBox .scheduleList li a .scheduleInfoList{margin: 0; justify-content: flex-start; padding: var(--spacing-s); background-color: var(--gray-50); border-radius: var(--radius-s);}
 .scheduleListBox .searchWrap{background: linear-gradient(
     to right,var(--gray-100) 0%, var(--primary-100) 50%, var(--gray-100) 100%);}
@@ -2656,7 +2657,7 @@ input::placeholder{color: var(--gray-600);}
 @media (max-width: 1024px) {
 
   .scheduleListBox .calendarScheduleBox{width: 100%;}
-  
+    
 }
 
 @media (max-width: 768px){
@@ -2693,75 +2694,13 @@ input::placeholder{color: var(--gray-600);}
 .scheduleViewBox .scheduleViewTop .scheduleViewInfo span{display: inline-block; margin-bottom: var(--spacing-s); padding: var(--spacing-2xs) var(--spacing-xs); border-radius: 0 0 0 var(--radius-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--success-50);}
 .scheduleViewBox .scheduleViewTop .scheduleViewInfo span strong{margin-right: 10px; color: var(--success-500); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
 .scheduleViewBox .scheduleViewTop .scheduleViewInfo p{color: var(--gray-600); font-size: var(--font-size-s);}
-
-.scheduleViewBox .scheduleDateScrollBox {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
-}
-
-.scheduleViewBox .scheduleViewDate {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
-  margin-bottom: var(--spacing-lm);
-  padding: var(--spacing-xs);
-
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 0 var(--spacing-m);
-
-  background-color: var(--gray-900);
-  border-radius: var(--radius-s);
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-
-  box-sizing: border-box;
-}
-
-.scheduleViewBox .scheduleViewDate::-webkit-scrollbar {
-  display: none;
-}
-
-.scheduleViewBox .scheduleViewDate .dateBtn {
-  flex: 0 0 auto;
-  flex-shrink: 0;
-
-  padding: var(--spacing-xs);
-  font-weight: var(--bold);
-  font-size: var(--font-size-xl);
-  color: var(--gray-400);
-  border-radius: var(--spacing-xs);
-  white-space: nowrap;
-
-}
-
+.scheduleViewBox .scheduleViewDate {margin-bottom: var(--spacing-lm); padding: var(--spacing-xs);
+  display: flex; flex-wrap: nowrap; align-items: center; gap: 0 var(--spacing-m);
+  background-color: var(--gray-900); border-radius: var(--radius-s); overflow-x: auto;}
+.scheduleViewBox .scheduleViewDate .dateBtn {padding: var(--spacing-xs); font-weight: var(--bold);
+  font-size: var(--font-size-xl); color: var(--gray-400); border-radius: var(--spacing-xs);  white-space: nowrap;}
 .scheduleViewBox .scheduleViewDate .allDateBtn,
-.scheduleViewBox .scheduleViewDate .dateBtn.active {
-  background-color: var(--primary-500);
-  color: var(--white);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+.scheduleViewBox .scheduleViewDate .dateBtn.active {background-color: var(--primary-500); color: var(--white);}
 .scheduleViewBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-lm);}
 .scheduleViewBox .scheduleViewDateBox{display: flex; align-items: center;}
 .scheduleViewBox .scheduleViewDateBox .date{position: relative; margin-right: 26px; font-weight: var(--bold); font-size: var(--H4); color: var(--gray-600);}
@@ -2913,5 +2852,58 @@ input::placeholder{color: var(--gray-600);}
   .scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession::before{left: 111px; top: 18px;}
   .scheduleWriteBox .scheduleWriteTopBox .sessionNum{min-width: auto; gap: 0 var(--spacing-2xs)}
   .scheduleWriteBox .formStepTit .tit{font-size: var(--Subtitle-1);}
+
+}
+
+/* 연간일정 - 목록 */
+.annualScheduleListBox .annualScheduleInfoTopBox{margin-bottom: var(--spacing-xs); display: flex; align-items: flex-end; justify-content: space-between;}
+.annualScheduleListBox .annualScheduleDateBox{position: relative;}
+.annualScheduleListBox .annualScheduleDateBox .annualScheduleDateBtn{padding: 0; color: var(--gray-900); font-size: var(--H4); font-weight: var(--bold); border: 0;}
+.annualScheduleListBox .annualScheduleDateBox .annualScheduleDateList{position: absolute; top:50px; left:0; right: 0;}
+.annualScheduleListBox .annualScheduleInfoTopBox .scheduleStatusInfo{display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-xs) var(--spacing-m);}
+.annualScheduleListBox .annualScheduleInfoTopBox .scheduleStatusDate{color: var(--gray-400); font-weight: var(--bold); font-size: var(--body-2);} 
+.annualScheduleListBox .annualScheduleInfoTopBox  .scheduleStatusLabel{display: flex; align-items: center; gap: 0 4px; color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);} 
+.annualScheduleListBox .annualScheduleInfoTopBox  .scheduleStatusLabel::before{content: ''; width: 8px; height: 8px; border-radius: 50%; }
+.annualScheduleListBox .annualScheduleInfoTopBox  .scheduleStatusDays::before{background-color: #61ACF6;}
+.annualScheduleListBox .annualScheduleInfoTopBox  .scheduleStatusAttend::before{background-color: #F86C41;}
+.annualScheduleListBox .annualScheduleInfo{margin-bottom: var(--spacing-m); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s);}
+.annualScheduleListBox .annualScheduleInfoBox{display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-lm); padding: var(--spacing-s); border-radius: var(--radius-s); background-color: var( --gray-50); }
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoText{color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-1);}
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoText span{margin-right:var(--spacing-xs) ; display: inline-block; padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); border: 1px solid var(--gray-100); background-color: var(--white); font-size: var(--H6); font-weight: var(--medium); color: var(--gray-600);} 
+.annualScheduleListBox em{font-style: normal;}
+.annualScheduleListBox .accent01{color: #61ACF6;}
+.annualScheduleListBox .accent02{color: #F86C41;}
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoList{display: flex; gap: var(--spacing-m);}
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoList li{display: flex; align-items: center; gap: var(--spacing-xs)}
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoList li::before{content: ''; width: 4px; height: 4px; border-radius: 50%; background-color: var(--gray-400);}
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoList li .scheduleType{color: var(--gray-600); font-weight: var(--bold); font-size: var(--body-1);}
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoList li .scheduleCount{padding: var(--spacing-2xs); font-weight:var(--bold); font-size: var(--body-1); color: var(--white); border-radius: var(--radius-xs); background-color: var(--gray-400);}
+.annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoList li .scheduleDays{color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-1);}
+.annualScheduleListBox .scheduleList li a .scheduleDay{display: inline-block; margin-bottom: var(--spacing-m); padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); border: 1px solid var(--gray-100); color: var(--gray-600); font-weight: var(--medium); font-size: var(--body-1);}
+.annualScheduleListBox .scheduleList li a .date{margin-bottom: var(--spacing-xs);}
+.annualScheduleListBox .scheduleList li a .annualScheduleListInfoBox{padding: var(--spacing-ms) var(--spacing-s);  background-color: var(--gray-50); border-radius: var(--radius-s); text-align: left;}
+.annualScheduleListBox .scheduleList li a .annualScheduleListInfoBox h5{margin-bottom: var(--spacing-s); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-m );}
+.annualScheduleListBox .scheduleList li a .annualScheduleListInfoBox .bulletBar li{color: var(--gray-600);}
+
+@media (max-width: 1024px){
+
+  .annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoText span{margin-right: 0; font-size:var(--body-1)}
+  .annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoText{font-size: var(--font-size-m);}
+  .annualScheduleListBox .annualScheduleDateBox .annualScheduleDateBtn{font-size: var(--H5);}
+  /* .annualScheduleListBox .annualScheduleInfoTopBox{flex-direction: column; align-items: flex-start; gap: var(--spacing-m) 0;} */
+
+}
+
+@media (max-width: 768px){
+  
+  .annualScheduleListBox .annualScheduleInfoBox{flex-direction: column; gap: var(--spacing-ms) 0;}
+  
+}
+
+@media (max-width: 480px){
+
+  .annualScheduleListBox .annualScheduleInfoBox .annualScheduleInfoList{flex-direction: column; gap: var(--spacing-s) 0;}
+  .annualScheduleListBox .annualScheduleInfoTopBox .scheduleStatusInfo{flex-direction: column; align-items: flex-end;}
+  .annualScheduleListBox .annualScheduleDateBox .annualScheduleDateBtn{font-size: var(--H6);}
 
 }
