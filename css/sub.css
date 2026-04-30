@@ -1951,7 +1951,7 @@ input::placeholder{color: var(--gray-600);}
 .boardWriteDateBox .calendarBtn{width: 24px; height: 24px; position: absolute; top:50%; transform: translateY(-50%); right:16px; background: url(../images/sub/calendar_icon.svg)no-repeat center;}
 
 .boardWriteTimeBox{max-width: 165px; width: 100%; padding: var(--spacing-xs) var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-xs); background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-xs);}
-.boardWriteTimeBox input{padding: 0!important; font-size: var(--font-size-s); text-align: center; border-radius: var(--radius-2xs);}
+.boardWriteTimeBox input{height: 32px; padding: 0!important; font-size: var(--font-size-s); text-align: center; border-radius: var(--radius-2xs);}
 
 @media (max-width: 480px){
 
