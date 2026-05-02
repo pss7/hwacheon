@@ -1775,23 +1775,37 @@ main{flex: 1;}
 .boardWriteFileBox .boardWriteFileItem .boardWriteFileDel{display: flex; align-items: center; justify-content: center; width: 48px; height: 28px; border-radius: var(--radius-xs); background-color: var(--gray-600); color: var(--white); font-size: var(--font-size-s); font-weight: var(--semi-bold);}
 .boardWriteFileBox .boardWriteFileItem .boardWriteFileName{color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
 
-/* 폼 - 체크 */
+/* 폼 - 체크, 라디오 */
 .chkBtn{display: inline-flex; align-items: center;  gap: 0 var(--spacing-xs);
     padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 48px; background-color: var(--white);
     border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600);
     font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer; white-space: nowrap;}
 .chkBtn::before {content: ''; width: 22px; height: 22px; background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
-#noticeChk:checked + .chkBtn::before {background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
+
+.boardWriteField  input[type="radio"]:checked + .chkBtn,
+.boardWriteField  input[type="checkBox"]:checked + .chkBtn
+{background-color: var(--primary-500); color: var(--white); border: 1px solid var(--primary-500);}
+.boardWriteField  input[type="radio"]:checked + .chkBtn::before,
+.boardWriteField  input[type="checkBox"]:checked + .chkBtn::before
+ {background: url(../images/sub/chk_on_icon.svg) no-repeat center / contain;}
+.boardWriteRadioWrap,
 .boardWriteChkWrap{display: flex; gap: var(--spacing-xs);}
+.boardWriteRadioWrap .inputRadioBox,
 .boardWriteChkWrap .inputChkBox{max-width: 220px; width: 100%;}
 
 @media (max-width: 480px){
 
+  .boardWriteRadioWrap,
   .boardWriteChkWrap{flex-direction: column; gap: var(--spacing-2xs) 0;}
+  .boardWriteRadioWrap .inputRadioBox,
   .boardWriteChkWrap .inputChkBox{max-width: none;}
   .chkBtn{max-width: none;}
 
 }
+
+
+
+
 
 /* 폼 - 입력 */
 textarea{width: 100%; height: 180px; padding: var(--spacing-s); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); font-family: 'Pretendard';}
@@ -2830,8 +2844,6 @@ input::placeholder{color: var(--gray-600);}
 .scheduleWriteBox .sortFormBox .sortFormItem:last-child{border-bottom: 0;}
 .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDragBtn{width: 32px; height: 48px; background: url(../images/sub/drag_icon.svg)no-repeat center;}
 .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDeleteBtn{width: 32px; height: 48px; background: url(../images/sub/delete_icon.svg)no-repeat center;}
-.scheduleWriteBox .sortFormBox .sortFormItem  .inputChkBox input:checked + label{background-color: var(--primary-500); color: var(--white); border: 1px solid var(--primary-500);}
-.scheduleWriteBox .sortFormBox .sortFormItem  .inputChkBox input:checked + label::before{background: url(../images/sub/chk_on_icon.svg) no-repeat center / contain;}
 .scheduleWriteBox .sortFormBox .sortFormItem .sortFormTitleCell{flex: 1;}
 .scheduleWriteBox .sortFormBox .sortFormItem .sortFormDeptCell{width: 185px;}
 .scheduleWriteBox .sortFormBox .sortFormItem .chkBtn{max-width: 87px;}

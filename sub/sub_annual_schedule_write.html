@@ -1277,17 +1277,19 @@
                                                 </span>
                                                 <div class="boardWriteContent">
 
-                                                    <div class="boardWriteChkWrap">
-                                                        <div class="inputChkBox">
-                                                            <input type="checkbox" id="chk01" class="blind" required>
-                                                            <label for="chk01" class="chkBtn">
+                                                    <div class="boardWriteRadioWrap">
+                                                        <div class="inputRadioBox">
+                                                            <input type="radio" id="radio01" name="radio01"
+                                                                class="blind" required>
+                                                            <label for="radio01" class="chkBtn">
                                                                 정례회
                                                             </label>
                                                         </div>
 
-                                                        <div class="inputChkBox">
-                                                            <input type="checkbox" id="chk02" class="blind" required>
-                                                            <label for="chk02" class="chkBtn">
+                                                        <div class="inputRadioBox">
+                                                            <input type="radio" id="radio02" name="radio01"
+                                                                class="blind" required>
+                                                            <label for="radio02" class="chkBtn">
                                                                 임시회
                                                             </label>
                                                         </div>
@@ -1405,17 +1407,19 @@
                                                 </span>
                                                 <div class="boardWriteContent">
 
-                                                    <div class="boardWriteChkWrap">
-                                                        <div class="inputChkBox">
-                                                            <input type="checkbox" id="chk03" class="blind" required>
-                                                            <label for="chk03" class="chkBtn">
+                                                    <div class="boardWriteRadioWrap">
+                                                        <div class="inputRadioBox">
+                                                            <input type="radio" id="radio03" name="radio02"
+                                                                class="blind" required>
+                                                            <label for="radio03" class="chkBtn">
                                                                 정례회
                                                             </label>
                                                         </div>
 
-                                                        <div class="inputChkBox">
-                                                            <input type="checkbox" id="chk04" class="blind" required>
-                                                            <label for="chk04" class="chkBtn">
+                                                        <div class="inputRadioBox">
+                                                            <input type="radio" id="radio04" name="radio02"
+                                                                class="blind" required>
+                                                            <label for="radio04" class="chkBtn">
                                                                 임시회
                                                             </label>
                                                         </div>
@@ -1688,6 +1692,8 @@
 
     <script>
         $(function () {
+
+            //달력
             $(".dateInput").datepicker({
                 dateFormat: "yy-mm-dd",
             });

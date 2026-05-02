@@ -19,6 +19,7 @@
 
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="../js/slick.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/sub.js"></script>
@@ -1246,7 +1247,8 @@
 
                                                     <div class="boardWriteDateWrap">
                                                         <div class="boardWriteDateBox">
-                                                            <input id="startDate" type="text" class="dateInput" placeholder="시작">
+                                                            <input id="startDate" type="text" class="dateInput"
+                                                                placeholder="시작">
                                                             <label for="startDate" class="blind">시작</label>
                                                             <button type="button" class="calendarBtn"
                                                                 aria-label="시작 일정 달력 열기">
@@ -1255,7 +1257,8 @@
                                                         <!-- //boardWriteDateBox -->
                                                         ~
                                                         <div class="boardWriteDateBox">
-                                                            <input id="endDate" type="text" class="dateInput" placeholder="종료">
+                                                            <input id="endDate" type="text" class="dateInput"
+                                                                placeholder="종료">
                                                             <label for="endDate" class="blind">종료</label>
                                                             <button type="button" class="calendarBtn"
                                                                 aria-label="종료 일정 달력 열기">
@@ -1376,6 +1379,7 @@
                                                     <span class="blind">필수 입력</span>
                                                 </span>
                                                 <div class="boardWriteContent">
+
                                                     <div class="sortFormBox">
 
                                                         <div class="btnBox left">
@@ -1720,6 +1724,8 @@
 
     <script>
         $(function () {
+
+            //달력
             $(".dateInput").datepicker({
                 dateFormat: "yy-mm-dd",
             });
@@ -1729,6 +1735,21 @@
                     .siblings(".dateInput")
                     .datepicker("show");
             });
+
+            //드래그
+            $(".sortFormList").each(function () {
+                new Sortable(this, {
+                    animation: 150,
+                    handle: ".sortFormDragBtn",
+                    draggable: ".sortFormItem",
+                    ghostClass: "isDragging"
+                });
+            });
+
+            $(".sortFormDeleteBtn").click(function () {
+                $(this).closest(".sortFormItem").remove();
+            });
+
         });
     </script>
 
