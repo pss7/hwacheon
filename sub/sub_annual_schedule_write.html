@@ -2,13 +2,13 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="Keywords" content="" />
-    <meta name="Description" content="" />
-    <meta name="Author" content="" />
+    <meta charset="utf-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="Author" content="">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <title>회기별일정</title>
+    <title>연간 일정</title>
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -1101,7 +1101,7 @@
                             <span>의사일정</span>
                         </li>
                         <li><span>
-                                회기별 일정</span>
+                                연간 일정</span>
                         </li>
                     </ul>
                     <!-- //breadcrumbList -->
@@ -1150,7 +1150,7 @@
                                 <!-- 상단 제목, 서브메뉴 영역-->
                                 <div class="titleBox">
                                     <h3>
-                                        회기별 일정
+                                        연간 일정
                                     </h3>
                                 </div>
                                 <!-- //titleBox -->
@@ -1176,7 +1176,7 @@
                     <!-- 콘텐츠 영역 -->
                     <div class="contentBox">
 
-                        <!-- 회기별일정 콘텐츠 -->
+                        <!-- 연간일정 콘텐츠 -->
                         <div class="scheduleWriteBox">
                             <div class="container">
 
@@ -1187,40 +1187,6 @@
                                  행정사무감사특별위 > auditSpecial
                                 -->
 
-                                <div class="scheduleWriteTopBox">
-
-                                    <div class="scheduleWriteSession">
-
-                                        <div class="sessionNumBox">
-                                            <button type="button" class="toggleBtn sessionNum">
-                                                제295회
-                                            </button>
-                                            <ul class="sessionNumList dropdown">
-                                                <li>
-                                                    <button type="button">1대</button>
-                                                </li>
-                                                <li>
-                                                    <button type="button">2대</button>
-                                                </li>
-                                                <li>
-                                                    <button type="button">3대</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <span class="sessionType">임시회</span>
-                                    </div>
-                                    <!-- //scheduleWriteSession -->
-
-                                    <span class="sessionPeriod">
-                                        <strong class="sessionDays">
-                                            7일
-                                        </strong>
-                                        2025.06.04 ~ 2025.06.13
-                                    </span>
-
-                                </div>
-                                <!-- //scheduleWriteTopBox -->
-
                                 <form>
 
                                     <div class="scheduleFormBox">
@@ -1229,7 +1195,7 @@
                                                 STEP.1
                                             </span>
                                             <span class="tit">
-                                                일정
+                                                연도 설정
                                             </span>
                                         </div>
                                         <!-- //formStepTit -->
@@ -1238,36 +1204,25 @@
 
                                             <div class="boardWriteField row">
                                                 <span class="boardWriteLabel">
-                                                    일정
+                                                    연도
                                                     <span class="required" aria-hidden="true">*</span>
                                                     <span class="blind">필수 입력</span>
                                                 </span>
+
                                                 <div class="boardWriteContent">
 
-                                                    <div class="boardWriteDateWrap">
-                                                        <div class="boardWriteDateBox">
-                                                            <input id="startDate" type="text" class="dateInput" placeholder="시작">
-                                                            <label for="startDate" class="blind">시작</label>
-                                                            <button type="button" class="calendarBtn"
-                                                                aria-label="시작 일정 달력 열기">
-                                                            </button>
-                                                        </div>
-                                                        <!-- //boardWriteDateBox -->
-                                                        ~
-                                                        <div class="boardWriteDateBox">
-                                                            <input id="endDate" type="text" class="dateInput" placeholder="종료">
-                                                            <label for="endDate" class="blind">종료</label>
-                                                            <button type="button" class="calendarBtn"
-                                                                aria-label="종료 일정 달력 열기">
-                                                            </button>
-                                                        </div>
-                                                        <!-- //boardWriteDateBox -->
-
+                                                    <div class="boardWriteSelectBox">
+                                                        <label for="select" class="blind">
+                                                            연도 선택
+                                                        </label>
+                                                        <select id="select">
+                                                            <option value="">선택</option>
+                                                        </select>
                                                     </div>
-                                                    <!-- //dateWrap -->
+                                                    <!-- //boardWriteSelectBox -->
 
                                                 </div>
-                                                <!-- //boardWriteDateWrap -->
+                                                <!-- //boardWriteContent -->
 
                                             </div>
                                             <!-- //boardWriteField -->
@@ -1285,259 +1240,272 @@
                                                 STEP.2
                                             </span>
                                             <span class="tit">
-                                                회의
+                                                회기
                                             </span>
                                         </div>
                                         <!-- //formStepTit -->
 
                                         <div class="scheduleFormWriteBox">
 
-                                            <ul class="scheduleInfoList">
-                                                <li class="plenary">
-                                                    본회의
-                                                </li>
-                                                <li class="budgetSpecial active">
-                                                    예산결산특별위
-                                                </li>
-                                                <li class="ordinanceSpecial">
-                                                    조례등의안심사특별위
-                                                </li>
-                                                <li class="auditSpecial">
-                                                    행정사무감사특별위
-                                                </li>
-                                            </ul>
-
-                                            <div class="boardWriteFieldBox">
-                                                <div class="boardWriteField row">
-                                                    <span class="boardWriteLabel">
-                                                        차수
-                                                        <span class="required" aria-hidden="true">*</span>
-                                                        <span class="blind">필수 입력</span>
-                                                    </span>
-                                                    <div class="boardWriteContent">
-
-                                                        <div class="boardWriteSelectBox">
-                                                            <label for="select" class="blind">
-                                                                차수 선택
-                                                            </label>
-                                                            <select id="select">
-                                                                <option value="">선택</option>
-                                                            </select>
-                                                        </div>
-                                                        <!-- //boardWriteSelectBox -->
-
-                                                    </div>
-                                                    <!-- //boardWriteContent -->
-
-                                                </div>
-                                                <!-- //boardWriteField -->
-
-                                                <div class="boardWriteField row">
-                                                    <span class="boardWriteLabel">
-                                                        회의 시간
-                                                    </span>
-                                                    <div class="boardWriteContent">
-
-                                                        <div class="boardWriteTimeWrap">
-                                                            <div class="boardWriteTimeBox">
-                                                                <div class="inputTextBox">
-                                                                    <label for="hour01" class="blind">
-                                                                        시작 시
-                                                                    </label>
-                                                                    <input id="hour01" type="text" placeholder="00시">
-                                                                </div>
-                                                                :
-                                                                <div class="inputTextBox">
-                                                                    <label for="minute01" class="blind">
-                                                                        시작 분
-                                                                    </label>
-                                                                    <input id="minute01" type="text" placeholder="00분">
-                                                                </div>
-                                                            </div>
-                                                            <!-- //boardWriteTimeBox -->
-
-                                                        </div>
-                                                        <!-- //boardWriteTimeWrap -->
-
-                                                    </div>
-                                                    <!-- //boardWriteContent -->
-
-                                                </div>
-                                                <!-- //boardWriteField -->
-
-                                            </div>
-                                            <!-- //boardWriteFieldBox -->
-
-
-                                            <div class="boardWriteField">
+                                            <div class="boardWriteField row">
                                                 <span class="boardWriteLabel">
-                                                    부의안건
+                                                    회차
                                                     <span class="required" aria-hidden="true">*</span>
                                                     <span class="blind">필수 입력</span>
                                                 </span>
                                                 <div class="boardWriteContent">
-                                                    <div class="sortFormBox">
 
-                                                        <div class="btnBox left">
-                                                            <button type="button" class="btn btnSecondary btnNegative">
-                                                                <div class="slideText">
-                                                                    <span
-                                                                        class="slideTextItem slideTextPrimary">초기화</span>
-                                                                    <span class="slideTextItem slideTextClone"
-                                                                        aria-hidden="true">초기화</span>
-                                                                </div>
-                                                            </button>
-
-                                                            <button type="button" class="btn btnPrimary btnPositive">
-                                                                <div class="slideText">
-                                                                    <span
-                                                                        class="slideTextItem slideTextPrimary">추가</span>
-                                                                    <span class="slideTextItem slideTextClone"
-                                                                        aria-hidden="true">추가</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                        <!-- //btnBox -->
-
-                                                        <div class="sortFormList">
-                                                            <div class="sortFormItem">
-                                                                <div class="sortFormCell sortFormDragCell">
-                                                                    <button type="button" class="sortFormDragBtn"
-                                                                        aria-label="드래그 순서 변경">
-                                                                    </button>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormCheckCell">
-                                                                    <div class="sortFormCheck">
-                                                                        <div class="inputChkBox">
-                                                                            <input type="checkbox" id="chk01"
-                                                                                class="blind" required="">
-                                                                            <label for="chk01" class="chkBtn">
-                                                                                상세
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormTitleCell">
-                                                                    <div class="sortFormInputBox">
-                                                                        <label for="inputTitle01" class="blind">
-                                                                            안건
-                                                                        </label>
-                                                                        <input id="inputTitle01" type="text"
-                                                                            placeholder="안건">
-                                                                    </div>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormDeptCell">
-                                                                    <div class="sortFormInputBox">
-                                                                        <label for="inputDept01" class="blind">
-                                                                            소관부서
-                                                                        </label>
-                                                                        <input id="inputDept01" type="text"
-                                                                            placeholder="소관부서">
-                                                                    </div>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormDeleteCell">
-                                                                    <button type="button" class="sortFormDeleteBtn"
-                                                                        aria-label="영역 삭제">
-                                                                    </button>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                            </div>
-                                                            <!-- //sortFormItem -->
-
-                                                            <div class="sortFormItem">
-                                                                <div class="sortFormCell sortFormDragCell">
-                                                                    <button type="button" class="sortFormDragBtn"
-                                                                        aria-label="드래그 순서 변경">
-                                                                    </button>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormCheckCell">
-                                                                    <div class="sortFormCheck">
-                                                                        <div class="inputChkBox">
-                                                                            <input type="checkbox" id="chk02"
-                                                                                class="blind" required="">
-                                                                            <label for="chk02" class="chkBtn">
-                                                                                상세
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormTitleCell">
-                                                                    <div class="sortFormInputBox">
-                                                                        <label for="inputTitle01" class="blind">
-                                                                            안건
-                                                                        </label>
-                                                                        <input id="inputTitle01" type="text"
-                                                                            placeholder="안건">
-                                                                    </div>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormDeptCell">
-                                                                    <div class="sortFormInputBox">
-                                                                        <label for="inputDept01" class="blind">
-                                                                            소관부서
-                                                                        </label>
-                                                                        <input id="inputDept01" type="text"
-                                                                            placeholder="소관부서">
-                                                                    </div>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                                <div class="sortFormCell sortFormDeleteCell">
-                                                                    <button type="button" class="sortFormDeleteBtn"
-                                                                        aria-label="영역 삭제">
-                                                                    </button>
-                                                                </div>
-                                                                <!-- //sortFormCell -->
-
-                                                            </div>
-                                                            <!-- //sortFormItem -->
-
-                                                        </div>
-                                                        <!-- //sortFormList -->
-
+                                                    <div class="boardWriteAddressBox">
+                                                        <label for="classSession" class="blind">
+                                                            회차 입력
+                                                        </label>
+                                                        <input id="classSession" type="text" placeholder="회차 입력">
                                                     </div>
-                                                    <!-- //sortFormBox -->
-
-                                                    <div class="btnBox left">
-                                                        <button type="button" class="btn btnSecondary btnNegative">
-                                                            <div class="slideText">
-                                                                <span class="slideTextItem slideTextPrimary">회의
-                                                                    삭제</span>
-                                                                <span class="slideTextItem slideTextClone"
-                                                                    aria-hidden="true">회의 삭제</span>
-                                                            </div>
-                                                        </button>
-
-                                                        <button type="button" class="btn btnPrimary btnPositive">
-                                                            <div class="slideText">
-                                                                <span class="slideTextItem slideTextPrimary">회의
-                                                                    추가</span>
-                                                                <span class="slideTextItem slideTextClone"
-                                                                    aria-hidden="true">회의 추가</span>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                    <!-- //btnBox -->
+                                                    <!-- //boardWriteAddressBox -->
 
                                                 </div>
                                                 <!-- //boardWriteContent -->
 
                                             </div>
                                             <!-- //boardWriteField -->
+
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    회기 구분
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteChkWrap">
+                                                        <div class="inputChkBox">
+                                                            <input type="checkbox" id="chk01" class="blind" required>
+                                                            <label for="chk01" class="chkBtn">
+                                                                정례회
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="inputChkBox">
+                                                            <input type="checkbox" id="chk02" class="blind" required>
+                                                            <label for="chk02" class="chkBtn">
+                                                                임시회
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    회기 기간
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteDateWrap">
+                                                        <div class="boardWriteDateBox">
+                                                            <input id="startDate01" type="text" class="dateInput"
+                                                                placeholder="시작" required>
+                                                            <label for="startDate01" class="blind">시작</label>
+                                                            <button type="button" class="calendarBtn"
+                                                                aria-label="시작 일정 달력 열기">
+                                                            </button>
+                                                        </div>
+                                                        <!-- //boardWriteDateBox -->
+                                                        ~
+                                                        <div class="boardWriteDateBox">
+                                                            <input id="endDate01" type="text" class="dateInput"
+                                                                placeholder="종료" required>
+                                                            <label for="endDate01" class="blind">종료</label>
+                                                            <button type="button" class="calendarBtn"
+                                                                aria-label="종료 일정 달력 열기">
+                                                            </button>
+                                                        </div>
+                                                        <!-- //boardWriteDateBox -->
+
+                                                    </div>
+                                                    <!-- //boardWriteDateWrap -->
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <div class="boardWriteField row start">
+                                                <span class="boardWriteLabel">
+                                                    주요(예상)안건
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="textAreaBox">
+                                                        <label for="content01" class="blind">주요(예상)안건 입력</label>
+                                                        <textarea id="content01" class="textarea"
+                                                            placeholder="주요(예상)안건 입력" required></textarea>
+                                                    </div>
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <div class="btnBox left">
+                                                <button type="button" class="btn btnSecondary btnNegative">
+                                                    <div class="slideText">
+                                                        <span class="slideTextItem slideTextPrimary">회의
+                                                            삭제</span>
+                                                        <span class="slideTextItem slideTextClone" aria-hidden="true">회의
+                                                            삭제</span>
+                                                    </div>
+                                                </button>
+
+                                            </div>
+                                            <!-- //btnBox -->
+
+                                        </div>
+                                        <!-- //scheduleFormWriteBox -->
+
+                                        <div class="scheduleFormWriteBox">
+
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    회차
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteAddressBox">
+                                                        <label for="classSession" class="blind">
+                                                            회차 입력
+                                                        </label>
+                                                        <input id="classSession" type="text" placeholder="회차 입력">
+                                                    </div>
+                                                    <!-- //boardWriteAddressBox -->
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    회기 구분
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteChkWrap">
+                                                        <div class="inputChkBox">
+                                                            <input type="checkbox" id="chk03" class="blind" required>
+                                                            <label for="chk03" class="chkBtn">
+                                                                정례회
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="inputChkBox">
+                                                            <input type="checkbox" id="chk04" class="blind" required>
+                                                            <label for="chk04" class="chkBtn">
+                                                                임시회
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <div class="boardWriteField row">
+                                                <span class="boardWriteLabel">
+                                                    회기 기간
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="boardWriteDateWrap">
+                                                        <div class="boardWriteDateBox">
+                                                            <input id="startDate02" type="text" class="dateInput"
+                                                                placeholder="시작" required>
+                                                            <label for="startDate02" class="blind">시작</label>
+                                                            <button type="button" class="calendarBtn"
+                                                                aria-label="시작 일정 달력 열기">
+                                                            </button>
+                                                        </div>
+                                                        <!-- //boardWriteDateBox -->
+                                                        ~
+                                                        <div class="boardWriteDateBox">
+                                                            <input id="endDate02" type="text" class="dateInput"
+                                                                placeholder="종료" required>
+                                                            <label for="endDate02" class="blind">종료</label>
+                                                            <button type="button" class="calendarBtn"
+                                                                aria-label="종료 일정 달력 열기">
+                                                            </button>
+                                                        </div>
+                                                        <!-- //boardWriteDateBox -->
+
+                                                    </div>
+                                                    <!-- //boardWriteDateWrap -->
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <div class="boardWriteField row start">
+                                                <span class="boardWriteLabel">
+                                                    주요(예상)안건
+                                                    <span class="required" aria-hidden="true">*</span>
+                                                    <span class="blind">필수 입력</span>
+                                                </span>
+                                                <div class="boardWriteContent">
+
+                                                    <div class="textAreaBox">
+                                                        <label for="content02" class="blind">주요(예상)안건 입력</label>
+                                                        <textarea id="content02" class="textarea"
+                                                            placeholder="주요(예상)안건 입력" required></textarea>
+                                                    </div>
+
+                                                </div>
+                                                <!-- //boardWriteContent -->
+
+                                            </div>
+                                            <!-- //boardWriteField -->
+
+                                            <div class="btnBox left">
+                                                <button type="button" class="btn btnSecondary btnNegative">
+                                                    <div class="slideText">
+                                                        <span class="slideTextItem slideTextPrimary">회의
+                                                            삭제</span>
+                                                        <span class="slideTextItem slideTextClone" aria-hidden="true">회의
+                                                            삭제</span>
+                                                    </div>
+                                                </button>
+
+                                                <button type="button" class="btn btnPrimary btnPositive">
+                                                    <div class="slideText">
+                                                        <span class="slideTextItem slideTextPrimary">회의
+                                                            추가</span>
+                                                        <span class="slideTextItem slideTextClone" aria-hidden="true">회의
+                                                            추가</span>
+                                                    </div>
+                                                </button>
+
+                                            </div>
+                                            <!-- //btnBox -->
 
                                         </div>
                                         <!-- //scheduleFormWriteBox -->

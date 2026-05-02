@@ -1245,7 +1245,7 @@
 
                                                     <div class="boardWriteDateWrap">
                                                         <div class="boardWriteDateBox">
-                                                            <input id="startDate" type="text" placeholder="시작">
+                                                            <input id="startDate" type="text" class="dateInput" placeholder="시작">
                                                             <label for="startDate" class="blind">시작</label>
                                                             <button type="button" class="calendarBtn"
                                                                 aria-label="시작 일정 달력 열기">
@@ -1254,7 +1254,7 @@
                                                         <!-- //boardWriteDateBox -->
                                                         ~
                                                         <div class="boardWriteDateBox">
-                                                            <input id="endDate" type="text" placeholder="종료">
+                                                            <input id="endDate" type="text" class="dateInput" placeholder="종료">
                                                             <label for="endDate" class="blind">종료</label>
                                                             <button type="button" class="calendarBtn"
                                                                 aria-label="종료 일정 달력 열기">
@@ -1558,16 +1558,14 @@
 
     <script>
         $(function () {
-            $("#startDate, #endDate").datepicker({
+            $(".dateInput").datepicker({
                 dateFormat: "yy-mm-dd",
             });
 
-            $(".calendarBtn").eq(0).on("click", function () {
-                $("#startDate").datepicker("show");
-            });
-
-            $(".calendarBtn").eq(1).on("click", function () {
-                $("#endDate").datepicker("show");
+            $(".calendarBtn").click(function () {
+                $(this)
+                    .siblings(".dateInput")
+                    .datepicker("show");
             });
         });
     </script>

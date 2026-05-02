@@ -1250,7 +1250,7 @@
                                             <div class="boardWriteContent">
 
                                                 <div class="boardWriteDateBox">
-                                                    <input id="date" type="text" placeholder="일정">
+                                                    <input id="date" class="dateInput" type="text" placeholder="일정">
                                                     <label for="date" class="blind">일정</label>
                                                     <button type="button" class="calendarBtn" aria-label="일정 달력 열기">
                                                     </button>
@@ -1670,12 +1670,14 @@
 
     <script>
         $(function () {
-            $("#date").datepicker({
-                dateFormat: "yy-mm-dd"
+            $(".dateInput").datepicker({
+                dateFormat: "yy-mm-dd",
             });
 
-            $(".calendarBtn").on("click", function () {
-                $("#date").datepicker("show");
+            $(".calendarBtn").click(function () {
+                $(this)
+                    .siblings(".dateInput")
+                    .datepicker("show");
             });
         });
     </script>

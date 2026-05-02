@@ -1756,8 +1756,14 @@ main{flex: 1;}
 .boardWriteEditor{display: flex; align-items: center; justify-content: center; height: 407px; border-radius: var(--radius-s); border: 1px solid var(--gray-100); background-color: var(--white); font-weight: var(--medium);}
 
 /* 폼 - 제목 */
-.boardWriteLabel{width: 120px; flex-shrink: 0; font-size: var(--Subtitle-2); font-weight: var(--bold); color: var(--gray-600);}
+.boardWriteLabel{padding: var(--spacing-s) 0; width: 120px; flex-shrink: 0; font-size: var(--Subtitle-2); font-weight: var(--bold); color: var(--gray-600);}
 .boardWriteLabel .required{color: var(--warning-500);}
+
+@media (max-width: 480px){
+
+  .boardWriteLabel{padding: 0;}
+
+}
 
 /* 폼 - 파일 */
 .boardWriteFileBox .boardWriteFile{margin-bottom: var(--spacing-s);}
@@ -1776,6 +1782,19 @@ main{flex: 1;}
     font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer; white-space: nowrap;}
 .chkBtn::before {content: ''; width: 22px; height: 22px; background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
 #noticeChk:checked + .chkBtn::before {background: url(../images/common/chk_icon.svg) no-repeat center / contain;}
+.boardWriteChkWrap{display: flex; gap: var(--spacing-xs);}
+.boardWriteChkWrap .inputChkBox{max-width: 220px; width: 100%;}
+
+@media (max-width: 480px){
+
+  .boardWriteChkWrap{flex-direction: column; gap: var(--spacing-2xs) 0;}
+  .boardWriteChkWrap .inputChkBox{max-width: none;}
+  .chkBtn{max-width: none;}
+
+}
+
+/* 폼 - 입력 */
+textarea{width: 100%; height: 180px; padding: var(--spacing-s); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); background-color: var(--white); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); font-family: 'Pretendard';}
 
 /* 폼 - 선택 */
 #select{padding: 0 var(--spacing-s); max-width: 220px; width: 100%; height: 48px;
@@ -1812,6 +1831,12 @@ main{flex: 1;}
 @media (max-width: 576px){
 
   .memberSelectBox .memberSelectBox .memberSelectList li{width: 100%; max-width: none;}
+
+}
+
+@media (max-width: 480px){
+
+  #select{max-width: none;}
 
 }
 
@@ -2765,7 +2790,7 @@ input::placeholder{color: var(--gray-600);}
 }
 
 /* 회기별일정 - 등록 */
-.scheduleWriteBox .scheduleFormWriteBox{padding: var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.scheduleWriteBox .scheduleFormWriteBox{margin-bottom: var(--spacing-s); padding: var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
 .scheduleWriteBox .scheduleWriteTopBox{margin-bottom: var(--spacing-2xl);}
 .scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession{position: relative; margin-bottom: var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-ml);}
 .scheduleWriteBox .scheduleWriteTopBox .scheduleWriteSession::before{content: ''; position: absolute; top:17px; left:162px; width: 4px; height: 4px; border-radius: 50%; background-color: var(--gray-400);}
