@@ -2778,6 +2778,8 @@ input::placeholder{color: var(--gray-600);}
   .scheduleListBox .scheduleList li a .scheduleNumber,
   .scheduleListBox .scheduleList li a h4{font-size: var(--font-size-l);}
 
+  .scheduleListBox .scheduleInfoList{justify-content: flex-start;}
+
 }
 
 @media (max-width: 576px){

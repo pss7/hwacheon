@@ -1,17 +1,24 @@
 @charset "UTF-8";
 
+/* 공통 */
+.borderBar{display: block; height: 3px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
-/* 공통 - 정렬 */
-.textLeft{text-align: left!important;}
-
 /* 공통 - 버튼 */
-.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 58px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
+.btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
 .btn.btnPrimary{background-color: var(--gray-600);}
 .btn:hover{background-color: var(--gray-400);} 
 .btn.btnSecondary{background-color: var(--gray-400);}
-.btn.btnNegative:hover{background-color: var(--pp-red);}
-.btn.btnPositive:hover{background-color: var(--pp-blue);}
+.btn.btnNegative:hover{background-color: #F6503B;}
+.btn.btnPositive:hover{background-color: #3E7BFD;}
+
+/* 공통 - 버튼(정렬) */
+.btnBox{display: flex; justify-content: center; flex-wrap: wrap; gap: var(--spacing-xs);}
+.btnBox.left {justify-content: flex-start;}
+.btnBox.center {justify-content: center;}
+.btnBox.right {justify-content: flex-end;}
+.btnBox.between {justify-content: space-between; width: 100%;}
+.btnLayoutBox{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
 
 @media (max-width: 1024px){
 
@@ -23,7 +30,7 @@
 
   .btn{min-width: 57px; height: 36px; font-size: var(--font-size-s);}
 
-}  
+}   
 
 /* 공통 - 호버 시 텍스트 슬라이드 */
 .slideText{position: relative; display: block; width: 100%; overflow: hidden; text-align: center;}
@@ -34,12 +41,29 @@
 .slideText:hover .slideTextPrimary{transform: translateY(100%);}
 .slideText:hover .slideTextClone{transform: translateY(0);}
 
+/* 공통 - 게시물 개수 */
+.boardCountWrap{margin-bottom: var(--spacing-m);}
+.boardCountWrap .boardCountBox{display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs) var(--spacing-s); }
+.boardCountWrap .boardCountBox span{padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--gray-100); border-radius: var(--radius-xs); font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400);}
+.boardCountWrap .boardCountBox span strong{color: var(--gray-600);}
+.boardCountWrap .boardCountBox p{color: var(--gray-600); font-weight: var(--medium);}
+.boardCountWrap .boardCountBox p strong{color: var(--primary-500);}
+
+@media (max-width: 1024px){
+
+  .boardCountWrap{margin-bottom: var(--spacing-s);}
+
+}
+
+
 /* 공통 - 게시판목록 */
 .boardListTable{width: 100%; table-layout: fixed; border-spacing: 0;}
 .boardListTable colgroup .id{width: 100px;}
-.boardListTable colgroup .title{width: auto;}
+.boardListTable colgroup .category{width: 100px;}
+.boardListTable colgroup .title{ width: auto;}
 .boardListTable colgroup .author{width: 176px;}
 .boardListTable colgroup .date{width: 144px;}
+.boardListTable thead tr th.title{padding-left: var(--spacing-m);}
 .boardListTable thead tr th:first-child{border-radius: var(--radius-xs) 0 0 0;}
 .boardListTable thead tr th:last-child{border-radius: 0 var(--radius-xs) 0 0;}
 .boardListTable thead tr th{height: 35px; font-size: var(--font-size-m); font-weight: var(--bold); background-color: var(--gray-600); color: var(--white);}
@@ -48,14 +72,16 @@
 .boardListTable tbody tr td .id{display: inline-block; padding: var(--spacing-2xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-400); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--gray-100);}
 .boardListTable tbody tr td .category{min-width: 80px; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--primary-500);}
 .boardListTable tbody tr td .link{display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-ml) var(--spacing-m) var(--spacing-ml) var(--spacing-m); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.boardListTable tbody tr:hover{background-color: var(--gray-50);}
+.boardListTable tbody tr:hover .link .titleText{text-shadow: 0.25px 0 0 currentColor, -0.25px 0 0 currentColor;}
 .boardListTable tbody tr td .link .file{flex-shrink: 0;}
 .boardListTable tbody tr td .link .file img{display: block;}
-.boardListTable tbody tr td .link .titleText{min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--H6); font-weight: var(--medium); color: var(--gray-900);}
+.boardListTable tbody tr td .link .titleText{min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--H6); font-weight: var(--medium); color: var(--gray-900); transition: all .3s;}
 .boardListTable tbody tr td .date{font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400);}
 
 @media (max-width: 1024px){
 
-  .boardListTable tr{padding: var(--spacing-s) 0; display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--gray-100)!important;}
+  .boardListTable tr{padding: var(--spacing-s) 0;  display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--gray-100)!important;}
   .boardListTable tbody tr td .date{margin-left: var(--spacing-xs);}
   .boardListTable tbody tr td .category{padding: var(--spacing-2xs) var(--spacing-xs);}
   .boardListTable tbody tr td .link{padding: var(--spacing-s) var(--spacing-ms) var(--spacing-s) 0;}
@@ -69,11 +95,300 @@
   .boardListTable tbody tr td{border: 0;}
   .boardListTable tbody tr td.title{flex-basis: 100%; width: 100%;}
 
-
 }
 
 @media (max-width: 480px){
 
   .boardListTable tbody tr td .link .titleText{font-size: var(--font-size-m);}
+
+}
+
+/* 공통 - 게시판 상세 */
+.boardViewBox{padding-top: var(--spacing-s); margin-bottom: var(--spacing-lm); position: relative;}
+.boardViewBox::after{content: ''; position: absolute; top:0; left:0; right:0; height: 16px; background: linear-gradient(to right, var(--gray-100), var(--primary-50), var(--gray-100));}
+.boardViewBox .boardViewTopBox{padding: var(--spacing-lm) var(--spacing-ms); border-bottom: 2px solid var(--gray-100); text-align: center;}
+.boardViewBox .boardViewTopBox .category{display: inline-block; margin-bottom: var(--spacing-xs); padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-xs); background-color: var(--primary-500); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white);}
+.boardViewBox .boardViewTopBox h4{margin-bottom: var(--spacing-s); color: var(--gray-900); font-size: var(--H1); font-weight: var(--bold); word-break: keep-all;}
+.boardViewBox .boardViewTopBox .boardViewInfoBox{display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap:var(--spacing-xs) var(--spacing-m);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewAuthor{font-weight: var(--bold); color: var(--gray-600);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewDate{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-400); font-weight: var(--bold);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewDate::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/date_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewCount{display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-400); font-weight: var(--bold);}
+.boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewCount::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/view_icon.svg)no-repeat center / contain;}
+.boardViewBox .boardViewContentBox{padding: var(--spacing-l) 0;}
+.boardViewBox .boardViewContentBox .viewContentBox ,
+.boardViewBox .boardViewContentBox .viewContentBox p, 
+.boardViewBox .boardViewContentBox .viewContentBox span{color: var(--gray-600);}
+.boardViewBox .boardViewContentBox .viewContentBox img{width: auto; max-width: 720px; width: 100%; margin: 0 auto var(--spacing-s);}
+.boardViewFileBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-m); padding: var(--spacing-lm) var(--spacing-m); background-color: var(--gray-50); border-radius: var(--radius-m);}
+.boardViewFileTitle{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-m);}
+.boardViewFileList li{margin-bottom: var(--spacing-s);}
+.boardViewFileList li:last-child{margin-bottom: 0;}
+.boardViewFileList li a{display: flex; flex-wrap: wrap; align-items: center;}
+.boardViewFileList li a:hover .boardViewFileName{text-shadow: 0.25px 0 0 currentColor, -0.25px 0 0 currentColor;}
+.boardViewFileList li a .boardViewFileIcon{width: 24px; height: 28px; margin-right: var(--spacing-xs);}
+.boardViewFileList li a.fileHwp .boardViewFileIcon{background: url(../images/sub/hwp_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.filePdf .boardViewFileIcon{background: url(../images/sub/pdf_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileXlsx .boardViewFileIcon{background: url(../images/sub/xlsx_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileJpg .boardViewFileIcon{background: url(../images/sub/jpg_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.filePpt .boardViewFileIcon{background: url(../images/sub/ppt_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a.fileZip .boardViewFileIcon{background: url(../images/sub/zip_icon.svg)no-repeat center / contain;}
+.boardViewFileList li a .boardViewFileName{margin-right: var(--spacing-2xs); color: var(--gray-600); transition: all .3s;}
+.boardViewFileList li a .boardViewFileSize{color: var(--gray-400);}
+.boardViewBox .boardViewLayoutBox{padding: 0 var(--spacing-m); display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-xl);}
+.boardViewBox .viewContentInfoBox dl{margin-bottom: var(--spacing-m); display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
+.boardViewBox .viewContentInfoBox dl dt{ padding: var(--spacing-2xs) var(--spacing-xs); color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s); background-color: var(--gray-100); border-radius: var(--radius-xs);}
+.boardViewBox .viewContentInfoBox dl dd{color: var(--gray-600); font-size: var(--Subtitle-1); font-weight: var(--medium);}
+.boardViewBox .viewParticipationBox{max-width: 200px; width: 100%; padding: var(--spacing-m) var(--spacing-ms); border-radius: var(--radius-m); border: 1px solid var(--gray-100);}
+.boardViewBox .viewParticipationBox p{margin-bottom: var(--spacing-s); line-height: 1.7; color: var(--gray-600); font-weight: var(--medium);}
+.boardViewBox .viewParticipationList{display: flex; flex-wrap: wrap; gap: var(--spacing-xs);}
+.boardViewBox .viewParticipationList li .imgBox{margin: 0 auto var(--spacing-2xs); width: 32px; height: 32px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100);}
+.boardViewBox .viewParticipationList li .imgBox img{height: 100%; object-fit: cover;}
+.boardViewBox .viewParticipationList li .name{display: block; color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-xs); text-align: center;}
+
+@media (max-width: 1024px){
+
+  .boardViewBox{margin-bottom: var(--spacing-m);}
+  .boardViewBox .boardViewTopBox h4{font-size: var(--H4);}
+  .boardViewFileBox{padding: var(--spacing-ml) var(--spacing-m);}
+
+  .boardViewBox .viewContentInfoBox{width: 100%; display: flex; justify-content: center; gap: 0 var(--spacing-ml);}
+  .boardViewBox .boardViewLayoutBox{padding: 0; flex-direction: column; gap: var(--spacing-lm) 0;}
+  .boardViewBox .viewContentInfoBox dl{margin: 0; align-items: center;}
+  .boardViewBox .boardViewContentBox .viewContentBox img{max-width: none;}
+  .boardViewBox .viewParticipationBox{max-width: none;}
+
+}
+
+@media (max-width: 768px){
+
+  .boardViewFileBox{padding: var(--spacing-m) var(--spacing-s); flex-direction: column; gap: var(--spacing-ms) 0;}
+  .boardViewFileList li a .boardViewFileSize{font-size: var(--body-2);}
+  .boardViewBox .viewContentInfoBox dl dd{font-size: var(--font-size-m);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardViewBox .boardViewContentBox{padding: var(--spacing-lm) 0;}
+  .boardViewBox .boardViewTopBox h4{font-size: var(--H5);}
+  .boardViewBox .boardViewTopBox .boardViewInfoBox .boardViewAuthor{width: 100%;}
+  .boardViewBox .boardViewTopBox .boardViewInfoBox span{font-size: var(--font-size-s);}
+
+}
+
+@media (max-width: 320px){
+
+  .boardViewBox .viewContentInfoBox{flex-direction: column; gap: var(--spacing-lm) 0;}
+
+}
+
+/* 공통 - 이전글, 다음글 */
+.boardViewNavBox{width: 100%; padding-top: 3px; position: relative; margin:var(--spacing-3xl) 0 var(--spacing-lm); border-bottom: 1px solid var(--gray-100);}
+.boardViewNavBox::after{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
+.boardViewNavBox .boardViewNavItem{padding: var(--spacing-s) 0; display: flex; align-items: center; min-height: 54px; }
+.boardViewNavBox .boardViewNavItem:hover .boardViewNavTitle{text-shadow: 0.25px 0 0 currentColor, -0.25px 0 0 currentColor;}
+.boardViewNavBox .boardViewNavIcon{margin-right:var(--spacing-xs); width: 24px; height: 24px;}
+.boardViewNavBox .boardViewNavItem.prev .boardViewNavIcon{background: url(../images/sub/arrow_icon07.svg)no-repeat center;}
+.boardViewNavBox .boardViewNavItem.next .boardViewNavIcon{transform: rotate(180deg); background: url(../images/sub/arrow_icon07.svg)no-repeat center;}
+.boardViewNavBox .boardViewNavLabel{flex-shrink: 0; margin-right: 30px; color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--bold);}
+.boardViewNavBox .boardViewNavTitle{flex: 1 1 auto; min-width: 0; color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-2); transition: all .3s;}
+.boardViewNavBox .boardViewNavDate{flex: 0 0 auto; color: var(--gray-500); font-weight: var(--medium); font-size: var(--body-2);} 
+.boardViewNavBox .boardViewNavContent{width: 100%; display: flex; align-items: center; justify-content: space-between;}
+
+@media (max-width: 1024px){
+
+  .boardViewNavBox{margin: var(--spacing-2xl) 0 var(--spacing-lm);}
+  .boardViewNavBox .boardViewNav{margin: var(--spacing-2xl) 0 var(--spacing-lm);}
+
+}
+
+@media (max-width: 480px){
+
+  .boardViewNavBox .boardViewNavTitle{font-size: var(--font-size-s);}
+  .boardViewNavBox .boardViewNavContent{flex-direction: column; align-items:flex-start; gap: var(--spacing-xs) 0;}
+
+}
+
+/* 공통 - 게시판(이미지) */
+.photoBoardList{position: relative; padding-top: 43px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-2xl) var(--spacing-s)}
+.photoBoardList::before{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
+.photoBoardList li a{display: block;}
+.photoBoardList li a .photoBoardImgBox{padding-top: 65%; margin-bottom: var(--spacing-m); position: relative; border-radius: var(--radius-m); overflow: hidden;}
+.photoBoardList li a .photoBoardImgBox::after{content: ''; position: absolute;
+    left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(
+        to bottom,rgba(0, 0, 0, 0) 0%,rgba(30, 43, 55, 0.70) 40%,rgba(30, 43, 55, 0.96) 100%
+    ); backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(1px);}
+.photoBoardList li a .photoBoardImgBox .img{height: 100%; position: absolute; top:0; left:0; right:0; bottom: 0; object-fit: cover; transition: all 1.3s;}
+.photoBoardList li a .photoBoardImgBox .participationBox{position: absolute; right: 0; left:24px; bottom: 26px; display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-s); z-index: 99;}
+.photoBoardList li a .photoBoardImgBox .participationBox strong{flex-shrink: 0; color: var(--white);}
+.photoBoardList li a .photoBoardImgBox .participationListBox{width: calc(100% - 63px); overflow-x: auto;}
+.photoBoardList li a .photoBoardImgBox .participationListBox::-webkit-scrollbar-thumb{background-color: var(--gray-300);}
+.photoBoardList li a .photoBoardImgBox .participationBox .participationList{display: flex; gap: var(--spacing-2xs);}
+.photoBoardList li a .photoBoardImgBox .participationBox .participationList li{flex: 0 0 auto; width: 32px; height: 32px; border-radius: var(--radius-m); overflow: hidden; background-color: var(--gray-100);}
+.photoBoardList li a .photoBoardImgBox .participationBox .participationList li img{height: 100%; object-fit: cover;}
+.photoBoardList li a .photoBoardTextBox h4{margin-bottom: var(--spacing-xs); color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--bold);}
+.photoBoardList li a .photoBoardTextBox h5{margin-bottom: var(--spacing-s); color: var( --gray-900); font-size: var(--H5); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;} 
+.photoBoardList li a .photoBoardTextBox .date{display: block; color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--medium);}
+
+@media (max-width: 1024px){
+
+  .photoBoardList li a .photoBoardTextBox h5{font-size: var(--H6);}
+  .photoBoardList li a .photoBoardImgBox::after{height: 80px;}
+  .photoBoardList li a .photoBoardImgBox .participationListBox::-webkit-scrollbar-thumb{
+    border: 5px solid transparent;}
+  .photoBoardList li a .photoBoardImgBox .participationBox{left: 20px;}
+
+}
+
+@media (max-width: 768px){
+
+  .photoBoardList li a .photoBoardImgBox{margin-bottom: var(--spacing-s); border-radius: var(--radius-s);}
+  .photoBoardList li a .photoBoardTextBox h5{margin-bottom: var(--spacing-xs);}
+  .photoBoardList{grid-template-columns: 1fr; gap: var(--spacing-xl) 0;}
+
+}
+
+@media (max-width: 576px){
+
+  .photoBoardList li a .photoBoardImgBox .participationBox{bottom: 10px;}
+
+}
+
+@media (max-width: 480px){
+
+  .photoBoardList{gap: var(--spacing-lm) 0;}
+  .photoBoardList li a .photoBoardImgBox .participationBox strong{font-size: var(--font-size-s);}
+
+}
+
+@media (max-width: 360px){
+
+  .photoBoardList li a .photoBoardImgBox::after{height: 55px;}
+
+}
+
+/* 공통 - 달력 */
+.calendarWrap{display: flex; min-height: 658px; border-radius: var(--radius-l); border: 4px solid var(--gray-100); border-radius: var(--radius-l); overflow: hidden;  background-color: var(--gray-50);} 
+.calendarScheduleBox{display: flex; flex-direction: column; padding: var(--spacing-ml) var(--spacing-m); width: 360px; flex-shrink: 0; border-radius: var(--radius-m); background-color: var(--white);} 
+.calendarScheduleBox .date{display: block; margin-bottom: var(--spacing-xs); color: #9AAF4E; font-weight: var(--bold); font-size: var(--H5);} 
+.calendarScheduleBox h4{margin-bottom: var(--spacing-ml); color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-xl);} 
+.calendarScheduleBox .calendarScheduleList{margin-bottom: var(--spacing-ms); height: 417px; overflow-y: auto;}
+.calendarScheduleBox .calendarScheduleList li{position: relative; padding: var(--spacing-s); margin-bottom: var(--spacing-s); background-color: var(--gray-50); border-radius: var(--radius-xs);}
+.calendarScheduleBox .calendarScheduleList li::after{content: ''; position: absolute; left:16px; bottom: -16px; width: 1px; height: 16px; background-color: var(--gray-100);}
+.calendarScheduleBox .calendarScheduleList li:last-child:after{display: none;}
+.calendarScheduleBox .calendarScheduleList li .time{display: flex; align-items: center; gap: 0 var(--spacing-xs); margin-bottom: var(--spacing-xs);color: var(--gray-600); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+.calendarScheduleBox .calendarScheduleList li .time::before{content: ''; width: 4px; height: 4px; background-color: var(--gray-600); border-radius: 50%;}
+.calendarScheduleBox .calendarScheduleList li p{padding: var(--spacing-xs); background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-900); font-size: var(--Subtitle-1); font-weight: var(--medium);}
+.calendarScheduleBox .btn{margin-top: auto; width: 100%;}
+.calendarScheduleBox .scheduleEmptyBox{padding: var(--spacing-ml);}
+.calendarScheduleBox .scheduleEmptyContentBox{position: relative; padding-top: var(--spacing-3xl);}
+.calendarScheduleBox .scheduleEmptyContentBox::after{content: ''; width: 72px; height: 72px; position: absolute; left: 50%; transform: translateX(-50%); top:0; background: url(../images/sub/document_icon.svg) no-repeat center / contain;}
+.calendarScheduleBox .scheduleEmptyTitle{margin-bottom: var(--spacing-2xs);font-weight: var(--bold); font-size: var(--Subtitle-1); text-align: center;
+  color: var(--gray-600);}
+.calendarScheduleBox .scheduleEmptyText{font-size: var(--body-2); text-align: center;
+    color: var(--gray-400);}
+.calendarBox{width: 100%; padding: var(--spacing-ml);}
+.calendarBox .calendarHeader{margin-bottom: var(--spacing-m); display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-m);}
+.calendarBox .calendarHeader h4{color: var(--gray-900); font-weight: var(--T-black); font-size: var(--H1); line-height: 1.3;}
+.calendarBox .calendarHeader .calendarBtn{position: relative; width: 32px; height: 32px; border-radius: var(--radius-l); background-color: var(--white); transition: all .3s;}
+.calendarBox .calendarHeader .calendarBtn::after{content: ''; width: 24px; height: 24px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.calendarBox .calendarHeader .calendarBtn.calendarPrev::after{background: url(../images/sub/arrow_icon09.svg)no-repeat center;}
+.calendarBox .calendarHeader .calendarBtn.calendarNext::after{ transform: translate(-50%, -50%) rotate(180deg); background: url(../images/sub/arrow_icon09.svg)no-repeat center;}
+.calendarBox .calendarHeader .calendarBtn:hover{background: var(--gray-200);}
+.calendarBox .calendarWeek {display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); margin-bottom: var(--spacing-xs); overflow: hidden;}
+.calendarBox .calendarWeek .week {display: flex; align-items: center; justify-content: center;
+    height: 37px; background-color: var(--gray-600); color: var(--gray-200); text-align: center;
+    font-size: var(--Subtitle-2); font-weight: var(--bold);}
+.calendarBox .calendarWeek .week:first-child{border-radius: var(--radius-m) 0 0 var(--radius-xs);}
+.calendarBox .calendarWeek .week:last-child{border-radius: 0 var(--radius-m) var(--radius-xs) 0;}
+.calendarBox .calendarWeek .week.sun {color: #FC6259;}
+.calendarBox .calendarWeek .week.sat {color: #4C93FD;}
+.calendarBox .calendarGrid{display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--spacing-2xs);
+}
+.calendarBox .calendarGrid .calendarCell {min-width: 0; min-height: 88px;}
+.calendarBox .calendarGrid .calendarCell .dateBtn{ -webkit-appearance: none; appearance: none; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; width: 100%; height: 100%; padding: var(--spacing-xs); border-radius: var(--spacing-xs); background-color: #fff; text-align: left; font-size: var(--body-2); font-weight: var(--medium); color: var(--gray-600); line-height: 1.2;  cursor: pointer;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.sun,
+.calendarBox .calendarGrid .calendarCell .dateBtn.sat,
+.calendarBox .calendarGrid .calendarCell .dateBtn.disabled {background-color: var(--gray-100);}
+.calendarBox .calendarGrid .calendarCell .dateBtn.sun{color: #FC6259;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.sat {color: #4C93FD;}
+.calendarBox .calendarGrid .calendarCell .dateBtn.disabled {color: var(--gray-300); cursor: default;}
+.calendarBox .calendarGrid .calendarCell .date {display: inline-block;}
+.calendarBox .calendarGrid .calendarCell .scheduleDots{margin-top:var(--spacing-2xs); padding: var(--spacing-2xs);
+    display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-3xs);  background-color: var(--white); border-radius: var(--spacing-xs);}
+.calendarBox .calendarGrid .calendarCell .scheduleDot{width: 6px; height: 6px;
+    border-radius: 50%; background-color: var(--primary-900);}
+.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule .date{color: var(--primary-800); font-weight: var(--bold);}
+.calendarBox .calendarGrid .calendarCell .dateBtn.hasSchedule{background-color: var(--primary-100);}
+.calendarBox .calendarGrid .calendarCell .dateBtn.disabled .scheduleDots{background-color: var(--gray-400);}
+.calendarBox .calendarGrid .calendarCell .dateBtn.disabled .scheduleDot{background-color: var(--white);}
+.calendarBox .calendarGrid .calendarCell .dateBtn.selected{background-color: var(--primary-500);}
+.calendarBox .calendarGrid .calendarCell .dateBtn.selected .date{color: var(--white);}
+.calendarBox .calendarGrid .calendarCell .scheduleInfoText{margin: var(--spacing-2xs) 0; padding: var(--spacing-2xs); background-color: #2F3F61; color: var(--white); border-radius: var(--radius-2xs); font-size: var(--font-size-xs); font-weight: var(--bold);}
+
+.scheduleInfoList{margin: var(--spacing-s) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: var(--spacing-2xs);}
+.scheduleInfoList li{display: flex; align-items: center; gap: 0 var(--spacing-2xs); padding: var(--spacing-2xs) var(--spacing-xs); background-color: var(--white); border-radius: var(--radius-xs); font-weight: var(--bold); font-size: var(--font-size-xs); color: var(--gray-600);}
+.scheduleInfoList li::before{content: ''; width: 8px; height: 8px; border-radius: 50%;}
+.scheduleTabList{margin-bottom: var(--spacing-m); display:inline-flex; padding: var(--spacing-2xs); background: var(--gray-100); border-radius: var(--radius-m);}
+
+.calendarScheduleBox .calendarScheduleList li .category{min-width: 53px; min-height: 25px; padding: var(--spacing-2xs) var(--spacing-xs); border-radius: var(--radius-xs); color: var(--white); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
+.calendarBox .calendarGrid .plenary,
+.calendarScheduleBox .calendarScheduleList li .plenary,
+.scheduleInfoList li.plenary::before
+{background-color: #FF8539!important;}
+.calendarBox .calendarGrid .budgetSpecial,
+.calendarScheduleBox .calendarScheduleList li .budgetSpecial,
+.scheduleInfoList li.budgetSpecial::before
+{background-color: #61ACF6!important;}
+.calendarBox .calendarGrid .ordinanceSpecial,
+.calendarScheduleBox .calendarScheduleList li .ordinanceSpecial,
+.scheduleInfoList li.ordinanceSpecial::before
+{background-color: #5D3FD3!important;}
+.calendarBox .calendarGrid .auditSpecial,
+.calendarScheduleBox .calendarScheduleList li .auditSpecial,
+.scheduleInfoList li.auditSpecial::before
+{background-color: #C77654!important;}
+
+@media (max-width: 1024px){
+
+  .calendarWrap{flex-direction: column-reverse; height: auto;}
+  .calendarScheduleBox{width: auto;}
+  .calendarScheduleBox .calendarScheduleList{height: 355px;}
+  .calendarBox .calendarHeader h4{font-size: var(--H2);}
+
+}
+
+@media (max-width: 768px){
+
+  .calendarBox{padding: var(--spacing-ml) var(--spacing-m);}
+  .calendarBox .calendarHeader h4{font-size: var(--H3);}
+  .calendarScheduleBox .calendarScheduleList li p{font-size: var(--font-size-m);}
+  .calendarScheduleBox .date{font-size: var(--font-size-xxl);}
+  .calendarScheduleBox h4{font-size: var(--font-size-l);}
+
+  .scheduleInfoList{justify-content: flex-start;}
+
+}
+
+@media (max-width: 576px){
+
+  .calendarBox{padding: var(--spacing-ml) var(--spacing-s);}
+  .calendarBox .calendarHeader h4{font-size: var(--H4);}
+  .calendarBox .calendarGrid .calendarCell{min-height: 66px;}
+  .calendarScheduleBox{padding: var(--spacing-ml) var(--spacing-ms);}
+  .calendarScheduleBox h4{margin-bottom: var(--spacing-m);}
+  .calendarBox .calendarGrid .calendarCell .scheduleDot{width: 4px; height: 4px;}
+  .calendarScheduleBox .scheduleEmptyTitle{font-size: var(--font-size-m);}
+
+  .calendarBox .calendarGrid .calendarCell .scheduleInfoText{display: none;}
+
+}
+
+@media (max-width: 414px){
+
+  .calendarBox .calendarGrid .calendarCell{min-height: 50px;}
+  .calendarBox .calendarGrid .calendarCell .scheduleDots{padding: var(--spacing-3xs); margin-top: var(--spacing-3xs);border-radius: var(--spacing-2xs);}
+  .calendarBox .calendarGrid .calendarCell .scheduleDot{width: 3px; height: 3px;}
 
 }

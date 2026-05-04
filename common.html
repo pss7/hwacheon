@@ -97,13 +97,6 @@
             font-weight: 700;
         }
 
-        .commonPreview {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 12px;
-        }
-
         .code {
             margin-top: 24px;
             padding: 16px 18px;
@@ -161,7 +154,7 @@
 
                     <div class="commonPreview">
 
-                        <div class="btnBox">
+                        <div class="btnBox left">
                             <button type="button" class="btn btnSecondary">
                                 <div class="slideText">
                                     <span class="slideTextItem slideTextPrimary">버튼</span>
@@ -184,7 +177,7 @@
                     <h3 class="commonItemTitle">등록 / 수정</h3>
                     <div class="commonPreview">
 
-                        <div class="btnBox">
+                        <div class="btnBox left">
                             <button type="button" class="btn btnPrimary btnPositive">
                                 <div class="slideText">
                                     <span class="slideTextItem slideTextPrimary">등록</span>
@@ -207,7 +200,7 @@
                     <h3 class="commonItemTitle">삭제 / 취소</h3>
                     <div class="commonPreview">
 
-                        <div class="btnBox">
+                        <div class="btnBox left">
                             <button type="button" class="btn btnSecondary btnNegative">
                                 <div class="slideText">
                                     <span class="slideTextItem slideTextPrimary">삭제</span>
@@ -225,6 +218,7 @@
 
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -232,14 +226,23 @@
             <h2 class="commonSectionTitle">게시판-테이블형</h2>
             <div class="commonGrid full">
                 <div class="commonItem">
-                    <h3 class="commonItemTitle">목록</h3>
-
                     <div class="commonPreview">
+                        <div class="boardCountWrap">
+                            <div class="boardCountBox">
+                                <span>
+                                    <strong>1</strong>
+                                    / 50
+                                </span>
+                                <p>
+                                    총 <strong>410</strong>건의 게시글이 있습니다.
+                                </p>
+                            </div>
+                        </div>
 
                         <div class="boardListBox">
                             <table class="boardListTable">
                                 <caption class="blind">
-                                    공지사항 테이블
+                                    자유게시판 테이블
                                 </caption>
                                 <colgroup>
                                     <col class="id">
@@ -252,7 +255,7 @@
                                         <th scope="col">
                                             번호
                                         </th>
-                                        <th scope="col" class="textLeft">
+                                        <th scope="col" class="title textLeft">
                                             제목
                                         </th>
                                         <th scope="col">
@@ -264,6 +267,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr class="borderBarRow" aria-hidden="true">
+                                        <td colspan="4">
+                                            <span class="borderBar"></span>
+                                        </td>
+                                    </tr>
                                     <tr class="notice">
                                         <td>
                                             <span class="category" aria-label="공지">
@@ -306,7 +314,168 @@
                                                     게시글 목록 텍스트입니다.
                                                 </span>
                                                 <span class="file">
-                                                    <img src="images/sub/file_icon.svg" alt="첨부파일">
+                                                    <img src="../images/sub/file_icon.svg" alt="첨부파일">
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            관리자
+                                        </td>
+                                        <td>
+                                            <span class="date">
+                                                2024-01-03
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="id">
+                                                5
+                                            </span>
+                                        </td>
+
+                                        <td class="title">
+                                            <a href="#" class="link">
+                                                <span class="titleText">
+                                                    게시글 목록 텍스트입니다.
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            관리자
+                                        </td>
+                                        <td>
+                                            <span class="date">
+                                                2024-01-03
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="id">
+                                                5
+                                            </span>
+                                        </td>
+
+                                        <td class="title">
+                                            <a href="#" class="link">
+                                                <span class="titleText">
+                                                    게시글 목록 텍스트입니다.
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            관리자
+                                        </td>
+                                        <td>
+                                            <span class="date">
+                                                2024-01-03
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="id">
+                                                5
+                                            </span>
+                                        </td>
+
+                                        <td class="title">
+                                            <a href="#" class="link">
+                                                <span class="titleText">
+                                                    게시글 목록 텍스트입니다.
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            관리자
+                                        </td>
+                                        <td>
+                                            <span class="date">
+                                                2024-01-03
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="id">
+                                                5
+                                            </span>
+                                        </td>
+
+                                        <td class="title">
+                                            <a href="#" class="link">
+                                                <span class="titleText">
+                                                    게시글 목록 텍스트입니다.
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            관리자
+                                        </td>
+                                        <td>
+                                            <span class="date">
+                                                2024-01-03
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="id">
+                                                5
+                                            </span>
+                                        </td>
+
+                                        <td class="title">
+                                            <a href="#" class="link">
+                                                <span class="titleText">
+                                                    게시글 목록 텍스트입니다.
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            관리자
+                                        </td>
+                                        <td>
+                                            <span class="date">
+                                                2024-01-03
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="id">
+                                                5
+                                            </span>
+                                        </td>
+
+                                        <td class="title">
+                                            <a href="#" class="link">
+                                                <span class="titleText">
+                                                    게시글 목록 텍스트입니다.
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            관리자
+                                        </td>
+                                        <td>
+                                            <span class="date">
+                                                2024-01-03
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="id">
+                                                5
+                                            </span>
+                                        </td>
+
+                                        <td class="title">
+                                            <a href="#" class="link">
+                                                <span class="titleText">
+                                                    게시글 목록 텍스트입니다.
                                                 </span>
                                             </a>
                                         </td>
@@ -346,6 +515,1060 @@
                             </table>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="commonSection">
+            <h2 class="commonSectionTitle">게시판-이미지형</h2>
+            <div class="commonGrid full">
+                <div class="commonItem">
+                    <div class="commonPreview">
+                        <div class="boardCountWrap">
+                            <div class="boardCountBox">
+                                <span>
+                                    <strong>1</strong>
+                                    / 50
+                                </span>
+                                <p>
+                                    총 <strong>410</strong>건의 게시글이 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="photoBoardListBox">
+                            <ul class="photoBoardList" aria-label="포토의정 목록">
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img01.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img02.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img03.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img04.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img01.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img01.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img01.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img01.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img01.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="photoBoardImgBox">
+                                            <img src="../images/sub/photo_img01.jpg" alt="" class="img">
+                                            <div class="participationBox">
+                                                <strong>참여</strong>
+                                                <div class="participationListBox">
+                                                    <ul class="participationList">
+                                                        <li>
+                                                            <img src="../images/sub/img01.png" alt="류희상의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img02.png" alt="조웅희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img03.png" alt="노이업의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img04.png" alt="김동완의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img05.png" alt="김명진의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img06.png" alt="이선희의원">
+                                                        </li>
+                                                        <li>
+                                                            <img src="../images/sub/img07.png" alt="조재규의원">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="photoBoardTextBox">
+                                            <h4>
+                                                포토의정
+                                            </h4>
+                                            <h5>
+                                                임용장 수여식
+                                            </h5>
+                                            <span class="date">
+                                                2025-03-31
+                                            </span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="commonSection">
+            <h2 class="commonSectionTitle">게시판-상세</h2>
+            <div class="commonGrid full">
+                <div class="commonItem">
+                    <div class="commonPreview">
+                        <div class="boardCountWrap">
+                            <div class="boardCountBox">
+                                <span>
+                                    <strong>1</strong>
+                                    / 50
+                                </span>
+                                <p>
+                                    총 <strong>410</strong>건의 게시글이 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="boardViewBox">
+                            <div class="boardViewTopBox">
+                                <span class="category">공지</span>
+                                <h4>
+                                    제295회 화천군의회(임시회) 의결사항
+                                </h4>
+                                <div class="boardViewInfoBox">
+                                    <span class="boardViewAuthor">관리자</span>
+                                    <span class="boardViewDate">2024-01-03</span>
+                                    <span class="boardViewCount">조회수 123</span>
+                                </div>
+                            </div>
+                            <!-- //boardViewTopBox -->
+
+                            <div class="boardViewContentBox">
+
+                                <div class="viewContentBox">
+                                    <img src="../images/sub/view_img01.jpg" alt="">
+                                    <img src="../images/sub/view_img02.jpg" alt="">
+                                    <br>
+                                    <p>
+                                        의결권은 자치단체 또는 의회자체의 의사를 결정하는 권한이다. 이 의결권에 의하여 조례를 제정ㆍ개폐하고, 예산안과 결산을
+                                        심의ㆍ확정ㆍ승인하는 등 법령과 조례에 의하여 지방의회의 권한에 속하는 사항과 중요정책을 심의ㆍ의결한다. <br> 지방의회의
+                                        의결사항으로서는 ① 지방자치법 제35조 제1항의 규정에 의한 11가지 의결사항, ② 지방자치법령이나 기타 법령에 의해 지방의회의
+                                        의결을
+                                        받도록 되어 있는 사항, ③ 당해 자치단체의 조례에 의해 지방의회의 의결을 거쳐야 할 사항으로 나눌 수 있다.의결권은 자치단체
+                                        또는
+                                        의회자체의 의사를 결정하는 권한이다. 이 의결권에 의하여 조례를 제정ㆍ개폐하고, 예산안과 결산을 심의ㆍ확정ㆍ승인하는 등 법령과
+                                        조례에
+                                        의하여 지방의회의 권한에 속하는 사항과 중요정책을 심의ㆍ의결한다. <br> 지방의회의 의결사항으로서는 ① 지방자치법 제35조
+                                        제1항의
+                                        규정에 의한 11가지 의결사항, ② 지방자치법령이나 기타 법령에 의해 지방의회의 의결을 받도록 되어 있는 사항, ③ 당해
+                                        자치단체의
+                                        조례에 의해 지방의회의 의결을 거쳐야 할 사항으로 나눌 수 있다.의결권은 자치단체 또는 의회자체의 의사를 결정하는 권한이다. 이
+                                        의결권에
+                                        의하여 조례를 제정ㆍ개폐하고, 예산안과 결산을 심의ㆍ확정ㆍ승인하는 등 법령과 조례에 의하여 지방의회의 권한에 속하는 사항과
+                                        중요정책을
+                                        심의ㆍ의결한다. <br> 지방의회의 의결사항으로서는 ① 지방자치법 제35조 제1항의 규정에 의한 11가지 의결사항, ②
+                                        지방자치법령이나
+                                        기타 법령에 의해 지방의회의 의결을 받도록 되어 있는 사항, ③ 당해 자치단체의 조례에 의해 지방의회의 의결을 거쳐야 할 사항으로
+                                        나눌
+                                        수 있다.의결권은 자치단체 또는 의회자체의 의사를 결정하는 권한이다. 이 의결권에 의하여 조례를 제정ㆍ개폐하고, 예산안과 결산을
+                                        심의ㆍ확정ㆍ승인하는 등 법령과 조례에 의하여 지방의회의 권한에 속하는 사항과 중요정책을 심의ㆍ의결한다. <br> 지방의회의
+                                        의결사항으로서는 ① 지방자치법 제35조 제1항의 규정에 의한 11가지 의결사항, ② 지방자치법령이나 기타 법령에 의해 지방의회의
+                                        의결을
+                                        받도록 되어 있는 사항, ③ 당해 자치단체의 조례에 의해 지방의회의 의결을 거쳐야 할 사항으로 나눌 수 있다.
+                                    </p>
+                                </div>
+                                <!-- //viewContentBox -->
+
+                            </div>
+                            <!-- //boardViewContentBox -->
+
+                            <div class="boardViewFileBox">
+                                <h5 class="boardViewFileTitle">첨부파일</h5>
+                                <ul class="boardViewFileList">
+                                    <li class="boardViewFileItem">
+                                        <a href="#" class="boardViewFileLink fileHwp">
+                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                            <span class="boardViewFileName">한글파일입니다.hwp</span>
+                                            <span class="boardViewFileSize">(79 KB)</span>
+                                        </a>
+                                    </li>
+                                    <li class="boardViewFileItem">
+                                        <a href="#" class="boardViewFileLink filePdf">
+                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                            <span class="boardViewFileName">PDF 파일입니다.pdf</span>
+                                            <span class="boardViewFileSize">(79 KB)</span>
+                                        </a>
+                                    </li>
+                                    <li class="boardViewFileItem">
+                                        <a href="#" class="boardViewFileLink fileXlsx">
+                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                            <span class="boardViewFileName">엑셀 파일입니다.xlsx</span>
+                                            <span class="boardViewFileSize">(79 KB)</span>
+                                        </a>
+                                    </li>
+                                    <li class="boardViewFileItem">
+                                        <a href="#" class="boardViewFileLink fileJpg">
+                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                            <span class="boardViewFileName">사진 파일입니다.jpg</span>
+                                            <span class="boardViewFileSize">(79 KB)</span>
+                                        </a>
+                                    </li>
+                                    <li class="boardViewFileItem">
+                                        <a href="#" class="boardViewFileLink filePpt">
+                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                            <span class="boardViewFileName">파워포인트 파일입니다.ppt</span>
+                                            <span class="boardViewFileSize">(79 KB)</span>
+                                        </a>
+                                    </li>
+                                    <li class="boardViewFileItem">
+                                        <a href="#" class="boardViewFileLink fileZip">
+                                            <span class="boardViewFileIcon" aria-hidden="true"></span>
+                                            <span class="boardViewFileName">그외 파일입니다.zip</span>
+                                            <span class="boardViewFileSize">(79 KB)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- //boardViewFileList -->
+
+                            </div>
+                            <!-- //boardViewFileBox -->
+
+                        </div>
+
+                        <div class="btnBox between">
+                            <a href="#" class="btn btnPrimary">
+                                <div class="slideText">
+                                    <span class="slideTextItem slideTextPrimary">목록</span>
+                                    <span class="slideTextItem slideTextClone" aria-hidden="true">목록</span>
+                                </div>
+                            </a>
+                            <div class="btnLayoutBox">
+                                <button type="button" class="btn btnSecondary btnNegative">
+                                    <div class="slideText">
+                                        <span class="slideTextItem slideTextPrimary">삭제</span>
+                                        <span class="slideTextItem slideTextClone" aria-hidden="true">삭제</span>
+                                    </div>
+                                </button>
+                                <button type="button" class="btn btnPrimary btnPositive">
+                                    <div class="slideText">
+                                        <span class="slideTextItem slideTextPrimary">수정</span>
+                                        <span class="slideTextItem slideTextClone" aria-hidden="true">수정</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <nav class="boardViewNavBox" aria-label="이전글 다음글">
+                            <a href="#" class="boardViewNavItem prev">
+                                <span class="boardViewNavIcon" aria-hidden="true"></span>
+                                <span class="boardViewNavLabel">이전글</span>
+                                <div class="boardViewNavContent">
+                                    <span class="boardViewNavTitle">이전글 제목이 들어갑니다.</span>
+                                    <span class="boardViewNavDate">2024-01-03</span>
+                                </div>
+                            </a>
+
+                            <a href="#" class="boardViewNavItem next">
+                                <span class="boardViewNavIcon" aria-hidden="true"></span>
+                                <span class="boardViewNavLabel">다음글</span>
+                                <div class="boardViewNavContent">
+                                    <span class="boardViewNavTitle">다음글 제목이 들어갑니다.</span>
+                                    <span class="boardViewNavDate">2024-01-04</span>
+                                </div>
+                            </a>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="commonSection">
+            <h2 class="commonSectionTitle">달력</h2>
+            <div class="commonGrid full">
+                <div class="commonItem">
+                    <div class="commonPreview">
+
+                        <div class="calendarWrap">
+
+                            <!-- //왼쪽영역 -->
+                            <section class="calendarScheduleBox">
+                                <span class="date">03.17</span>
+
+                                <h4>
+                                    제295회 임시회
+                                </h4>
+
+                                <ul class="calendarScheduleList">
+                                    <li>
+                                        <span class="time">10:00</span>
+                                        <span class="category plenary">본회의</span>
+                                    </li>
+                                    <li>
+                                        <span class="time">13:00</span>
+                                        <span class="category budgetSpecial">예산결산특별위원회</span>
+                                    </li>
+                                    <li>
+                                        <span class="time">15:00</span>
+                                        <span class="category ordinanceSpecial">조례등의안심사특별위</span>
+                                    </li>
+                                    <li>
+                                        <span class="time">17:00</span>
+                                        <span class="category auditSpecial">행정사무감사특별위</span>
+                                    </li>
+                                </ul>
+                                <!-- //calendarScheduleList -->
+
+                                <div class="btnBox">
+                                    <button type="button" class="btn btnPrimary btnPositive">
+                                        <div class="slideText">
+                                            <span class="slideTextItem slideTextPrimary">자세히보기</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">자세히보기</span>
+                                        </div>
+                                    </button>
+                                    <!-- //btn -->
+
+                                    <button type="button" class="btn btnPrimary btnPositive">
+                                        <div class="slideText">
+                                            <span class="slideTextItem slideTextPrimary">등록</span>
+                                            <span class="slideTextItem slideTextClone" aria-hidden="true">등록</span>
+                                        </div>
+                                    </button>
+                                    <!-- //btn -->
+
+                                </div>
+                                <!-- //btnBox -->
+
+                                <!-- 내용 없을 경우 
+                                            <div class="scheduleEmptyBox">
+                                                <div class="scheduleEmptyContentBox">
+                                                    <p class="scheduleEmptyTitle">등록된 내용이 없어요</p>
+                                                    <p class="scheduleEmptyText">새로운 정보가 준비 중이에요</p>
+                                                </div>
+                                            </div>
+                                            -->
+                                <!-- //scheduleEmptyBox -->
+
+                            </section>
+                            <!-- //calendarScheduleBox -->
+
+                            <!-- //오른쪽영역 -->
+                            <section class="calendarBox">
+                                <header class="calendarHeader">
+                                    <button type="button" class="calendarBtn calendarPrev" aria-label="이전달"></button>
+                                    <h4>2026.4</h4>
+                                    <button type="button" class="calendarBtn calendarNext" aria-label="다음달"></button>
+                                </header>
+
+                                <div class="calendarWeek">
+                                    <div class="week sun">일</div>
+                                    <div class="week">월</div>
+                                    <div class="week">화</div>
+                                    <div class="week">수</div>
+                                    <div class="week">목</div>
+                                    <div class="week">금</div>
+                                    <div class="week sat">토</div>
+                                </div>
+                                <!-- //calendarWeek -->
+
+                                <div class="calendarGrid">
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sun disabled" disabled="">
+                                            <span class="date">30</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn disabled" disabled="">
+                                            <span class="date">31</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn hasSchedule">
+                                            <span class="date">1</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                            <span class="scheduleDots" aria-hidden="true">
+                                                <span class="scheduleDot plenary"></span>
+                                                <span class="scheduleDot budgetSpecial"></span>
+                                                <span class="scheduleDot ordinanceSpecial"></span>
+                                                <span class="scheduleDot auditSpecial"></span>
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn hasSchedule">
+                                            <span class="date">2</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                            <span class="scheduleDots" aria-hidden="true">
+                                                <span class="scheduleDot plenary"></span>
+                                                <span class="scheduleDot budgetSpecial"></span>
+                                                <span class="scheduleDot ordinanceSpecial"></span>
+                                                <span class="scheduleDot auditSpecial"></span>
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">3</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">4</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sat">
+                                            <span class="date">5</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sun">
+                                            <span class="date">6</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn hasSchedule">
+                                            <span class="date">7</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                            <span class="scheduleDots" aria-hidden="true">
+                                                <span class="scheduleDot plenary"></span>
+                                                <span class="scheduleDot budgetSpecial"></span>
+                                                <span class="scheduleDot ordinanceSpecial"></span>
+                                                <span class="scheduleDot auditSpecial"></span>
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn hasSchedule">
+                                            <span class="date">8</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                            <span class="scheduleDots" aria-hidden="true">
+                                                <span class="scheduleDot plenary"></span>
+                                                <span class="scheduleDot budgetSpecial"></span>
+                                                <span class="scheduleDot ordinanceSpecial"></span>
+                                                <span class="scheduleDot auditSpecial"></span>
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn hasSchedule">
+                                            <span class="date">9</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                            <span class="scheduleDots" aria-hidden="true">
+                                                <span class="scheduleDot plenary"></span>
+                                                <span class="scheduleDot budgetSpecial"></span>
+                                                <span class="scheduleDot ordinanceSpecial"></span>
+                                                <span class="scheduleDot auditSpecial"></span>
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn hasSchedule">
+                                            <span class="date">10</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                            <span class="scheduleDots" aria-hidden="true">
+                                                <span class="scheduleDot plenary"></span>
+                                                <span class="scheduleDot budgetSpecial"></span>
+                                                <span class="scheduleDot ordinanceSpecial"></span>
+                                                <span class="scheduleDot auditSpecial"></span>
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn hasSchedule selected">
+                                            <span class="date">11</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                            <span class="scheduleDots" aria-hidden="true">
+                                                <span class="scheduleDot plenary"></span>
+                                                <span class="scheduleDot budgetSpecial"></span>
+                                                <span class="scheduleDot ordinanceSpecial"></span>
+                                                <span class="scheduleDot auditSpecial"></span>
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sat">
+                                            <span class="date">12</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sun">
+                                            <span class="date">13</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">14</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">15</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">16</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">17</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">18</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sat">
+                                            <span class="date">19</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sun">
+                                            <span class="date">20</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">21</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">22</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">23</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">24</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">25</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sat">
+                                            <span class="date">26</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sun">
+                                            <span class="date">27</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">28</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">29</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn">
+                                            <span class="date">30</span>
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn disabled" disabled="">
+                                            <span class="date">1</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn disabled" disabled="">
+                                            <span class="date">2</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+
+                                        </button>
+                                    </div>
+                                    <div class="calendarCell">
+                                        <button type="button" class="dateBtn sat disabled" disabled="">
+                                            <span class="date">3</span>
+
+                                            <span class="scheduleInfoText">
+                                                제295회 임시회
+                                            </span>
+
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- //calendarGrid -->
+
+                                <ul class="scheduleInfoList">
+                                    <li class="plenary">
+                                        본회의
+                                    </li>
+                                    <li class="budgetSpecial">
+                                        예산결산특별위
+                                    </li>
+                                    <li class="ordinanceSpecial">
+                                        조례등의안심사특별위
+                                    </li>
+                                    <li class="auditSpecial">
+                                        행정사무감사특별위
+                                    </li>
+                                </ul>
+                                <!-- //scheduleInfoList -->
+
+                            </section>
+                            <!-- //calendarBox -->
+
+                        </div>
                     </div>
                 </div>
             </div>
