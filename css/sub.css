@@ -1516,7 +1516,8 @@ main{flex: 1;}
 
 /* 공통 - 검색 */
 .searchWrap{margin-bottom: var(--spacing-lm); padding: var(--spacing-m) var(--spacing-ms); border-radius: var(--radius-m); background: linear-gradient(to right, var(--gray-100), var(--primary-50)), var(--gray-100);}
-.searchBox{position: relative; display: flex; align-items: center; gap: 0 var(--spacing-s); max-width: 540px; margin: 0 auto; height: 72px; overflow: hidden; background-color: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius-s);}
+.searchBox{position: relative; display: flex; align-items: center; gap: 0 var(--spacing-s); max-width: 540px; margin: 0 auto; height: 72px; overflow: hidden; background-color: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius-s); }
+.searchBox:focus-within{border-color: var(--gray-600);}
 .searchBox .searchBtn{width: 40px; height: 100%; position: absolute; top: 50%; transform: translateY(-50%); right:16px; background: url(../images/sub/search_icon.svg)no-repeat center / contain;}
 .searchBox .searchSelectBox{height: 100%;}
 .searchBox .searchSelectBox #searchSelect{flex-shrink: 0; padding-left: var(--spacing-m); width: 98px; height: 100%; color: var(--gray-900); font-weight: var(--medium); font-size: var(--font-size-m);  cursor: pointer; border: 0; background-color: var(--white);}
@@ -1546,9 +1547,11 @@ main{flex: 1;}
 .boardListTable tbody tr td .id{display: inline-block; padding: var(--spacing-2xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--gray-400); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--gray-100);}
 .boardListTable tbody tr td .category{min-width: 80px; padding: var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-s); font-weight: var(--bold); color: var(--white); transition: all .3s; border-radius: var(--radius-xs); background-color: var(--primary-500);}
 .boardListTable tbody tr td .link{display: flex; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-ml) var(--spacing-m) var(--spacing-ml) var(--spacing-m); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.boardListTable tbody tr:hover{background-color: var(--gray-50);}
+.boardListTable tbody tr:hover .link .titleText{text-shadow: 0.25px 0 0 currentColor, -0.25px 0 0 currentColor;}
 .boardListTable tbody tr td .link .file{flex-shrink: 0;}
 .boardListTable tbody tr td .link .file img{display: block;}
-.boardListTable tbody tr td .link .titleText{min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--H6); font-weight: var(--medium); color: var(--gray-900);}
+.boardListTable tbody tr td .link .titleText{min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: var(--H6); font-weight: var(--medium); color: var(--gray-900); transition: all .3s;}
 .boardListTable tbody tr td .date{font-size: var(--font-size-s); font-weight: var(--medium); color: var(--gray-400);}
 .boardCountWrap{margin-bottom: var(--spacing-m);}
 .boardCountWrap .boardCountBox{display: flex; align-items: center; flex-wrap: wrap; gap: var(--spacing-xs) var(--spacing-s); }
@@ -1651,6 +1654,7 @@ main{flex: 1;}
 .boardViewFileList li{margin-bottom: var(--spacing-s);}
 .boardViewFileList li:last-child{margin-bottom: 0;}
 .boardViewFileList li a{display: flex; flex-wrap: wrap; align-items: center;}
+.boardViewFileList li a:hover .boardViewFileName{text-shadow: 0.25px 0 0 currentColor, -0.25px 0 0 currentColor;}
 .boardViewFileList li a .boardViewFileIcon{width: 24px; height: 28px; margin-right: var(--spacing-xs);}
 .boardViewFileList li a.fileHwp .boardViewFileIcon{background: url(../images/sub/hwp_icon.svg)no-repeat center / contain;}
 .boardViewFileList li a.filePdf .boardViewFileIcon{background: url(../images/sub/pdf_icon.svg)no-repeat center / contain;}
@@ -1658,7 +1662,7 @@ main{flex: 1;}
 .boardViewFileList li a.fileJpg .boardViewFileIcon{background: url(../images/sub/jpg_icon.svg)no-repeat center / contain;}
 .boardViewFileList li a.filePpt .boardViewFileIcon{background: url(../images/sub/ppt_icon.svg)no-repeat center / contain;}
 .boardViewFileList li a.fileZip .boardViewFileIcon{background: url(../images/sub/zip_icon.svg)no-repeat center / contain;}
-.boardViewFileList li a .boardViewFileName{margin-right: var(--spacing-2xs); color: var(--gray-600);}
+.boardViewFileList li a .boardViewFileName{margin-right: var(--spacing-2xs); color: var(--gray-600); transition: all .3s;}
 .boardViewFileList li a .boardViewFileSize{color: var(--gray-400);}
 .boardViewBox .boardViewLayoutBox{padding: 0 var(--spacing-m); display: flex; align-items: flex-start; justify-content: space-between; gap: 0 var(--spacing-xl);}
 .boardViewBox .viewContentInfoBox dl{margin-bottom: var(--spacing-m); display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-xs) 0;}
@@ -1712,11 +1716,12 @@ main{flex: 1;}
 .boardViewNavBox{padding-top: 3px; position: relative; margin:var(--spacing-3xl) 0 var(--spacing-lm); border-bottom: 1px solid var(--gray-100);}
 .boardViewNavBox::after{content: ''; position: absolute; top:0; left:0; right:0; height: 1px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
 .boardViewNavBox .boardViewNavItem{padding: var(--spacing-s) 0; display: flex; align-items: center; min-height: 54px; }
+.boardViewNavBox .boardViewNavItem:hover .boardViewNavTitle{text-shadow: 0.25px 0 0 currentColor, -0.25px 0 0 currentColor;}
 .boardViewNavBox .boardViewNavIcon{margin-right:var(--spacing-xs); width: 24px; height: 24px;}
 .boardViewNavBox .boardViewNavItem.prev .boardViewNavIcon{background: url(../images/sub/arrow_icon07.svg)no-repeat center;}
 .boardViewNavBox .boardViewNavItem.next .boardViewNavIcon{transform: rotate(180deg); background: url(../images/sub/arrow_icon07.svg)no-repeat center;}
 .boardViewNavBox .boardViewNavLabel{flex-shrink: 0; margin-right: 30px; color: var(--gray-400); font-size: var(--font-size-s); font-weight: var(--bold);}
-.boardViewNavBox .boardViewNavTitle{flex: 1 1 auto; min-width: 0; color: var(--gray-600); font-weight: var(--bold); font-size: var(--Subtitle-2);}
+.boardViewNavBox .boardViewNavTitle{flex: 1 1 auto; min-width: 0; color: var(--gray-600); font-weight: var(--medium); font-size: var(--Subtitle-2); transition: all .3s;}
 .boardViewNavBox .boardViewNavDate{flex: 0 0 auto; color: var(--gray-500); font-weight: var(--medium); font-size: var(--body-2);} 
 .boardViewNavBox .boardViewNavContent{width: 100%; display: flex; align-items: center; justify-content: space-between;}
 
@@ -1774,6 +1779,7 @@ main{flex: 1;}
 .boardWriteFileBox .boardWriteFile{margin-bottom: var(--spacing-s);}
 .boardWriteFileBox .boardWriteFile:last-child{margin-bottom: 0;}
 .boardWriteFileBox .boardWriteFileBtn{display: flex; align-items: center; gap: 0 var(--spacing-xs); max-width: 699px; height: 48px; padding:0 var(--spacing-s); border: 1px solid var(--gray-100); border-radius: var(--radius-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--white); cursor: pointer;}
+.boardWriteFileBox .boardWriteFileBtn.active {border-color: var(--primary-800); font-weight: var(--bold);}
 .boardWriteFileBox:first-child .boardWriteFileBtn{max-width: none; width: 100%;}
 .boardWriteFileBox .boardWriteFileBtn::before{content: ''; margin-top: 2px; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center / contain;}
 .boardWriteFileBox .boardWriteFileItem{margin-top: var(--spacing-xs); display: flex; align-items: center; gap: 0 var(--spacing-xs);}
@@ -1859,6 +1865,14 @@ textarea{width: 100%; height: 180px; padding: var(--spacing-s); border: 1px soli
 }
 
 /* 공통 - 폼 */
+select:focus,
+input:focus,
+textarea:focus{outline: 0; border: 1px solid var(--primary-800)!important;}
+.boardWriteFileBtn:focus,
+textarea,
+select:focus,
+input:focus::placeholder{font-weight: var(--bold)!important;}
+
 input{padding: var(--spacing-ms) var(--spacing-s); width: 100%; border: 1px solid var(--gray-100); border-radius: var(--radius-xs);  color: var(--gray-600); font-size: var(--font-size-s); font-weight: var(--medium);}
 input::placeholder{color: var(--gray-600);}
 #boardTitle{font-size: var(--font-size-xl); border-radius:var(--radius-s);}

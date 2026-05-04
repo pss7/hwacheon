@@ -168,4 +168,38 @@ $(function () {
 
   });
 
+  //파일
+  $('.boardWriteFileBtn').click(function () {
+    $('.boardWriteFileBtn').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  $(window).focus(function () {
+    setTimeout(function () {
+      $('.boardWriteFileBtn.active').each(function () {
+        if (!$(this).closest('.boardWriteFile').find('input[type="file"]').val()) {
+          $(this).removeClass('active');
+        }
+      });
+    }, 200);
+  });
+
+  $('.boardWriteFile input[type="file"]').change(function () {
+    if ($(this).val()) {
+      $(this).closest('.boardWriteFile').find('.boardWriteFileBtn')
+        .addClass('active')
+        .text(this.files[0].name);
+
+      $(this).closest('.boardWriteFile').find('.boardWriteFileName')
+        .text(this.files[0].name);
+
+      $(this).closest('.boardWriteFile').find('.boardWriteFileItem')
+        .show();
+    }
+  });
+
+  $('.boardWriteFileDel').click(function () {
+    $(this).closest('.boardWriteFile').remove();
+  });
+
 });
