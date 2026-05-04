@@ -2007,6 +2007,49 @@ input::placeholder{color: var(--gray-600);}
 .boardWriteDateBox{max-width: 188px; width: 100%; position: relative;}
 .boardWriteDateBox .calendarBtn{width: 24px; height: 24px; position: absolute; top:50%; transform: translateY(-50%); right:16px; background: url(../images/sub/calendar_icon.svg)no-repeat center;}
 
+/* 달력 */
+#ui-datepicker-div {max-width: 280px; width: 100%; padding: var(--spacing-s); border: 1px solid var(--gray-100);
+  border-radius: var(--radius-m); background: #EFF1F3; box-shadow: 10px 10px 40px rgba(0,0,0,.1); z-index: 9999 !important;}
+#ui-datepicker-div .ui-datepicker-year,
+#ui-datepicker-div .ui-datepicker-month {width: 72px; height: 32px; padding: 0 var(--spacing-xs);
+  border-radius: var(--radius-xs); border: 0; background-color: var(--white); font-size: var(--body-2); font-weight: var(--bold); color: var(--gray-900); cursor: pointer;}
+#ui-datepicker-div .ui-datepicker-header {position: relative; padding: 0 0 var(--spacing-s); border: 0; background: transparent;}
+#ui-datepicker-div .ui-datepicker-prev,
+#ui-datepicker-div .ui-datepicker-next {position: absolute; top: 0; width: 32px; height: 32px;
+  border-radius: 50%; background-color: var(--white); cursor: pointer;}
+#ui-datepicker-div .ui-datepicker-prev {left: 0;}
+#ui-datepicker-div .ui-datepicker-next {right: 0;}
+#ui-datepicker-div .ui-datepicker-prev span,
+#ui-datepicker-div .ui-datepicker-next span {display: none;}
+#ui-datepicker-div .ui-corner-all:hover{border: 0;}
+#ui-datepicker-div .ui-corner-all::before{content: '';}
+#ui-datepicker-div .ui-datepicker-prev::before {background: url(../images/sub/arrow.svg)no-repeat center;}
+#ui-datepicker-div .ui-datepicker-next::before {transform: rotate(180deg);
+  background: url(../images/sub/arrow.svg)no-repeat center;}
+.ui-datepicker .ui-datepicker-title{display: flex; align-items: center; justify-content: center; gap: 0 var(--spacing-2xs); margin: 0!important; line-height: 1!important;}
+#ui-datepicker-div .ui-datepicker-prev::before,
+#ui-datepicker-div .ui-datepicker-next::before {display: flex; align-items: center; justify-content: center; height: 100%;
+  font-size: 24px; color: var(--gray-900);}
+#ui-datepicker-div .ui-datepicker-calendar {width: 100%; border-collapse: collapse;}
+#ui-datepicker-div .ui-datepicker-calendar th {padding: var(--spacing-xs) 0; font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
+#ui-datepicker-div .ui-datepicker-calendar td {padding: var(--spacing-3xs); text-align: center;}
+#ui-datepicker-div .ui-datepicker-calendar td a {display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; color: var(--gray-600); border-radius: 50%; font-weight: var(--medium);
+  background-color: var(--white); text-decoration: none; border-radius: var(--radius-2xs); border: 0;}
+#ui-datepicker-div .ui-datepicker-calendar td a:hover {background: var(--gray-100);}
+#ui-datepicker-div .ui-datepicker-today a {background-color: var(--primary-500)!important; color: var(--white)!important;
+  font-weight: var(--bold)!important;}
+#ui-datepicker-div .ui-datepicker-current-day a,
+#ui-datepicker-div .ui-state-active {background: var(--primary-800) !important; color: #fff !important; font-weight: var(--bold)!important;}
+#ui-datepicker-div .ui-state-disabled span {padding: 0; text-align: center; border: 0;
+  font-weight: var(--medium); font-size: var(--body-2); color: var(--gray-400);}
+#ui-datepicker-div .ui-datepicker-buttonpane {margin: var(--spacing-s) 0 0; padding: var(--spacing-xs) 0 0;
+  border-top: 1px solid var(--gray-100); background: transparent;}
+#ui-datepicker-div .ui-datepicker-close {margin: 0; width: 64px; height: 28px;
+  padding: 0 var(--spacing-xs); border-radius: var(--radius-xs); background: #fff; font-weight: var(--bold);
+  font-size: var(--font-size-s); color: var(--gray-600); cursor: pointer; text-align: center; border: 0;}
+#ui-datepicker-div .ui-datepicker-current {display: none;}
+
 .boardWriteTimeBox{max-width: 165px; width: 100%; padding: var(--spacing-xs) var(--spacing-s); display: flex; align-items: center; gap: 0 var(--spacing-xs); background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-xs);}
 .boardWriteTimeBox input{height: 32px; padding: 0!important; font-size: var(--font-size-s); text-align: center; border-radius: var(--radius-2xs);}
 
