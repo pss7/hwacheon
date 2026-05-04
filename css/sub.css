@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
 /* 공통 */
-html, 
-body{height: 100%;}
-#wrap{height: 100%; display: flex; flex-direction: column;}
+#wrap{display: flex; flex-direction: column;}
 main{flex: 1;}
 .borderBar{display: block; height: 3px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
 
@@ -2739,20 +2737,20 @@ input::placeholder{color: var(--gray-600);}
 }
 
 /* 회기별 일정 -상세 */
-.scheduleViewBox .scheduleViewContentBox{padding: 0 var(--spacing-m);}
+.scheduleViewBox .scheduleViewContentBox{ padding: 0 var(--spacing-m);}
 .scheduleViewBox .scheduleViewTop{padding: var(--spacing-l) 0 var(--spacing-lm); display: flex; gap: 0 var(--spacing-xl);}
-.scheduleViewBox .scheduleViewTop h4{color: var(--gray-900); font-weight: var(--bold); font-size: var(--font-size-xl);}
+.scheduleViewBox .scheduleViewTop h4{flex-shrink: 0; color: var(--gray-900); font-weight: var(--bold); font-size: var(--font-size-xl);}
 .scheduleViewBox .scheduleViewTop .scheduleViewInfo span{display: inline-block; margin-bottom: var(--spacing-s); padding: var(--spacing-2xs) var(--spacing-xs); border-radius: 0 0 0 var(--radius-xs); color: var(--gray-600); font-weight: var(--medium); font-size: var(--font-size-s); background-color: var(--success-50);}
 .scheduleViewBox .scheduleViewTop .scheduleViewInfo span strong{margin-right: 10px; color: var(--success-500); font-weight: var(--semi-bold); font-size: var(--font-size-s);}
 .scheduleViewBox .scheduleViewTop .scheduleViewInfo p{color: var(--gray-600); font-size: var(--font-size-s);}
-.scheduleViewBox .scheduleViewDate {margin-bottom: var(--spacing-lm); padding: var(--spacing-xs);
-  display: flex; flex-wrap: nowrap; align-items: center; gap: 0 var(--spacing-m);
-  background-color: var(--gray-900); border-radius: var(--radius-s); overflow-x: auto;}
-.scheduleViewBox .scheduleViewDate .dateBtn {padding: var(--spacing-xs); font-weight: var(--bold);
-  font-size: var(--font-size-xl); color: var(--gray-400); border-radius: var(--spacing-xs);  white-space: nowrap;}
+.scheduleViewBox .scheduleViewDate{margin-bottom: var(--spacing-lm); padding: var(--spacing-xs);
+  display: flex; flex-wrap: nowrap; align-items: center; gap: 0 var(--spacing-m); background-color: var(--gray-900); border-radius: var(--radius-s); overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;}
+.scheduleViewBox .scheduleViewDate::-webkit-scrollbar {display: none;}
+.scheduleViewBox .scheduleViewDate .dateBtn{flex-shrink: 0; padding: var(--spacing-xs); font-weight: var(--bold);
+  font-size: var(--font-size-xl); color: var(--gray-400); border-radius: var(--spacing-xs);  white-space: nowrap;} 
 .scheduleViewBox .scheduleViewDate .allDateBtn,
 .scheduleViewBox .scheduleViewDate .dateBtn.active {background-color: var(--primary-500); color: var(--white);}
-.scheduleViewBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-lm);}
+.scheduleViewBox .scheduleBox{display: flex; align-items: flex-start; gap: 0 var(--spacing-lm);}
 .scheduleViewBox .scheduleViewDateBox{display: flex; align-items: center;}
 .scheduleViewBox .scheduleViewDateBox .date{position: relative; margin-right: 26px; font-weight: var(--bold); font-size: var(--H4); color: var(--gray-600);}
 .scheduleViewBox .scheduleViewDateBox .date::after{content: ''; position: absolute; top:17px; right:-17px; width: 5px; height: 5px; border-radius: 50%; background-color: var(--gray-400);}
@@ -2799,11 +2797,13 @@ input::placeholder{color: var(--gray-600);}
 
 @media (max-width: 768px){
 
-  .scheduleViewBox .scheduleViewBox{flex-direction: column; gap: var(--spacing-s) 0}
+  .scheduleViewBox .scheduleBox{flex-direction: column; gap: var(--spacing-s) 0}
 
 }
 
 @media (max-width: 480px){
+
+  .scheduleViewBox .scheduleViewTop{flex-direction: column; align-items: center; gap: var(--spacing-s) 0; text-align: center;}
 
   .scheduleViewBox .scheduleViewDateBox .day,
   .scheduleViewBox .scheduleViewDateBox .date{font-size: var(--H6);}

@@ -136,5 +136,26 @@ $(function () {
     }
   });
 
+  //가로스크롤
+  $('.scheduleViewBox .scheduleViewDate').mousedown(function (e) {
+    $(this)
+      .addClass('dragging')
+      .data('down', true)
+      .data('x', e.pageX)
+      .data('left', this.scrollLeft);
+  });
+
+  $(document).mouseup(function () {
+    $('.scheduleViewBox .scheduleViewDate')
+      .removeClass('dragging')
+      .data('down', false);
+  });
+
+  $(document).mousemove(function (e) {
+    $('.scheduleViewBox .scheduleViewDate.dragging').each(function () {
+      this.scrollLeft = $(this).data('left') - (e.pageX - $(this).data('x'));
+    });
+  });
+
 
 });
