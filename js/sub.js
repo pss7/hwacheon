@@ -157,5 +157,15 @@ $(function () {
     });
   });
 
+  //의원선택 
+  $('.memberSelectList li .button').click(function () {
+
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $(this).addClass('active');
+    }
+
+  });
 
 });

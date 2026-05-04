@@ -197,8 +197,8 @@ $(function () {
     }
   });
   $('.selectCloseBtn').click(function () {
-    $(this).parent().parent().removeClass('active');
-    $(this).parent().siblings('.toggleBtn').attr('aria-expanded', 'false').focus();
+    $(this).parents('.toggleBtnBox').removeClass('active');
+    $(this).parents('.toggleBtnBox').find('.toggleBtn').attr('aria-expanded', 'false').focus();
   });
 
 });

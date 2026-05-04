@@ -19,7 +19,7 @@ main{flex: 1;}
 
 /* 공통 - 선택 */
 .toggleBtnBox{position: relative;}
-.toggleBtn{display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-xs); padding: 0 var(--spacing-xs) 0 var(--spacing-s); height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
+.toggleBtn{display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-xs); padding: 0 var(--spacing-xs) 0 var(--spacing-s); height: 40px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s); background-color: var(--white);}
 .toggleBtn span{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
 .toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain; border: 1px solid var(--gray-100); border-radius: var(--radius-l); transition: all .3s;}
 .toggleBtn:hover:after{background-color: var(--gray-100);}
@@ -1817,6 +1817,7 @@ textarea{width: 100%; height: 180px; padding: var(--spacing-s); border: 1px soli
     font-weight: var(--medium); font-size: var(--font-size-s); cursor: pointer; background: #fff url(../images/sub/arrow_icon01.svg) right 16px center no-repeat;}
 #select{appearance: none;-webkit-appearance: none; -moz-appearance: none;}
 .memberSelectBox{position: relative;}
+.memberSelectBox.active .memberSelectBtn{border: 1px solid var(--gray-600);}
 .memberSelectBox .memberSelectBtn{display: flex; align-items: center; gap: 0 var(--spacing-s); padding: 0 var(--spacing-xs); width: 160px; height: 64px; background-color: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-s);}
 .memberSelectBox .memberSelectBtn span{flex-shrink: 0; display: flex; align-items: center; gap: 0 var(--spacing-xs); color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
 .memberSelectBox .memberSelectBtn span::before{content: ''; width: 48px; height: 48px; background: url(../images/sub/parliament.svg)no-repeat center / contain;}
@@ -1825,7 +1826,9 @@ textarea{width: 100%; height: 180px; padding: var(--spacing-s); border: 1px soli
 .memberSelectBox .memberSelectBox strong{display: block; margin-bottom: var(--spacing-m); font-size: var(--Subtitle-1);}
 .memberSelectBox .memberSelectBox .memberSelectList{display: flex; flex-wrap: wrap; gap: var(--spacing-2xs);}
 .memberSelectBox .memberSelectBox .memberSelectList li{max-width: 160px; width: 100%;}
-.memberSelectBox .memberSelectBox .memberSelectList li .button{display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-xs ); width: 100%; border-radius: var(--radius-s); background-color: var(--white);     box-shadow: 0 0 40px rgba(0, 0, 0, .15);}
+.memberSelectBox .memberSelectBox .memberSelectList li .button{display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--spacing-xs); padding: var(--spacing-xs ); width: 100%; border-radius: var(--radius-s); background-color: var(--white); box-shadow: 0 0 40px rgba(0, 0, 0, .15); border: 1px solid transparent; transition: all .3s;}
+.memberSelectBox .memberSelectBox .memberSelectList li .button.active{border-color: var(--gray-600);}
+.memberSelectBox .memberSelectBox .memberSelectList li .button.active .selectImgBox{background-color: var(--primary-500);}
 .memberSelectBox .memberSelectBox .memberSelectList li .button .selectImgBox{width: 36px; height: 36px; border-radius: var(--radius-m); background-color: var(--gray-100); overflow: hidden;}
 .memberSelectBox .memberSelectBox .memberSelectList li .button .selectImgBox img{height: 100%; object-fit: cover;}
 .memberSelectBox .memberSelectBox .memberSelectList li .button .name{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
@@ -2956,3 +2959,30 @@ input::placeholder{color: var(--gray-600);}
   .annualScheduleListBox .annualScheduleDateBox .annualScheduleDateBtn{font-size: var(--H6);}
 
 }
+
+/* 의원선택박스 */
+.memberSelectDropdownBox.active .toggleBtn span{color: var(--primary-500);}
+.memberSelectDropdownListBox{display: flex; flex-direction: column; width: 180px; padding: var(--spacing-ml) 0 0; max-height: 364px; position: absolute; top:57px; left:0; right:0; box-shadow: 0 0 40px rgba(0,0,0,.2); border-radius: var(--radius-l); border: 1px solid var(--white); background-color: var(--white); z-index: 999; } 
+.memberSelectDropdownListBox .councilTermBox{margin-bottom: -30px; padding: 0 var(--spacing-m) var(--spacing-xs); display: flex; align-items: center; justify-content: space-between; background-color: var(--white); z-index: 999;}
+.memberSelectDropdownListBox .councilTermBox .councilTermLabel{display: block; color: var(--gray-600); font-weight: var(--bold); font-size: var(--Subtitle-1);}
+.memberSelectDropdownListBox .councilTermBox .closeBtn{width: 32px; height: 32px;}
+.memberSelectDropdownListBox .councilTermBox .closeBtn::after{width: 13px; height: 13px;}
+.memberSelectDropdownList{height: 100%; padding: var(--spacing-l) var(--spacing-m) var(--spacing-m); overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none;}
+.memberSelectDropdownList::-webkit-scrollbar{width: 0; height: 0;}
+.memberSelectDropdownList li{ margin-bottom: var(--spacing-2xs); }
+.memberSelectDropdownList li:last-child{margin-bottom: 0;}
+.memberSelectDropdownList li .selectBtn{width: 100%; padding: var(--spacing-xs); background-color: var(--white); display: flex; align-items: center; gap: 0 var(--spacing-xs); border: 1px solid transparent; border-radius: var(--radius-s); box-shadow: 0 0 20px rgba(0,0,0,.2); transition: all .3s;}
+.memberSelectDropdownList li .selectBtn:hover,
+.memberSelectDropdownList li .selectBtn.active{border-color: var(--gray-600);}
+.memberSelectDropdownList li .selectBtn:hover .memberImgBox,
+.memberSelectDropdownList li .selectBtn.active .memberImgBox{background-color: var(--primary-500);}
+.memberSelectDropdownList li .memberImgBox{width: 48px; height: 48px; border-radius: var(--radius-m); background-color: var(--gray-100); overflow: hidden;}
+.memberSelectDropdownList li .memberImgBox img{height: 100%; object-fit: cover;}
+.memberSelectDropdownList li .memberTextBox .memberName{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
+
+/* 공통 - 드롭다운 선택 */
+.selectDropdownBtnBox{padding: var(--spacing-s) var(--spacing-m); position: absolute; top: 56px; left: 0;  width: max-content; border: 1px solid var(--gray-600);
+    border-radius: var(--radius-m); box-shadow: 10px 10px 40px rgba(0, 0, 0, .1); z-index: 9999;
+    background-color: var(--white); overflow-y: auto; overflow-x: hidden;}
+.selectDropdownBtnBox .selectBtn{padding: var(--spacing-xs) 0; display: block; font-size: var(--font-size-l); color: var(--gray-600); font-weight: var(--semi-bold);}
+.selectDropdownBtnBox .selectBtn:hover{color: var(--gray-900);}
