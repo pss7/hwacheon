@@ -4,6 +4,28 @@
 .borderBar{display: block; height: 3px; border: 1px solid #BF9F17; background-color: #F9F7F1;}
 .blind{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 
+/* 공통 - 선택 */
+.toggleBtnBox{position: relative;}
+.toggleBtn{display: flex; align-items: center; justify-content: space-between; gap: 0 var(--spacing-xs); padding: 0 var(--spacing-xs) 0 var(--spacing-s); height: 40px; border: 1px solid var(--gray-100); border-radius: var(--radius-s); background-color: var(--white);}
+.toggleBtn span{font-weight: var(--bold); font-size: var(--font-size-s); color: var(--gray-600);}
+.toggleBtn::after{content: ''; width: 24px; height: 24px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain; border: 1px solid var(--gray-100); border-radius: var(--radius-l); transition: all .3s;}
+.toggleBtn:hover:after{background-color: var(--gray-100);}
+
+/* 공통 - 애니메이션(드롭다운) */
+.dropdown{opacity: 0; visibility: hidden; transform: translateY(-12px);
+  pointer-events: none; transition: all .3s, transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear .55s;}
+.active .dropdown{opacity: 1; visibility: visible; transform: translateY(0);
+  pointer-events: auto; transition:all .3s,
+    transform .55s cubic-bezier(.18, 2, .32, 1), visibility 0s linear 0s;}
+.active .toggleBtn::after{transform: rotate(-180deg);}
+.selectListBox{padding: var(--spacing-s) 0; position: absolute;
+  min-width: 150px;
+    top: 5px; left: 0; border: 1px solid var(--gray-600); border-radius: var(--radius-m);
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, .1); z-index: 9999; background-color: var(--white);
+    overflow-y: auto; overflow-x: hidden;}
+.selectListBox .selectList .selectBtn{display: block; width: 100%; padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-s); font-size: var(--font-size-m);  color: var(--gray-600); font-weight: var(--semi-bold);}
+.selectListBox .selectList .selectBtn:hover{color: var(--gray-900);}
+
 /* 공통 - 버튼 */
 .btn{display: inline-flex; align-items: center; justify-content: center; min-width: 108px ; height: 56px; padding: var(--spacing-xs); color: var(--white); border-radius: var(--radius-s); font-size: var(--font-size-l); transition: all .3s;}
 .btn.btnPrimary{background-color: var(--gray-600);}
@@ -392,3 +414,5 @@
   .calendarBox .calendarGrid .calendarCell .scheduleDot{width: 3px; height: 3px;}
 
 }
+
+/* 공통 - 드래그 */

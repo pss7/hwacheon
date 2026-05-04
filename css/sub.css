@@ -3040,8 +3040,8 @@ input::placeholder{color: var(--gray-600);}
 .memberSelectDropdownList li .memberTextBox .memberName{color: var(--gray-600); font-weight: var(--bold); font-size: var(--font-size-s);}
 
 /* 공통 - 드롭다운 선택 */
-.selectDropdownBtnBox{padding: var(--spacing-s) var(--spacing-m); position: absolute; top: 56px; left: 0;  width: max-content; border: 1px solid var(--gray-600);
+.selectDropdownBtnBox{padding: var(--spacing-s) 0; position: absolute; top: 56px; left: 0;  width: max-content; border: 1px solid var(--gray-600);
     border-radius: var(--radius-m); box-shadow: 10px 10px 40px rgba(0, 0, 0, .1); z-index: 9999;
     background-color: var(--white); overflow-y: auto; overflow-x: hidden;}
-.selectDropdownBtnBox .selectBtn{padding: var(--spacing-xs) 0; display: block; font-size: var(--font-size-l); color: var(--gray-600); font-weight: var(--semi-bold);}
+.selectDropdownBtnBox .selectBtn{padding: var(--spacing-xs) var(--spacing-m); display: block; font-size: var(--font-size-l); color: var(--gray-600); font-weight: var(--semi-bold);}
 .selectDropdownBtnBox .selectBtn:hover{color: var(--gray-900);}
