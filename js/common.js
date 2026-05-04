@@ -16,5 +16,16 @@ $(function () {
     $(this).parents('.toggleBtnBox').find('.toggleBtn').attr('aria-expanded', 'false').focus();
   });
 
+  //탭
+  $('.tabContentBox').hide();
+  $('.tabContentBox').first().show();
+  $('.tabList li').click(function () {
+    $('.tabList li').children().removeClass('active').attr('aria-selected', 'false');
+    $(this).children().addClass('active').attr('aria-selected', 'true');
+
+    $('.tabContentBox').hide();
+    $('.tabContentBox').eq($(this).index()).show();
+  });
+
 
 });
